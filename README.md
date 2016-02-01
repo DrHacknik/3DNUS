@@ -6,6 +6,8 @@ The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-ha
 # COPYWRITE (C) 2014-2016
 #########################
 
+
+
 Note: All Icons & Images and/or components that are Featured in U-NUS/3DSNUS Are Either created by:
 The Original Creator(Me), Current Dev, or other Artists/Dev's. You may NOT redistribute this software, or 
 Bundle/Sell it for Any cost. If you paid for any of these App's/App, then you have been Scammed!
