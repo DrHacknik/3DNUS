@@ -2,7 +2,7 @@
 A Simple NUS Downloader for 3DS Content, and Pack's them as .cia's. 
 The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-hacknik.392360/
 
-Current Version: 2.5.4.7 v29384
+Current Version: 2.5.4.7 v29384c
 
 #########################
 # COPYWRITE (C) 2014-2016
