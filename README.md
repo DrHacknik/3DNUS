@@ -4,8 +4,8 @@ A Simple NUS Downloader for 3DS Content and Pack's them as .cia's. The original 
 Current Version: 2.5.4.7 v29384c
 
 ###############################
-COPYWRITE (C) 2014-2016
-Copyright Updated as of 2/29/16
+#COPYWRITE (C) 2014-2016
+#Copyright Updated as of 2/29/16
 ###############################
 
 Note: All Icons & Images and/or components that are featured in U-NUS/3DSNUS are created by: The Original Creator (Me), Current Dev, or other Artists/Dev's. You may NOT redistribute this software, or Bundle/Sell it for any cost. If you paid for any of these App's/App, then you have been scammed! This software is Free, and will always be Free. It is also Open-Source, and is maintained by Volunteers. This software is Non-Profit! We are NOT affiliated with Nintendo at All! The new Flat Styled icons were created by me in Gimp 2.8
