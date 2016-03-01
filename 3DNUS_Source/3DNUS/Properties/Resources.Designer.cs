@@ -123,6 +123,26 @@ namespace _3DNUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap application_x_bzip_compressed_tar {
+            get {
+                object obj = ResourceManager.GetObject("application_x_bzip_compressed_tar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap application_xml {
+            get {
+                object obj = ResourceManager.GetObject("application_xml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blank_bck {
             get {
                 object obj = ResourceManager.GetObject("blank_bck", resourceCulture);
@@ -153,6 +173,16 @@ namespace _3DNUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap DevKit_bck {
+            get {
+                object obj = ResourceManager.GetObject("DevKit_bck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Donate_Green {
             get {
                 object obj = ResourceManager.GetObject("Donate_Green", resourceCulture);
@@ -173,6 +203,16 @@ namespace _3DNUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap door_out {
+            get {
+                object obj = ResourceManager.GetObject("door_out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap download_b {
             get {
                 object obj = ResourceManager.GetObject("download_b", resourceCulture);
@@ -186,6 +226,16 @@ namespace _3DNUS.Properties {
         public static System.Drawing.Bitmap download_b_select {
             get {
                 object obj = ResourceManager.GetObject("download_b_select", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ext_icon {
+            get {
+                object obj = ResourceManager.GetObject("ext_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +313,16 @@ namespace _3DNUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap service_manager {
+            get {
+                object obj = ResourceManager.GetObject("service_manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap twitter_btn {
             get {
                 object obj = ResourceManager.GetObject("twitter_btn", resourceCulture);
@@ -276,6 +336,16 @@ namespace _3DNUS.Properties {
         public static System.Drawing.Bitmap vnm_bck {
             get {
                 object obj = ResourceManager.GetObject("vnm_bck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap vnm_bck1 {
+            get {
+                object obj = ResourceManager.GetObject("vnm_bck1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

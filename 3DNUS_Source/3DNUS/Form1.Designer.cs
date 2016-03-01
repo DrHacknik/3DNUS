@@ -168,9 +168,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(124, 574);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 13);
+            this.label3.Size = new System.Drawing.Size(274, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "   For Updates.   Version: 2.5.4.7 (v29384)";
+            this.label3.Text = "   For Updates.   Version: 2.5.4.7 (v29384c - Codename) ";
             // 
             // panel1
             // 
@@ -370,7 +370,7 @@
             this.supportedToolStripMenuItem,
             this.unsupportedToolStripMenuItem});
             this.firmwareListToolStripMenuItem.Name = "firmwareListToolStripMenuItem";
-            this.firmwareListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.firmwareListToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.firmwareListToolStripMenuItem.Text = "Firmware List";
             // 
             // supportedToolStripMenuItem
@@ -591,7 +591,7 @@
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F12)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -662,7 +662,7 @@
             this.originalPostToolStripMenuItem,
             this.newPostToolStripMenuItem});
             this.forumsToolStripMenuItem.Name = "forumsToolStripMenuItem";
-            this.forumsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.forumsToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.forumsToolStripMenuItem.Text = "Forums";
             // 
             // originalPostToolStripMenuItem
@@ -781,6 +781,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);

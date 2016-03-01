@@ -35,7 +35,7 @@ namespace _3DNUS
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            ext_mng_main form = new ext_mng_main();
+            ext_pick form = new ext_pick();
             form.Show();
             timer2.Stop();
             Close();

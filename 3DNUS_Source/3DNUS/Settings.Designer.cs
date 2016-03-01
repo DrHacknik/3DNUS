@@ -831,7 +831,7 @@
             this.Name = "Settings";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Settings (Preview Only)";
+            this.Text = "Settings";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Settings_Load);
             this.panel1.ResumeLayout(false);

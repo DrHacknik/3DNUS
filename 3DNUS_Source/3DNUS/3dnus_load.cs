@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,11 +34,12 @@ namespace _3DNUS
         }
 
         private void main_load_Load(object sender, EventArgs e)
-        {
+       { 
             Process.Start("3DNUS Upd - Lite.exe");
             {
                 string cd = Path.GetDirectoryName(Application.ExecutablePath);
                 {
+                    //Read all Config Files into RAM (.cfg)
                     File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
                     File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
                     File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");

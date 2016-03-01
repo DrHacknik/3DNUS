@@ -202,7 +202,7 @@ namespace _3DNUS
             textBox2.Text = File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
             textBox3.Text = File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
             label18.Text = File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg");
-            //Load's All the Config Files
+            //Reads All the Config Files
             File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
                 File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
                 File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
@@ -230,6 +230,13 @@ namespace _3DNUS
                 File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
                 
                 label13.Text = File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
+                //If ext_sandbox_val.cfg has Text stating the Size in MB, then this will determine the setting. 
+                //For example; "if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "Whatever in MB")"
+                //{
+                // Label18.Text = "Whatever in MB" 
+                //picturebox4.Width = Whatever Value, same as Setting. 
+                //progressBar1.Value = Whatever Value, same as Setting. 
+                //}
             if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "0MB")
             {
                 label18.Text = "0MB";
@@ -352,12 +359,37 @@ namespace _3DNUS
 
             //Refresh Configuration
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
-            
+            File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_dns_add_s.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_dns_ip4.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_px.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_px_add.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
+                File.ReadAllText(cd + "\\Config\\adv_sub_mask.cfg");
+                File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
+                File.ReadAllText(cd + "\\Config\\ext_ext.cfg");
+                File.ReadAllText(cd + "\\Config\\ext_net_4.cfg");
+                File.ReadAllText(cd + "\\Config\\ext_sandbox.cfg");
+                File.ReadAllText(cd + "\\Config\\ext_sandbox_md.cfg");
+                File.ReadAllText(cd + "\\Config\\ext_sandbox_st.cfg");
+                File.ReadAllText(cd + "\\Config\\upd_auto.cfg");
+                File.ReadAllText(cd + "\\Config\\upd_custom.cfg");
+                File.ReadAllText(cd + "\\Config\\upd_custom_svr.cfg");
+                File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
+                File.ReadAllText(cd + "\\Config\\vnm.cfg");
+                File.ReadAllText(cd + "\\Config\\vnm_fw.cfg");
+                File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg");
+                File.ReadAllText(cd + "\\Config\\vnm_skip_failed.cfg");
+                File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         //Code for when saving Config's from a Text Field or Checkbox, to either val's "0" or "1"
         //To do this, use a StreamWrite Line, and an If or Else Statement, or None. 
+        //It's not too Clean for now, sorry.
         {
 
             string cd = Path.GetDirectoryName(Application.ExecutablePath);

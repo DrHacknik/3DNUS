@@ -118,53 +118,77 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="vnm_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vnm_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Donate_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Donate_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="console_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\console_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ext_mng_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ext_mng_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Preloader_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Preloader_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_7_zip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\7-zip.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="download_b_select" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b_download_select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="application_xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_xml.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vnm_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vnm_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="make_cdn_cia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\make_cdn_cia.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ext_mng_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ext_mng_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_3ds_bck_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3ds_bck_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_7zFM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7zFM.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="_7z1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\7z.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Donate_Nyan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donate_Nyan.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="vnm_bck1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vnm_bck1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="service_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\service_manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Preloader_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Preloader_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vnm_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vnm_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3ds_bck_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3ds_bck_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_7zG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\7zG.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="download_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b_download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blank_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_7z" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\7z.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="_7z1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7z.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="console_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\console_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ext_mng_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ext_mng_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitter_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter_btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DevKit_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DevKit_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download_b_select" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b_download_select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_7zFM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\7zFM.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="vnm_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vnm_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ext_mng_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ext_mng_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="application_x_bzip_compressed_tar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_x_bzip_compressed_tar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_3dnus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_3dnus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,19 +196,16 @@
   <data name="blank_bck_ukn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blank_bck_ukn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b_download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="make_cdn_cia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\make_cdn_cia.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Donate_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Donate_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ext_mng_logo_shdw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ext_mng_logo_shdw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_7zG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7zG.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="twitter_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twitter_btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blank_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blank_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ext_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ext_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

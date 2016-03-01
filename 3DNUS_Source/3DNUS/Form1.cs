@@ -395,7 +395,23 @@ foreach (Process worker in workers)
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Process[] workers = Process.GetProcessesByName("3DNUS Upd - Lite");
+                foreach (Process worker in workers)
+                {
+                    worker.Kill();
+                    worker.WaitForExit();
+                    worker.Dispose();
+                }
+                Application.Exit();
+
+            }
+            catch
+            {
+            }
             Application.Exit();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -647,6 +663,25 @@ foreach (Process worker in workers)
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Process[] workers = Process.GetProcessesByName("3DNUS Upd - Lite");
+                foreach (Process worker in workers)
+                {
+                    worker.Kill();
+                    worker.WaitForExit();
+                    worker.Dispose();
+                }
+                Application.Exit();
+
+            }
+            catch
+            {
+            }
         }
     }
 }

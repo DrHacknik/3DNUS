@@ -23,7 +23,6 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3D
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.About.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.ext_mng_load.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.ext_about.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.ext_mng_main.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.Main.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.Properties.Resources.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.Settings.resources
@@ -31,8 +30,4 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3D
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.csproj.GenerateResource.Cache
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.exe
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.pdb
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Debug\3DNUS.exe.manifest
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Debug\3DNUS.application
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.TrustInfo.xml
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.exe.manifest
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.application
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3DNUS.ext_pick.resources
