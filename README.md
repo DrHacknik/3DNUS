@@ -12,6 +12,7 @@ Current Version: 2.5.4.7 v29384c_KIRKLAND (x64)
 
 Current Version: 2.5.4.7 v29384c_REDMOND (x86) 
 
+Do keep in Mind, download this Repository as a .zip or .tar.gz, can be quite large! 
 
 Note: All Icons & Images and/or components that are Featured in U-NUS/3DSNUS Are Either created by:
 The Original Creator(Me), Current Dev, or other Artists/Dev's. You may NOT redistribute this software, or 
