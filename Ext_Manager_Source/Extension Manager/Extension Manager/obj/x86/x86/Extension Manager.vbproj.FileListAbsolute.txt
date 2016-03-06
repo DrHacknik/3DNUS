@@ -1,0 +1,13 @@
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\bin\x86\x86\Extension Manager.exe.config
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\bin\x86\x86\Extension Manager.exe
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\bin\x86\x86\dje\Extension Manager.resources.dll
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.dev_console_debug.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.dev_about.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.extension_about.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.Form1.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.Main.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.Resources.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.dev_console_debug.dje.resources
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension Manager.vbproj.GenerateResource.Cache
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\dje\Extension Manager.resources.dll
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension Manager.exe
