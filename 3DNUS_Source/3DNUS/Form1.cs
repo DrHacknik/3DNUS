@@ -113,8 +113,15 @@ namespace _3DNUS
 
             if (t_titleid.Text.Length == 0 || t_version.Text.Length == 0)
             {
-                MessageBox.Show("Please enter a titleid/firmware and version/region");
+                MessageBox.Show("Please enter a Firmware or Title to download;" +
+                    "Ex: 8.1.0-23 ---- USA; Or 00000000000 ---- v1024 ");
                 return;
+            }
+            if (c_cia.Checked && !File.Exists("make_cdn_cia.exe"))
+            {
+                MessageBox.Show("Error: make_cdn_cia.exe can't be found in the working directory!\r\n" +
+                    "This option will be unavailable while make_cdn_cia.exe is not found", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                c_cia.Checked = false;
             }
             if (t_titleid.Text.Contains("."))
             {
@@ -171,6 +178,8 @@ namespace _3DNUS
             //download files
             WebClient contd = new WebClient();
             for (int i = 1; i <= contentcounter; i++)
+
+
             {
                 try
                 {
@@ -499,9 +508,9 @@ foreach (Process worker in workers)
 
         private void extensionManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string cd = Path.GetDirectoryName(Application.ExecutablePath);
             //MessageBox.Show("Extension Manager is Not Ready to Use Yet!", "Extension Manager:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            ext_mng_load form = new ext_mng_load();
-            form.Show();
+            Process.Start(cd + "\\Extension Manager.exe" );
         }
 
         private void downloadExtensionsPackToolStripMenuItem_Click(object sender, EventArgs e)

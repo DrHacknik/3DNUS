@@ -2,12 +2,9 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\x86\x32 B
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\x86\x32 Build\3DNUS.exe
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\x86\x32 Build\Microsoft.VisualStudio.DebuggerVisualizers.dll
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\x86\x32 Build\Microsoft.VisualStudio.DebuggerVisualizers.xml
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\3DNUS.csprojResolveAssemblyReference.cache
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.main_load.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.About.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.ext_mng_load.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.ext_about.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.ext_pick.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.Main.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.Properties.Resources.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\x86\x32 Build\_3DNUS.Settings.resources

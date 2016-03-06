@@ -101,6 +101,7 @@
             this.startDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.download = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -176,6 +177,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.t_titleid);
             this.panel1.Controls.Add(this.linkLabel1);
@@ -297,7 +299,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(213, 474);
+            this.pictureBox1.Location = new System.Drawing.Point(213, 490);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 53);
             this.pictureBox1.TabIndex = 12;
@@ -765,6 +767,13 @@
             this.download.Interval = 1;
             this.download.Tick += new System.EventHandler(this.download_Tick);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 474);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(561, 10);
+            this.progressBar1.TabIndex = 24;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -870,6 +879,7 @@
         private System.Windows.Forms.ToolStripMenuItem jPNToolStripMenuItem5;
         private System.Windows.Forms.Timer download;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

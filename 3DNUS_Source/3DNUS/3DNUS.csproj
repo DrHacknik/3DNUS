@@ -151,23 +151,11 @@
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="debugger.cs" />
-    <Compile Include="extension_manager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="extension_manager.Designer.cs">
-      <DependentUpon>extension_manager.cs</DependentUpon>
-    </Compile>
     <Compile Include="ext_about.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ext_about.Designer.cs">
       <DependentUpon>ext_about.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ext_pick.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ext_pick.Designer.cs">
-      <DependentUpon>ext_pick.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -196,14 +184,8 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="extension_manager.resx">
-      <DependentUpon>extension_manager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ext_about.resx">
       <DependentUpon>ext_about.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ext_pick.resx">
-      <DependentUpon>ext_pick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -269,9 +251,6 @@
     <None Include="bin\Debug\7zG.exe" />
     <None Include="bin\Debug\7-zip.dll" />
     <None Include="bin\Debug\make_cdn_cia.exe" />
-    <Content Include="ext_pick.vb">
-      <SubType>Form</SubType>
-    </Content>
     <Content Include="Logo_3dnus.ico" />
     <Content Include="Logo_3dnus_128x128.ico" />
     <None Include="Resources\ext_mng_logo_shdw.png" />
