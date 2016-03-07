@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 
 
@@ -18,9 +19,13 @@ namespace _3DNUS
     public partial class Main : Form
     {
         string server = "http://nus.cdn.c.shop.nintendowifi.net/ccs/download/";
+
+        YLS yls = null;
+
         public Main()
         {
             InitializeComponent();
+            System.Net.ServicePointManager.ServerCertificateValidationCallback = (_dmy_sndr_, _dmy_cert_, _dmy_chain_, _dmy_ejjoj_) => true;
         }
 
         private void b_download_Click(object sender, EventArgs e)
@@ -29,75 +34,47 @@ namespace _3DNUS
         }
         private void firmwdownload(string firm, string reg)
         {
+            string cd = Path.GetDirectoryName(Application.ExecutablePath);
+
+            if(reg == null || reg.Length != 1 || !yls.regions.ContainsKey(reg[0]))
             {
-
-                {
-                    string cd = Path.GetDirectoryName(Application.ExecutablePath);
-                    WebClient titlelist = new WebClient();
-                    titlelist.DownloadFile("http://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
-
-                    string[] titles = File.ReadAllLines(cd + "\\titlelist.csv");
-                    Directory.CreateDirectory(cd + "\\" + t_titleid.Text);
-                    foreach (string select1 in titles.Skip(1))
-
-                    {
-                        if (select1.Contains(reg))
-                        {
-                            string title;
-                            string version;
-
-                            int[] wantedfw = Array.ConvertAll(t_titleid.Text.Replace(".", "").Split('-'), int.Parse);
-                            string[] csv = select1.Split(',');
-                            string firmwaresls = csv[3].Replace(" Initial scan", "").Replace("(stage1)", "").Replace("(stage2)", "").Replace("(stage3)", "").Replace("(stage4)", "").Replace("(stage5)", "").Replace("(stage6)", "").Replace("(stage7)", "").Replace("E", "").Replace("U", "").Replace("J", "");
-                            string[] csvfirm = firmwaresls.Split(' ');
-                            int[] csvfu = Array.ConvertAll(csvfirm[0].Replace(".", "").Split('-'), int.Parse);
-
-                            if (wantedfw[1] >= csvfu[1] && wantedfw[0] >= csvfu[0])
-                            {
-                                string use = null;
-                                foreach (string temp in csvfirm)
-
-
-                                {
-
-                                    string currentclean = temp;
-                                    int[] intcc = Array.ConvertAll(currentclean.Replace(".", "").Split('-'), int.Parse);
-
-
-                                    if (wantedfw[0] < intcc[0] && wantedfw[1] < intcc[1])
-                                    {
-                                        break;
-                                    }
-                                    use = currentclean;
-
-                                    //set download title
-                                    title = csv[0];
-                                    // find version number
-                                    int verindex = Array.IndexOf(csvfirm, use);
-                                    // get version number
-                                    if (csv[2].Contains(" "))
-                                    {
-                                        string[] aver = csv[2].Split(' ');
-                                        version = aver[verindex].Replace("v", "");
-                                    }
-                                    else
-
-                                    {
-                                        version = csv[2].Replace("v", "");
-                                    }
-                                    //send the command
-                                    singledownload(title, version);
-
-                                }
-                            }
-                        }
-                    }
-                    log("\r\n" + DateTime.Now + " Firmware Download complete!");
-                    notifyIcon1.BalloonTipText = "Firmware download complete!";
-                    notifyIcon1.ShowBalloonTip(1);
-
-                }
+                MessageBox.Show("Invalid region! Valid regions are:\r\n" + String.Join(", ", yls.regions.Keys.ToArray()), "Invalid region", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            //better be safe'n'paranoid
+            if(yls == null) if(File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv");
+            else
+            {
+                MessageBox.Show("Can't read title list, file doesn't exist.", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            WebClient titlelist = new WebClient();
+
+            Directory.CreateDirectory(cd + "\\" + t_titleid.Text);
+
+            YLS_Sysver sys = new YLS_Sysver();
+            sys.label = firm;
+
+            foreach(YLS_Title t in yls.regions[reg[0]])
+            {
+                YLS_Titlever optimal = null;
+
+                foreach(YLS_Titlever tv in t.ver)
+                {
+                    if(tv.sysver == sys) { optimal = tv; break; }
+                    if(tv.sysver < sys && (optimal == null || tv.sysver > optimal.sysver)) optimal = tv;
+                }
+
+                if(optimal == null) continue;
+
+                singledownload(t.id.ToString("X16"), optimal.version.ToString());
+                Application.DoEvents();
+            }
+            log("\r\n" + DateTime.Now + " Firmware Download complete!");
+            notifyIcon1.BalloonTipText = "Firmware download complete!";
+            notifyIcon1.ShowBalloonTip(1);
         }
 
 
@@ -110,6 +87,8 @@ namespace _3DNUS
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            t_titleid.Text = t_titleid.Text.Trim();
+            t_version.Text = t_version.Text.Trim();
 
             if (t_titleid.Text.Length == 0 || t_version.Text.Length == 0)
             {
@@ -123,10 +102,44 @@ namespace _3DNUS
                     "This option will be unavailable while make_cdn_cia.exe is not found", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 c_cia.Checked = false;
             }
+
+            String cd = Path.GetDirectoryName(Application.ExecutablePath);
+
+            if(yls == null) if(File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv"); else
+            {
+                MessageBox.Show("Can't read title list, file doesn't exist.", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (t_titleid.Text.Contains("."))
             {
                 string firmw = t_titleid.Text;
                 string reg = t_version.Text;
+
+                Match match = Regex.Match(firmw, @"(\d+)\.(\d+)(\.(\d+))?(-(\d+))?([a-zA-Z])?");
+                if(!match.Success)
+                {
+                    MessageBox.Show("Invalid firmware string format!");
+                    return;
+                }
+
+                firmw = (match.Groups[1] + "." + match.Groups[2] + "." + (match.Groups[4].Success ? match.Groups[4].ToString() : "0") + "-" + (match.Groups[6].Success ? match.Groups[6].ToString() : "999"));
+                t_titleid.Text = firmw;
+                t_titleid.Update();
+
+                switch(reg.ToUpper())
+                {
+                    case "EUR": reg = "E"; break;
+                    case "USA": reg = "U"; break;
+                    case "JPN": reg = "J"; break;
+                    case "TWN": reg = "T"; break;
+                    case "CHN": reg = "C"; break;
+                    case "KOR": reg = "K"; break;
+                }
+
+                t_version.Text = reg;
+                t_version.Update();
+
                 log(DateTime.Now + " Downloading Firmware: " + firmw + reg);
                 notifyIcon1.BalloonTipText = "Downloading Firmware: " + firmw + reg;
                 notifyIcon1.ShowBalloonTip(1);
@@ -136,6 +149,7 @@ namespace _3DNUS
             {
                 string title = t_titleid.Text;
                 string version = t_version.Text;
+                if(version[0] == 'v') { version = version.Substring(1); t_version.Text = version; t_version.Update(); }
                 singledownload(title, version);
             }
         }
@@ -302,71 +316,33 @@ foreach (Process worker in workers)
             form.Show();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void SysSelectRadio_CheckedChanged(object sender, EventArgs e)
         {
-            bool condition = true;
+            WebClient titlelist = new WebClient();
+            String cd = Path.GetDirectoryName(Application.ExecutablePath);
 
-            if (condition)
+            yls = null;
+            RadioButton chk = panel1.Controls.OfType<RadioButton>().FirstOrDefault(ch => ch.Checked);
+
+            if(chk == null) return;
+
+            switch(chk.Name)
             {
-                string cd = Path.GetDirectoryName(Application.ExecutablePath);
-                WebClient titlelist = new WebClient();
-                titlelist.DownloadFile("http://yls8.mtheall.com/ninupdates/titlelist.php?sys=ktr&csv=1", cd + "\\titlelist.csv");
-
-                string[] titles = File.ReadAllLines(cd + "\\titlelist.csv");
-                Directory.CreateDirectory(cd + "\\" + t_titleid.Text);
-                foreach (string select1 in titles.Skip(1)) ;
-            }
-            else
-            {
-
-            }
-
-
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            bool condition = true;
-
-            if (condition)
-            {
-                string cd = Path.GetDirectoryName(Application.ExecutablePath);
-                WebClient titlelist = new WebClient();
-                titlelist.DownloadFile("http://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
-
-                string[] titles = File.ReadAllLines(cd + "\\titlelist.csv");
-                Directory.CreateDirectory(cd + "\\" + t_titleid.Text);
-                foreach (string select1 in titles.Skip(1)) ;
-            }
-            else
-            {
-
+                case "radioButton1":
+                    titlelist.DownloadFile("http://yls8.mtheall.com/ninupdates/titlelist.php?sys=ktr&csv=1", cd + "\\titlelist.csv");
+                    break;
+                case "radioButton2":
+                case "radioButton3":
+                    titlelist.DownloadFile("http://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
+                    break;
+                default:
+                    MessageBox.Show("Well, this shouldn't be happening!\r\nDeveloper! " +
+                        "Please update Form1.cs @ SysSelectRadio_CheckedChanged!\r\n\r\nThanks! :D",
+                        "Developer error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
 
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            bool condition = true;
-
-            if (condition)
-            {
-                string cd = Path.GetDirectoryName(Application.ExecutablePath);
-                WebClient titlelist = new WebClient();
-                titlelist.DownloadFile("http://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
-
-                string[] titles = File.ReadAllLines(cd + "\\titlelist.csv");
-                Directory.CreateDirectory(cd + "\\" + t_titleid.Text);
-                foreach (string select1 in titles.Skip(1)) ;
-            }
-            else
-            {
-
-            }
-
-
+            if(File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv");
         }
 
         private void withoutGUIToolStripMenuItem_Click(object sender, EventArgs e)
@@ -381,6 +357,7 @@ foreach (Process worker in workers)
             t_log.Text = DateTime.Now + " | 3DNUS Log Console:";
             label4.Text = DateTime.Now + "";
 
+            if(yls == null) { radioButton2.Checked = false; radioButton2.Checked = true; }
         }
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
