@@ -29,3 +29,19 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\_3D
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.csproj.GenerateResource.Cache
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.exe
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Debug\3DNUS.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\bin\Debug\3DNUS.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\3DNUS.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\3DNUS.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\3DNUS.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.main_load.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.About.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.ext_about.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.Main.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.Settings.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.vnm_installer.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\Debug\3DNUS.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\bin\Debug\3DNUS.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\bin\Debug\3DNUS.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml

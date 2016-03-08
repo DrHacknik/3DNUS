@@ -178,6 +178,7 @@
     <Compile Include="vnm_installer.Designer.cs">
       <DependentUpon>vnm_installer.cs</DependentUpon>
     </Compile>
+    <Compile Include="YLS.cs" />
     <EmbeddedResource Include="3dnus_load.resx">
       <DependentUpon>3dnus_load.cs</DependentUpon>
     </EmbeddedResource>
