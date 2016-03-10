@@ -1,7 +1,7 @@
 # 3DNUS
 A Simple NUS Downloader for 3DS Content, and Pack's them as .cia's. 
 The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-hacknik.392360/
-You can find the Dedicated Site here: http://zoltx23.github.io/3DNUS
+
 
 [Click here for the Dedicated GitHub Site](http://zoltx23.github.io/3DNUS/)
 
