@@ -24,16 +24,16 @@ Listening to dev_main"
 
             PictureBox3.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot1\\ext_icon.png")
             PictureBox4.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot2\\ext_icon.png")
-            PictureBox5.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot3\\ext_icon.png")
-            PictureBox6.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot4\\ext_icon.png")
-            PictureBox7.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot5\\ext_icon.png")
-            PictureBox8.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot6\\ext_icon.png")
-            PictureBox9.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot7\\ext_icon.png")
-            PictureBox10.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot8\\ext_icon.png")
-            PictureBox11.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot9\\ext_icon.png")
-            PictureBox12.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot10\\ext_icon.png")
-            PictureBox13.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot11\\ext_icon.png")
-            PictureBox14.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot12\\ext_icon.png")
+            PictureBox5.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot4\\ext_icon.png")
+            PictureBox6.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot3\\ext_icon.png")
+            PictureBox7.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot8\\ext_icon.png")
+            PictureBox8.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot7\\ext_icon.png")
+            PictureBox9.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot6\\ext_icon.png")
+            PictureBox10.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot5\\ext_icon.png")
+            PictureBox11.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot12\\ext_icon.png")
+            PictureBox12.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot11\\ext_icon.png")
+            PictureBox13.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot10\\ext_icon.png")
+            PictureBox14.Image = Image.FromFile(cd + "\\Extensions\\_ext\\Slot9\\ext_icon.png")
         Catch ex As Exception
 
         End Try

@@ -11,3 +11,4 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\E
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension Manager.vbproj.GenerateResource.Cache
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\dje\Extension Manager.resources.dll
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension Manager.exe
+C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\x86\Extension Manager.vbprojResolveAssemblyReference.cache
