@@ -13,6 +13,7 @@ Current Version: 2.5.4.7 v29384c_KIRKLAND (x64)
 Current Version: 2.5.4.7 v29384c_REDMOND (x86) 
 
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/status/3DNUS_STATUS_32x64.png)
+
 Do keep in Mind, downloading this Repository as a .zip or .tar.gz, can be quite large! 
 
 Note: All Icons & Images and/or components that are Featured in U-NUS/3DSNUS Are Either created by:
