@@ -168,9 +168,9 @@ namespace _3DNUS
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(124, 574);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 13);
+            this.label3.Size = new System.Drawing.Size(268, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "   For Updates.   Version: 2.5.4.7 (v29384c - Codename) ";
+            this.label3.Text = "   For Updates.   Version: 2.6.0.0 (v29400 - Codename) ";
             // 
             // panel1
             // 
