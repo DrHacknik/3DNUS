@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class dev_market
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,17 @@ Partial Class dev_market
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dev_market))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -57,30 +57,6 @@ Partial Class dev_market
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "3DNUS: dev_market"
         '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 24)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(667, 471)
-        Me.WebBrowser1.TabIndex = 3
-        Me.WebBrowser1.Url = New System.Uri("http://www.google.com", System.UriKind.Absolute)
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox2.Image = Global.Extension_Manager.My.Resources.Resources.Preloader_2
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 24)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(667, 471)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -93,6 +69,30 @@ Partial Class dev_market
         Me.PictureBox1.Size = New System.Drawing.Size(22, 19)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
+        Me.WebBrowser1.Location = New System.Drawing.Point(0, 24)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
+        Me.WebBrowser1.Size = New System.Drawing.Size(667, 471)
+        Me.WebBrowser1.TabIndex = 3
+        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox2.Image = Global.Extension_Manager.My.Resources.Resources.Preloader_2
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 24)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(667, 471)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
         '
         'dev_market
         '
@@ -115,8 +115,8 @@ Partial Class dev_market
         Me.Text = "dev_market"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
