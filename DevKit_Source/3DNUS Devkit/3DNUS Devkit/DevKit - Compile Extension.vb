@@ -20,14 +20,16 @@ Public Class DevKit___Compile_Extension
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
+            Directory.CreateDirectory(cd + "\\Temp")
+            My.Computer.FileSystem.WriteAllText(cd + "\\Temp\\ext_info.ini", TextBox2.Text, True)
             My.Computer.FileSystem.CopyDirectory(Source_Sel.SelectedPath, cd + "\\Temp", True)
-            RichTextBox1.SaveFile(cd + "\\Temp\\Source_dir.txt", RichTextBoxStreamType.PlainText)
-            My.Computer.FileSystem.CreateDirectory(cd + "\\Temp")
+            RichTextBox1.SaveFile(cd + "\\Temp\\" + "\\Source_dir.txt", RichTextBoxStreamType.PlainText)
+            My.Computer.FileSystem.CreateDirectory(cd + "\\Temp\\" + TextBox2.Text)
             Dim FileToCopy As String
             Dim NewCopy As String
 
             FileToCopy = Icon_Sel.FileName
-            NewCopy = cd + "\\Temp\\ext_icon.png"
+            NewCopy = cd + "\\Temp\\" + "\\ext_icon.png"
 
             If System.IO.File.Exists(FileToCopy) = True Then
 
@@ -36,7 +38,7 @@ Public Class DevKit___Compile_Extension
 
             End If
             FileToCopy = Short_Desc.FileName
-            NewCopy = cd + "\\Temp\\ext_desc.ini"
+            NewCopy = cd + "\\Temp\\" + "\\ext_desc.ini"
 
             If System.IO.File.Exists(FileToCopy) = True Then
 
@@ -45,7 +47,7 @@ Public Class DevKit___Compile_Extension
 
             End If
             FileToCopy = Long_Desc.FileName
-            NewCopy = cd + "\\Temp\\ext_desc_long.ini"
+            NewCopy = cd + "\\Temp\\" + "\\ext_desc_long.ini"
 
             If System.IO.File.Exists(FileToCopy) = True Then
 
@@ -56,7 +58,7 @@ Public Class DevKit___Compile_Extension
 
 
 
-            MessageBox.Show("There was an Error when trying To Compress the Files. Try Zipping them Yourself (The Temp Dir) ", "Zip Manager v3", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("There was an Error When trying To Compress the Files. Try Zipping them Yourself (The Temp Dir) ", "Zip Manager v3", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Catch ex As Exception
 
         End Try

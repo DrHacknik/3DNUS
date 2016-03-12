@@ -10,7 +10,7 @@ Public Class extension_about
         Try
             Process.Start(My.Settings.ext_launch + "boot_ext.exe")
             My.Settings.dev_debugger_logged = "
-loaded: " + My.Settings.ext_launch + "
+loaded: " + My.Settings.ext_launch + "boot_ext.exe
 
 Started: boot_ext.framework
 Listening to boot_ext.exe"
@@ -20,7 +20,8 @@ Listening to boot_ext.exe"
 Error: Unable to Load Extension!
 Cannot locate file at " + My.Settings.ext_launch + "
 Listening dev_main"
-            MessageBox.Show("Error: Unable to Find any Extensions in that Slot!", "Extension Manager: Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error: Unable to Find any Extensions in that Slot! 
+                Or there is no Executable!", "Extension Manager: Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
 
 

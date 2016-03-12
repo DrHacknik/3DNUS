@@ -14,6 +14,11 @@ Public Class Main
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.settings_enable_mrkt = "1" Then
+            DEVMARKETToolStripMenuItem.Visible = True
+        Else
+            DEVMARKETToolStripMenuItem.Visible = False
+        End If
         Try
             My.Settings.dev_debugger_logged = "
 loaded: Settings from Application.Root()
@@ -346,6 +351,7 @@ Listening to dev_main"
             ComboBox1.Text = "Default"
         End If
         My.Settings.Save()
+        Me.Refresh()
     End Sub
 
     Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -367,5 +373,16 @@ Listening to dev_main"
         PictureBox15.BackColor = Color.DodgerBlue
         PictureBox15.Visible = False
         Timer2.Stop()
+    End Sub
+
+    Private Sub DEVMARKETToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DEVMARKETToolStripMenuItem.Click
+        My.Settings.dev_debugger_logged = "
+loaded: dev_market
+Listening to dev_market"
+        dev_market.Show()
+    End Sub
+
+    Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
+        My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, My.Settings.settings_def_color + ", " + My.Settings.settings_devmd + ", " + My.Settings.settings_enable_mrkt + ", " + My.Settings.settings_encrypt + ", " + My.Settings.settings_encrypt_type + ", " + My.Settings.settings_inst_chck + ", " + My.Settings.settings_inst_sgnd + ", " + My.Settings.settings_load_text, True)
     End Sub
 End Class

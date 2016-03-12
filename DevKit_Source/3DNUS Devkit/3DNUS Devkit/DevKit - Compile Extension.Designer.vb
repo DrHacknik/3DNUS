@@ -265,7 +265,7 @@ Partial Class DevKit___Compile_Extension
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 260)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(219, 38)
+        Me.RichTextBox1.Size = New System.Drawing.Size(219, 157)
         Me.RichTextBox1.TabIndex = 21
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         Me.RichTextBox1.Visible = False

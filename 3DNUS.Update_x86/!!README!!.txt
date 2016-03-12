@@ -1,7 +1,7 @@
 Welcome to 3DNUS;
 
 This is a FREE to use Application, It is fully working.
-The Current version you have is: Version 2.5.4.
+The Current version you have is: Version 2.6.0 (x86) 
 3DNUS Allows you (The User) to download "3DS Firmwares/Titles" with ease.
 If you wish to use them on a real 3DS (New Or OLD), Then please read the Tutorial below.
 

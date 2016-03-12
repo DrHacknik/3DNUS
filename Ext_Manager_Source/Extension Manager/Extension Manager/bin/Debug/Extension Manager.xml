@@ -22,7 +22,22 @@ Extension Manager
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Extension_Manager.My.Resources.Resources.bar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Extension_Manager.My.Resources.Resources.Close">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Extension_Manager.My.Resources.Resources.Close1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Extension_Manager.My.Resources.Resources.Dev_Market">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -33,6 +48,11 @@ Extension Manager
 </summary>
 </member>
 <member name="P:Extension_Manager.My.Resources.Resources.Minimize">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Extension_Manager.My.Resources.Resources.Minimize1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

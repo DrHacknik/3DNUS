@@ -25,6 +25,7 @@ Partial Class Settings
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReturnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -34,7 +35,6 @@ Partial Class Settings
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.ReturnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -56,6 +56,13 @@ Partial Class Settings
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.SaveToolStripMenuItem.Text = "Save"
+        '
+        'ReturnToolStripMenuItem
+        '
+        Me.ReturnToolStripMenuItem.Name = "ReturnToolStripMenuItem"
+        Me.ReturnToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.ReturnToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.ReturnToolStripMenuItem.Text = "Return"
         '
         'ExitToolStripMenuItem
         '
@@ -89,7 +96,6 @@ Partial Class Settings
         '
         'TextBox1
         '
-        Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(12, 105)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
@@ -100,7 +106,6 @@ Partial Class Settings
         '
         'ComboBox1
         '
-        Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Default", "", "C", "C++", "C#", "", "F", "F++", "F#", "", "BASIC", "ADV-BASIC", "", "Java", "Java-Script", "", "HTML", "CSS", "PHP"})
         Me.ComboBox1.Location = New System.Drawing.Point(12, 59)
@@ -112,7 +117,6 @@ Partial Class Settings
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Enabled = False
         Me.CheckBox2.Location = New System.Drawing.Point(3, 36)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(150, 17)
@@ -123,7 +127,6 @@ Partial Class Settings
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Enabled = False
         Me.CheckBox1.Location = New System.Drawing.Point(3, 13)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(118, 17)
@@ -144,13 +147,6 @@ Partial Class Settings
         '
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
-        '
-        'ReturnToolStripMenuItem
-        '
-        Me.ReturnToolStripMenuItem.Name = "ReturnToolStripMenuItem"
-        Me.ReturnToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.ReturnToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.ReturnToolStripMenuItem.Text = "Return"
         '
         'Settings
         '

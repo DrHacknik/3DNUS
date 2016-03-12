@@ -1,0 +1,10 @@
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\bin\Debug\Extension Launcher.exe.config
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\bin\Debug\Extension Launcher.exe
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\bin\Debug\Extension Launcher.pdb
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\bin\Debug\Extension Launcher.xml
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\Debug\Extension_Launcher.Form1.resources
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\Debug\Extension_Launcher.Resources.resources
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\Debug\Extension Launcher.vbproj.GenerateResource.Cache
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\Debug\Extension Launcher.exe
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\Debug\Extension Launcher.xml
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\Debug\Extension Launcher.pdb

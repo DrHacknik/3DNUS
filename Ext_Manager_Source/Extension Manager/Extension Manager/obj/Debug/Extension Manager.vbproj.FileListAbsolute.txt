@@ -33,3 +33,22 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\E
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\Debug\Extension Manager.vbproj.GenerateResource.Cache
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\Debug\dje\Extension Manager.resources.dll
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.extension_about.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\Extension Manager.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\Extension Manager.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\Extension Manager.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\Extension Manager.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\dje\Extension Manager.resources.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.vbprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.dev_console_debug.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.dev_about.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.extension_about.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.Form1.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.Main.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.Resources.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.dev_console_debug.dje.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.vbproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\dje\Extension Manager.resources.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.dev_market.resources

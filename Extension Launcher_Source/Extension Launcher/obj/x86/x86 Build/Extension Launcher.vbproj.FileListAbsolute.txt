@@ -1,0 +1,6 @@
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\bin\x86\x86 Build\Extension Launcher.exe.config
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\bin\x86\x86 Build\Extension Launcher.exe
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\x86\x86 Build\Extension_Launcher.Form1.resources
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\x86\x86 Build\Extension_Launcher.Resources.resources
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\x86\x86 Build\Extension Launcher.vbproj.GenerateResource.Cache
+c:\users\luke\documents\visual studio 2015\Projects\Extension Launcher\Extension Launcher\obj\x86\x86 Build\Extension Launcher.exe

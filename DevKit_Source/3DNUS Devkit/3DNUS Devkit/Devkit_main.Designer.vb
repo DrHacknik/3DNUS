@@ -312,7 +312,7 @@ Partial Class Devkit_main
         '
         Me.SettingsToolStripMenuItem.Image = Global._3DNUS_Devkit.My.Resources.Resources.service_manager
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
@@ -333,7 +333,7 @@ Partial Class Devkit_main
         Me.AboutToolStripMenuItem.Image = Global._3DNUS_Devkit.My.Resources.Resources.ext_mng_logo
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.AboutToolStripMenuItem.Text = "About (v1.0.6; Build: 68)"
+        Me.AboutToolStripMenuItem.Text = "About (v1.0.6; Build: 72)"
         '
         'Panel1
         '

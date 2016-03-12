@@ -15,3 +15,7 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\E
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\Debug\Extension Manager.exe
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\Debug\Extension Manager.xml
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\obj\x86\Debug\Extension Manager.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\x86\Debug\Extension Manager.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Debug\Extension Manager.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Debug\Extension Manager.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Debug\Extension Manager.pdb

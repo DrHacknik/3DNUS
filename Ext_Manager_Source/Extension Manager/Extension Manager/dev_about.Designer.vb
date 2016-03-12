@@ -35,6 +35,7 @@ Partial Class dev_about
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.bar
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -46,7 +47,9 @@ Partial Class dev_about
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(3, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(137, 15)
@@ -60,11 +63,11 @@ Partial Class dev_about
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(75, 40)
+        Me.Label2.Location = New System.Drawing.Point(69, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(169, 21)
+        Me.Label2.Size = New System.Drawing.Size(179, 21)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Extension Manager v 1.1"
+        Me.Label2.Text = "Extension Manager v 1.1.1"
         '
         'Label3
         '
@@ -73,16 +76,17 @@ Partial Class dev_about
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(111, 61)
+        Me.Label3.Location = New System.Drawing.Point(98, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 15)
+        Me.Label3.Size = New System.Drawing.Size(115, 15)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Build: 42 - Bothell"
+        Me.Label3.Text = "Build: 60 - Codename"
         '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.Close
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.Close1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Location = New System.Drawing.Point(297, 0)

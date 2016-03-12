@@ -24,3 +24,4 @@ C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\x64\x64 Build\_3DNUS
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\x64\x64 Build\_3DNUS.Settings.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\x64\x64 Build\_3DNUS.vnm_installer.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\x64\x64 Build\3DNUS.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\obj\x64\x64 Build\3DNUS.csprojResolveAssemblyReference.cache

@@ -51,7 +51,7 @@ Partial Class Form1
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(259, 14)
         Me.label1.TabIndex = 1
-        Me.label1.Text = "3DNUS Devkit, based on 3DNUS 2.5.4.7"
+        Me.label1.Text = "3DNUS Devkit, based on 3DNUS 2.6.0.0"
         '
         'label2
         '

@@ -51,11 +51,11 @@ Partial Class sys_about
         Me.Label2.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(252, 112)
+        Me.Label2.Size = New System.Drawing.Size(245, 112)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Is made in Visual Studio 2015 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Express. The DevKit runs on" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & ".NET 4.5+ and PowerP" &
     "acks 10.0." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Made by: Dr.Hacknik ©2016." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "I am NOT Affiliated w/Nintendo!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "v1." &
-    "0.6 ALPHA - Base: 2.5.4.7 v29384"
+    "0.6 BETA - Base: 2.6.0.0 v29400"
         '
         'Label3
         '
