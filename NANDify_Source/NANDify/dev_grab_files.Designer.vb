@@ -26,13 +26,14 @@ Partial Class dev_grab_files
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dev_grab_files))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,6 +61,19 @@ Partial Class dev_grab_files
         Me.Label1.Size = New System.Drawing.Size(137, 15)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "NANDify: Grabbing Files..."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.NANDify.My.Resources.Resources.Close1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Location = New System.Drawing.Point(432, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(22, 19)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -105,7 +119,7 @@ Partial Class dev_grab_files
         Me.RichTextBox1.Location = New System.Drawing.Point(6, 80)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(436, 240)
+        Me.RichTextBox1.Size = New System.Drawing.Size(436, 181)
         Me.RichTextBox1.TabIndex = 6
         Me.RichTextBox1.Text = "Debug; "
         Me.RichTextBox1.Visible = False
@@ -120,18 +134,12 @@ Partial Class dev_grab_files
         Me.Button1.Text = "Next"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'ProgressBar1
         '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.NANDify.My.Resources.Resources.Close1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(432, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(22, 19)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.ProgressBar1.Location = New System.Drawing.Point(0, 310)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(452, 10)
+        Me.ProgressBar1.TabIndex = 8
         '
         'dev_grab_files
         '
@@ -140,6 +148,7 @@ Partial Class dev_grab_files
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(454, 345)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.CheckBox1)
@@ -171,4 +180,5 @@ Partial Class dev_grab_files
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class
