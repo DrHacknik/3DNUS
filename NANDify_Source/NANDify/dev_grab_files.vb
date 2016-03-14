@@ -12,14 +12,43 @@ Public Class dev_grab_files
     End Sub
 
     Private Sub dev_grab_files_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim client As WebClient = New WebClient
+        Dim client1 As WebClient = New WebClient
+        Dim client2 As WebClient = New WebClient
+        Dim client3 As WebClient = New WebClient
+        Dim client4 As WebClient = New WebClient
+        Dim client5 As WebClient = New WebClient
+        Dim client6 As WebClient = New WebClient
+        Dim client7 As WebClient = New WebClient
+        Dim client8 As WebClient = New WebClient
+        Dim client9 As WebClient = New WebClient
+        AddHandler client1.DownloadProgressChanged, AddressOf client_ProgressChanged
 
-        AddHandler client.DownloadProgressChanged, AddressOf client_ProgressChanged
+        AddHandler client1.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client2.DownloadProgressChanged, AddressOf client_ProgressChanged
 
-        AddHandler client.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client2.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client3.DownloadProgressChanged, AddressOf client_ProgressChanged
 
-        client.DownloadFileAsync(New Uri("https://github.com/zoltx23/3DNUS/raw/master/3DNUS.Update_x86.zip"), cd + "\\firmware.zip")
+        AddHandler client3.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client4.DownloadProgressChanged, AddressOf client_ProgressChanged
 
+        AddHandler client4.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client5.DownloadProgressChanged, AddressOf client_ProgressChanged
+
+        AddHandler client5.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client6.DownloadProgressChanged, AddressOf client_ProgressChanged
+
+        AddHandler client6.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client7.DownloadProgressChanged, AddressOf client_ProgressChanged
+
+        AddHandler client7.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client8.DownloadProgressChanged, AddressOf client_ProgressChanged
+
+        AddHandler client8.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        AddHandler client9.DownloadProgressChanged, AddressOf client_ProgressChanged
+
+        AddHandler client9.DownloadFileCompleted, AddressOf client_DownloadCompleted
+        client1.DownloadFileAsync(New Uri("https://github.com/zoltx23/3DNUS/raw/master/wiki/resources/1.zip"), cd + "\\firmware.zip")
         Label3.Text = "Download in Progress..."
 
 
@@ -59,12 +88,10 @@ Preparing to unzip..."
             For Each f In zip1
                 f.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
             Next
-            Label3.Text = "All Done!"
-            RichTextBox1.Text += "
-Extraction Completed!"
-            Button1.Enabled = True
+
 
         End Using
+
     End Sub
 
 
@@ -97,5 +124,9 @@ Waiting for Server to Respond..."
         Else
             RichTextBox1.Visible = False
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        End
     End Sub
 End Class

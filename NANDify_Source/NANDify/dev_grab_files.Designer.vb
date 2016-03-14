@@ -131,7 +131,7 @@ Partial Class dev_grab_files
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(63, 23)
         Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Next"
+        Me.Button1.Text = "Finish"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ProgressBar1
