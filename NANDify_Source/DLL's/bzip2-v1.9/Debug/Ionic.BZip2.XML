@@ -1,0 +1,1215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ionic.BZip2</name>
+    </assembly>
+    <members>
+        <member name="F:Ionic.BZip2.BZip2Compressor.increments">
+            Knuth's increments seem to work better than Incerpi-Sedgewick here.
+            Possibly because the number of elems to sort is usually small, typically
+            &lt;= 20.
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.#ctor(Ionic.BZip2.BitWriter)">
+            <summary>
+              BZip2Compressor writes its compressed data out via a BitWriter. This
+              is necessary because BZip2 does byte shredding.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.Fill(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+              Accept new bytes into the compressor data buffer
+            </summary>
+            <remarks>
+              <para>
+                This method does the first-level (cheap) run-length encoding, and
+                stores the encoded data into the rle block.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.write0(System.Byte)">
+             <summary>
+               Process one input byte into the block.
+             </summary>
+            
+             <remarks>
+               <para>
+                 To "process" the byte means to do the run-length encoding.
+                 There are 3 possible return values:
+            
+                    0 - the byte was not written, in other words, not
+                        encoded into the block. This happens when the
+                        byte b would require the start of a new run, and
+                        the block has no more room for new runs.
+            
+                    1 - the byte was written, and the block is not full.
+            
+                    2 - the byte was written, and the block is full.
+            
+               </para>
+             </remarks>
+             <returns>0 if the byte was not written, non-zero if written.</returns>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.AddRunToOutputBlock(System.Boolean)">
+             <summary>
+               Append one run to the output block.
+             </summary>
+            
+             <remarks>
+               <para>
+                 This compressor does run-length-encoding before BWT and etc. This
+                 method simply appends a run to the output block. The append always
+                 succeeds. The return value indicates whether the block is full:
+                 false (not full) implies that at least one additional run could be
+                 processed.
+               </para>
+             </remarks>
+             <returns>true if the block is now full; otherwise false.</returns>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.CompressAndWrite">
+            <summary>
+              Compress the data that has been placed (Run-length-encoded) into the
+              block. The compressed data goes into the CompressedBytes array.
+            </summary>
+            <remarks>
+              <para>
+                Side effects: 1.  fills the CompressedBytes array.  2. sets the
+                AvailableBytesOut property.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.mainSimpleSort(Ionic.BZip2.BZip2Compressor.CompressionState,System.Int32,System.Int32,System.Int32)">
+             This is the most hammered method of this class.
+            
+             <p>
+             This is the version using unrolled loops.
+             </p>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2Compressor.mainQSort3(Ionic.BZip2.BZip2Compressor.CompressionState,System.Int32,System.Int32,System.Int32)">
+            Method "mainQSort3", file "blocksort.c", BZip2 1.0.2
+        </member>
+        <member name="P:Ionic.BZip2.BZip2Compressor.UncompressedBytes">
+            <summary>
+              The number of uncompressed bytes being held in the buffer.
+            </summary>
+            <remarks>
+              <para>
+                I am thinking this may be useful in a Stream that uses this
+                compressor class. In the Close() method on the stream it could
+                check this value to see if anything has been written at all.  You
+                may think the stream could easily track the number of bytes it
+                wrote, which would eliminate the need for this. But, there is the
+                case where the stream writes a complete block, and it is full, and
+                then writes no more. In that case the stream may want to check.
+              </para>
+            </remarks>
+        </member>
+        <member name="F:Ionic.BZip2.BZip2Compressor.CompressionState.quadrant">
+            Array instance identical to sfmap, both are used only
+            temporarily and independently, so we do not need to allocate
+            additional memory.
+        </member>
+        <member name="T:Ionic.BZip2.ParallelBZip2OutputStream">
+             <summary>
+               A write-only decorator stream that compresses data as it is
+               written using the BZip2 algorithm. This stream compresses by
+               block using multiple threads.
+             </summary>
+             <para>
+               This class performs BZIP2 compression through writing.  For
+               more information on the BZIP2 algorithm, see
+               <see href="http://en.wikipedia.org/wiki/BZIP2"/>.
+             </para>
+            
+             <para>
+               This class is similar to <see cref="T:Ionic.BZip2.BZip2OutputStream"/>,
+               except that this implementation uses an approach that employs multiple
+               worker threads to perform the compression.  On a multi-cpu or multi-core
+               computer, the performance of this class can be significantly higher than
+               the single-threaded BZip2OutputStream, particularly for larger streams.
+               How large?  Anything over 10mb is a good candidate for parallel
+               compression.
+             </para>
+            
+             <para>
+               The tradeoff is that this class uses more memory and more CPU than the
+               vanilla <c>BZip2OutputStream</c>. Also, for small files, the
+               <c>ParallelBZip2OutputStream</c> can be much slower than the vanilla
+               <c>BZip2OutputStream</c>, because of the overhead associated to using the
+               thread pool.
+             </para>
+            
+             <seealso cref="T:Ionic.BZip2.BZip2OutputStream"/>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.#ctor(System.IO.Stream)">
+             <summary>
+               Constructs a new <c>ParallelBZip2OutputStream</c>, that sends its
+               compressed output to the given output stream.
+             </summary>
+            
+             <param name='output'>
+               The destination stream, to which compressed output will be sent.
+             </param>
+            
+             <example>
+            
+               This example reads a file, then compresses it with bzip2 file,
+               and writes the compressed data into a newly created file.
+            
+               <code>
+               var fname = "logfile.log";
+               using (var fs = File.OpenRead(fname))
+               {
+                   var outFname = fname + ".bz2";
+                   using (var output = File.Create(outFname))
+                   {
+                       using (var compressor = new Ionic.BZip2.ParallelBZip2OutputStream(output))
+                       {
+                           byte[] buffer = new byte[2048];
+                           int n;
+                           while ((n = fs.Read(buffer, 0, buffer.Length)) > 0)
+                           {
+                               compressor.Write(buffer, 0, n);
+                           }
+                       }
+                   }
+               }
+               </code>
+             </example>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.#ctor(System.IO.Stream,System.Int32)">
+            <summary>
+              Constructs a new <c>ParallelBZip2OutputStream</c> with specified blocksize.
+            </summary>
+            <param name = "output">the destination stream.</param>
+            <param name = "blockSize">
+              The blockSize in units of 100000 bytes.
+              The valid range is 1..9.
+            </param>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>
+              Constructs a new <c>ParallelBZip2OutputStream</c>.
+            </summary>
+              <param name = "output">the destination stream.</param>
+            <param name = "leaveOpen">
+              whether to leave the captive stream open upon closing this stream.
+            </param>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.#ctor(System.IO.Stream,System.Int32,System.Boolean)">
+             <summary>
+               Constructs a new <c>ParallelBZip2OutputStream</c> with specified blocksize,
+               and explicitly specifies whether to leave the wrapped stream open.
+             </summary>
+            
+             <param name = "output">the destination stream.</param>
+             <param name = "blockSize">
+               The blockSize in units of 100000 bytes.
+               The valid range is 1..9.
+             </param>
+             <param name = "leaveOpen">
+               whether to leave the captive stream open upon closing this stream.
+             </param>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.Close">
+            <summary>
+              Close the stream.
+            </summary>
+            <remarks>
+              <para>
+                This may or may not close the underlying stream.  Check the
+                constructors that accept a bool value.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.Flush">
+            <summary>
+              Flush the stream.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.Write(System.Byte[],System.Int32,System.Int32)">
+             <summary>
+               Write data to the stream.
+             </summary>
+             <remarks>
+            
+             <para>
+               Use the <c>ParallelBZip2OutputStream</c> to compress data while
+               writing: create a <c>ParallelBZip2OutputStream</c> with a writable
+               output stream.  Then call <c>Write()</c> on that
+               <c>ParallelBZip2OutputStream</c>, providing uncompressed data as
+               input.  The data sent to the output stream will be the compressed
+               form of the input data.
+             </para>
+            
+             <para>
+               A <c>ParallelBZip2OutputStream</c> can be used only for
+               <c>Write()</c> not for <c>Read()</c>.
+             </para>
+            
+             </remarks>
+            
+             <param name="buffer">The buffer holding data to write to the stream.</param>
+             <param name="offset">the offset within that data array to find the first byte to write.</param>
+             <param name="count">the number of bytes to write.</param>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="offset">this is irrelevant, since it will always throw!</param>
+            <param name="origin">this is irrelevant, since it will always throw!</param>
+            <returns>irrelevant!</returns>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.SetLength(System.Int64)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="value">this is irrelevant, since it will always throw!</param>
+        </member>
+        <member name="M:Ionic.BZip2.ParallelBZip2OutputStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="buffer">this parameter is never used</param>
+            <param name="offset">this parameter is never used</param>
+            <param name="count">this parameter is never used</param>
+            <returns>never returns anything; always throws</returns>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.MaxWorkers">
+             <summary>
+               The maximum number of concurrent compression worker threads to use.
+             </summary>
+            
+             <remarks>
+             <para>
+               This property sets an upper limit on the number of concurrent worker
+               threads to employ for compression. The implementation of this stream
+               employs multiple threads from the .NET thread pool, via <see cref="M:System.Threading.ThreadPool.QueueUserWorkItem(System.Threading.WaitCallback)">
+               ThreadPool.QueueUserWorkItem()</see>, to compress the incoming data by
+               block.  As each block of data is compressed, this stream re-orders the
+               compressed blocks and writes them to the output stream.
+             </para>
+            
+             <para>
+               A higher number of workers enables a higher degree of
+               parallelism, which tends to increase the speed of compression on
+               multi-cpu computers.  On the other hand, a higher number of buffer
+               pairs also implies a larger memory consumption, more active worker
+               threads, and a higher cpu utilization for any compression. This
+               property enables the application to limit its memory consumption and
+               CPU utilization behavior depending on requirements.
+             </para>
+            
+             <para>
+               By default, DotNetZip allocates 4 workers per CPU core, subject to the
+               upper limit specified in this property. For example, suppose the
+               application sets this property to 16.  Then, on a machine with 2
+               cores, DotNetZip will use 8 workers; that number does not exceed the
+               upper limit specified by this property, so the actual number of
+               workers used will be 4 * 2 = 8.  On a machine with 4 cores, DotNetZip
+               will use 16 workers; again, the limit does not apply. On a machine
+               with 8 cores, DotNetZip will use 16 workers, because of the limit.
+             </para>
+            
+             <para>
+               For each compression "worker thread" that occurs in parallel, there is
+               up to 2mb of memory allocated, for buffering and processing. The
+               actual number depends on the <see cref="P:Ionic.BZip2.ParallelBZip2OutputStream.BlockSize"/> property.
+             </para>
+            
+             <para>
+               CPU utilization will also go up with additional workers, because a
+               larger number of buffer pairs allows a larger number of background
+               threads to compress in parallel. If you find that parallel
+               compression is consuming too much memory or CPU, you can adjust this
+               value downward.
+             </para>
+            
+             <para>
+               The default value is 16. Different values may deliver better or
+               worse results, depending on your priorities and the dynamic
+               performance characteristics of your storage and compute resources.
+             </para>
+            
+             <para>
+               The application can set this value at any time, but it is effective
+               only before the first call to Write(), which is when the buffers are
+               allocated.
+             </para>
+             </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.BlockSize">
+            <summary>
+              The blocksize parameter specified at construction time.
+            </summary>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.CanRead">
+            <summary>
+            Indicates whether the stream can be read.
+            </summary>
+            <remarks>
+            The return value is always false.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.CanSeek">
+            <summary>
+            Indicates whether the stream supports Seek operations.
+            </summary>
+            <remarks>
+            Always returns false.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.CanWrite">
+            <summary>
+            Indicates whether the stream can be written.
+            </summary>
+            <remarks>
+            The return value depends on whether the captive stream supports writing.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.Length">
+            <summary>
+            Reading this property always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.Position">
+             <summary>
+             The position of the stream pointer.
+             </summary>
+            
+             <remarks>
+               Setting this property always throws a <see cref="T:System.NotImplementedException"/>. Reading will return the
+               total number of uncompressed bytes written through.
+             </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.ParallelBZip2OutputStream.BytesWrittenOut">
+            <summary>
+            The total number of bytes written out by the stream.
+            </summary>
+            <remarks>
+            This value is meaningful only after a call to Close().
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.Rand.Rnums(System.Int32)">
+            <summary>
+              Returns the "random" number at a specific index.
+            </summary>
+            <param name='i'>the index</param>
+            <returns>the random number</returns>
+        </member>
+        <member name="T:Ionic.BZip2.BZip2OutputStream">
+            <summary>
+              A write-only decorator stream that compresses data as it is
+              written using the BZip2 algorithm.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.#ctor(System.IO.Stream)">
+             <summary>
+               Constructs a new <c>BZip2OutputStream</c>, that sends its
+               compressed output to the given output stream.
+             </summary>
+            
+             <param name='output'>
+               The destination stream, to which compressed output will be sent.
+             </param>
+            
+             <example>
+            
+               This example reads a file, then compresses it with bzip2 file,
+               and writes the compressed data into a newly created file.
+            
+               <code>
+               var fname = "logfile.log";
+               using (var fs = File.OpenRead(fname))
+               {
+                   var outFname = fname + ".bz2";
+                   using (var output = File.Create(outFname))
+                   {
+                       using (var compressor = new Ionic.BZip2.BZip2OutputStream(output))
+                       {
+                           byte[] buffer = new byte[2048];
+                           int n;
+                           while ((n = fs.Read(buffer, 0, buffer.Length)) > 0)
+                           {
+                               compressor.Write(buffer, 0, n);
+                           }
+                       }
+                   }
+               }
+               </code>
+             </example>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.#ctor(System.IO.Stream,System.Int32)">
+            <summary>
+              Constructs a new <c>BZip2OutputStream</c> with specified blocksize.
+            </summary>
+            <param name = "output">the destination stream.</param>
+            <param name = "blockSize">
+              The blockSize in units of 100000 bytes.
+              The valid range is 1..9.
+            </param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>
+              Constructs a new <c>BZip2OutputStream</c>.
+            </summary>
+              <param name = "output">the destination stream.</param>
+            <param name = "leaveOpen">
+              whether to leave the captive stream open upon closing this stream.
+            </param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.#ctor(System.IO.Stream,System.Int32,System.Boolean)">
+             <summary>
+               Constructs a new <c>BZip2OutputStream</c> with specified blocksize,
+               and explicitly specifies whether to leave the wrapped stream open.
+             </summary>
+            
+             <param name = "output">the destination stream.</param>
+             <param name = "blockSize">
+               The blockSize in units of 100000 bytes.
+               The valid range is 1..9.
+             </param>
+             <param name = "leaveOpen">
+               whether to leave the captive stream open upon closing this stream.
+             </param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.Close">
+            <summary>
+              Close the stream.
+            </summary>
+            <remarks>
+              <para>
+                This may or may not close the underlying stream.  Check the
+                constructors that accept a bool value.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.Flush">
+            <summary>
+              Flush the stream.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.Write(System.Byte[],System.Int32,System.Int32)">
+             <summary>
+               Write data to the stream.
+             </summary>
+             <remarks>
+            
+             <para>
+               Use the <c>BZip2OutputStream</c> to compress data while writing:
+               create a <c>BZip2OutputStream</c> with a writable output stream.
+               Then call <c>Write()</c> on that <c>BZip2OutputStream</c>, providing
+               uncompressed data as input.  The data sent to the output stream will
+               be the compressed form of the input data.
+             </para>
+            
+             <para>
+               A <c>BZip2OutputStream</c> can be used only for <c>Write()</c> not for <c>Read()</c>.
+             </para>
+            
+             </remarks>
+            
+             <param name="buffer">The buffer holding data to write to the stream.</param>
+             <param name="offset">the offset within that data array to find the first byte to write.</param>
+             <param name="count">the number of bytes to write.</param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="offset">this is irrelevant, since it will always throw!</param>
+            <param name="origin">this is irrelevant, since it will always throw!</param>
+            <returns>irrelevant!</returns>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.SetLength(System.Int64)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="value">this is irrelevant, since it will always throw!</param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2OutputStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+              Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="buffer">this parameter is never used</param>
+            <param name="offset">this parameter is never used</param>
+            <param name="count">this parameter is never used</param>
+            <returns>never returns anything; always throws</returns>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2OutputStream.BlockSize">
+            <summary>
+              The blocksize parameter specified at construction time.
+            </summary>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2OutputStream.CanRead">
+            <summary>
+            Indicates whether the stream can be read.
+            </summary>
+            <remarks>
+            The return value is always false.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2OutputStream.CanSeek">
+            <summary>
+            Indicates whether the stream supports Seek operations.
+            </summary>
+            <remarks>
+            Always returns false.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2OutputStream.CanWrite">
+            <summary>
+            Indicates whether the stream can be written.
+            </summary>
+            <remarks>
+            The return value should always be true, unless and until the
+            object is disposed and closed.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2OutputStream.Length">
+            <summary>
+            Reading this property always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2OutputStream.Position">
+             <summary>
+             The position of the stream pointer.
+             </summary>
+            
+             <remarks>
+               Setting this property always throws a <see cref="T:System.NotImplementedException"/>. Reading will return the
+               total number of uncompressed bytes written through.
+             </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BitWriter.Reset">
+            <summary>
+              Reset the BitWriter.
+            </summary>
+            <remarks>
+              <para>
+                This is useful when the BitWriter writes into a MemoryStream, and
+                is used by a BZip2Compressor, which itself is re-used for multiple
+                distinct data blocks.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BitWriter.WriteBits(System.Int32,System.UInt32)">
+            <summary>
+              Write some number of bits from the given value, into the output.
+            </summary>
+            <remarks>
+              <para>
+                The nbits value should be a max of 25, for safety. For performance
+                reasons, this method does not check!
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BitWriter.WriteByte(System.Byte)">
+            <summary>
+              Write a full 8-bit byte into the output.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BitWriter.WriteInt(System.UInt32)">
+            <summary>
+              Write four 8-bit bytes into the output.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BitWriter.Flush">
+            <summary>
+              Write all available byte-aligned bytes.
+            </summary>
+            <remarks>
+              <para>
+                This method writes no new output, but flushes any accumulated
+                bits. At completion, the accumulator may contain up to 7
+                bits.
+              </para>
+              <para>
+                This is necessary when re-assembling output from N independent
+                compressors, one for each of N blocks. The output of any
+                particular compressor will in general have some fragment of a byte
+                remaining. This fragment needs to be accumulated into the
+                parent BZip2OutputStream.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.BZip2.BitWriter.FinishAndPad">
+            <summary>
+              Writes all available bytes, and emits padding for the final byte as
+              necessary. This must be the last method invoked on an instance of
+              BitWriter.
+            </summary>
+        </member>
+        <member name="P:Ionic.BZip2.BitWriter.RemainingBits">
+            <summary>
+              Delivers the remaining bits, left-aligned, in a byte.
+            </summary>
+            <remarks>
+              <para>
+                This is valid only if NumRemainingBits is less than 8;
+                in other words it is valid only after a call to Flush().
+              </para>
+            </remarks>
+        </member>
+        <member name="T:Ionic.Crc.CRC32">
+            <summary>
+              Computes a CRC-32. The CRC-32 algorithm is parameterized - you
+              can set the polynomial and enable or disable bit
+              reversal. This can be used for GZIP, BZip2, or ZIP.
+            </summary>
+            <remarks>
+              This type is used internally by DotNetZip; it is generally not used
+              directly by applications wishing to create, read, or manipulate zip
+              archive files.
+            </remarks>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.GetCrc32(System.IO.Stream)">
+            <summary>
+            Returns the CRC32 for the specified stream.
+            </summary>
+            <param name="input">The stream over which to calculate the CRC32</param>
+            <returns>the CRC32 calculation</returns>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.GetCrc32AndCopy(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Returns the CRC32 for the specified stream, and writes the input into the
+            output stream.
+            </summary>
+            <param name="input">The stream over which to calculate the CRC32</param>
+            <param name="output">The stream into which to deflate the input</param>
+            <returns>the CRC32 calculation</returns>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.ComputeCrc32(System.Int32,System.Byte)">
+            <summary>
+              Get the CRC32 for the given (word,byte) combo.  This is a
+              computation defined by PKzip for PKZIP 2.0 (weak) encryption.
+            </summary>
+            <param name="W">The word to start with.</param>
+            <param name="B">The byte to combine it with.</param>
+            <returns>The CRC-ized result.</returns>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.SlurpBlock(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Update the value for the running CRC32 using the given block of bytes.
+            This is useful when using the CRC32() class in a Stream.
+            </summary>
+            <param name="block">block of bytes to slurp</param>
+            <param name="offset">starting point in the block</param>
+            <param name="count">how many bytes within the block to slurp</param>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.UpdateCRC(System.Byte)">
+            <summary>
+              Process one byte in the CRC.
+            </summary>
+            <param name = "b">the byte to include into the CRC .  </param>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.UpdateCRC(System.Byte,System.Int32)">
+            <summary>
+              Process a run of N identical bytes into the CRC.
+            </summary>
+            <remarks>
+              <para>
+                This method serves as an optimization for updating the CRC when a
+                run of identical bytes is found. Rather than passing in a buffer of
+                length n, containing all identical bytes b, this method accepts the
+                byte value and the length of the (virtual) buffer - the length of
+                the run.
+              </para>
+            </remarks>
+            <param name = "b">the byte to include into the CRC.  </param>
+            <param name = "n">the number of times that byte should be repeated. </param>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.Combine(System.Int32,System.Int32)">
+            <summary>
+              Combines the given CRC32 value with the current running total.
+            </summary>
+            <remarks>
+              This is useful when using a divide-and-conquer approach to
+              calculating a CRC.  Multiple threads can each calculate a
+              CRC32 on a segment of the data, and then combine the
+              individual CRC32 values at the end.
+            </remarks>
+            <param name="crc">the crc value to be combined with this one</param>
+            <param name="length">the length of data the CRC value was calculated on</param>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.#ctor">
+            <summary>
+              Create an instance of the CRC32 class using the default settings: no
+              bit reversal, and a polynomial of 0xEDB88320.
+            </summary>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.#ctor(System.Boolean)">
+            <summary>
+              Create an instance of the CRC32 class, specifying whether to reverse
+              data bits or not.
+            </summary>
+            <param name='reverseBits'>
+              specify true if the instance should reverse data bits.
+            </param>
+            <remarks>
+              <para>
+                In the CRC-32 used by BZip2, the bits are reversed. Therefore if you
+                want a CRC32 with compatibility with BZip2, you should pass true
+                here. In the CRC-32 used by GZIP and PKZIP, the bits are not
+                reversed; Therefore if you want a CRC32 with compatibility with
+                those, you should pass false.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.#ctor(System.Int32,System.Boolean)">
+             <summary>
+               Create an instance of the CRC32 class, specifying the polynomial and
+               whether to reverse data bits or not.
+             </summary>
+             <param name='polynomial'>
+               The polynomial to use for the CRC, expressed in the reversed (LSB)
+               format: the highest ordered bit in the polynomial value is the
+               coefficient of the 0th power; the second-highest order bit is the
+               coefficient of the 1 power, and so on. Expressed this way, the
+               polynomial for the CRC-32C used in IEEE 802.3, is 0xEDB88320.
+             </param>
+             <param name='reverseBits'>
+               specify true if the instance should reverse data bits.
+             </param>
+            
+             <remarks>
+               <para>
+                 In the CRC-32 used by BZip2, the bits are reversed. Therefore if you
+                 want a CRC32 with compatibility with BZip2, you should pass true
+                 here for the <c>reverseBits</c> parameter. In the CRC-32 used by
+                 GZIP and PKZIP, the bits are not reversed; Therefore if you want a
+                 CRC32 with compatibility with those, you should pass false for the
+                 <c>reverseBits</c> parameter.
+               </para>
+             </remarks>
+        </member>
+        <member name="M:Ionic.Crc.CRC32.Reset">
+            <summary>
+              Reset the CRC-32 class - clear the CRC "remainder register."
+            </summary>
+            <remarks>
+              <para>
+                Use this when employing a single instance of this class to compute
+                multiple, distinct CRCs on multiple, distinct data blocks.
+              </para>
+            </remarks>
+        </member>
+        <member name="P:Ionic.Crc.CRC32.TotalBytesRead">
+            <summary>
+              Indicates the total number of bytes applied to the CRC.
+            </summary>
+        </member>
+        <member name="P:Ionic.Crc.CRC32.Crc32Result">
+            <summary>
+            Indicates the current CRC for all blocks slurped in.
+            </summary>
+        </member>
+        <member name="T:Ionic.Crc.CrcCalculatorStream">
+             <summary>
+             A Stream that calculates a CRC32 (a checksum) on all bytes read,
+             or on all bytes written.
+             </summary>
+            
+             <remarks>
+             <para>
+             This class can be used to verify the CRC of a ZipEntry when
+             reading from a stream, or to calculate a CRC when writing to a
+             stream.  The stream should be used to either read, or write, but
+             not both.  If you intermix reads and writes, the results are not
+             defined.
+             </para>
+            
+             <para>
+             This class is intended primarily for use internally by the
+             DotNetZip library.
+             </para>
+             </remarks>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.#ctor(System.IO.Stream)">
+            <summary>
+            The default constructor.
+            </summary>
+            <remarks>
+              <para>
+                Instances returned from this constructor will leave the underlying
+                stream open upon Close().  The stream uses the default CRC32
+                algorithm, which implies a polynomial of 0xEDB88320.
+              </para>
+            </remarks>
+            <param name="stream">The underlying stream</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>
+              The constructor allows the caller to specify how to handle the
+              underlying stream at close.
+            </summary>
+            <remarks>
+              <para>
+                The stream uses the default CRC32 algorithm, which implies a
+                polynomial of 0xEDB88320.
+              </para>
+            </remarks>
+            <param name="stream">The underlying stream</param>
+            <param name="leaveOpen">true to leave the underlying stream
+            open upon close of the <c>CrcCalculatorStream</c>; false otherwise.</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.#ctor(System.IO.Stream,System.Int64)">
+            <summary>
+              A constructor allowing the specification of the length of the stream
+              to read.
+            </summary>
+            <remarks>
+              <para>
+                The stream uses the default CRC32 algorithm, which implies a
+                polynomial of 0xEDB88320.
+              </para>
+              <para>
+                Instances returned from this constructor will leave the underlying
+                stream open upon Close().
+              </para>
+            </remarks>
+            <param name="stream">The underlying stream</param>
+            <param name="length">The length of the stream to slurp</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.#ctor(System.IO.Stream,System.Int64,System.Boolean)">
+            <summary>
+              A constructor allowing the specification of the length of the stream
+              to read, as well as whether to keep the underlying stream open upon
+              Close().
+            </summary>
+            <remarks>
+              <para>
+                The stream uses the default CRC32 algorithm, which implies a
+                polynomial of 0xEDB88320.
+              </para>
+            </remarks>
+            <param name="stream">The underlying stream</param>
+            <param name="length">The length of the stream to slurp</param>
+            <param name="leaveOpen">true to leave the underlying stream
+            open upon close of the <c>CrcCalculatorStream</c>; false otherwise.</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.#ctor(System.IO.Stream,System.Int64,System.Boolean,Ionic.Crc.CRC32)">
+            <summary>
+              A constructor allowing the specification of the length of the stream
+              to read, as well as whether to keep the underlying stream open upon
+              Close(), and the CRC32 instance to use.
+            </summary>
+            <remarks>
+              <para>
+                The stream uses the specified CRC32 instance, which allows the
+                application to specify how the CRC gets calculated.
+              </para>
+            </remarks>
+            <param name="stream">The underlying stream</param>
+            <param name="length">The length of the stream to slurp</param>
+            <param name="leaveOpen">true to leave the underlying stream
+            open upon close of the <c>CrcCalculatorStream</c>; false otherwise.</param>
+            <param name="crc32">the CRC32 instance to use to calculate the CRC32</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read from the stream
+            </summary>
+            <param name="buffer">the buffer to read</param>
+            <param name="offset">the offset at which to start</param>
+            <param name="count">the number of bytes to read</param>
+            <returns>the number of bytes actually read</returns>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Write to the stream.
+            </summary>
+            <param name="buffer">the buffer from which to write</param>
+            <param name="offset">the offset at which to start writing</param>
+            <param name="count">the number of bytes to write</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.Flush">
+            <summary>
+            Flush the stream.
+            </summary>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Seeking is not supported on this stream. This method always throws
+            <see cref="T:System.NotSupportedException"/>
+            </summary>
+            <param name="offset">N/A</param>
+            <param name="origin">N/A</param>
+            <returns>N/A</returns>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.SetLength(System.Int64)">
+            <summary>
+            This method always throws
+            <see cref="T:System.NotSupportedException"/>
+            </summary>
+            <param name="value">N/A</param>
+        </member>
+        <member name="M:Ionic.Crc.CrcCalculatorStream.Close">
+            <summary>
+            Closes the stream.
+            </summary>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.TotalBytesSlurped">
+             <summary>
+               Gets the total number of bytes run through the CRC32 calculator.
+             </summary>
+            
+             <remarks>
+               This is either the total number of bytes read, or the total number of
+               bytes written, depending on the direction of this stream.
+             </remarks>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.Crc">
+            <summary>
+              Provides the current CRC for all blocks slurped in.
+            </summary>
+            <remarks>
+              <para>
+                The running total of the CRC is kept as data is written or read
+                through the stream.  read this property after all reads or writes to
+                get an accurate CRC for the entire stream.
+              </para>
+            </remarks>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.LeaveOpen">
+            <summary>
+              Indicates whether the underlying stream will be left open when the
+              <c>CrcCalculatorStream</c> is Closed.
+            </summary>
+            <remarks>
+              <para>
+                Set this at any point before calling <see cref="M:Ionic.Crc.CrcCalculatorStream.Close"/>.
+              </para>
+            </remarks>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.CanRead">
+            <summary>
+            Indicates whether the stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.CanSeek">
+            <summary>
+              Indicates whether the stream supports seeking.
+            </summary>
+            <remarks>
+              <para>
+                Always returns false.
+              </para>
+            </remarks>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.CanWrite">
+            <summary>
+            Indicates whether the stream supports writing.
+            </summary>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.Length">
+            <summary>
+              Returns the length of the underlying stream.
+            </summary>
+        </member>
+        <member name="P:Ionic.Crc.CrcCalculatorStream.Position">
+            <summary>
+              The getter for this property returns the total bytes read.
+              If you use the setter, it will throw
+            <see cref="T:System.NotSupportedException"/>.
+            </summary>
+        </member>
+        <member name="T:Ionic.BZip2.BZip2InputStream">
+            <summary>
+              A read-only decorator stream that performs BZip2 decompression on Read.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.#ctor(System.IO.Stream)">
+            <summary>
+              Create a BZip2InputStream, wrapping it around the given input Stream.
+            </summary>
+            <remarks>
+              <para>
+                The input stream will be closed when the BZip2InputStream is closed.
+              </para>
+            </remarks>
+            <param name='input'>The stream from which to read compressed data</param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.#ctor(System.IO.Stream,System.Boolean)">
+             <summary>
+               Create a BZip2InputStream with the given stream, and
+               specifying whether to leave the wrapped stream open when
+               the BZip2InputStream is closed.
+             </summary>
+             <param name='input'>The stream from which to read compressed data</param>
+             <param name='leaveOpen'>
+               Whether to leave the input stream open, when the BZip2InputStream closes.
+             </param>
+            
+             <example>
+            
+               This example reads a bzip2-compressed file, decompresses it,
+               and writes the decompressed data into a newly created file.
+            
+               <code>
+               var fname = "logfile.log.bz2";
+               using (var fs = File.OpenRead(fname))
+               {
+                   using (var decompressor = new Ionic.BZip2.BZip2InputStream(fs))
+                   {
+                       var outFname = fname + ".decompressed";
+                       using (var output = File.Create(outFname))
+                       {
+                           byte[] buffer = new byte[2048];
+                           int n;
+                           while ((n = decompressor.Read(buffer, 0, buffer.Length)) > 0)
+                           {
+                               output.Write(buffer, 0, n);
+                           }
+                       }
+                   }
+               }
+               </code>
+             </example>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.Read(System.Byte[],System.Int32,System.Int32)">
+             <summary>
+               Read data from the stream.
+             </summary>
+            
+             <remarks>
+               <para>
+                 To decompress a BZip2 data stream, create a <c>BZip2InputStream</c>,
+                 providing a stream that reads compressed data.  Then call Read() on
+                 that <c>BZip2InputStream</c>, and the data read will be decompressed
+                 as you read.
+               </para>
+            
+               <para>
+                 A <c>BZip2InputStream</c> can be used only for <c>Read()</c>, not for <c>Write()</c>.
+               </para>
+             </remarks>
+            
+             <param name="buffer">The buffer into which the read data should be placed.</param>
+             <param name="offset">the offset within that data array to put the first byte read.</param>
+             <param name="count">the number of bytes to read.</param>
+             <returns>the number of bytes actually read</returns>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.ReadByte">
+            <summary>
+              Read a single byte from the stream.
+            </summary>
+            <returns>the byte read from the stream, or -1 if EOF</returns>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.Flush">
+            <summary>
+            Flush the stream.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="offset">this is irrelevant, since it will always throw!</param>
+            <param name="origin">this is irrelevant, since it will always throw!</param>
+            <returns>irrelevant!</returns>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.SetLength(System.Int64)">
+            <summary>
+            Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="value">this is irrelevant, since it will always throw!</param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+              Calling this method always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+            <param name="buffer">this parameter is never used</param>
+            <param name="offset">this parameter is never used</param>
+            <param name="count">this parameter is never used</param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.Dispose(System.Boolean)">
+            <summary>
+              Dispose the stream.
+            </summary>
+            <param name="disposing">
+              indicates whether the Dispose method was invoked by user code.
+            </param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.Close">
+            <summary>
+              Close the stream.
+            </summary>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.GetBits(System.Int32)">
+            <summary>
+              Read n bits from input, right justifying the result.
+            </summary>
+            <remarks>
+              <para>
+                For example, if you read 1 bit, the result is either 0
+                or 1.
+              </para>
+            </remarks>
+            <param name ="n">
+              The number of bits to read, always between 1 and 32.
+            </param>
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.hbCreateDecodeTables(System.Int32[],System.Int32[],System.Int32[],System.Char[],System.Int32,System.Int32,System.Int32)">
+            Called by createHuffmanDecodingTables() exclusively.
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.createHuffmanDecodingTables(System.Int32,System.Int32)">
+            Called by recvDecodingTables() exclusively.
+        </member>
+        <member name="P:Ionic.BZip2.BZip2InputStream.CanRead">
+            <summary>
+            Indicates whether the stream can be read.
+            </summary>
+            <remarks>
+            The return value depends on whether the captive stream supports reading.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2InputStream.CanSeek">
+            <summary>
+            Indicates whether the stream supports Seek operations.
+            </summary>
+            <remarks>
+            Always returns false.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2InputStream.CanWrite">
+            <summary>
+            Indicates whether the stream can be written.
+            </summary>
+            <remarks>
+            The return value depends on whether the captive stream supports writing.
+            </remarks>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2InputStream.Length">
+            <summary>
+            Reading this property always throws a <see cref="T:System.NotImplementedException"/>.
+            </summary>
+        </member>
+        <member name="P:Ionic.BZip2.BZip2InputStream.Position">
+             <summary>
+             The position of the stream pointer.
+             </summary>
+            
+             <remarks>
+               Setting this property always throws a <see cref="T:System.NotImplementedException"/>. Reading will return the
+               total number of uncompressed bytes read in.
+             </remarks>
+        </member>
+        <member name="T:Ionic.BZip2.BZip2InputStream.CState">
+            <summary>
+              Compressor State
+            </summary>
+        </member>
+        <member name="F:Ionic.BZip2.BZip2InputStream.DecompressionState.unzftab">
+            Freq table collected to save a pass over the data during
+            decompression.
+        </member>
+        <member name="M:Ionic.BZip2.BZip2InputStream.DecompressionState.initTT(System.Int32)">
+             Initializes the tt array.
+            
+             This method is called when the required length of the array is known.
+             I don't initialize it at construction time to avoid unneccessary
+             memory allocation when compressing small files.
+        </member>
+    </members>
+</doc>
