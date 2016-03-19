@@ -36,12 +36,11 @@ Partial Class Form1
         '
         'Label1
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(74, 27)
+        Me.Label1.Location = New System.Drawing.Point(0, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(177, 15)
         Me.Label1.TabIndex = 1

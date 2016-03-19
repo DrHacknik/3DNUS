@@ -27,3 +27,5 @@ C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extens
 C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\x86\Extension Manager.vbproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\x86\dje\Extension Manager.resources.dll
 C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.dev_market.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\x86\Extension_Manager.dev_slot_install_sel.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\x86\x86\Ionic.Zip.dll

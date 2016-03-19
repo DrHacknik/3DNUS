@@ -15,9 +15,27 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = My.Settings.settings_load_text
-        If My.Settings.settings_load_text = Nothing Then
-            Label1.Text = "Brewing your Coffee, Please wait..."
+        If My.Settings.cache_state = Nothing Then
+            Timer1.Interval = 55
+            Label1.Text = "Building Cache..."
+            'This is where the Building Cache for Extensions would go. 
+            'Basically a Database
+
+            My.Settings.cache_state = "1"
+            My.Settings.Save()
+        End If
+        If My.Settings.cache_state = "1" Then
+            Timer1.Interval = 3
+            Label1.Text = My.Settings.settings_load_text
+
+
+
+        End If
+        If My.Settings.cache_state = "0" Then
+            Timer1.Interval = 55
+            Label1.Text = "Building Cache..."
+            'This is where the Building Cache for Extensions would go. 
+            'Basically a Database
         End If
     End Sub
 End Class

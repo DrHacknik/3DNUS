@@ -221,6 +221,30 @@ Namespace My
                 Me("ext_icon") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property cache_state() As String
+            Get
+                Return CType(Me("cache_state"),String)
+            End Get
+            Set
+                Me("cache_state") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dev_martket_state() As String
+            Get
+                Return CType(Me("dev_martket_state"),String)
+            End Get
+            Set
+                Me("dev_martket_state") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

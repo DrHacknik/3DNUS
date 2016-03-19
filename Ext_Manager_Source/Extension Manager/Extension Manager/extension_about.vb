@@ -12,11 +12,16 @@ Public Class extension_about
     End Sub
 
     Private Sub extension_about_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = System.IO.File.ReadAllText(My.Settings.ext_info)
-        Label2.Text = System.IO.File.ReadAllText(My.Settings.ext_info)
-        Label4.Text = System.IO.File.ReadAllText(My.Settings.ext_short)
-        Label3.Text = System.IO.File.ReadAllText(My.Settings.ext_long)
-        PictureBox1.BackgroundImage = Image.FromFile(My.Settings.ext_icon)
+        Try
+            Label1.Text = System.IO.File.ReadAllText(My.Settings.ext_info)
+            Label2.Text = System.IO.File.ReadAllText(My.Settings.ext_info)
+            Label4.Text = System.IO.File.ReadAllText(My.Settings.ext_short)
+            Label3.Text = System.IO.File.ReadAllText(My.Settings.ext_long)
+            PictureBox1.BackgroundImage = Image.FromFile(My.Settings.ext_icon)
+        Catch
+            MessageBox.Show("There seems to be No Extension Files within the Slot you Selected.", "Extension Manager: Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

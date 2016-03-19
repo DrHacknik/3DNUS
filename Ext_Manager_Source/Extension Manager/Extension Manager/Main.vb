@@ -1,3 +1,5 @@
+Imports Ionic.Zip
+
 Public Class Main
     Dim cd = Application.StartupPath
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -14,6 +16,9 @@ Public Class Main
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Settings.cache_state = "1"
+        My.Settings.Save()
+
         If My.Settings.settings_enable_mrkt = "1" Then
             DEVMARKETToolStripMenuItem.Visible = True
         Else
@@ -365,7 +370,7 @@ Listening to dev_main"
     End Sub
 
     Private Sub InstallToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InstallToolStripMenuItem.Click
-        Install.ShowDialog()
+        dev_slot_install_sel.Show()
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -384,5 +389,13 @@ Listening to dev_market"
 
     Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
         My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, My.Settings.settings_def_color + ", " + My.Settings.settings_devmd + ", " + My.Settings.settings_enable_mrkt + ", " + My.Settings.settings_encrypt + ", " + My.Settings.settings_encrypt_type + ", " + My.Settings.settings_inst_chck + ", " + My.Settings.settings_inst_sgnd + ", " + My.Settings.settings_load_text, True)
+    End Sub
+
+    Private Sub Install_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
+
+    End Sub
+
+    Private Sub ReloadExtensionsToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Application.Restart()
     End Sub
 End Class
