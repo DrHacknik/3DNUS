@@ -26,11 +26,28 @@ Public Class dev_market
     cd + "\main.html")
             WebBrowser1.Navigate(cd + "\main.html")
 
+
         Catch
         End Try
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub WebView1_DownloadCompleted(sender As Object, e As EO.WebBrowser.DownloadEventArgs)
+
+    End Sub
+
+    Private Sub WebView1_LoadCompleted(sender As Object, e As EO.WebBrowser.LoadCompletedEventArgs)
+
+    End Sub
+
+    Private Sub WebView1_UrlChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub WebView1_IsLoadingChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

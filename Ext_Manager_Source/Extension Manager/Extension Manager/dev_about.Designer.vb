@@ -54,9 +54,9 @@ Partial Class dev_about
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(98, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 15)
+        Me.Label3.Size = New System.Drawing.Size(110, 15)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Build: 81 - Codename"
+        Me.Label3.Text = "Build: 83 - Lynnwood"
         '
         'Panel1
         '

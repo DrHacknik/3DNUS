@@ -54,3 +54,12 @@ C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extens
 C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.xml
 C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.pdb
 C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.vbprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\EO.WebBrowser.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\EO.Base.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\EO.WebEngine.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\EO.WebBrowser.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\EO.Base.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\EO.WebEngine.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\WebKitBrowser.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\WebKit.Interop.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\Debug\stdole.dll

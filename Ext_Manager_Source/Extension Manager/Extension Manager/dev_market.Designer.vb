@@ -26,8 +26,8 @@ Partial Class dev_market
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,18 +70,6 @@ Partial Class dev_market
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 24)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(667, 471)
-        Me.WebBrowser1.TabIndex = 3
-        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
-        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.White
@@ -93,6 +81,18 @@ Partial Class dev_market
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
+        Me.WebBrowser1.Location = New System.Drawing.Point(0, 24)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
+        Me.WebBrowser1.Size = New System.Drawing.Size(667, 471)
+        Me.WebBrowser1.TabIndex = 3
+        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
         '
         'dev_market
         '
@@ -124,6 +124,6 @@ Partial Class dev_market
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents WebBrowser1 As WebBrowser
 End Class
