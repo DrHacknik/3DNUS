@@ -27,10 +27,36 @@ namespace _3DNUS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            string cd = Path.GetDirectoryName(Application.ExecutablePath);
             timer1.Stop();
-            Main form = new Main();
-            form.Show();
-            Hide();
+            if (File.ReadAllText(cd + "\\Config\\setup_completed.cfg") == (""))
+            {
+                Process.Start(cd + "\\dev_first_time_setup.exe");
+                try
+                {
+                    Process[] workers = Process.GetProcessesByName("3DNUS Upd - Lite");
+                    foreach (Process worker in workers)
+                    {
+                        worker.Kill();
+                        worker.WaitForExit();
+                        worker.Dispose();
+                    }
+                    Application.Exit();
+
+                }
+                catch
+                {
+                }
+                Application.Exit();
+            }
+            timer1.Stop();
+            if (File.ReadAllText(cd + "\\Config\\setup_completed.cfg") == ("1"))
+            {
+                Main form = new Main();
+                form.Show();
+                Hide();
+            }
+           
         }
 
         private void main_load_Load(object sender, EventArgs e)
