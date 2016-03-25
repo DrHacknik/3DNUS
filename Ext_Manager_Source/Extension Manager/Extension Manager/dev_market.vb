@@ -19,12 +19,17 @@ Public Class dev_market
     End Sub
 
     Private Sub dev_market_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Download the HTML Files & Save them. 
         Try
             File.Delete(cd + "\\main.html")
+            File.Delete(cd + "\\404_Not_Found.html")
             My.Computer.Network.DownloadFile(
     "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/main.html",
     cd + "\main.html")
-            WebBrowser1.Navigate(cd + "\main.html")
+            My.Computer.Network.DownloadFile(
+    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/404_Not_Found.html",
+    cd + "\404_Not_Found.html")
+
 
 
         Catch

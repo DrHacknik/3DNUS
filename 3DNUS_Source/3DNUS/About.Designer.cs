@@ -54,7 +54,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 30);
             this.label1.TabIndex = 2;
-            this.label1.Text = "3DNUS 2.5:";
+            this.label1.Text = "3DNUS 2.6:";
             // 
             // label2
             // 
@@ -63,7 +63,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 91);
             this.label2.TabIndex = 3;
-            this.label2.Text = "       3DNUS Version 2.5.4\r\n                (STABLE) \r\n     Original work by: Gro" +
+            this.label2.Text = "       3DNUS Version 2.6.0\r\n                (STABLE) \r\n     Original work by: Gro" +
     "und\r\n\r\nNow maintained by: Dr. Hacknik\r\n\r\n      CIA and WUD: Crediar";
             // 
             // label3

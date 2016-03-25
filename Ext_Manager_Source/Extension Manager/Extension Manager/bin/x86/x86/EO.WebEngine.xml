@@ -1,0 +1,643 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>EO.WebEngine</name>
+  </assembly>
+  <members>
+    <member name="T:EO.WebEngine.BrowserOptions">
+      <summary>
+            Contains options for a WebView instance.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.BrowserOptions.Clone">
+      <summary>
+            To create a copy of this <see cref="T:EO.WebEngine.BrowserOptions" /> class.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.DefaultEncoding">
+      <summary>
+            Gets or sets the default page encoding.
+            </summary>
+      <remarks>
+            If you do not set this property, ISO-8859-1 encoding is used.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.UserStyleSheet">
+      <summary>
+            Gets or sets the additional style sheets to be applied to the document.
+            </summary>
+      <remarks>
+            Setting this property to a string that contains one or more style rules
+            applies the style rules to the document. For example, you can set it to
+            <code lang="CSS" title="CSS">
+            body { font-size: 20px; }
+            </code>
+            to change the document's default font size to 20px.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScript">
+      <summary>
+            Gets or sets a value indicating whether JavaScript should be allowed.
+            </summary>
+      <remarks>
+            If you do not set this property, default value <b>true</b> is used.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptOpenWindow">
+      <summary>
+            Gets or sets a value indicating whether opening a new window from JavaScript should be allowed.
+            </summary>
+      <remarks>
+            If you do not set this property, the default value <b>true</b> is used.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptCloseWindow">
+      <summary>
+            Gets or sets a value indicating whether using JavaScript to close a window that was not opened with JavaScript should be allowed.
+            </summary>
+      <remarks>
+        <para>
+            This property controls whether using JavaScript to close a window that was not opened with JavaScript should be 
+            allowed. Windows that were opened with JavaScript are always be allowed.
+            </para>
+        <para>
+            If you do not set this property, the default value <b>true</b> is used.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowJavaScriptAccessClipboard">
+      <summary>
+            Gets or sets a value indicating whether accessing clipboard from JavaScript should be allowed.
+            </summary>
+      <remarks>
+            If you do not set this property, the default value <b>false</b> is used.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowPlugins">
+      <summary>
+            Gets or sets a value indicating whether any plug-in can be loaded.
+            </summary>
+      <remarks>
+            If you do not set this property, default value <b>true</b> is used.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.EnableWebSecurity">
+      <summary>
+            Gets or sets a value indicating whether to enforce same-origin policy.
+            </summary>
+      <remarks>
+            If you do not set this property, default value <b>true</b> is used. When this
+            option is enabled, the browser enforce same-origin policy. For example, it does 
+            not allow JavaScript code from one site to access contents of a page from 
+            another site. This is a major security measure thus all modern browsers enforce 
+            this policy by default. 
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.EnableXSSAuditor">
+      <summary>
+            Gets or sets a value indicating whether to enable XSS auditor.
+            </summary>
+      <remarks>
+            If you do not set this property, default value <b>true</b> is used, which
+            enables the XSS Auditor. The XSS auditor is a built-in security feature
+            designed to mitigate reflective XSS (cross site scripting).
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.LoadImages">
+      <summary>
+            Gets or sets a value indicating whether the browser engine should automatically
+            load images.
+            </summary>
+      <remarks>
+            If you do not set this property, default value <b>true</b> is used. In that
+            case the browser engine will automatically loads images if necessary. When this
+            property is set to <b>false</b>, the browser will only the image only if it
+            is already in the cache.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.Cursor">
+      <summary>
+            Gets or sets the default cursor.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.BrowserOptions.AllowZooming">
+      <summary>
+            Gets or sets a value to determine whether user can use Ctrl + mouse wheel or +/- to zoom
+            the current view.
+            </summary>
+      <remarks>
+            If you do not set this value, default value <b>true</b> is used.
+            </remarks>
+    </member>
+    <member name="T:EO.WebEngine.CursorType">
+      <summary>
+            Specifies the type of the cursor.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Auto">
+      <summary>
+            The browser determines the cursor to display based on the current context.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Default">
+      <summary>
+            Default cursor, typically an arrow.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.None">
+      <summary>
+            No cursor is rendered.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Help">
+      <summary>
+            ndicating help is available.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Pointer">
+      <summary>
+            E.g. used when hovering over links, typically a hand.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Progress">
+      <summary>
+            The program is busy in the background but the user can still interact with the interface (unlike for wait).
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Wait">
+      <summary>
+            The program is busy (sometimes an hourglass or a watch).
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.CrossHair">
+      <summary>
+            Cross cursor, often used to indicate selection in a bitmap.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Text">
+      <summary>
+            Indicating text can be selected, typically an I-beam.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.VerticalText">
+      <summary>
+            Indicating that vertical text can be selected, typically a sideways I-beam.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Alias">
+      <summary>
+            Indicating an alias or shortcut is to be created.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Copy">
+      <summary>
+            Indicating that something can be copied.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Move">
+      <summary>
+            The hovered object may be moved.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.NotAllowed">
+      <summary>
+            Cursor showing that something cannot be done.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.ColResize">
+      <summary>
+            The item/column can be resized horizontally. Often rendered as arrows pointing left and right with a vertical bar separating.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.RowResize">
+      <summary>
+            The item/row can be resized vertically. Often rendered as arrows pointing up and down with a horizontal bar separating them.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.EWResize">
+      <summary>
+            East-west resize.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.NSResize">
+      <summary>
+            North-south resize.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.NESWResize">
+      <summary>
+            North east to south west resize.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.NWSEResize">
+      <summary>
+            North west to south east resize.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.ZoomIn">
+      <summary>
+            Zoom in.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.ZoomOut">
+      <summary>
+            Zoom out.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Grab">
+      <summary>
+            Indicates that something can be grabbed.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.CursorType.Custom">
+      <summary>
+            Custom cursor.
+            </summary>
+    </member>
+    <member name="T:EO.WebEngine.Cursor">
+      <summary>
+            Represents a cursor.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.Cursor.#ctor(EO.WebEngine.CursorType)">
+      <summary>
+            Initializes a <see cref="T:EO.WebEngine.Cursor" /> of a predefined cursor type.
+            </summary>
+      <param name="type">Cursor type.</param>
+    </member>
+    <member name="M:EO.WebEngine.Cursor.#ctor(System.String,System.Int32,System.Int32)">
+      <summary>
+            Initalizes a custom cursor.
+            </summary>
+      <param name="uriString">The Uri of the custom cursor, can be a local file name.</param>
+      <param name="x">Hotspot X.</param>
+      <param name="y">Hotspot Y.</param>
+    </member>
+    <member name="M:EO.WebEngine.Cursor.#ctor(System.String)">
+      <summary>
+            Initalizes a custom cursor.
+            </summary>
+      <param name="uri">The Uri of the custom cursor, can be a local file name.</param>
+    </member>
+    <member name="M:EO.WebEngine.Cursor.#ctor(System.String,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            Initalizes a custom cursor.
+            </summary>
+      <param name="mimeType">Custom cursor data MIME type.</param>
+      <param name="data">Custom cursor data.</param>
+      <param name="x">Hotspot X.</param>
+      <param name="y">Hotspot Y.</param>
+    </member>
+    <member name="M:EO.WebEngine.Cursor.#ctor(System.String,System.Byte[])">
+      <summary>
+            Initalizes a custom cursor.
+            </summary>
+      <param name="mimeType">Custom cursor data MIME type.</param>
+      <param name="data">Custom cursor data.</param>
+    </member>
+    <member name="P:EO.WebEngine.Cursor.Type">
+      <summary>
+            Gets the cursor type.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Cursor.HotSpot">
+      <summary>
+            Gets the hotspot for the cursor.
+            </summary>
+    </member>
+    <member name="T:EO.WebEngine.EngineState">
+      <summary>
+            Represents the state of a browser engine.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.EngineState.Created">
+      <summary>
+            The engine has been created by has not started yet.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.EngineState.Starting">
+      <summary>
+            The engine is starting.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.EngineState.Running">
+      <summary>
+            The engine is running.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.EngineState.Stopping">
+      <summary>
+            The engine is stopping.
+            </summary>
+    </member>
+    <member name="F:EO.WebEngine.EngineState.Stopped">
+      <summary>
+            The engine is stopped.
+            </summary>
+    </member>
+    <member name="T:EO.WebEngine.EngineEventArgs">
+      <summary>
+            Provides additional information for an <see cref="T:EO.WebEngine.Engine" /> event.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineEventArgs.Data">
+      <summary>
+            Gets or sets the data to be associated to the engine.
+            </summary>
+      <remarks>
+            You can change this property in your event handler. After the event handler,
+            the value of this property is stored in <see cref="P:EO.WebEngine.Engine.Data">Engine.Data</see>
+            property.
+            </remarks>
+    </member>
+    <member name="T:EO.WebEngine.EngineEventHandler">
+      <summary>
+            Represents the method that will handle an <see cref="T:EO.WebEngine.Engine" /> event.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">Additional event data.</param>
+    </member>
+    <member name="T:EO.WebEngine.Engine">
+      <summary>
+            Represents a browser engine.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.Engine.Create(System.String)">
+      <summary>
+            Creates a new browser engine instance.
+            </summary>
+      <param name="name">The name of the engine.</param>
+    </member>
+    <member name="M:EO.WebEngine.Engine.FromName(System.String,System.Boolean)">
+      <summary>
+            Gets a browser engine by the engine name.
+            </summary>
+      <param name="name">The name of the engine.</param>
+      <param name="autoCreate">True to automatically create the engine if an engine
+            with the specific name does not exist.</param>
+      <returns>
+            Returns the matching <see cref="T:EO.WebEngine.Engine" /> object if a match is found
+            or <i>autoCreate</i> is true. Otherwise <b>null</b>.
+            </returns>
+    </member>
+    <member name="M:EO.WebEngine.Engine.FromName(System.String)">
+      <summary>
+            Gets the browser engine by engine name.
+            </summary>
+      <param name="name">The name of the engine.</param>
+      <returns>
+            Returns the matching <see cref="T:EO.WebEngine.Engine" /> object if a match is found,
+            otherwise <b>null</b>.
+            </returns>
+    </member>
+    <member name="M:EO.WebEngine.Engine.FromID(System.Int32)">
+      <summary>
+            Gets the browser engine by engine ID.
+            </summary>
+      <param name="id">The unique engine ID.</param>
+    </member>
+    <member name="M:EO.WebEngine.Engine.Start">
+      <summary>
+            Starts the engine.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.Engine.Stop(System.Boolean)">
+      <summary>
+            Stop the engine.
+            </summary>
+      <param name="deleteCache">
+            Whether to automatically delete cached data (including history,
+            cache, cookies, etc) during the life span of the engine.
+            </param>
+    </member>
+    <member name="M:EO.WebEngine.Engine.GetChildProcessIDs">
+      <summary>
+            Returns a list of child process IDs.
+            </summary>
+      <remarks>
+        <para>
+            Chromium browser engine employs a multi-process architecture. Use this
+            method to returns the PID of the child processes in which the browser
+            engine runs. The first PID is the main browser process. The rest PIDs
+            are child processes for other purposes --- such as rendering process,
+            GPU processes, plug-in processes, etc.
+            </para>
+        <para>
+            If the function fails (for example, the engine is not running), the
+            return value is null.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Default">
+      <summary>
+            Gets the default engine.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.AllowRestart">
+      <summary>
+            Gets or sets a value specifying whether the engine can be restarted.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.ID">
+      <summary>
+            Gets the unique engine ID.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Name">
+      <summary>
+            Gets the engine name.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Options">
+      <summary>
+            Gets the options for this engine.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.State">
+      <summary>
+            Gets the engine state.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.Engine.Data">
+      <summary>
+            Gets or sets custom engine data.
+            </summary>
+      <remarks>
+            This property corresponds to <see cref="P:EO.WebEngine.EngineEventArgs.Data">EngineEventArgs.Data</see>.
+            </remarks>
+    </member>
+    <member name="E:EO.WebEngine.Engine.Started">
+      <summary>
+            Occurs when the engine has been started.
+            </summary>
+    </member>
+    <member name="E:EO.WebEngine.Engine.Stopped">
+      <summary>
+            Occurs when the engine has been stopped.
+            </summary>
+    </member>
+    <member name="T:EO.WebEngine.EngineOptions">
+      <summary>
+            Contains options for a browser engine.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.#ctor">
+      <summary>
+            Creates a new instance of the <see cref="T:EO.WebEngine.EngineOptions" /> object.
+            </summary>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.RegisterCustomSchemes(System.String[])">
+      <summary>
+            Registers one or more protocoal schemes.
+            </summary>
+      <param name="schemes">One or more custom protocol schemes.</param>
+      <remarks>
+            See <a href="WebBrowser/Advanced/resource_handler.html">custom resource handler</a> for more information on how to use this method.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.SetDefaultBrowserOptions(EO.WebEngine.BrowserOptions)">
+      <summary>
+            Sets the default options for all WebView objects created after this call.
+            </summary>
+      <param name="options">The <see cref="T:EO.WebEngine.BrowserOptions" /> object.</param>
+      <remarks>
+            This function does not affect WebView objects created before this function is called.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.AllowProprietaryMediaFormats">
+      <summary>
+            Enable proprietary media formats support.
+            </summary>
+      <remarks>
+            By default supports for certain media formats (particularly MP4 video
+            and MP3 audio) are disabled because these formats are covered by patents. 
+            If you wish to use these formats, you must check whether you are in
+            compliance with the license terms of the specific patent owners.
+            See <a href="WebBrowser/advanced/html5.html#codecs">here</a> for more details.
+            Once you are in compliance, you can call this method to enable supports
+            to those media formats.
+            </remarks>
+    </member>
+    <member name="M:EO.WebEngine.EngineOptions.Clone">
+      <summary>
+            Make a copy of this <see cref="T:EO.WebEngine.EngineOptions" /> class.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.Default">
+      <summary>
+            Gets the default engine options.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.CachePath">
+      <summary>
+            Gets or sets the cache path.
+            </summary>
+      <remarks>
+            This path is also used to store cookies.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.RemoteDebugPort">
+      <summary>
+            Gets or sets the remote debug port.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.DisableGPU">
+      <summary>
+            Gets or sets whether to disable GPU.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.AutoScanCommonPlugins">
+      <summary>
+            Gets or sets a value indicating whether to automatically scan commonly used plugins.
+            </summary>
+      <remarks>
+        <para>
+            By default, the browser engine automatically scans and loads plugins from
+            the following directories:
+            </para>
+        <list type="bullet">
+          <item>The same directory where EO.WebBrowser.dll is located;</item>
+          <item>If FireFox is installed, then scans FireFox's plugin directory;</item>
+          <item>Acrobat or Acrobat reader browser plugin directory;</item>
+          <item>QuickTime plugin directory;</item>
+          <item>Windows Media player plugin directory;</item>
+        </list>
+        <para>
+            Set this property to false to skip scaning these directories.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.AdditionalPluginsDirs">
+      <summary>
+            Gets or sets additional plugin directories.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.DisableBuiltInPlugIns">
+      <summary>
+            Gets or sets a value to disable the built-in PDF plugin.
+            </summary>
+      <remarks>
+            By default, EO.WebBrowser will automatically load the built-in plug-ins (such as
+            the built-in PDF plug-in). Set this property to true if this is not desired.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.Proxy">
+      <summary>
+            Gets or sets the proxy information to be used by all WebViews.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.UILanguage">
+      <summary>
+            Gets or sets the UI language to be used in the format <i>languagecode2-country/regioncode2</i>.
+            </summary>
+      <remarks>
+            See <a href="WebBrowser/customize/localization.html">localization</a> for more details about
+            how to use this property.
+            </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.GoogleAPIKey">
+      <summary>
+            Gets or sets Google API key.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.GoogleClientID">
+      <summary>
+            Gets or sets Google client ID.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.GoogleClientSecret">
+      <summary>
+            Gets or sets Google client secret.
+            </summary>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.ExtraCommandLineArgs">
+      <summary>
+            Gets or sets the additional command line arguments to be passed to the Chrome browser engine.
+            </summary>
+      <remarks>
+        <para>
+            Google Chrome browser supports many command line switches, some of them are interpreted
+            by the core browser engine. You can pass those command line arguments to the core browser
+            engine through this property. For example, you can use "--disable-databases" to disable
+            HTML 5 DB support.
+            </para>
+        <para>
+            Use space to separate multiple arguments. For example, use 
+            "--disable-databases --disable-local-storage " to disable both HTML 5 DB support and
+            local storage support.
+            </para>
+        <para>
+            Note that not all switches supported by Google Chrome browser are interpreted by the core
+            browser engine. For example, switch "--enable-cloud-devices" enable cloud device for Google
+            Chrome browser, however cloud device support is a part of Google Chrome browser, but not
+            a part of the core browser engine. As such this switch has no effect on EO.WebBrowser.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:EO.WebEngine.EngineOptions.DisableSpellChecker">
+      <summary>
+            Gets or sets a value to whether disable the built-in spell checker.
+            </summary>
+    </member>
+  </members>
+</doc>

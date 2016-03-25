@@ -24,6 +24,8 @@ Public Class Form1
     "https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Package_URI",
     cd + "\\Update_URI.txt")
         Catch
+            MessageBox.Show("It seems that we Couldn't get the Latest Update Information Files! 
+Please try again Later!", "3DNUS Updater - Lite: Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         Me.Hide()
         Dim ver = File.ReadAllText(cd + "\\Ver_info.txt")
