@@ -8,9 +8,9 @@ The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-ha
 #########################
 # COPYWRITE (C) 2014-2016
 #########################
-Current Version: 2.6.0.0 v29400 (x64)
+Current Version: 2.6.0.1 v29412 (x64)
 
-Current Version: 2.6.0.0 v29400 (x86) 
+Current Version: 2.6.0.1 v29412 (x86) 
 
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/status/3DNUS_STATUS_32x64.png)
 
