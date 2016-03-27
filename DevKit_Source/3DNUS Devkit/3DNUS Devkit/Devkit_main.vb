@@ -76,7 +76,7 @@
     End Sub
 
     Private Sub SaveFileDialog2_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog2.FileOk
-        RichTextBox1.SaveFile(SaveFileDialog2.FileName, RichTextBoxStreamType.RichText)
+        RichTextBox1.SaveFile(SaveFileDialog2.FileName, RichTextBoxStreamType.TextTextOleObjs)
         ToolStripProgressBar1.Value = 100
         Timer1.Start()
 
