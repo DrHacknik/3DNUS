@@ -20,4 +20,19 @@ Public Class dev_custom_finish
             MessageBox.Show("There was a Problem when Trying to load 3DNUS, make sure it's still there!", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub dev_custom_finish_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Label2.Text = "¡Vamonos!"
+            Label2.Location = New Point(134, 209)
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Label2.Text = "¡Vamonos!"
+            Label2.Location = New Point(134, 209)
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Label2.Text = "¡Vamonos!"
+            Label2.Location = New Point(134, 209)
+        End If
+    End Sub
 End Class

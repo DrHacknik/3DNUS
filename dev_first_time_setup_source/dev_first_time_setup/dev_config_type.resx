@@ -120,25 +120,58 @@
   <metadata name="tp_express.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="tp_custom.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>116, 17</value>
-  </metadata>
-  <data name="PictureBox4.ToolTip" xml:space="preserve">
-    <value>The Custom Settings allow you to Change any of the Settings from their Defaults. 
-Although, recommended settings may/may not be selected by Default! 
-
-NOTE: You can disable the Sending/Collecting of System Diagnostic Information using this Setup
-type. </value>
-  </data>
   <data name="PictureBox3.ToolTip" xml:space="preserve">
-    <value>The Express settings will setup 3DNUS, and get you ready
+    <value>English (Ingles, Anglais) 
+
+The Express settings will setup 3DNUS, and get you ready
 as Soon as Possible (ASAP). It will use most of the Defaults
 and some Recommended Settings for your System. 
 
 NOTE: Some settings may Involve Sending System Diagnostic Information to us,
 but NO Private Information about you, or your Computer will be Collected. If you wish, 
-this/these Settings(s) can be disabled at any Time. </value>
+this/these Settings(s) can be disabled at any Time. 
+
+Espanol (Spanish, Espanol) 
+
+Los ajustes de configuración Express 3DNUS , y ayudarle a prepararse
+lo más pronto posible (ASAP ) . Se utilizará la mayor parte de los valores predeterminados
+y algunos ajustes recomendados para su sistema .
+
+NOTA : Algunas configuraciones pueden suponer el envío de información de diagnóstico del sistema para nosotros,
+pero no hay información privada acerca de usted , o su ordenador serán recogidos . Si lo desea,
+este / estos ajustes ( s) se puede desactivar en cualquier momento.</value>
   </data>
+  <metadata name="tp_custom.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 17</value>
+  </metadata>
+  <data name="PictureBox4.ToolTip" xml:space="preserve">
+    <value>English (Ingles, Anglais) 
+
+The Custom Settings allow you to Change any of the Settings from their Defaults. 
+Although, recommended settings may/may not be selected by Default! 
+
+NOTE: You can disable the Sending/Collecting of System Diagnostic Information using this Setup
+type. 
+
+Espanol (Spanish, Espanol) 
+
+
+Los ajustes personalizados le permiten cambiar cualquiera 
+de los ajustes de sus valores originales .
+Si bien , los ajustes recomendados pueden / no pueden ser 
+seleccionados por defecto !
+
+NOTA : Usted puede desactivar el envío / Recogida de 
+Información de diagnóstico
+del sistema con esta configuración del
+tipo.</value>
+  </data>
+  <metadata name="tp_express_span.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>224, 17</value>
+  </metadata>
+  <metadata name="tp_custom_span.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>364, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

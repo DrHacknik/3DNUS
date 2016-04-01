@@ -31,6 +31,9 @@ Partial Class dev_begin
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -45,7 +48,7 @@ Partial Class dev_begin
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(155, 206)
+        Me.Label2.Location = New System.Drawing.Point(155, 182)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(262, 74)
         Me.Label2.TabIndex = 6
@@ -77,7 +80,7 @@ Partial Class dev_begin
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox2.BackgroundImage = Global.dev_first_time_setup.My.Resources.Resources.Logo_3dnus_beta
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(191, 54)
+        Me.PictureBox2.Location = New System.Drawing.Point(191, 30)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(167, 149)
         Me.PictureBox2.TabIndex = 5
@@ -120,6 +123,48 @@ Partial Class dev_begin
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"System Default", "English, US", "English, UK", "Spanish, MX (Español)", "Spanish, US (Español)", "Spanish, UK (Español)", "", "---NOT WORKING---", "French, US (français)", "French, UK (français)", "French, FR (français)", "Dutch, US (Nederlands)", "Dutch, UK (Nederlands)", "Dutch, NL (Nederlands)", "Chinese (中文)", "Japanese (日本語)"})
+        Me.ComboBox1.Location = New System.Drawing.Point(174, 285)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(221, 23)
+        Me.ComboBox1.TabIndex = 8
+        Me.ComboBox1.Text = "Please Select a Language, de mi amigo"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.LightGray
+        Me.Label3.Location = New System.Drawing.Point(171, 256)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(114, 26)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Bienvenido a 3DNUS !  " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "¿Empezamos ? "
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.LightGray
+        Me.Label4.Location = New System.Drawing.Point(278, 256)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(124, 26)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Bienvenue à 3DNUS !" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Allons-nous commencer?"
+        '
         'dev_begin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -127,7 +172,10 @@ Partial Class dev_begin
         Me.BackColor = System.Drawing.Color.DimGray
         Me.ClientSize = New System.Drawing.Size(553, 395)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
@@ -158,4 +206,7 @@ Partial Class dev_begin
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

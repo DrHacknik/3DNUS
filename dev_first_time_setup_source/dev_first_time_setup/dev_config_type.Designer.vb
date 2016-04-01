@@ -33,15 +33,17 @@ Partial Class dev_config_type
         Me.rd_custom = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.tp_express = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.tp_custom = New System.Windows.Forms.ToolTip(Me.components)
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tp_express_span = New System.Windows.Forms.ToolTip(Me.components)
+        Me.tp_custom_span = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,6 +166,20 @@ Partial Class dev_config_type
         Me.tp_express.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.tp_express.ToolTipTitle = "About Express Settings:"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.BackgroundImage = Global.dev_first_time_setup.My.Resources.Resources._1458960538_question_blue
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Location = New System.Drawing.Point(523, 130)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 25)
+        Me.PictureBox3.TabIndex = 6
+        Me.PictureBox3.TabStop = False
+        Me.tp_express.SetToolTip(Me.PictureBox3, resources.GetString("PictureBox3.ToolTip"))
+        '
         'tp_custom
         '
         Me.tp_custom.AutomaticDelay = 100
@@ -181,26 +197,12 @@ Partial Class dev_config_type
         Me.PictureBox4.BackgroundImage = Global.dev_first_time_setup.My.Resources.Resources._1458960538_question_blue
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Location = New System.Drawing.Point(165, 302)
+        Me.PictureBox4.Location = New System.Drawing.Point(525, 235)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(28, 25)
         Me.PictureBox4.TabIndex = 6
         Me.PictureBox4.TabStop = False
         Me.tp_custom.SetToolTip(Me.PictureBox4, resources.GetString("PictureBox4.ToolTip"))
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackgroundImage = Global.dev_first_time_setup.My.Resources.Resources._1458960538_question_blue
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Location = New System.Drawing.Point(165, 184)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(28, 25)
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
-        Me.tp_express.SetToolTip(Me.PictureBox3, resources.GetString("PictureBox3.ToolTip"))
         '
         'PictureBox2
         '
@@ -251,6 +253,26 @@ Partial Class dev_config_type
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'tp_express_span
+        '
+        Me.tp_express_span.AutomaticDelay = 100
+        Me.tp_express_span.AutoPopDelay = 20000
+        Me.tp_express_span.InitialDelay = 100
+        Me.tp_express_span.IsBalloon = True
+        Me.tp_express_span.ReshowDelay = 20
+        Me.tp_express_span.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.tp_express_span.ToolTipTitle = "Acerca de los ajustes Express:"
+        '
+        'tp_custom_span
+        '
+        Me.tp_custom_span.AutomaticDelay = 100
+        Me.tp_custom_span.AutoPopDelay = 20000
+        Me.tp_custom_span.InitialDelay = 100
+        Me.tp_custom_span.IsBalloon = True
+        Me.tp_custom_span.ReshowDelay = 20
+        Me.tp_custom_span.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.tp_custom_span.ToolTipTitle = "Acerca de los ajustes personalizados :"
+        '
         'dev_config_type
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -280,8 +302,8 @@ Partial Class dev_config_type
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "dev_config_type"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -307,4 +329,6 @@ Partial Class dev_config_type
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents tp_express As ToolTip
     Friend WithEvents tp_custom As ToolTip
+    Friend WithEvents tp_express_span As ToolTip
+    Friend WithEvents tp_custom_span As ToolTip
 End Class

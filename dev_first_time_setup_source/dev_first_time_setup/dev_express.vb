@@ -10,4 +10,25 @@
         dev_custom_finish.Show()
         Me.Close()
     End Sub
+
+    Private Sub dev_express_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Label1.Text = "3DNUS : Configuración por primera vez | Ajustes express"
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Label1.Text = "3DNUS : Configuración por primera vez | Ajustes express"
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Label1.Text = "3DNUS : Configuración por primera vez | Ajustes express"
+        End If
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Label2.Text = "Por favor espera..."
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Label2.Text = "Por favor espera..."
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Label2.Text = "Por favor espera..."
+        End If
+    End Sub
 End Class

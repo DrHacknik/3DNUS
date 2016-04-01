@@ -13,4 +13,46 @@
         dev_custom_finish.Show()
         Me.Hide()
     End Sub
+
+    Private Sub dev_custom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Label1.Text = "3DNUS : Configuración por primera vez | Ajustes personalizados"
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Label1.Text = "3DNUS : Configuración por primera vez | Ajustes personalizados"
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Label1.Text = "3DNUS : Configuración por primera vez | Ajustes personalizados"
+        End If
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Label2.Text = "Configuración de dejar que los ajustes 
+personalizados ."
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Label2.Text = "Configuración de dejar que los ajustes 
+personalizados ."
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Label2.Text = "Configuración de dejar que los ajustes 
+personalizados ."
+        End If
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Label3.Text = "Los basicos:"
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Label3.Text = "Los basicos:"
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Label3.Text = "Los basicos:"
+        End If
+        If My.Settings.lang_selected = "Spanish, MX (Español)" Then
+            Button1.Text = "Terminar"
+        End If
+        If My.Settings.lang_selected = "Spanish, US (Español)" Then
+            Button1.Text = "Terminar"
+        End If
+        If My.Settings.lang_selected = "Spanish, UK (Español)" Then
+            Button1.Text = "Terminar"
+        End If
+    End Sub
 End Class
