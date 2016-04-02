@@ -8,10 +8,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Save Configurations & Close, then Start 3DNUS. 
-
-        dev_custom_finish.Show()
-        Me.Hide()
+        Timer1.Start()
     End Sub
 
     Private Sub dev_custom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -54,5 +51,21 @@ personalizados ."
         If My.Settings.lang_selected = "Spanish, UK (Español)" Then
             Button1.Text = "Terminar"
         End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        dev_begin.Close()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        'Save Configurations & Close, then Start 3DNUS. 
+
+        dev_custom_finish.Show()
+        Me.Hide()
+        Timer1.Stop()
     End Sub
 End Class

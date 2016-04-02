@@ -123,6 +123,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property FeedbackAppList_targetsize_80_altform_unplated_contrast_black() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FeedbackAppList.targetsize-80_altform-unplated_contrast-black", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Lets_Begin() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Lets_Begin", resourceCulture)

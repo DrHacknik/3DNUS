@@ -24,15 +24,19 @@ Public Class dev_custom_finish
     Private Sub dev_custom_finish_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.lang_selected = "Spanish, MX (Español)" Then
             Label2.Text = "¡Vamonos!"
-            Label2.Location = New Point(134, 209)
+            Label2.Location = New Point(134, 205)
         End If
         If My.Settings.lang_selected = "Spanish, US (Español)" Then
             Label2.Text = "¡Vamonos!"
-            Label2.Location = New Point(134, 209)
+            Label2.Location = New Point(134, 205)
         End If
         If My.Settings.lang_selected = "Spanish, UK (Español)" Then
             Label2.Text = "¡Vamonos!"
-            Label2.Location = New Point(134, 209)
+            Label2.Location = New Point(134, 205)
         End If
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        End
     End Sub
 End Class

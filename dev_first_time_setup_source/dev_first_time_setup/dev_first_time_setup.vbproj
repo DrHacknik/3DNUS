@@ -138,6 +138,12 @@
     <Compile Include="dev_custom_finish.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dev_eula.Designer.vb">
+      <DependentUpon>dev_eula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dev_eula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dev_express.Designer.vb">
       <DependentUpon>dev_express.vb</DependentUpon>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dev_custom_finish.resx">
       <DependentUpon>dev_custom_finish.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_eula.resx">
+      <DependentUpon>dev_eula.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dev_express.resx">
       <DependentUpon>dev_express.vb</DependentUpon>
@@ -222,9 +231,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_3dnus_beta.ico" />
+    <None Include="Resources\FeedbackAppList.targetsize-80_altform-unplated_contrast-black.png" />
     <None Include="Resources\comp-1_1.gif" />
     <None Include="Resources\Beam Me Up.png" />
     <None Include="Resources\1458960538_question_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

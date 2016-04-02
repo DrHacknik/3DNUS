@@ -6,6 +6,7 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         'Save Configurations and Continue
+        My.Settings.Save()
 
         dev_custom_finish.Show()
         Me.Close()
@@ -30,5 +31,9 @@
         If My.Settings.lang_selected = "Spanish, UK (Español)" Then
             Label2.Text = "Por favor espera..."
         End If
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        dev_begin.Close()
     End Sub
 End Class

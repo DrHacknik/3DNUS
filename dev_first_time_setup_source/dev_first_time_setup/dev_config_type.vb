@@ -5,12 +5,10 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If rd_express.Checked = True Then
-            dev_express.Show()
-            Me.Close()
+            Timer1.Start()
         End If
         If rd_custom.Checked = True Then
-            dev_custom.Show()
-            Me.Close()
+            Timer2.Start()
         End If
     End Sub
 
@@ -102,5 +100,19 @@ Use su mayoría de valores predeterminados"
         If My.Settings.lang_selected = "Spanish, UK (Español)" Then
             Label3.Text = "Ajustes express:"
         End If
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        dev_begin.Close()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        dev_express.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        dev_custom.Show()
+        Me.Close()
     End Sub
 End Class
