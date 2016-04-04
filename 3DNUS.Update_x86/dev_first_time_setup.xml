@@ -52,6 +52,11 @@ dev_first_time_setup
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:dev_first_time_setup.My.Resources.Resources.FeedbackAppList_targetsize_80_altform_unplated_contrast_black">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:dev_first_time_setup.My.Resources.Resources.Lets_Begin">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -6,10 +6,16 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         'Save Configurations and Continue
-        My.Settings.Save()
 
-        dev_custom_finish.Show()
-        Me.Close()
+
+        If My.Settings.get_extensions = "1" Then
+            dev_grabbing_files.Show()
+            Me.Hide()
+            My.Settings.Save()
+        Else
+            dev_custom_finish.Show()
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub dev_express_Load(sender As Object, e As EventArgs) Handles MyBase.Load

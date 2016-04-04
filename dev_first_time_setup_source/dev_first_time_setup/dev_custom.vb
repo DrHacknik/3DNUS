@@ -64,8 +64,24 @@ personalizados ."
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Save Configurations & Close, then Start 3DNUS. 
 
-        dev_custom_finish.Show()
-        Me.Hide()
+        If My.Settings.get_extensions = "1" Then
+            dev_grabbing_files.Show()
+            Me.Hide()
+            My.Settings.Save()
+        Else
+            dev_custom_finish.Show()
+            Me.Hide()
+            My.Settings.Save()
+        End If
         Timer1.Stop()
+    End Sub
+
+    Private Sub CheckBox10_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox10.CheckedChanged
+        If CheckBox10.Checked = True Then
+            My.Settings.get_extensions = "1"
+
+        Else
+            My.Settings.get_extensions = "0"
+        End If
     End Sub
 End Class

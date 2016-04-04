@@ -6,6 +6,8 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If rd_express.Checked = True Then
             Timer1.Start()
+            My.Settings.get_extensions = "1"
+            My.Settings.Save()
         End If
         If rd_custom.Checked = True Then
             Timer2.Start()

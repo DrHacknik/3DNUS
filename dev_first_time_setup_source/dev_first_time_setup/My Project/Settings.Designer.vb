@@ -65,6 +65,18 @@ Namespace My
                 Me("lang_selected") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property get_extensions() As String
+            Get
+                Return CType(Me("get_extensions"),String)
+            End Get
+            Set
+                Me("get_extensions") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
