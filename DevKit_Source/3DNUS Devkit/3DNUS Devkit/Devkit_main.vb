@@ -100,7 +100,13 @@
     End Sub
 
     Private Sub Devkit_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RichTextBox1.Text = "
+EXAMPLE (VB)
 
+Public Class Devkit_main
+    Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel1.Click
+
+    End Sub"
     End Sub
 
     Private Sub FileToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -160,7 +166,8 @@
     End Sub
 
     Private Sub Devkit_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
+        DevKit___What_to_Do.Show()
+        Me.Hide()
     End Sub
 
     Private Sub ReturnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturnToolStripMenuItem.Click
@@ -170,5 +177,154 @@
 
     Private Sub open_Popup(sender As Object, e As PopupEventArgs) Handles open.Popup
 
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
+        Dim words As New List(Of String)
+        ' Timer2.Start()
+        ' Timer3.Start()
+        words.Add("Then")
+        words.Add("Sub")
+        words.Add("If")
+        words.Add("Public")
+        words.Add("Class")
+        words.Add("Object")
+        words.Add("As")
+        words.Add("Handles")
+        words.Add("Dim")
+        words.Add("Integer")
+        words.Add("Do")
+        words.Add("While")
+        words.Add("Loop")
+        words.Add("Next")
+        words.Add("End")
+        words.Add("Stop")
+        words.Add("Me")
+        words.Add("Form")
+        words.Add("Try")
+        words.Add("Catch")
+        words.Add("Private")
+        words.Add("Imports")
+        If RichTextBox1.Text.Length > 0 Then
+
+            Dim selectStart As Integer = RichTextBox1.SelectionStart
+
+            RichTextBox1.Select(0, RichTextBox1.Text.Length)
+
+            RichTextBox1.SelectionColor = Color.Black
+
+            RichTextBox1.DeselectAll()
+
+            For Each oneWord As String In words
+
+                Dim pos As Integer = 0
+
+                Do While RichTextBox1.Text.ToUpper.IndexOf(oneWord.ToUpper, pos) >= 0
+
+                    pos = RichTextBox1.Text.ToUpper.IndexOf(oneWord.ToUpper, pos)
+
+                    RichTextBox1.Select(pos, oneWord.Length)
+
+                    RichTextBox1.SelectionColor = Color.Blue
+
+                    pos += 1
+
+                Loop
+
+            Next
+
+            RichTextBox1.SelectionStart = selectStart
+
+        End If
+
+
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim words As New List(Of String)
+        words.Add("0")
+        words.Add("1")
+        words.Add("2")
+        words.Add("3")
+        words.Add("4")
+        words.Add("5")
+        words.Add("6")
+        words.Add("7")
+        words.Add("8")
+        words.Add("9")
+        If RichTextBox1.Text.Length > 0 Then
+
+            Dim selectStart As Integer = RichTextBox1.SelectionStart
+
+            RichTextBox1.Select(0, RichTextBox1.Text.Length)
+
+            RichTextBox1.SelectionColor = Color.Black
+
+            RichTextBox1.DeselectAll()
+
+            For Each oneWord As String In words
+
+                Dim pos As Integer = 0
+
+                Do While RichTextBox1.Text.ToUpper.IndexOf(oneWord.ToUpper, pos) >= 0
+
+                    pos = RichTextBox1.Text.ToUpper.IndexOf(oneWord.ToUpper, pos)
+
+                    RichTextBox1.Select(pos, oneWord.Length)
+
+                    RichTextBox1.SelectionColor = Color.LightGreen
+
+                    pos += 1
+
+                Loop
+
+            Next
+
+            RichTextBox1.SelectionStart = selectStart
+
+        End If
+        Timer2.Stop()
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+        Dim words As New List(Of String)
+        words.Add("Color")
+        words.Add("List")
+        words.Add("EventArgs")
+        words.Add("FormClosingEventArgs")
+        words.Add("PopupEventArgs")
+        words.Add("Exception")
+        If RichTextBox1.Text.Length > 0 Then
+
+            Dim selectStart As Integer = RichTextBox1.SelectionStart
+
+            RichTextBox1.Select(0, RichTextBox1.Text.Length)
+
+            RichTextBox1.SelectionColor = Color.Black
+
+            RichTextBox1.DeselectAll()
+
+            For Each oneWord As String In words
+
+                Dim pos As Integer = 0
+
+                Do While RichTextBox1.Text.ToUpper.IndexOf(oneWord.ToUpper, pos) >= 0
+
+                    pos = RichTextBox1.Text.ToUpper.IndexOf(oneWord.ToUpper, pos)
+
+                    RichTextBox1.Select(pos, oneWord.Length)
+
+                    RichTextBox1.SelectionColor = Color.Cyan
+
+                    pos += 1
+
+                Loop
+
+            Next
+
+            RichTextBox1.SelectionStart = selectStart
+
+        End If
+        Timer3.Stop()
     End Sub
 End Class

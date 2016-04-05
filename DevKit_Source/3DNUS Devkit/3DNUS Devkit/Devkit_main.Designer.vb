@@ -60,6 +60,8 @@ Partial Class Devkit_main
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -312,7 +314,7 @@ Partial Class Devkit_main
         '
         Me.SettingsToolStripMenuItem.Image = Global._3DNUS_Devkit.My.Resources.Resources.service_manager
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
@@ -333,7 +335,7 @@ Partial Class Devkit_main
         Me.AboutToolStripMenuItem.Image = Global._3DNUS_Devkit.My.Resources.Resources.ext_mng_logo
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.AboutToolStripMenuItem.Text = "About (v1.0.6; Build: 72)"
+        Me.AboutToolStripMenuItem.Text = "About (v1.0.7; Build: 88)"
         '
         'Panel1
         '
@@ -356,9 +358,10 @@ Partial Class Devkit_main
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 59)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.RichTextBox1.ShowSelectionMargin = True
         Me.RichTextBox1.Size = New System.Drawing.Size(690, 477)
         Me.RichTextBox1.TabIndex = 7
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        Me.RichTextBox1.Text = ""
         '
         'Label2
         '
@@ -369,7 +372,15 @@ Partial Class Devkit_main
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(43, 13)
         Me.Label2.TabIndex = 8
-        Me.Label2.Text = "v1.0.6"
+        Me.Label2.Text = "v1.0.7"
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 25
+        '
+        'Timer3
+        '
+        Me.Timer3.Interval = 25
         '
         'Devkit_main
         '
@@ -435,9 +446,11 @@ Partial Class Devkit_main
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents ReturnToolStripMenuItem As ToolStripMenuItem
+    Public WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents Timer3 As Timer
 End Class

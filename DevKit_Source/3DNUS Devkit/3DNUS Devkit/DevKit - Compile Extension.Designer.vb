@@ -49,6 +49,7 @@ Partial Class DevKit___Compile_Extension
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Source_Sel = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -241,6 +242,7 @@ Partial Class DevKit___Compile_Extension
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackgroundImage = Global._3DNUS_Devkit.My.Resources.Resources.application_x_bzip_compressed_tar
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(389, 12)
@@ -251,8 +253,7 @@ Partial Class DevKit___Compile_Extension
         '
         'Label6
         '
-        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(390, 83)
@@ -263,9 +264,11 @@ Partial Class DevKit___Compile_Extension
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 260)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(219, 157)
+        Me.RichTextBox1.Size = New System.Drawing.Size(219, 88)
         Me.RichTextBox1.TabIndex = 21
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         Me.RichTextBox1.Visible = False
@@ -273,6 +276,17 @@ Partial Class DevKit___Compile_Extension
         'Timer1
         '
         Me.Timer1.Enabled = True
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(-1, 413)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(67, 13)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Waiting..."
         '
         'DevKit___Compile_Extension
         '
@@ -296,6 +310,7 @@ Partial Class DevKit___Compile_Extension
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Button1)
@@ -339,4 +354,5 @@ Partial Class DevKit___Compile_Extension
     Friend WithEvents Timer1 As Timer
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Source_Sel As FolderBrowserDialog
+    Friend WithEvents Label7 As Label
 End Class

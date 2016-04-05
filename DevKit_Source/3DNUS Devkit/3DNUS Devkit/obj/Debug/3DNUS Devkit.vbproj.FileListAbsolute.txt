@@ -42,3 +42,21 @@ C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS Devkit\3DNUS 
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.DevKit___Compile_Extension.resources
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS Devkit\3DNUS Devkit\bin\Debug\Ionic.Zip.dll
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS Devkit\3DNUS Devkit\bin\Debug\Ionic.Zlib.CF.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Debug\3DNUS Devkit.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\3DNUS Devkit.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\3DNUS Devkit.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\3DNUS Devkit.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Debug\3DNUS Devkit.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Debug\3DNUS Devkit.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Debug\3DNUS Devkit.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Debug\Ionic.Zip.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Debug\Ionic.Zlib.CF.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\3DNUS Devkit.vbprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.sys_about.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.DevKit___Compile_Extension.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.DevKit___What_to_Do.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.Devkit_main.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.Form1.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.Resources.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\_3DNUS_Devkit.Settings.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Debug\3DNUS Devkit.vbproj.GenerateResource.Cache

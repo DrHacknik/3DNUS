@@ -1,7 +1,8 @@
 ﻿Imports System.IO.Compression
 Imports System.Threading.Tasks
+Imports Ionic.Zip
 Imports System.IO
-Imports Ionic
+Imports Microsoft.SqlServer
 
 Public Class DevKit___Compile_Extension
     Dim cd = Path.GetDirectoryName(Application.ExecutablePath)
@@ -20,11 +21,13 @@ Public Class DevKit___Compile_Extension
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
+            TextBox2.Enabled = False
+            Label7.Text = "Copying Files..."
             Directory.CreateDirectory(cd + "\\Temp")
             My.Computer.FileSystem.WriteAllText(cd + "\\Temp\\ext_info.ini", TextBox2.Text, True)
             My.Computer.FileSystem.CopyDirectory(Source_Sel.SelectedPath, cd + "\\Temp", True)
             RichTextBox1.SaveFile(cd + "\\Temp\\" + "\\Source_dir.txt", RichTextBoxStreamType.PlainText)
-            My.Computer.FileSystem.CreateDirectory(cd + "\\Temp\\" + TextBox2.Text)
+            'My.Computer.FileSystem.CreateDirectory(cd + "\\Temp\\" + TextBox2.Text)
             Dim FileToCopy As String
             Dim NewCopy As String
 
@@ -58,9 +61,28 @@ Public Class DevKit___Compile_Extension
 
 
 
-            MessageBox.Show("There was an Error When trying To Compress the Files. Try Zipping them Yourself (The Temp Dir) ", "Zip Manager v3", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Catch ex As Exception
+            Label7.Text = "Compiling .ZIP...."
+            ' ZIP ALL FILES IN THE FOLDER.
+            Using zip As New Ionic.Zip.ZipFile()
 
+                ' CREATE A FILE USING A STRING. 
+                ' THE FILE WILL BE STORED INSIDE THE ZIP FILE.
+           
+
+                ' ZIP THE FOLDER WITH THE FILES IN IT.
+                zip.AddFiles(cd + "\\Temp")
+
+                zip.Save(cd + "\\" + TextBox2.Text + ".zip")           ' SAVE THE ZIP FILE.
+                Label7.Text = "All Done!"
+            End Using
+
+
+
+            ' My.Computer.FileSystem.RenameFile(cd + "False", TextBox2.Text + ".zip")
+        Catch ex1 As Exception
+            TextBox2.Enabled = True
+            Label7.Text = "Zip --Fail"
+            MessageBox.Show("There was an Error When trying To Compress the Files. Try Zipping them Yourself (The Temp Dir) ", "Zip Manager v3", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

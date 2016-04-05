@@ -51,11 +51,11 @@ Partial Class sys_about
         Me.Label2.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(245, 112)
+        Me.Label2.Size = New System.Drawing.Size(280, 112)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Is made in Visual Studio 2015 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Express. The DevKit runs on" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & ".NET 4.5+ and PowerP" &
     "acks 10.0." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Made by: Dr.Hacknik ©2016." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "I am NOT Affiliated w/Nintendo!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "v1." &
-    "0.6 BETA - Base: 2.6.0.0 v29400"
+    "0.7 BETA - Base: 2.6.0.1 v29412-core"
         '
         'Label3
         '
@@ -79,7 +79,7 @@ Partial Class sys_about
         Me.RichTextBox1.Location = New System.Drawing.Point(6, 163)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(258, 170)
+        Me.RichTextBox1.Size = New System.Drawing.Size(288, 170)
         Me.RichTextBox1.TabIndex = 3
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
@@ -88,7 +88,7 @@ Partial Class sys_about
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(265, 345)
+        Me.ClientSize = New System.Drawing.Size(295, 345)
         Me.ControlBox = False
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label3)
