@@ -22,6 +22,7 @@ Partial Class dev_market
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dev_market))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lb_download_status = New System.Windows.Forms.Label()
@@ -29,9 +30,6 @@ Partial Class dev_market
         Me.downloads = New System.Windows.Forms.PictureBox()
         Me.refresh = New System.Windows.Forms.PictureBox()
         Me.home = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dl_progress = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -90,14 +88,15 @@ Partial Class dev_market
         Me.PictureBox33 = New System.Windows.Forms.PictureBox()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.pic_error = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.downloads, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.refresh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.home, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,8 +135,9 @@ Partial Class dev_market
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        CType(Me.pic_error, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -153,7 +153,7 @@ Partial Class dev_market
         Me.Panel2.Controls.Add(Me.refresh)
         Me.Panel2.Controls.Add(Me.home)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 24)
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(830, 56)
         Me.Panel2.TabIndex = 4
@@ -224,43 +224,6 @@ Partial Class dev_market
         Me.home.TabIndex = 0
         Me.home.TabStop = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.bar
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(830, 24)
-        Me.Panel1.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 15)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "3DNUS: dev_market"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.Close1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(808, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(22, 19)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Panel3
         '
         Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -281,7 +244,6 @@ Partial Class dev_market
         Me.dl_progress.Size = New System.Drawing.Size(1, 10)
         Me.dl_progress.TabIndex = 0
         Me.dl_progress.TabStop = False
-        Me.dl_progress.Visible = False
         '
         'PictureBox2
         '
@@ -550,9 +512,9 @@ Partial Class dev_market
         Me.ban_name.ForeColor = System.Drawing.Color.Black
         Me.ban_name.Location = New System.Drawing.Point(3, 0)
         Me.ban_name.Name = "ban_name"
-        Me.ban_name.Size = New System.Drawing.Size(141, 40)
+        Me.ban_name.Size = New System.Drawing.Size(82, 40)
         Me.ban_name.TabIndex = 7
-        Me.ban_name.Text = "%NAME%"
+        Me.ban_name.Text = "Citra "
         '
         'ban_desc
         '
@@ -564,9 +526,10 @@ Partial Class dev_market
         Me.ban_desc.ForeColor = System.Drawing.Color.Black
         Me.ban_desc.Location = New System.Drawing.Point(-1, 40)
         Me.ban_desc.Name = "ban_desc"
-        Me.ban_desc.Size = New System.Drawing.Size(38, 17)
+        Me.ban_desc.Size = New System.Drawing.Size(192, 85)
         Me.ban_desc.TabIndex = 7
-        Me.ban_desc.Text = "DESC"
+        Me.ban_desc.Text = "Is an Experimental 3DS Emulator. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The Current Build is Unknown. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Although, it" &
+    " is updated " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "every week! "
         '
         'Panel5
         '
@@ -574,7 +537,6 @@ Partial Class dev_market
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel5.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.main_bar
         Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel5.Controls.Add(Me.PictureBox36)
         Me.Panel5.Controls.Add(Me.PictureBox35)
         Me.Panel5.Controls.Add(Me.PictureBox34)
         Me.Panel5.Controls.Add(Me.PictureBox33)
@@ -1074,19 +1036,6 @@ Partial Class dev_market
         Me.PictureBox35.TabIndex = 26
         Me.PictureBox35.TabStop = False
         '
-        'PictureBox36
-        '
-        Me.PictureBox36.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox36.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox36.BackgroundImage = CType(resources.GetObject("PictureBox36.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox36.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox36.Location = New System.Drawing.Point(392, 84)
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox36.TabIndex = 27
-        Me.PictureBox36.TabStop = False
-        '
         'PictureBox37
         '
         Me.PictureBox37.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1100,35 +1049,74 @@ Partial Class dev_market
         Me.PictureBox37.TabIndex = 16
         Me.PictureBox37.TabStop = False
         '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.Transparent
+        Me.Panel6.Controls.Add(Me.pic_error)
+        Me.Panel6.Controls.Add(Me.Label12)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel6.Location = New System.Drawing.Point(0, 56)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(830, 550)
+        Me.Panel6.TabIndex = 13
+        Me.Panel6.Visible = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(120, 116)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(592, 80)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Sorry, you need an Internet Connection to use " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                   The Extension " &
+    "Market! "
+        '
+        'pic_error
+        '
+        Me.pic_error.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pic_error.BackgroundImage = CType(resources.GetObject("pic_error.BackgroundImage"), System.Drawing.Image)
+        Me.pic_error.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pic_error.Location = New System.Drawing.Point(343, 199)
+        Me.pic_error.Name = "pic_error"
+        Me.pic_error.Size = New System.Drawing.Size(130, 126)
+        Me.pic_error.TabIndex = 4
+        Me.pic_error.TabStop = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 3500
+        '
         'dev_market
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.RosyBrown
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(830, 606)
-        Me.ControlBox = False
+        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "dev_market"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "dev_market"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Extension Market - Concept"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.downloads, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.refresh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.home, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1169,16 +1157,14 @@ Partial Class dev_market
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.pic_error, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents home As PictureBox
     Friend WithEvents downloads As PictureBox
@@ -1229,7 +1215,6 @@ Partial Class dev_market
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PictureBox20 As PictureBox
     Friend WithEvents PictureBox21 As PictureBox
-    Friend WithEvents PictureBox36 As PictureBox
     Friend WithEvents PictureBox35 As PictureBox
     Friend WithEvents PictureBox34 As PictureBox
     Friend WithEvents PictureBox33 As PictureBox
@@ -1245,4 +1230,8 @@ Partial Class dev_market
     Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents PictureBox22 As PictureBox
     Friend WithEvents PictureBox37 As PictureBox
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label12 As Label
+    Friend WithEvents pic_error As PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class

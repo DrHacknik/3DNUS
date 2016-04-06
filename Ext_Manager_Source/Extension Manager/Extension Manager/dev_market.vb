@@ -2,7 +2,7 @@
 Public Class dev_market
 
     Dim cd = Application.StartupPath
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -21,39 +21,13 @@ Public Class dev_market
     Private Sub dev_market_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Download the HTML Files & Save them. 
         Try
-            File.Delete(cd + "\\main.html")
-            File.Delete(cd + "\\404_Not_Found.html")
-            My.Computer.Network.DownloadFile(
-    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/main.html",
-    cd + "\main.html")
-            My.Computer.Network.DownloadFile(
-    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/404_Not_Found.html",
-    cd + "\404_Not_Found.html")
-            My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
- cd + "\featured.png")
-            My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
- cd + "\featured.png")
+            If My.Computer.Network.IsAvailable = False Then
+                Panel6.Visible = True
+            Else
+                Panel6.Visible = False
+            End If
             banner.Image = Image.FromFile(cd + "\featured.png")
-            My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_title.txt",
- cd + "\icon_banner_title.txt")
-            My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_desc.txt",
- cd + "\icon_banner_desc.txt")
-            Dim bnt As String = cd + "\icon_banner_title.txt"
-            For Each line As String In System.IO.File.ReadAllLines(bnt)
-                Dim bnt1 As New Label
-                ban_name.Text = line
 
-            Next
-            Dim bnd As String = cd + "\icon_banner_desc.txt"
-            For Each line As String In System.IO.File.ReadAllLines(bnd)
-                Dim bnd1 As New Label
-                ban_name.Text = line
-
-            Next
         Catch
         End Try
     End Sub
@@ -114,27 +88,71 @@ Public Class dev_market
     End Sub
 
     Private Sub PictureBox21_Click(sender As Object, e As EventArgs) Handles PictureBox21.Click
+        Panel6.Visible = True
+        pic_error.Visible = False
+        Label12.Text = "                Dowloading, please wait..."
+        lb_download_status.Text = "1"
         My.Computer.Network.DownloadFile(
-   "https://github.com/zoltx23/3DNUS/blob/master/ext_market/packages/tools/@dr_hacknik/citra_emu/citra.zip?raw=true",
+   "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/tools/@dr_hacknik/citra_emu/citra.zip",
    cd + "\Downloads\citra.zip")
+        dl_progress.Width = 42
+        Timer1.Start()
     End Sub
 
     Private Sub PictureBox22_Click(sender As Object, e As EventArgs) Handles PictureBox22.Click
+        Panel6.Visible = True
+        pic_error.Visible = False
+        Label12.Text = "                Dowloading, please wait..."
+        lb_download_status.Text = "1"
         My.Computer.Network.DownloadFile(
-"https://github.com/zoltx23/3DNUS/blob/master/ext_market/packages/tools/@dr_hacknik/devkit/devkit.zip?raw=true",
+"https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/tools/@dr_hacknik/devkit/devkit.zip",
 cd + "\Downloads\devkit.zip")
+        dl_progress.Width = 42
+        Timer1.Start()
     End Sub
 
     Private Sub PictureBox23_Click(sender As Object, e As EventArgs) Handles PictureBox23.Click
+        Panel6.Visible = True
+        pic_error.Visible = False
+        Label12.Text = "                Dowloading, please wait..."
+        lb_download_status.Text = "1"
         My.Computer.Network.DownloadFile(
-"https://github.com/zoltx23/3DNUS/blob/master/ext_market/packages/tools/@dr_hacknik/nandify/nandify.zip?raw=true",
+"https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/tools/@dr_hacknik/nandify/nandify.zip",
 cd + "\Downloads\nandify.zip")
+        dl_progress.Width = 42
+        Timer1.Start()
     End Sub
 
     Private Sub PictureBox37_Click(sender As Object, e As EventArgs) Handles PictureBox37.Click
+        Panel6.Visible = True
+        pic_error.Visible = False
+        Label12.Text = "                Dowloading, please wait..."
+        lb_download_status.Text = "1"
         My.Computer.Network.DownloadFile(
-"https://github.com/zoltx23/3DNUS/blob/master/ext_market/packages/tools/@dr_hacknik/nand_tool/nand_tool.zip?raw=true",
+"https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/tools/@dr_hacknik/nand_tool/nand_tool.zip",
 cd + "\Downloads\nand_tool.zip")
+        dl_progress.Width = 42
+        Timer1.Start()
+    End Sub
 
+    Private Sub PictureBox20_Click(sender As Object, e As EventArgs) Handles PictureBox20.Click
+        Panel6.Visible = True
+        pic_error.Visible = False
+        Label12.Text = "                Dowloading, please wait..."
+        lb_download_status.Text = "1"
+        My.Computer.Network.DownloadFile(
+"https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/tools/@dr_hacknik/citra_emu/citra.zip",
+cd + "\Downloads\citra.zip")
+        dl_progress.Width = 42
+        Timer1.Start()
+    End Sub
+
+    Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Panel6.Visible = False
+        pic_error.Visible = True
+
+        dl_progress.Width = 1
+        Timer1.Stop()
+        lb_download_status.Text = "0"
     End Sub
 End Class

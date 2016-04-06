@@ -1,3 +1,4 @@
+Imports System.IO
 Imports Ionic.Zip
 
 Public Class Main
@@ -16,6 +17,35 @@ Public Class Main
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            File.Delete(cd + "\\main.html")
+            File.Delete(cd + "\\404_Not_Found.html")
+            File.Delete(cd + "\\main.html")
+            File.Delete(cd + "\\featured.png")
+            File.Delete(cd + "\\icon_banner_title.txt")
+            File.Delete(cd + "\\icon_banner_desc.txt")
+            My.Computer.Network.DownloadFile(
+    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/main.html",
+    cd + "\main.html")
+            My.Computer.Network.DownloadFile(
+    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/404_Not_Found.html",
+    cd + "\404_Not_Found.html")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
+ cd + "\featured.png")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
+ cd + "\featured.png")
+
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_title.txt",
+ cd + "\icon_banner_title.txt")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_desc.txt",
+ cd + "\icon_banner_desc.txt")
+        Catch
+
+        End Try
         My.Settings.cache_state = "1"
         My.Settings.Save()
 
