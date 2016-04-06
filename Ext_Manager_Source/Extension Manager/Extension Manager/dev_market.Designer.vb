@@ -53,8 +53,8 @@ Partial Class dev_market
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.banner = New System.Windows.Forms.PictureBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ban_name = New System.Windows.Forms.Label()
+        Me.ban_desc = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -519,8 +519,8 @@ Partial Class dev_market
         Me.Panel4.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.main_bar
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel4.Controls.Add(Me.PictureBox20)
-        Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Controls.Add(Me.Label12)
+        Me.Panel4.Controls.Add(Me.ban_desc)
+        Me.Panel4.Controls.Add(Me.ban_name)
         Me.Panel4.Controls.Add(Me.banner)
         Me.Panel4.Location = New System.Drawing.Point(12, 126)
         Me.Panel4.Name = "Panel4"
@@ -532,7 +532,7 @@ Partial Class dev_market
         Me.banner.BackColor = System.Drawing.Color.Transparent
         Me.banner.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.main_bar
         Me.banner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.banner.Image = CType(resources.GetObject("banner.Image"), System.Drawing.Image)
+        Me.banner.Image = Global.Extension_Manager.My.Resources.Resources.ext_icon
         Me.banner.Location = New System.Drawing.Point(0, 0)
         Me.banner.Name = "banner"
         Me.banner.Size = New System.Drawing.Size(806, 183)
@@ -540,34 +540,33 @@ Partial Class dev_market
         Me.banner.TabIndex = 7
         Me.banner.TabStop = False
         '
-        'Label12
+        'ban_name
         '
-        Me.Label12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ban_name.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(3, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(145, 40)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "Citra Emu "
+        Me.ban_name.AutoSize = True
+        Me.ban_name.BackColor = System.Drawing.Color.Transparent
+        Me.ban_name.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ban_name.ForeColor = System.Drawing.Color.Black
+        Me.ban_name.Location = New System.Drawing.Point(3, 0)
+        Me.ban_name.Name = "ban_name"
+        Me.ban_name.Size = New System.Drawing.Size(141, 40)
+        Me.ban_name.TabIndex = 7
+        Me.ban_name.Text = "%NAME%"
         '
-        'Label13
+        'ban_desc
         '
-        Me.Label13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ban_desc.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(-1, 40)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(192, 85)
-        Me.Label13.TabIndex = 7
-        Me.Label13.Text = "Is an Experimental 3DS Emulator. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The Current Build is Unknown. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Although, it" &
-    " is updated " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "every week! "
+        Me.ban_desc.AutoSize = True
+        Me.ban_desc.BackColor = System.Drawing.Color.Transparent
+        Me.ban_desc.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ban_desc.ForeColor = System.Drawing.Color.Black
+        Me.ban_desc.Location = New System.Drawing.Point(-1, 40)
+        Me.ban_desc.Name = "ban_desc"
+        Me.ban_desc.Size = New System.Drawing.Size(38, 17)
+        Me.ban_desc.TabIndex = 7
+        Me.ban_desc.Text = "DESC"
         '
         'Panel5
         '
@@ -1206,9 +1205,9 @@ Partial Class dev_market
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label12 As Label
+    Friend WithEvents ban_name As Label
     Friend WithEvents banner As PictureBox
-    Friend WithEvents Label13 As Label
+    Friend WithEvents ban_desc As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents PictureBox18 As PictureBox
     Friend WithEvents PictureBox14 As PictureBox

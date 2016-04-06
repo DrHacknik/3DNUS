@@ -36,6 +36,24 @@ Public Class dev_market
  "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
  cd + "\featured.png")
             banner.Image = Image.FromFile(cd + "\featured.png")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_title.txt",
+ cd + "\icon_banner_title.txt")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_desc.txt",
+ cd + "\icon_banner_desc.txt")
+            Dim bnt As String = cd + "\icon_banner_title.txt"
+            For Each line As String In System.IO.File.ReadAllLines(bnt)
+                Dim bnt1 As New Label
+                ban_name.Text = line
+
+            Next
+            Dim bnd As String = cd + "\icon_banner_desc.txt"
+            For Each line As String In System.IO.File.ReadAllLines(bnd)
+                Dim bnd1 As New Label
+                ban_name.Text = line
+
+            Next
         Catch
         End Try
     End Sub
