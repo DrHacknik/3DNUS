@@ -154,6 +154,12 @@
     <Compile Include="dev_about.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dev_download_manager.Designer.vb">
+      <DependentUpon>dev_download_manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dev_download_manager.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dev_market.Designer.vb">
       <DependentUpon>dev_market.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dev_about.resx">
       <DependentUpon>dev_about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_download_manager.resx">
+      <DependentUpon>dev_download_manager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dev_market.resx">
       <DependentUpon>dev_market.vb</DependentUpon>
@@ -283,6 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ext_mng_logo.ico" />
+    <None Include="Resources\main_bar.png" />
     <None Include="Resources\bar.png" />
     <None Include="Resources\Minimize1.png" />
     <None Include="Resources\Close1.png" />

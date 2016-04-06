@@ -6,15 +6,15 @@ Public Class dev_market
         Me.Close()
     End Sub
 
-    Private Sub WebBrowser1_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowser1.Navigated
+    Private Sub WebBrowser1_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs)
         PictureBox2.Visible = False
     End Sub
 
-    Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
+    Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs)
         PictureBox2.Visible = True
     End Sub
 
-    Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+    Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
         PictureBox2.Visible = False
     End Sub
 
@@ -29,7 +29,7 @@ Public Class dev_market
             My.Computer.Network.DownloadFile(
     "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/404_Not_Found.html",
     cd + "\404_Not_Found.html")
-
+            WebBrowser1.Navigate(cd + "/main.html")
 
 
         Catch
@@ -54,5 +54,24 @@ Public Class dev_market
 
     Private Sub WebView1_IsLoadingChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub WebBrowser1_ProgressChanged(sender As Object, e As WebBrowserProgressChangedEventArgs) Handles WebBrowser1.ProgressChanged
+        dl_progress.Width += 1
+        If dl_progress.Width = 42 Then
+            dl_progress.Width = 1
+        End If
+    End Sub
+
+    Private Sub WebBrowser1_DocumentCompleted_1(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+        PictureBox2.Visible = False
+    End Sub
+
+    Private Sub WebBrowser1_Navigated_1(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowser1.Navigated
+        PictureBox2.Visible = False
+    End Sub
+
+    Private Sub WebBrowser1_Navigating_1(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
+        PictureBox2.Visible = True
     End Sub
 End Class

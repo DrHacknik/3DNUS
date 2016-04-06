@@ -47,6 +47,11 @@ Extension Manager
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Extension_Manager.My.Resources.Resources.main_bar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Extension_Manager.My.Resources.Resources.Minimize">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
