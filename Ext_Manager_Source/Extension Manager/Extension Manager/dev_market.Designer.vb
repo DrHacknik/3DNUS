@@ -23,7 +23,6 @@ Partial Class dev_market
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dev_market))
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lb_download_status = New System.Windows.Forms.Label()
@@ -36,6 +35,7 @@ Partial Class dev_market
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dl_progress = New System.Windows.Forms.PictureBox()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.downloads, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,26 +47,14 @@ Partial Class dev_market
         CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(830, 606)
-        Me.WebBrowser1.TabIndex = 6
-        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
-        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.White
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox2.Image = Global.Extension_Manager.My.Resources.Resources.Preloader_2
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 80)
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(830, 526)
+        Me.PictureBox2.Size = New System.Drawing.Size(830, 606)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 5
         Me.PictureBox2.TabStop = False
@@ -93,11 +81,11 @@ Partial Class dev_market
         Me.lb_download_status.BackColor = System.Drawing.Color.Transparent
         Me.lb_download_status.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_download_status.ForeColor = System.Drawing.Color.White
-        Me.lb_download_status.Location = New System.Drawing.Point(774, 3)
+        Me.lb_download_status.Location = New System.Drawing.Point(775, 3)
         Me.lb_download_status.Name = "lb_download_status"
-        Me.lb_download_status.Size = New System.Drawing.Size(44, 13)
+        Me.lb_download_status.Size = New System.Drawing.Size(22, 13)
         Me.lb_download_status.TabIndex = 3
-        Me.lb_download_status.Text = "%DL#%"
+        Me.lb_download_status.Text = "0%"
         '
         'Label2
         '
@@ -118,6 +106,7 @@ Partial Class dev_market
         Me.downloads.BackColor = System.Drawing.Color.Transparent
         Me.downloads.BackgroundImage = CType(resources.GetObject("downloads.BackgroundImage"), System.Drawing.Image)
         Me.downloads.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.downloads.Cursor = System.Windows.Forms.Cursors.Hand
         Me.downloads.Location = New System.Drawing.Point(785, 3)
         Me.downloads.Name = "downloads"
         Me.downloads.Size = New System.Drawing.Size(42, 33)
@@ -131,6 +120,7 @@ Partial Class dev_market
         Me.refresh.BackColor = System.Drawing.Color.Transparent
         Me.refresh.BackgroundImage = CType(resources.GetObject("refresh.BackgroundImage"), System.Drawing.Image)
         Me.refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.refresh.Cursor = System.Windows.Forms.Cursors.Hand
         Me.refresh.Location = New System.Drawing.Point(48, 3)
         Me.refresh.Name = "refresh"
         Me.refresh.Size = New System.Drawing.Size(42, 33)
@@ -144,6 +134,7 @@ Partial Class dev_market
         Me.home.BackColor = System.Drawing.Color.Transparent
         Me.home.BackgroundImage = CType(resources.GetObject("home.BackgroundImage"), System.Drawing.Image)
         Me.home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.home.Cursor = System.Windows.Forms.Cursors.Hand
         Me.home.Location = New System.Drawing.Point(0, 3)
         Me.home.Name = "home"
         Me.home.Size = New System.Drawing.Size(42, 33)
@@ -209,6 +200,18 @@ Partial Class dev_market
         Me.dl_progress.TabStop = False
         Me.dl_progress.Visible = False
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
+        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
+        Me.WebBrowser1.Size = New System.Drawing.Size(830, 606)
+        Me.WebBrowser1.TabIndex = 7
+        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
+        '
         'dev_market
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -216,9 +219,9 @@ Partial Class dev_market
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(830, 606)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.WebBrowser1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -249,7 +252,6 @@ Partial Class dev_market
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents home As PictureBox
     Friend WithEvents downloads As PictureBox
     Friend WithEvents refresh As PictureBox
@@ -257,4 +259,5 @@ Partial Class dev_market
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents dl_progress As PictureBox
+    Friend WithEvents WebBrowser1 As WebBrowser
 End Class

@@ -56,22 +56,38 @@ Public Class dev_market
 
     End Sub
 
-    Private Sub WebBrowser1_ProgressChanged(sender As Object, e As WebBrowserProgressChangedEventArgs) Handles WebBrowser1.ProgressChanged
+    Private Sub WebBrowser1_ProgressChanged(sender As Object, e As WebBrowserProgressChangedEventArgs)
+
+    End Sub
+
+    Private Sub home_Click(sender As Object, e As EventArgs) Handles home.Click
+        WebBrowser1.Navigate(cd + "/main.html")
+    End Sub
+
+    Private Sub refresh_Click(sender As Object, e As EventArgs) Handles refresh.Click
+        WebBrowser1.Refresh()
+    End Sub
+
+    Private Sub downloads_Click(sender As Object, e As EventArgs) Handles downloads.Click
+        dev_download_manager.Show()
+    End Sub
+
+    Private Sub WebBrowser1_DocumentCompleted_2(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+        PictureBox2.Visible = False
+    End Sub
+
+    Private Sub WebBrowser1_ProgressChanged_1(sender As Object, e As WebBrowserProgressChangedEventArgs) Handles WebBrowser1.ProgressChanged
         dl_progress.Width += 1
         If dl_progress.Width = 42 Then
             dl_progress.Width = 1
         End If
     End Sub
 
-    Private Sub WebBrowser1_DocumentCompleted_1(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
-        PictureBox2.Visible = False
-    End Sub
-
-    Private Sub WebBrowser1_Navigated_1(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowser1.Navigated
-        PictureBox2.Visible = False
-    End Sub
-
-    Private Sub WebBrowser1_Navigating_1(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
+    Private Sub WebBrowser1_Navigating_2(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
         PictureBox2.Visible = True
+    End Sub
+
+    Private Sub WebBrowser1_Navigated_2(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowser1.Navigated
+        PictureBox2.Visible = False
     End Sub
 End Class
