@@ -62,9 +62,9 @@ Partial Class dev_download_manager
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(4, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 15)
+        Me.Label1.Size = New System.Drawing.Size(134, 15)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "%STATUS% "
+        Me.Label1.Text = "No Downloads Currently. "
         '
         'Button1
         '
