@@ -1,4 +1,0 @@
-[extension_info] ver=0.8 title=ext_mng_base_fw  ext_type=framework  ext_priv=2 ext_external_res=1  ext_upd=0 
-
-ext_external_res="0\\_bin", "0\\_res"
-ext_reset=1
