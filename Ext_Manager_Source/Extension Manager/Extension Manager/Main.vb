@@ -428,4 +428,8 @@ Listening to dev_market"
     Private Sub ReloadExtensionsToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Application.Restart()
     End Sub
+
+    Private Sub ReloadExtensionsToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ReloadExtensionsToolStripMenuItem.Click
+        Application.Restart()
+    End Sub
 End Class

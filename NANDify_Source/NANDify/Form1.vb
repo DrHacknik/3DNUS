@@ -16,4 +16,8 @@
         Me.Close()
         Timer1.Stop()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        fw_choose_dl.ShowDialog()
+    End Sub
 End Class

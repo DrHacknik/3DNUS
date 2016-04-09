@@ -25,13 +25,15 @@ Partial Class dev_market
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dev_market))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.dl_progress = New System.Windows.Forms.PictureBox()
         Me.lb_download_status = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.downloads = New System.Windows.Forms.PictureBox()
         Me.refresh = New System.Windows.Forms.PictureBox()
         Me.home = New System.Windows.Forms.PictureBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.dl_progress = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -50,55 +52,56 @@ Partial Class dev_market
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.banner = New System.Windows.Forms.PictureBox()
-        Me.ban_name = New System.Windows.Forms.Label()
-        Me.ban_desc = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.ban_desc = New System.Windows.Forms.Label()
+        Me.ban_name = New System.Windows.Forms.Label()
+        Me.banner = New System.Windows.Forms.PictureBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.pic_error = New System.Windows.Forms.PictureBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.em_bck_music = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.em_check = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.downloads, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.refresh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.home, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,36 +111,36 @@ Partial Class dev_market
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.banner, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.pic_error, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.em_bck_music, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -157,6 +160,49 @@ Partial Class dev_market
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(830, 56)
         Me.Panel2.TabIndex = 4
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox19.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox19.BackgroundImage = CType(resources.GetObject("PictureBox19.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox19.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox19.Location = New System.Drawing.Point(708, 11)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(22, 20)
+        Me.PictureBox19.TabIndex = 10
+        Me.PictureBox19.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(546, 11)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox1.TabIndex = 9
+        Me.TextBox1.Text = "Search"
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel3.Controls.Add(Me.dl_progress)
+        Me.Panel3.Location = New System.Drawing.Point(785, 40)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(42, 5)
+        Me.Panel3.TabIndex = 8
+        '
+        'dl_progress
+        '
+        Me.dl_progress.BackColor = System.Drawing.Color.DodgerBlue
+        Me.dl_progress.Location = New System.Drawing.Point(0, -1)
+        Me.dl_progress.Name = "dl_progress"
+        Me.dl_progress.Size = New System.Drawing.Size(1, 10)
+        Me.dl_progress.TabIndex = 0
+        Me.dl_progress.TabStop = False
         '
         'lb_download_status
         '
@@ -223,27 +269,6 @@ Partial Class dev_market
         Me.home.Size = New System.Drawing.Size(42, 33)
         Me.home.TabIndex = 0
         Me.home.TabStop = False
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel3.Controls.Add(Me.dl_progress)
-        Me.Panel3.Location = New System.Drawing.Point(785, 40)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(42, 5)
-        Me.Panel3.TabIndex = 8
-        '
-        'dl_progress
-        '
-        Me.dl_progress.BackColor = System.Drawing.Color.DodgerBlue
-        Me.dl_progress.Location = New System.Drawing.Point(0, -1)
-        Me.dl_progress.Name = "dl_progress"
-        Me.dl_progress.Size = New System.Drawing.Size(1, 10)
-        Me.dl_progress.TabIndex = 0
-        Me.dl_progress.TabStop = False
         '
         'PictureBox2
         '
@@ -489,32 +514,18 @@ Partial Class dev_market
         Me.Panel4.Size = New System.Drawing.Size(806, 183)
         Me.Panel4.TabIndex = 6
         '
-        'banner
+        'PictureBox20
         '
-        Me.banner.BackColor = System.Drawing.Color.Transparent
-        Me.banner.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.main_bar
-        Me.banner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.banner.Image = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.banner.Location = New System.Drawing.Point(0, 0)
-        Me.banner.Name = "banner"
-        Me.banner.Size = New System.Drawing.Size(806, 183)
-        Me.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.banner.TabIndex = 7
-        Me.banner.TabStop = False
-        '
-        'ban_name
-        '
-        Me.ban_name.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ban_name.AutoSize = True
-        Me.ban_name.BackColor = System.Drawing.Color.Transparent
-        Me.ban_name.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ban_name.ForeColor = System.Drawing.Color.Black
-        Me.ban_name.Location = New System.Drawing.Point(3, 0)
-        Me.ban_name.Name = "ban_name"
-        Me.ban_name.Size = New System.Drawing.Size(82, 40)
-        Me.ban_name.TabIndex = 7
-        Me.ban_name.Text = "Citra "
+        Me.PictureBox20.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox20.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox20.BackgroundImage = CType(resources.GetObject("PictureBox20.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox20.Location = New System.Drawing.Point(766, 157)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(40, 26)
+        Me.PictureBox20.TabIndex = 12
+        Me.PictureBox20.TabStop = False
         '
         'ban_desc
         '
@@ -530,6 +541,33 @@ Partial Class dev_market
         Me.ban_desc.TabIndex = 7
         Me.ban_desc.Text = "Is an Experimental 3DS Emulator. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The Current Build is Unknown. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Although, it" &
     " is updated " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "every week! "
+        '
+        'ban_name
+        '
+        Me.ban_name.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ban_name.AutoSize = True
+        Me.ban_name.BackColor = System.Drawing.Color.Transparent
+        Me.ban_name.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ban_name.ForeColor = System.Drawing.Color.Black
+        Me.ban_name.Location = New System.Drawing.Point(3, 0)
+        Me.ban_name.Name = "ban_name"
+        Me.ban_name.Size = New System.Drawing.Size(145, 40)
+        Me.ban_name.TabIndex = 7
+        Me.ban_name.Text = "Citra Emu "
+        '
+        'banner
+        '
+        Me.banner.BackColor = System.Drawing.Color.Transparent
+        Me.banner.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.main_bar
+        Me.banner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.banner.Image = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.banner.Location = New System.Drawing.Point(0, 0)
+        Me.banner.Name = "banner"
+        Me.banner.Size = New System.Drawing.Size(806, 183)
+        Me.banner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.banner.TabIndex = 7
+        Me.banner.TabStop = False
         '
         'Panel5
         '
@@ -590,100 +628,226 @@ Partial Class dev_market
         Me.Panel5.Size = New System.Drawing.Size(804, 186)
         Me.Panel5.TabIndex = 7
         '
-        'Label14
+        'PictureBox35
         '
-        Me.Label14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PictureBox35.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox35.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox35.BackgroundImage = CType(resources.GetObject("PictureBox35.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox35.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox35.Location = New System.Drawing.Point(668, 140)
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox35.TabIndex = 26
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox34
+        '
+        Me.PictureBox34.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox34.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox34.BackgroundImage = CType(resources.GetObject("PictureBox34.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox34.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox34.Location = New System.Drawing.Point(570, 140)
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox34.TabIndex = 25
+        Me.PictureBox34.TabStop = False
+        '
+        'PictureBox33
+        '
+        Me.PictureBox33.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox33.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox33.BackgroundImage = CType(resources.GetObject("PictureBox33.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox33.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox33.Location = New System.Drawing.Point(472, 140)
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox33.TabIndex = 24
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox32
+        '
+        Me.PictureBox32.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox32.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox32.BackgroundImage = CType(resources.GetObject("PictureBox32.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox32.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox32.Location = New System.Drawing.Point(371, 140)
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox32.TabIndex = 23
+        Me.PictureBox32.TabStop = False
+        '
+        'PictureBox31
+        '
+        Me.PictureBox31.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox31.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox31.BackgroundImage = CType(resources.GetObject("PictureBox31.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox31.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox31.Location = New System.Drawing.Point(273, 140)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox31.TabIndex = 22
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox30
+        '
+        Me.PictureBox30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox30.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox30.BackgroundImage = CType(resources.GetObject("PictureBox30.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox30.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox30.Location = New System.Drawing.Point(175, 140)
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox30.TabIndex = 21
+        Me.PictureBox30.TabStop = False
+        '
+        'PictureBox29
+        '
+        Me.PictureBox29.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox29.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox29.BackgroundImage = CType(resources.GetObject("PictureBox29.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox29.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox29.Location = New System.Drawing.Point(77, 140)
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox29.TabIndex = 20
+        Me.PictureBox29.TabStop = False
+        '
+        'PictureBox28
+        '
+        Me.PictureBox28.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox28.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox28.BackgroundImage = CType(resources.GetObject("PictureBox28.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox28.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox28.Location = New System.Drawing.Point(766, 54)
+        Me.PictureBox28.Name = "PictureBox28"
+        Me.PictureBox28.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox28.TabIndex = 19
+        Me.PictureBox28.TabStop = False
+        '
+        'PictureBox27
+        '
+        Me.PictureBox27.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox27.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox27.BackgroundImage = CType(resources.GetObject("PictureBox27.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox27.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox27.Location = New System.Drawing.Point(668, 54)
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox27.TabIndex = 18
+        Me.PictureBox27.TabStop = False
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox26.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox26.BackgroundImage = CType(resources.GetObject("PictureBox26.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox26.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox26.Location = New System.Drawing.Point(570, 54)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox26.TabIndex = 17
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox37
+        '
+        Me.PictureBox37.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox37.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox37.BackgroundImage = CType(resources.GetObject("PictureBox37.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox37.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox37.Location = New System.Drawing.Point(371, 54)
+        Me.PictureBox37.Name = "PictureBox37"
+        Me.PictureBox37.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox37.TabIndex = 16
+        Me.PictureBox37.TabStop = False
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox25.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox25.BackgroundImage = CType(resources.GetObject("PictureBox25.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox25.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox25.Location = New System.Drawing.Point(472, 54)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox25.TabIndex = 16
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox24.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox24.BackgroundImage = CType(resources.GetObject("PictureBox24.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox24.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox24.Location = New System.Drawing.Point(765, 140)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox24.TabIndex = 14
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox23.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox23.BackgroundImage = CType(resources.GetObject("PictureBox23.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox23.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox23.Location = New System.Drawing.Point(276, 54)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox23.TabIndex = 15
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox22.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox22.BackgroundImage = CType(resources.GetObject("PictureBox22.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox22.Location = New System.Drawing.Point(178, 54)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox22.TabIndex = 14
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox21.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox21.BackgroundImage = CType(resources.GetObject("PictureBox21.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox21.Location = New System.Drawing.Point(80, 54)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(21, 18)
+        Me.PictureBox21.TabIndex = 13
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(13, 161)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(85, 15)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "%EXT_NAME% "
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(111, 161)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(85, 15)
-        Me.Label15.TabIndex = 3
-        Me.Label15.Text = "%EXT_NAME% "
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(209, 161)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(85, 15)
-        Me.Label16.TabIndex = 3
-        Me.Label16.Text = "%EXT_NAME% "
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox11.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox11.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox11.Location = New System.Drawing.Point(6, 93)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox11.TabIndex = 5
-        Me.PictureBox11.TabStop = False
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(307, 161)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(85, 15)
-        Me.Label17.TabIndex = 3
-        Me.Label17.Text = "%EXT_NAME% "
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox12.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox12.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox12.Location = New System.Drawing.Point(104, 93)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox12.TabIndex = 5
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox13.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox13.Location = New System.Drawing.Point(202, 93)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox13.TabIndex = 5
-        Me.PictureBox13.TabStop = False
+        Me.PictureBox18.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox18.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox18.Location = New System.Drawing.Point(695, 93)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox18.TabIndex = 5
+        Me.PictureBox18.TabStop = False
         '
         'PictureBox14
         '
@@ -698,60 +862,57 @@ Partial Class dev_market
         Me.PictureBox14.TabIndex = 5
         Me.PictureBox14.TabStop = False
         '
-        'Label18
+        'PictureBox17
         '
-        Me.Label18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PictureBox17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(408, 161)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(85, 15)
-        Me.Label18.TabIndex = 3
-        Me.Label18.Text = "%EXT_NAME% "
+        Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox17.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox17.Location = New System.Drawing.Point(597, 93)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox17.TabIndex = 5
+        Me.PictureBox17.TabStop = False
         '
-        'Label19
+        'PictureBox13
         '
-        Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PictureBox13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(506, 161)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(85, 15)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "%EXT_NAME% "
+        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox13.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox13.Location = New System.Drawing.Point(202, 93)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox13.TabIndex = 5
+        Me.PictureBox13.TabStop = False
         '
-        'Label20
+        'PictureBox16
         '
-        Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PictureBox16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(604, 161)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(85, 15)
-        Me.Label20.TabIndex = 3
-        Me.Label20.Text = "%EXT_NAME% "
+        Me.PictureBox16.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox16.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox16.Location = New System.Drawing.Point(499, 93)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox16.TabIndex = 5
+        Me.PictureBox16.TabStop = False
         '
-        'PictureBox15
+        'PictureBox12
         '
-        Me.PictureBox15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PictureBox12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox15.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox15.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox15.Location = New System.Drawing.Point(401, 93)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox15.TabIndex = 5
-        Me.PictureBox15.TabStop = False
+        Me.PictureBox12.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox12.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox12.Location = New System.Drawing.Point(104, 93)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox12.TabIndex = 5
+        Me.PictureBox12.TabStop = False
         '
         'Label21
         '
@@ -767,291 +928,134 @@ Partial Class dev_market
         Me.Label21.TabIndex = 3
         Me.Label21.Text = "%EXT_NAME% "
         '
-        'PictureBox16
+        'Label17
         '
-        Me.PictureBox16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox16.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox16.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox16.Location = New System.Drawing.Point(499, 93)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox16.TabIndex = 5
-        Me.PictureBox16.TabStop = False
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.Black
+        Me.Label17.Location = New System.Drawing.Point(307, 161)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(85, 15)
+        Me.Label17.TabIndex = 3
+        Me.Label17.Text = "%EXT_NAME% "
         '
-        'PictureBox17
+        'PictureBox15
         '
-        Me.PictureBox17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.PictureBox15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox17.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox17.Location = New System.Drawing.Point(597, 93)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox17.TabIndex = 5
-        Me.PictureBox17.TabStop = False
+        Me.PictureBox15.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox15.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox15.Location = New System.Drawing.Point(401, 93)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox15.TabIndex = 5
+        Me.PictureBox15.TabStop = False
         '
-        'PictureBox18
+        'Label20
         '
-        Me.PictureBox18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox18.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox18.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
-        Me.PictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox18.Location = New System.Drawing.Point(695, 93)
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(92, 65)
-        Me.PictureBox18.TabIndex = 5
-        Me.PictureBox18.TabStop = False
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.Black
+        Me.Label20.Location = New System.Drawing.Point(604, 161)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(85, 15)
+        Me.Label20.TabIndex = 3
+        Me.Label20.Text = "%EXT_NAME% "
         '
-        'TextBox1
+        'PictureBox11
         '
-        Me.TextBox1.Location = New System.Drawing.Point(546, 11)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox1.TabIndex = 9
-        Me.TextBox1.Text = "Search"
-        '
-        'PictureBox19
-        '
-        Me.PictureBox19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.PictureBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox19.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox19.BackgroundImage = CType(resources.GetObject("PictureBox19.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox19.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox19.Location = New System.Drawing.Point(708, 11)
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(22, 20)
-        Me.PictureBox19.TabIndex = 10
-        Me.PictureBox19.TabStop = False
+        Me.PictureBox11.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox11.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.ext_icon
+        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox11.Location = New System.Drawing.Point(6, 93)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(92, 65)
+        Me.PictureBox11.TabIndex = 5
+        Me.PictureBox11.TabStop = False
         '
-        'PictureBox20
+        'Label16
         '
-        Me.PictureBox20.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox20.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox20.BackgroundImage = CType(resources.GetObject("PictureBox20.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox20.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox20.Location = New System.Drawing.Point(766, 157)
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(40, 26)
-        Me.PictureBox20.TabIndex = 12
-        Me.PictureBox20.TabStop = False
+        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(209, 161)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(85, 15)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "%EXT_NAME% "
         '
-        'PictureBox21
+        'Label19
         '
-        Me.PictureBox21.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox21.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox21.BackgroundImage = CType(resources.GetObject("PictureBox21.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox21.Location = New System.Drawing.Point(80, 54)
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox21.TabIndex = 13
-        Me.PictureBox21.TabStop = False
+        Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(506, 161)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(85, 15)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "%EXT_NAME% "
         '
-        'PictureBox22
+        'Label15
         '
-        Me.PictureBox22.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox22.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox22.BackgroundImage = CType(resources.GetObject("PictureBox22.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox22.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox22.Location = New System.Drawing.Point(178, 54)
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox22.TabIndex = 14
-        Me.PictureBox22.TabStop = False
+        Me.Label15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(111, 161)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(85, 15)
+        Me.Label15.TabIndex = 3
+        Me.Label15.Text = "%EXT_NAME% "
         '
-        'PictureBox23
+        'Label18
         '
-        Me.PictureBox23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox23.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox23.BackgroundImage = CType(resources.GetObject("PictureBox23.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox23.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox23.Location = New System.Drawing.Point(276, 54)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox23.TabIndex = 15
-        Me.PictureBox23.TabStop = False
+        Me.Label18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.Location = New System.Drawing.Point(408, 161)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(85, 15)
+        Me.Label18.TabIndex = 3
+        Me.Label18.Text = "%EXT_NAME% "
         '
-        'PictureBox24
+        'Label14
         '
-        Me.PictureBox24.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox24.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox24.BackgroundImage = CType(resources.GetObject("PictureBox24.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox24.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox24.Location = New System.Drawing.Point(765, 140)
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox24.TabIndex = 14
-        Me.PictureBox24.TabStop = False
-        '
-        'PictureBox25
-        '
-        Me.PictureBox25.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox25.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox25.BackgroundImage = CType(resources.GetObject("PictureBox25.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox25.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox25.Location = New System.Drawing.Point(472, 54)
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox25.TabIndex = 16
-        Me.PictureBox25.TabStop = False
-        '
-        'PictureBox26
-        '
-        Me.PictureBox26.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox26.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox26.BackgroundImage = CType(resources.GetObject("PictureBox26.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox26.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox26.Location = New System.Drawing.Point(570, 54)
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox26.TabIndex = 17
-        Me.PictureBox26.TabStop = False
-        '
-        'PictureBox27
-        '
-        Me.PictureBox27.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox27.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox27.BackgroundImage = CType(resources.GetObject("PictureBox27.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox27.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox27.Location = New System.Drawing.Point(668, 54)
-        Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox27.TabIndex = 18
-        Me.PictureBox27.TabStop = False
-        '
-        'PictureBox28
-        '
-        Me.PictureBox28.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox28.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox28.BackgroundImage = CType(resources.GetObject("PictureBox28.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox28.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox28.Location = New System.Drawing.Point(766, 54)
-        Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox28.TabIndex = 19
-        Me.PictureBox28.TabStop = False
-        '
-        'PictureBox29
-        '
-        Me.PictureBox29.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox29.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox29.BackgroundImage = CType(resources.GetObject("PictureBox29.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox29.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox29.Location = New System.Drawing.Point(77, 140)
-        Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox29.TabIndex = 20
-        Me.PictureBox29.TabStop = False
-        '
-        'PictureBox30
-        '
-        Me.PictureBox30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox30.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox30.BackgroundImage = CType(resources.GetObject("PictureBox30.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox30.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox30.Location = New System.Drawing.Point(175, 140)
-        Me.PictureBox30.Name = "PictureBox30"
-        Me.PictureBox30.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox30.TabIndex = 21
-        Me.PictureBox30.TabStop = False
-        '
-        'PictureBox31
-        '
-        Me.PictureBox31.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox31.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox31.BackgroundImage = CType(resources.GetObject("PictureBox31.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox31.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox31.Location = New System.Drawing.Point(273, 140)
-        Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox31.TabIndex = 22
-        Me.PictureBox31.TabStop = False
-        '
-        'PictureBox32
-        '
-        Me.PictureBox32.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox32.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox32.BackgroundImage = CType(resources.GetObject("PictureBox32.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox32.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox32.Location = New System.Drawing.Point(371, 140)
-        Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox32.TabIndex = 23
-        Me.PictureBox32.TabStop = False
-        '
-        'PictureBox33
-        '
-        Me.PictureBox33.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox33.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox33.BackgroundImage = CType(resources.GetObject("PictureBox33.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox33.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox33.Location = New System.Drawing.Point(472, 140)
-        Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox33.TabIndex = 24
-        Me.PictureBox33.TabStop = False
-        '
-        'PictureBox34
-        '
-        Me.PictureBox34.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox34.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox34.BackgroundImage = CType(resources.GetObject("PictureBox34.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox34.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox34.Location = New System.Drawing.Point(570, 140)
-        Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox34.TabIndex = 25
-        Me.PictureBox34.TabStop = False
-        '
-        'PictureBox35
-        '
-        Me.PictureBox35.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox35.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox35.BackgroundImage = CType(resources.GetObject("PictureBox35.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox35.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox35.Location = New System.Drawing.Point(668, 140)
-        Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox35.TabIndex = 26
-        Me.PictureBox35.TabStop = False
-        '
-        'PictureBox37
-        '
-        Me.PictureBox37.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox37.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox37.BackgroundImage = CType(resources.GetObject("PictureBox37.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox37.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox37.Location = New System.Drawing.Point(371, 54)
-        Me.PictureBox37.Name = "PictureBox37"
-        Me.PictureBox37.Size = New System.Drawing.Size(21, 18)
-        Me.PictureBox37.TabIndex = 16
-        Me.PictureBox37.TabStop = False
+        Me.Label14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.Black
+        Me.Label14.Location = New System.Drawing.Point(13, 161)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(85, 15)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "%EXT_NAME% "
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Transparent
+        Me.Panel6.Controls.Add(Me.em_bck_music)
         Me.Panel6.Controls.Add(Me.pic_error)
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1060,19 +1064,6 @@ Partial Class dev_market
         Me.Panel6.Size = New System.Drawing.Size(830, 550)
         Me.Panel6.TabIndex = 13
         Me.Panel6.Visible = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(120, 116)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(592, 80)
-        Me.Label12.TabIndex = 3
-        Me.Label12.Text = "Sorry, you need an Internet Connection to use " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                   The Extension " &
-    "Market! "
         '
         'pic_error
         '
@@ -1087,15 +1078,42 @@ Partial Class dev_market
         Me.pic_error.TabIndex = 4
         Me.pic_error.TabStop = False
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(120, 116)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(592, 80)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Sorry, you need an Internet Connection to use " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                   The Extension " &
+    "Market! "
+        '
         'Timer1
         '
         Me.Timer1.Interval = 3500
+        '
+        'em_bck_music
+        '
+        Me.em_bck_music.Enabled = True
+        Me.em_bck_music.Location = New System.Drawing.Point(75, 66)
+        Me.em_bck_music.Name = "em_bck_music"
+        Me.em_bck_music.OcxState = CType(resources.GetObject("em_bck_music.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.em_bck_music.Size = New System.Drawing.Size(75, 23)
+        Me.em_bck_music.TabIndex = 5
+        Me.em_bck_music.Visible = False
+        '
+        'em_check
+        '
+        Me.em_check.Enabled = True
         '
         'dev_market
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.RosyBrown
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(830, 606)
         Me.Controls.Add(Me.Panel6)
@@ -1114,11 +1132,12 @@ Partial Class dev_market
         Me.Text = "Extension Market - Concept"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.downloads, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.refresh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.home, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1129,38 +1148,38 @@ Partial Class dev_market
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.banner, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         CType(Me.pic_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.em_bck_music, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1234,4 +1253,6 @@ Partial Class dev_market
     Friend WithEvents Label12 As Label
     Friend WithEvents pic_error As PictureBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents em_bck_music As AxWMPLib.AxWindowsMediaPlayer
+    Friend WithEvents em_check As Timer
 End Class

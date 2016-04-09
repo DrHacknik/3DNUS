@@ -21,6 +21,14 @@ Public Class dev_market
     Private Sub dev_market_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Download the HTML Files & Save them. 
         Try
+            em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+            If em_bck_music.playState = WMPLib.WMPPlayState.wmppsStopped Then
+                em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+            End If
+            If em_bck_music.playState = WMPLib.WMPPlayState.wmppsReady Then
+                em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+            End If
+
             If My.Computer.Network.IsAvailable = False Then
                 Panel6.Visible = True
             Else
@@ -154,5 +162,14 @@ cd + "\Downloads\citra.zip")
         dl_progress.Width = 1
         Timer1.Stop()
         lb_download_status.Text = "0"
+    End Sub
+
+    Private Sub em_check_Tick(sender As Object, e As EventArgs) Handles em_check.Tick
+        If em_bck_music.playState = WMPLib.WMPPlayState.wmppsStopped Then
+            em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+        End If
+        If em_bck_music.playState = WMPLib.WMPPlayState.wmppsReady Then
+            em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+        End If
     End Sub
 End Class
