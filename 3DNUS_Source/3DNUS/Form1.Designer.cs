@@ -205,11 +205,11 @@ namespace _3DNUS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(402, 27);
+            this.label4.Location = new System.Drawing.Point(539, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 23;
-            this.label4.Text = "label4";
+            this.label4.Text = "test";
             this.label4.Visible = false;
             // 
             // linkLabel1

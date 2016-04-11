@@ -7,7 +7,6 @@
         Timer1.Stop()
         'Save Configurations and Continue
 
-
         If My.Settings.get_extensions = "1" Then
             dev_grabbing_files.Show()
             Me.Hide()
