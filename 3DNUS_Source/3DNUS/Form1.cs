@@ -354,6 +354,8 @@ foreach (Process worker in workers)
 
         private void Main_Load(object sender, EventArgs e)
         {
+            string cd = Path.GetDirectoryName(Application.ExecutablePath);
+         
             t_log.Text = DateTime.Now + " | 3DNUS Log Console:";
             label4.Text = DateTime.Now + "";
 
