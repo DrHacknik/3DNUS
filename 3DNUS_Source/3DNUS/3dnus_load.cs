@@ -29,9 +29,9 @@ namespace _3DNUS
         {
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
             timer1.Stop();
-            if (File.ReadAllText(cd + "\\Config\\setup_completed.cfg") == (""))
+            if (File.ReadAllText(Path.Combine(cd, "Config", "setup_completed.cfg")) == (""))
             {
-                Process.Start(cd + "\\dev_first_time_setup.exe");
+                Process.Start(Path.Combine(cd, "dev_first_time_setup.exe"));
                 try
                 {
                     Process[] workers = Process.GetProcessesByName("3DNUS Upd - Lite");
@@ -50,7 +50,7 @@ namespace _3DNUS
                 Application.Exit();
             }
             timer1.Stop();
-            if (File.ReadAllText(cd + "\\Config\\setup_completed.cfg") == ("1"))
+            if (File.ReadAllText(Path.Combine(cd, "Config", "setup_completed.cfg")) == ("1"))
             {
                 Main form = new Main();
                 form.Show();
@@ -66,37 +66,37 @@ namespace _3DNUS
                 string cd = Path.GetDirectoryName(Application.ExecutablePath);
                 {
                     //Read all Config Files into RAM (.cfg)
-                    File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_dns_add_s.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_dns_ip4.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_px.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_px_add.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
-                    File.ReadAllText(cd + "\\Config\\adv_sub_mask.cfg");
-                    File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
-                    File.ReadAllText(cd + "\\Config\\ext_ext.cfg");
-                    File.ReadAllText(cd + "\\Config\\ext_net_4.cfg");
-                    File.ReadAllText(cd + "\\Config\\ext_sandbox.cfg");
-                    File.ReadAllText(cd + "\\Config\\ext_sandbox_md.cfg");
-                    File.ReadAllText(cd + "\\Config\\ext_sandbox_st.cfg");
-                    File.ReadAllText(cd + "\\Config\\upd_auto.cfg");
-                    File.ReadAllText(cd + "\\Config\\upd_custom.cfg");
-                    File.ReadAllText(cd + "\\Config\\upd_custom_svr.cfg");
-                    File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
-                    File.ReadAllText(cd + "\\Config\\vnm.cfg");
-                    File.ReadAllText(cd + "\\Config\\vnm_fw.cfg");
-                    File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg");
-                    File.ReadAllText(cd + "\\Config\\vnm_skip_failed.cfg");
-                    File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
+                    File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns_add_p.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns_add_s.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns_ip4.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px_add.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px_pass.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px_usr.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "adv_sub_mask.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "ext_ext.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "ext_net_4.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "ext_sandbox.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "ext_sandbox_md.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "ext_sandbox_st.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "upd_auto.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "upd_custom.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "upd_custom_svr.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "ver_dis.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "vnm.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "vnm_fw.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "vnm_install_signed.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "vnm_skip_failed.cfg"));
+                    File.ReadAllText(Path.Combine(cd, "Config", "upd_checker.cfg"));
 
 
 
                     {
 
-                        if (File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg") == ("1"))
+                        if (File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg")) == ("1"))
                         {
                             panel1.Visible = true;
                         }

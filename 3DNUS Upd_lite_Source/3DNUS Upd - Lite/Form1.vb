@@ -11,26 +11,26 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        File.Delete(cd + "\\Update_Info.txt")
-        File.Delete(cd + "\\Update_URI.txt")
-        File.Delete(cd + "\\Update_Latest.zip")
+        File.Delete(Path.Combine(cd, "Update_Info.txt"))
+        File.Delete(Path.Combine(cd, "Update_URI.txt"))
+        File.Delete(Path.Combine(cd, "Update_Latest.zip"))
         Try
             My.Computer.Network.DownloadFile(
     "https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt",
-    cd + "\\Update_Info.txt")
+    Path.Combine(cd, "Update_Info.txt"))
 
-            File.ReadAllLines(cd + "\\Ver_info.txt")
+            File.ReadAllLines(Path.Combine(cd + "Ver_info.txt"))
             My.Computer.Network.DownloadFile(
     "https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Package_URI",
-    cd + "\\Update_URI.txt")
+    Path.Combine(cd, "Update_URI.txt"))
         Catch
             MessageBox.Show("It seems that we Couldn't get the Latest Update Information Files! 
 Please try again Later!", "3DNUS Updater - Lite: Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         Me.Hide()
-        Dim ver = File.ReadAllText(cd + "\\Ver_info.txt")
+        Dim ver = File.ReadAllText(Path.Combine(cd, "Ver_info.txt"))
         Label2.Text = ver
-        Dim upd = File.ReadAllText(cd + "\\Update_info.txt")
+        Dim upd = File.ReadAllText(Path.Combine(cd, "Update_info.txt"))
         Dim htp = New WebClient
 
 
@@ -43,7 +43,7 @@ Please try again Later!", "3DNUS Updater - Lite: Error", MessageBoxButtons.OK, M
                 Me.WindowState = FormWindowState.Minimized
             Else
 
-                Dim URI = File.ReadAllText(cd + "\\Update_URI.txt")
+                Dim URI = File.ReadAllText(Path.Combine(cd, "Update_URI.txt"))
                 Timer1.Start()
                 NotifyIcon1.BalloonTipText = "An Update is Available, it will Automatically be Downloaded and Installed. "
                 NotifyIcon1.ShowBalloonTip(5)
@@ -74,7 +74,7 @@ Please try again Later!", "3DNUS Updater - Lite: Error", MessageBoxButtons.OK, M
         NotifyIcon1.BalloonTipText = "The Update has been Downloaded! You must manually extract the Zip file for Now.  "
         NotifyIcon1.ShowBalloonTip(5)
         Timer2.Stop()
-        Process.Start(cd + "\\upd_extract.exe")
+        Process.Start(Path.Combine(cd, "upd_extract.exe"))
         Timer1.Start()
     End Sub
 
