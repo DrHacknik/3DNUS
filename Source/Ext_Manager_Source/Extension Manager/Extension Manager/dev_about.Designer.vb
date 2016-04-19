@@ -41,9 +41,9 @@ Partial Class dev_about
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(69, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(181, 21)
+        Me.Label2.Size = New System.Drawing.Size(185, 21)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Extension Manager v 1.1.3"
+        Me.Label2.Text = "Extension Manager v 1.1.4 "
         '
         'Label3
         '
@@ -54,9 +54,9 @@ Partial Class dev_about
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(98, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(119, 15)
+        Me.Label3.Size = New System.Drawing.Size(109, 15)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Build: 102 - Paramount"
+        Me.Label3.Text = "Build: 110 - Clyde Hill "
         '
         'Panel1
         '

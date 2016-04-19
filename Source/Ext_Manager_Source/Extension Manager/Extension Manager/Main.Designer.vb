@@ -30,10 +30,36 @@ Partial Class Main
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
@@ -64,41 +90,12 @@ Partial Class Main
         Me.ForumsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,7 +109,10 @@ Partial Class Main
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,294 +162,10 @@ Partial Class Main
         Me.TabControl1.Size = New System.Drawing.Size(517, 389)
         Me.TabControl1.TabIndex = 16
         '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.Label16)
-        Me.TabPage2.Controls.Add(Me.ComboBox2)
-        Me.TabPage2.Controls.Add(Me.Panel2)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
-        Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.CheckBox3)
-        Me.TabPage2.Controls.Add(Me.CheckBox5)
-        Me.TabPage2.Controls.Add(Me.CheckBox4)
-        Me.TabPage2.Controls.Add(Me.CheckBox2)
-        Me.TabPage2.Controls.Add(Me.CheckBox1)
-        Me.TabPage2.Controls.Add(Me.Button1)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
-        Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(509, 363)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Settings"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(8, 295)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(124, 13)
-        Me.Label16.TabIndex = 8
-        Me.Label16.Text = "Default Debugger Color: "
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Black", "White"})
-        Me.ComboBox2.Location = New System.Drawing.Point(11, 311)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 7
-        Me.ComboBox2.Text = "Default"
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel2.Controls.Add(Me.PictureBox15)
-        Me.Panel2.Location = New System.Drawing.Point(375, 325)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(50, 7)
-        Me.Panel2.TabIndex = 6
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Enabled = False
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"--Custom", "8 Bit", "16 Bit", "32 Bit", "64 Bit", "128 Bit", "256 Bit", "512 Bit ", "1024 Bit", "2048 Bit", "4096 Bit", "", "--Presets", "MSKEY", "CRYPT-LOCKER", "Default"})
-        Me.ComboBox1.Location = New System.Drawing.Point(34, 223)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 5
-        Me.ComboBox1.Text = "Default"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(31, 207)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(112, 13)
-        Me.Label15.TabIndex = 4
-        Me.Label15.Text = "Use Encryption Type: "
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Checked = True
-        Me.CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox3.Location = New System.Drawing.Point(34, 151)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(139, 17)
-        Me.CheckBox3.TabIndex = 3
-        Me.CheckBox3.Text = "Check for Legit Signing "
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(11, 267)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(191, 17)
-        Me.CheckBox5.TabIndex = 3
-        Me.CheckBox5.Text = "Enable Extension Market (ALPHA) "
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Enabled = False
-        Me.CheckBox4.Location = New System.Drawing.Point(11, 187)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(217, 17)
-        Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "Encrypt Extension Folder (Not available) "
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Checked = True
-        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox2.Location = New System.Drawing.Point(11, 128)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(165, 17)
-        Me.CheckBox2.TabIndex = 3
-        Me.CheckBox2.Text = "Install only Signed Extensions"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(11, 89)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(112, 17)
-        Me.CheckBox1.TabIndex = 3
-        Me.CheckBox1.Text = "Enable Dev Mode"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(428, 317)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(11, 37)
-        Me.TextBox1.MaxLength = 64
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "Brewing your Coffee, Please wait..."
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(8, 21)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(117, 13)
-        Me.Label14.TabIndex = 0
-        Me.Label14.Text = "Loading Window Text: "
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 10
-        '
-        'Timer2
-        '
-        Me.Timer2.Interval = 1000
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.MenuStrip1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.bar
-        Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ReloadExtensionsToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 389)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(517, 24)
-        Me.MenuStrip1.TabIndex = 15
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem, Me.ManageSandboxToolStripMenuItem, Me.DebuggerToolStripMenuItem, Me.ExportSettingsToolStripMenuItem, Me.ImportSettingsToolStripMenuItem, Me.InstallToolStripMenuItem, Me.DEVMARKETToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'CloseToolStripMenuItem
-        '
-        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.[End]), System.Windows.Forms.Keys)
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.CloseToolStripMenuItem.Text = "Close"
-        '
-        'ManageSandboxToolStripMenuItem
-        '
-        Me.ManageSandboxToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearSandboxToolStripMenuItem, Me.ResetSandboxToolStripMenuItem, Me.RunExtensionInSandboxToolStripMenuItem, Me.CloseAllExtensionsToolStripMenuItem})
-        Me.ManageSandboxToolStripMenuItem.Name = "ManageSandboxToolStripMenuItem"
-        Me.ManageSandboxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ManageSandboxToolStripMenuItem.Text = "Manage Sandbox"
-        '
-        'ClearSandboxToolStripMenuItem
-        '
-        Me.ClearSandboxToolStripMenuItem.Name = "ClearSandboxToolStripMenuItem"
-        Me.ClearSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.ClearSandboxToolStripMenuItem.Text = "Clear Sandbox"
-        '
-        'ResetSandboxToolStripMenuItem
-        '
-        Me.ResetSandboxToolStripMenuItem.Name = "ResetSandboxToolStripMenuItem"
-        Me.ResetSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.ResetSandboxToolStripMenuItem.Text = "Reset Sandbox"
-        '
-        'RunExtensionInSandboxToolStripMenuItem
-        '
-        Me.RunExtensionInSandboxToolStripMenuItem.Name = "RunExtensionInSandboxToolStripMenuItem"
-        Me.RunExtensionInSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.RunExtensionInSandboxToolStripMenuItem.Text = "Run Extension in Sandbox"
-        '
-        'CloseAllExtensionsToolStripMenuItem
-        '
-        Me.CloseAllExtensionsToolStripMenuItem.Name = "CloseAllExtensionsToolStripMenuItem"
-        Me.CloseAllExtensionsToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.CloseAllExtensionsToolStripMenuItem.Text = "Close All Extensions "
-        '
-        'DebuggerToolStripMenuItem
-        '
-        Me.DebuggerToolStripMenuItem.Name = "DebuggerToolStripMenuItem"
-        Me.DebuggerToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
-            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DebuggerToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.DebuggerToolStripMenuItem.Text = "Debugger"
-        '
-        'ExportSettingsToolStripMenuItem
-        '
-        Me.ExportSettingsToolStripMenuItem.Name = "ExportSettingsToolStripMenuItem"
-        Me.ExportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ExportSettingsToolStripMenuItem.Text = "Export Settings"
-        '
-        'ImportSettingsToolStripMenuItem
-        '
-        Me.ImportSettingsToolStripMenuItem.Name = "ImportSettingsToolStripMenuItem"
-        Me.ImportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ImportSettingsToolStripMenuItem.Text = "Import Settings"
-        '
-        'InstallToolStripMenuItem
-        '
-        Me.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem"
-        Me.InstallToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.InstallToolStripMenuItem.Text = "Install"
-        '
-        'DEVMARKETToolStripMenuItem
-        '
-        Me.DEVMARKETToolStripMenuItem.Name = "DEVMARKETToolStripMenuItem"
-        Me.DEVMARKETToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.DEVMARKETToolStripMenuItem.Text = "DEV_MARKET"
-        Me.DEVMARKETToolStripMenuItem.Visible = False
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ForumsToolStripMenuItem, Me.AboutToolStripMenuItem})
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ExitToolStripMenuItem.Text = "Help"
-        '
-        'ReportABugToolStripMenuItem
-        '
-        Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
-        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ReportABugToolStripMenuItem.Text = "Report a Bug"
-        '
-        'ForumsToolStripMenuItem
-        '
-        Me.ForumsToolStripMenuItem.Name = "ForumsToolStripMenuItem"
-        Me.ForumsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ForumsToolStripMenuItem.Text = "Forums "
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.AboutToolStripMenuItem.Text = "About "
-        '
-        'ReloadExtensionsToolStripMenuItem
-        '
-        Me.ReloadExtensionsToolStripMenuItem.Name = "ReloadExtensionsToolStripMenuItem"
-        Me.ReloadExtensionsToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
-        Me.ReloadExtensionsToolStripMenuItem.Text = "Reload Extensions"
-        '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.LightGray
+        Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.Label9)
@@ -485,7 +201,9 @@ Partial Class Main
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
         Me.Label13.Location = New System.Drawing.Point(440, 325)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(33, 13)
@@ -497,6 +215,7 @@ Partial Class Main
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(440, 213)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(29, 13)
@@ -506,7 +225,9 @@ Partial Class Main
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(307, 325)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(31, 13)
@@ -518,6 +239,7 @@ Partial Class Main
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(440, 104)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(29, 13)
@@ -529,6 +251,7 @@ Partial Class Main
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(307, 213)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(28, 13)
@@ -538,7 +261,9 @@ Partial Class Main
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(175, 325)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(33, 13)
@@ -550,6 +275,7 @@ Partial Class Main
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(307, 104)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(29, 13)
@@ -561,6 +287,7 @@ Partial Class Main
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(175, 213)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(29, 13)
@@ -570,7 +297,9 @@ Partial Class Main
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(42, 325)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(29, 13)
@@ -582,6 +311,7 @@ Partial Class Main
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(175, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(29, 13)
@@ -593,6 +323,7 @@ Partial Class Main
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(42, 213)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(29, 13)
@@ -604,6 +335,7 @@ Partial Class Main
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(42, 104)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(27, 13)
@@ -754,6 +486,60 @@ Partial Class Main
         Me.PictureBox3.TabIndex = 15
         Me.PictureBox3.TabStop = False
         '
+        'TabPage2
+        '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.Controls.Add(Me.Label16)
+        Me.TabPage2.Controls.Add(Me.ComboBox2)
+        Me.TabPage2.Controls.Add(Me.Panel2)
+        Me.TabPage2.Controls.Add(Me.ComboBox1)
+        Me.TabPage2.Controls.Add(Me.Label15)
+        Me.TabPage2.Controls.Add(Me.CheckBox3)
+        Me.TabPage2.Controls.Add(Me.CheckBox5)
+        Me.TabPage2.Controls.Add(Me.CheckBox4)
+        Me.TabPage2.Controls.Add(Me.CheckBox2)
+        Me.TabPage2.Controls.Add(Me.CheckBox1)
+        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.Label14)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(509, 363)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Settings"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(8, 295)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(124, 13)
+        Me.Label16.TabIndex = 8
+        Me.Label16.Text = "Default Debugger Color: "
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Black", "White"})
+        Me.ComboBox2.Location = New System.Drawing.Point(11, 311)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 7
+        Me.ComboBox2.Text = "Default"
+        '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel2.Controls.Add(Me.PictureBox15)
+        Me.Panel2.Location = New System.Drawing.Point(375, 325)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(50, 7)
+        Me.Panel2.TabIndex = 6
+        '
         'PictureBox15
         '
         Me.PictureBox15.BackColor = System.Drawing.Color.DodgerBlue
@@ -763,6 +549,246 @@ Partial Class Main
         Me.PictureBox15.TabIndex = 0
         Me.PictureBox15.TabStop = False
         Me.PictureBox15.Visible = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Enabled = False
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"--Custom", "8 Bit", "16 Bit", "32 Bit", "64 Bit", "128 Bit", "256 Bit", "512 Bit ", "1024 Bit", "2048 Bit", "4096 Bit", "", "--Presets", "MSKEY", "CRYPT-LOCKER", "Default"})
+        Me.ComboBox1.Location = New System.Drawing.Point(34, 223)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 5
+        Me.ComboBox1.Text = "Default"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(31, 207)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(112, 13)
+        Me.Label15.TabIndex = 4
+        Me.Label15.Text = "Use Encryption Type: "
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Checked = True
+        Me.CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox3.ForeColor = System.Drawing.Color.White
+        Me.CheckBox3.Location = New System.Drawing.Point(34, 151)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(139, 17)
+        Me.CheckBox3.TabIndex = 3
+        Me.CheckBox3.Text = "Check for Legit Signing "
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.ForeColor = System.Drawing.Color.White
+        Me.CheckBox5.Location = New System.Drawing.Point(11, 267)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(191, 17)
+        Me.CheckBox5.TabIndex = 3
+        Me.CheckBox5.Text = "Enable Extension Market (ALPHA) "
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Enabled = False
+        Me.CheckBox4.ForeColor = System.Drawing.Color.White
+        Me.CheckBox4.Location = New System.Drawing.Point(11, 187)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(217, 17)
+        Me.CheckBox4.TabIndex = 3
+        Me.CheckBox4.Text = "Encrypt Extension Folder (Not available) "
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Checked = True
+        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox2.ForeColor = System.Drawing.Color.White
+        Me.CheckBox2.Location = New System.Drawing.Point(11, 128)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(165, 17)
+        Me.CheckBox2.TabIndex = 3
+        Me.CheckBox2.Text = "Install only Signed Extensions"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.ForeColor = System.Drawing.Color.White
+        Me.CheckBox1.Location = New System.Drawing.Point(11, 89)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(112, 17)
+        Me.CheckBox1.TabIndex = 3
+        Me.CheckBox1.Text = "Enable Dev Mode"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(428, 317)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Save"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(11, 37)
+        Me.TextBox1.MaxLength = 64
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(188, 20)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = "Brewing your Coffee, Please wait..."
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(8, 21)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(117, 13)
+        Me.Label14.TabIndex = 0
+        Me.Label14.Text = "Loading Window Text: "
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.MenuStrip1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.bar
+        Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ReloadExtensionsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 389)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(517, 24)
+        Me.MenuStrip1.TabIndex = 15
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem, Me.ManageSandboxToolStripMenuItem, Me.DebuggerToolStripMenuItem, Me.ExportSettingsToolStripMenuItem, Me.ImportSettingsToolStripMenuItem, Me.InstallToolStripMenuItem, Me.DEVMARKETToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'CloseToolStripMenuItem
+        '
+        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
+        Me.CloseToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.[End]), System.Windows.Forms.Keys)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'ManageSandboxToolStripMenuItem
+        '
+        Me.ManageSandboxToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearSandboxToolStripMenuItem, Me.ResetSandboxToolStripMenuItem, Me.RunExtensionInSandboxToolStripMenuItem, Me.CloseAllExtensionsToolStripMenuItem})
+        Me.ManageSandboxToolStripMenuItem.Name = "ManageSandboxToolStripMenuItem"
+        Me.ManageSandboxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ManageSandboxToolStripMenuItem.Text = "Manage Sandbox"
+        '
+        'ClearSandboxToolStripMenuItem
+        '
+        Me.ClearSandboxToolStripMenuItem.Name = "ClearSandboxToolStripMenuItem"
+        Me.ClearSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.ClearSandboxToolStripMenuItem.Text = "Clear Sandbox"
+        '
+        'ResetSandboxToolStripMenuItem
+        '
+        Me.ResetSandboxToolStripMenuItem.Name = "ResetSandboxToolStripMenuItem"
+        Me.ResetSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.ResetSandboxToolStripMenuItem.Text = "Reset Sandbox"
+        '
+        'RunExtensionInSandboxToolStripMenuItem
+        '
+        Me.RunExtensionInSandboxToolStripMenuItem.Name = "RunExtensionInSandboxToolStripMenuItem"
+        Me.RunExtensionInSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.RunExtensionInSandboxToolStripMenuItem.Text = "Run Extension in Sandbox"
+        '
+        'CloseAllExtensionsToolStripMenuItem
+        '
+        Me.CloseAllExtensionsToolStripMenuItem.Name = "CloseAllExtensionsToolStripMenuItem"
+        Me.CloseAllExtensionsToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.CloseAllExtensionsToolStripMenuItem.Text = "Close All Extensions "
+        '
+        'DebuggerToolStripMenuItem
+        '
+        Me.DebuggerToolStripMenuItem.Name = "DebuggerToolStripMenuItem"
+        Me.DebuggerToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
+            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DebuggerToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.DebuggerToolStripMenuItem.Text = "Debugger"
+        '
+        'ExportSettingsToolStripMenuItem
+        '
+        Me.ExportSettingsToolStripMenuItem.Name = "ExportSettingsToolStripMenuItem"
+        Me.ExportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ExportSettingsToolStripMenuItem.Text = "Export Settings"
+        '
+        'ImportSettingsToolStripMenuItem
+        '
+        Me.ImportSettingsToolStripMenuItem.Name = "ImportSettingsToolStripMenuItem"
+        Me.ImportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ImportSettingsToolStripMenuItem.Text = "Import Settings"
+        '
+        'InstallToolStripMenuItem
+        '
+        Me.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem"
+        Me.InstallToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.InstallToolStripMenuItem.Text = "Install"
+        '
+        'DEVMARKETToolStripMenuItem
+        '
+        Me.DEVMARKETToolStripMenuItem.Name = "DEVMARKETToolStripMenuItem"
+        Me.DEVMARKETToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.DEVMARKETToolStripMenuItem.Text = "DEV_MARKET"
+        Me.DEVMARKETToolStripMenuItem.Visible = False
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ForumsToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ExitToolStripMenuItem.Text = "Help"
+        '
+        'ReportABugToolStripMenuItem
+        '
+        Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
+        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.ReportABugToolStripMenuItem.Text = "Report a Bug"
+        '
+        'ForumsToolStripMenuItem
+        '
+        Me.ForumsToolStripMenuItem.Name = "ForumsToolStripMenuItem"
+        Me.ForumsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.ForumsToolStripMenuItem.Text = "Forums "
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.AboutToolStripMenuItem.Text = "About "
+        '
+        'ReloadExtensionsToolStripMenuItem
+        '
+        Me.ReloadExtensionsToolStripMenuItem.Name = "ReloadExtensionsToolStripMenuItem"
+        Me.ReloadExtensionsToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
+        Me.ReloadExtensionsToolStripMenuItem.Text = "Reload Extensions"
         '
         'Panel1
         '
@@ -836,11 +862,6 @@ Partial Class Main
         Me.Text = "Main"
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
@@ -855,7 +876,12 @@ Partial Class Main
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

@@ -90,11 +90,12 @@ Partial Class dev_market
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.em_bck_music = New AxWMPLib.AxWindowsMediaPlayer()
         Me.pic_error = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.em_bck_music = New AxWMPLib.AxWindowsMediaPlayer()
         Me.em_check = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -139,14 +140,16 @@ Partial Class dev_market
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
-        CType(Me.pic_error, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.em_bck_music, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pic_error, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.main_bar
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.PictureBox19)
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.Panel3)
@@ -169,7 +172,7 @@ Partial Class dev_market
         Me.PictureBox19.BackgroundImage = CType(resources.GetObject("PictureBox19.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox19.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox19.Location = New System.Drawing.Point(708, 11)
+        Me.PictureBox19.Location = New System.Drawing.Point(664, 11)
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.Size = New System.Drawing.Size(22, 20)
         Me.PictureBox19.TabIndex = 10
@@ -177,7 +180,7 @@ Partial Class dev_market
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(546, 11)
+        Me.TextBox1.Location = New System.Drawing.Point(502, 11)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(156, 20)
         Me.TextBox1.TabIndex = 9
@@ -1065,6 +1068,16 @@ Partial Class dev_market
         Me.Panel6.TabIndex = 13
         Me.Panel6.Visible = False
         '
+        'em_bck_music
+        '
+        Me.em_bck_music.Enabled = True
+        Me.em_bck_music.Location = New System.Drawing.Point(792, 536)
+        Me.em_bck_music.Name = "em_bck_music"
+        Me.em_bck_music.OcxState = CType(resources.GetObject("em_bck_music.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.em_bck_music.Size = New System.Drawing.Size(38, 10)
+        Me.em_bck_music.TabIndex = 5
+        Me.em_bck_music.Visible = False
+        '
         'pic_error
         '
         Me.pic_error.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1095,19 +1108,24 @@ Partial Class dev_market
         '
         Me.Timer1.Interval = 3500
         '
-        'em_bck_music
-        '
-        Me.em_bck_music.Enabled = True
-        Me.em_bck_music.Location = New System.Drawing.Point(75, 66)
-        Me.em_bck_music.Name = "em_bck_music"
-        Me.em_bck_music.OcxState = CType(resources.GetObject("em_bck_music.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.em_bck_music.Size = New System.Drawing.Size(75, 23)
-        Me.em_bck_music.TabIndex = 5
-        Me.em_bck_music.Visible = False
-        '
         'em_check
         '
         Me.em_check.Enabled = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Location = New System.Drawing.Point(718, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(42, 33)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Tag = "github"
         '
         'dev_market
         '
@@ -1178,8 +1196,9 @@ Partial Class dev_market
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.pic_error, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.em_bck_music, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pic_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1255,4 +1274,5 @@ Partial Class dev_market
     Friend WithEvents Timer1 As Timer
     Friend WithEvents em_bck_music As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents em_check As Timer
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

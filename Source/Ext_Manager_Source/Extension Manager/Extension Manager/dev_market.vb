@@ -172,4 +172,8 @@ cd + "\Downloads\citra.zip")
             em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
         End If
     End Sub
+
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Process.Start("https://github.com/zoltx23/3DNUS")
+    End Sub
 End Class
