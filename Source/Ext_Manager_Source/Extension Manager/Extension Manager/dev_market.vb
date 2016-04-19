@@ -47,7 +47,7 @@ Public Class dev_market
                 Panel6.Visible = False
             End If
             banner.Image = Image.FromFile(cd + "\featured.png")
-            If File.ReadAllText(cd + "\ext_upd\citra_upd_info.txt") = cd + "\Extensions\_ext\Slot1\ext_desc.txt" Then
+            If File.ReadAllText(cd + "\ext_upd\citra_upd_info.txt") = cd + "\Extensions\_ext\Slot1\upd_info.txt" Then
                 MessageBox.Show("An Update for: Citra Emu; is Available!", "Update Manager:", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch
