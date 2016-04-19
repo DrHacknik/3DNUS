@@ -19,20 +19,20 @@ Public Class dev_market
     End Sub
 
     Private Sub dev_market_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Download the HTML Files & Save them. 
+        'Download the HTML Files & Save them.
         Try
             My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/citra_emu/extension_ver.txt",
- cd + "ext_upd\citra_upd_info.txt")
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/citra_emu/upd_info.txt",
+ cd + "\ext_upd\citra_upd_info.txt")
             My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/devkit/extension_ver.txt",
- cd + "ext_upd\citra_upd_info.txt")
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/devkit/upd_info.txt",
+ cd + "\ext_upd\devkit_upd_info.txt")
             My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nand_tool/extension_ver.txt",
- cd + "ext_upd\citra_upd_info.txt")
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nand_tool/upd_info.txt",
+ cd + "\ext_upd\nandtool_upd_info.txt")
             My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nandify/extension_ver.txt",
- cd + "ext_upd\citra_upd_info.txt")
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nandify/upd_info.txt",
+ cd + "\ext_upd\nandify_upd_info.txt")
             em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
             If em_bck_music.playState = WMPLib.WMPPlayState.wmppsStopped Then
                 em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
