@@ -13,7 +13,6 @@ Public Class Main
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
 
-
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -198,7 +197,7 @@ Listening to dev_main"
     Private Sub ResetSandboxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetSandboxToolStripMenuItem.Click
         MessageBox.Show("The Sandbox Settings, and Cache WILL BE Reset. Are you sure you Wish to continue?", "Extension Manager: Reset Sandbox", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
         If vbYes Then
-            MessageBox.Show("The Sandbox has been Reset!" + " 
+            MessageBox.Show("The Sandbox has been Reset!" + "
 Removed: 20MB's from Cache.", "Extension Manager: Reset Sandbox", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
         If vbNo Then
@@ -338,7 +337,7 @@ Removed: 20MB's from Cache.", "Extension Manager: Reset Sandbox", MessageBoxButt
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             My.Settings.dev_debugger_logged = "
-saved: Settings to Application.Root() 
+saved: Settings to Application.Root()
 Listening to dev_main"
         Catch ex As Exception
         End Try
@@ -431,5 +430,9 @@ Listening to dev_market"
 
     Private Sub ReloadExtensionsToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ReloadExtensionsToolStripMenuItem.Click
         Application.Restart()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

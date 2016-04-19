@@ -30,6 +30,26 @@ Partial Class Main
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunExtensionInSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseAllExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebuggerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImportSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InstallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DEVMARKETToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForumsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReloadExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -70,32 +90,13 @@ Partial Class Main
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClearSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResetSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RunExtensionInSandboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CloseAllExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DebuggerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExportSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ImportSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InstallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DEVMARKETToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportABugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ForumsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReloadExtensionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,7 +113,6 @@ Partial Class Main
         Me.TabPage2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,6 +161,136 @@ Partial Class Main
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(517, 389)
         Me.TabControl1.TabIndex = 16
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 1000
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.MenuStrip1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.bar
+        Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ReloadExtensionsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 389)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(517, 24)
+        Me.MenuStrip1.TabIndex = 15
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem, Me.ManageSandboxToolStripMenuItem, Me.DebuggerToolStripMenuItem, Me.ExportSettingsToolStripMenuItem, Me.ImportSettingsToolStripMenuItem, Me.InstallToolStripMenuItem, Me.DEVMARKETToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'CloseToolStripMenuItem
+        '
+        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
+        Me.CloseToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.[End]), System.Windows.Forms.Keys)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'ManageSandboxToolStripMenuItem
+        '
+        Me.ManageSandboxToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearSandboxToolStripMenuItem, Me.ResetSandboxToolStripMenuItem, Me.RunExtensionInSandboxToolStripMenuItem, Me.CloseAllExtensionsToolStripMenuItem})
+        Me.ManageSandboxToolStripMenuItem.Name = "ManageSandboxToolStripMenuItem"
+        Me.ManageSandboxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ManageSandboxToolStripMenuItem.Text = "Manage Sandbox"
+        '
+        'ClearSandboxToolStripMenuItem
+        '
+        Me.ClearSandboxToolStripMenuItem.Name = "ClearSandboxToolStripMenuItem"
+        Me.ClearSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.ClearSandboxToolStripMenuItem.Text = "Clear Sandbox"
+        '
+        'ResetSandboxToolStripMenuItem
+        '
+        Me.ResetSandboxToolStripMenuItem.Name = "ResetSandboxToolStripMenuItem"
+        Me.ResetSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.ResetSandboxToolStripMenuItem.Text = "Reset Sandbox"
+        '
+        'RunExtensionInSandboxToolStripMenuItem
+        '
+        Me.RunExtensionInSandboxToolStripMenuItem.Name = "RunExtensionInSandboxToolStripMenuItem"
+        Me.RunExtensionInSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.RunExtensionInSandboxToolStripMenuItem.Text = "Run Extension in Sandbox"
+        '
+        'CloseAllExtensionsToolStripMenuItem
+        '
+        Me.CloseAllExtensionsToolStripMenuItem.Name = "CloseAllExtensionsToolStripMenuItem"
+        Me.CloseAllExtensionsToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.CloseAllExtensionsToolStripMenuItem.Text = "Close All Extensions "
+        '
+        'DebuggerToolStripMenuItem
+        '
+        Me.DebuggerToolStripMenuItem.Name = "DebuggerToolStripMenuItem"
+        Me.DebuggerToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
+            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DebuggerToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.DebuggerToolStripMenuItem.Text = "Debugger"
+        '
+        'ExportSettingsToolStripMenuItem
+        '
+        Me.ExportSettingsToolStripMenuItem.Name = "ExportSettingsToolStripMenuItem"
+        Me.ExportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ExportSettingsToolStripMenuItem.Text = "Export Settings"
+        '
+        'ImportSettingsToolStripMenuItem
+        '
+        Me.ImportSettingsToolStripMenuItem.Name = "ImportSettingsToolStripMenuItem"
+        Me.ImportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ImportSettingsToolStripMenuItem.Text = "Import Settings"
+        '
+        'InstallToolStripMenuItem
+        '
+        Me.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem"
+        Me.InstallToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.InstallToolStripMenuItem.Text = "Install"
+        '
+        'DEVMARKETToolStripMenuItem
+        '
+        Me.DEVMARKETToolStripMenuItem.Name = "DEVMARKETToolStripMenuItem"
+        Me.DEVMARKETToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.DEVMARKETToolStripMenuItem.Text = "DEV_MARKET"
+        Me.DEVMARKETToolStripMenuItem.Visible = False
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ForumsToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ExitToolStripMenuItem.Text = "Help"
+        '
+        'ReportABugToolStripMenuItem
+        '
+        Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
+        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.ReportABugToolStripMenuItem.Text = "Report a Bug"
+        '
+        'ForumsToolStripMenuItem
+        '
+        Me.ForumsToolStripMenuItem.Name = "ForumsToolStripMenuItem"
+        Me.ForumsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.ForumsToolStripMenuItem.Text = "Forums "
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.AboutToolStripMenuItem.Text = "About "
+        '
+        'ReloadExtensionsToolStripMenuItem
+        '
+        Me.ReloadExtensionsToolStripMenuItem.Name = "ReloadExtensionsToolStripMenuItem"
+        Me.ReloadExtensionsToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
+        Me.ReloadExtensionsToolStripMenuItem.Text = "Reload Extensions"
         '
         'TabPage1
         '
@@ -660,136 +790,6 @@ Partial Class Main
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Loading Window Text: "
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 10
-        '
-        'Timer2
-        '
-        Me.Timer2.Interval = 1000
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.MenuStrip1.BackgroundImage = Global.Extension_Manager.My.Resources.Resources.bar
-        Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ReloadExtensionsToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 389)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(517, 24)
-        Me.MenuStrip1.TabIndex = 15
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem, Me.ManageSandboxToolStripMenuItem, Me.DebuggerToolStripMenuItem, Me.ExportSettingsToolStripMenuItem, Me.ImportSettingsToolStripMenuItem, Me.InstallToolStripMenuItem, Me.DEVMARKETToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'CloseToolStripMenuItem
-        '
-        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.[End]), System.Windows.Forms.Keys)
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.CloseToolStripMenuItem.Text = "Close"
-        '
-        'ManageSandboxToolStripMenuItem
-        '
-        Me.ManageSandboxToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearSandboxToolStripMenuItem, Me.ResetSandboxToolStripMenuItem, Me.RunExtensionInSandboxToolStripMenuItem, Me.CloseAllExtensionsToolStripMenuItem})
-        Me.ManageSandboxToolStripMenuItem.Name = "ManageSandboxToolStripMenuItem"
-        Me.ManageSandboxToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ManageSandboxToolStripMenuItem.Text = "Manage Sandbox"
-        '
-        'ClearSandboxToolStripMenuItem
-        '
-        Me.ClearSandboxToolStripMenuItem.Name = "ClearSandboxToolStripMenuItem"
-        Me.ClearSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.ClearSandboxToolStripMenuItem.Text = "Clear Sandbox"
-        '
-        'ResetSandboxToolStripMenuItem
-        '
-        Me.ResetSandboxToolStripMenuItem.Name = "ResetSandboxToolStripMenuItem"
-        Me.ResetSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.ResetSandboxToolStripMenuItem.Text = "Reset Sandbox"
-        '
-        'RunExtensionInSandboxToolStripMenuItem
-        '
-        Me.RunExtensionInSandboxToolStripMenuItem.Name = "RunExtensionInSandboxToolStripMenuItem"
-        Me.RunExtensionInSandboxToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.RunExtensionInSandboxToolStripMenuItem.Text = "Run Extension in Sandbox"
-        '
-        'CloseAllExtensionsToolStripMenuItem
-        '
-        Me.CloseAllExtensionsToolStripMenuItem.Name = "CloseAllExtensionsToolStripMenuItem"
-        Me.CloseAllExtensionsToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.CloseAllExtensionsToolStripMenuItem.Text = "Close All Extensions "
-        '
-        'DebuggerToolStripMenuItem
-        '
-        Me.DebuggerToolStripMenuItem.Name = "DebuggerToolStripMenuItem"
-        Me.DebuggerToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
-            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DebuggerToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.DebuggerToolStripMenuItem.Text = "Debugger"
-        '
-        'ExportSettingsToolStripMenuItem
-        '
-        Me.ExportSettingsToolStripMenuItem.Name = "ExportSettingsToolStripMenuItem"
-        Me.ExportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ExportSettingsToolStripMenuItem.Text = "Export Settings"
-        '
-        'ImportSettingsToolStripMenuItem
-        '
-        Me.ImportSettingsToolStripMenuItem.Name = "ImportSettingsToolStripMenuItem"
-        Me.ImportSettingsToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ImportSettingsToolStripMenuItem.Text = "Import Settings"
-        '
-        'InstallToolStripMenuItem
-        '
-        Me.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem"
-        Me.InstallToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.InstallToolStripMenuItem.Text = "Install"
-        '
-        'DEVMARKETToolStripMenuItem
-        '
-        Me.DEVMARKETToolStripMenuItem.Name = "DEVMARKETToolStripMenuItem"
-        Me.DEVMARKETToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.DEVMARKETToolStripMenuItem.Text = "DEV_MARKET"
-        Me.DEVMARKETToolStripMenuItem.Visible = False
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportABugToolStripMenuItem, Me.ForumsToolStripMenuItem, Me.AboutToolStripMenuItem})
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ExitToolStripMenuItem.Text = "Help"
-        '
-        'ReportABugToolStripMenuItem
-        '
-        Me.ReportABugToolStripMenuItem.Name = "ReportABugToolStripMenuItem"
-        Me.ReportABugToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ReportABugToolStripMenuItem.Text = "Report a Bug"
-        '
-        'ForumsToolStripMenuItem
-        '
-        Me.ForumsToolStripMenuItem.Name = "ForumsToolStripMenuItem"
-        Me.ForumsToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ForumsToolStripMenuItem.Text = "Forums "
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.AboutToolStripMenuItem.Text = "About "
-        '
-        'ReloadExtensionsToolStripMenuItem
-        '
-        Me.ReloadExtensionsToolStripMenuItem.Name = "ReloadExtensionsToolStripMenuItem"
-        Me.ReloadExtensionsToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
-        Me.ReloadExtensionsToolStripMenuItem.Text = "Reload Extensions"
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
@@ -862,6 +862,8 @@ Partial Class Main
         Me.Text = "Main"
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
@@ -880,8 +882,6 @@ Partial Class Main
         Me.TabPage2.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

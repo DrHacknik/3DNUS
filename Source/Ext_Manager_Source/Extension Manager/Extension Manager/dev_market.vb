@@ -21,6 +21,18 @@ Public Class dev_market
     Private Sub dev_market_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Download the HTML Files & Save them. 
         Try
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/citra_emu/extension_ver.txt",
+ cd + "ext_upd\citra_upd_info.txt")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/devkit/extension_ver.txt",
+ cd + "ext_upd\citra_upd_info.txt")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nand_tool/extension_ver.txt",
+ cd + "ext_upd\citra_upd_info.txt")
+            My.Computer.Network.DownloadFile(
+ "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nandify/extension_ver.txt",
+ cd + "ext_upd\citra_upd_info.txt")
             em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
             If em_bck_music.playState = WMPLib.WMPPlayState.wmppsStopped Then
                 em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
@@ -35,7 +47,9 @@ Public Class dev_market
                 Panel6.Visible = False
             End If
             banner.Image = Image.FromFile(cd + "\featured.png")
-
+            If File.ReadAllText(cd + "\ext_upd\citra_upd_info.txt") = cd + "\Extensions\_ext\Slot1\ext_desc.txt" Then
+                MessageBox.Show("An Update for: Citra Emu; is Available!", "Update Manager:", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
         Catch
         End Try
     End Sub

@@ -1,1 +1,2 @@
-Nightly Build-HEAD-0408f11 
+A simple ROM Emulator for the 3DS.
+Version: Nightly Build-HEAD-32dfd4b 
