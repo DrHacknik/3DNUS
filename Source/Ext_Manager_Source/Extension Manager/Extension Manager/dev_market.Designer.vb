@@ -1062,9 +1062,9 @@ Partial Class dev_market
         Me.Panel6.Controls.Add(Me.pic_error)
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(0, 56)
+        Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(830, 550)
+        Me.Panel6.Size = New System.Drawing.Size(830, 606)
         Me.Panel6.TabIndex = 13
         Me.Panel6.Visible = False
         '
@@ -1087,7 +1087,7 @@ Partial Class dev_market
         Me.pic_error.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.pic_error.Location = New System.Drawing.Point(343, 199)
         Me.pic_error.Name = "pic_error"
-        Me.pic_error.Size = New System.Drawing.Size(130, 126)
+        Me.pic_error.Size = New System.Drawing.Size(130, 182)
         Me.pic_error.TabIndex = 4
         Me.pic_error.TabStop = False
         '
@@ -1134,11 +1134,11 @@ Partial Class dev_market
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(830, 606)
-        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel6)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

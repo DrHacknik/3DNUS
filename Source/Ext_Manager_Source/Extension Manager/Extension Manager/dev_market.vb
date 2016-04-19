@@ -33,6 +33,9 @@ Public Class dev_market
             My.Computer.Network.DownloadFile(
  "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/nandify/upd_info.txt",
  cd + "\ext_upd\nandify_upd_info.txt")
+            If File.ReadAllText(cd + "\ext_upd\citra_upd_info.txt") = cd + "\Extensions\_ext\Slot1\upd_info.txt" Then
+                MessageBox.Show("An Update for: Citra Emu; is Available!", "Update Manager:", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
             em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
             If em_bck_music.playState = WMPLib.WMPPlayState.wmppsStopped Then
                 em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
@@ -47,9 +50,7 @@ Public Class dev_market
                 Panel6.Visible = False
             End If
             banner.Image = Image.FromFile(cd + "\featured.png")
-            If File.ReadAllText(cd + "\ext_upd\citra_upd_info.txt") = cd + "\Extensions\_ext\Slot1\upd_info.txt" Then
-                MessageBox.Show("An Update for: Citra Emu; is Available!", "Update Manager:", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
+
         Catch
         End Try
     End Sub
@@ -189,5 +190,17 @@ cd + "\Downloads\citra.zip")
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Process.Start("https://github.com/zoltx23/3DNUS")
+    End Sub
+
+    Private Sub dev_market_HelpButtonClicked(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.HelpButtonClicked
+
+    End Sub
+
+    Private Sub dev_market_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        File.Delete(cd + "\ext_upd\citra_upd_info.txt")
+        File.Delete(cd + "\ext_upd\devkit_upd_info.txt")
+        File.Delete(cd + "\ext_upd\nandtool_upd_info.txt")
+        File.Delete(cd + "\ext_upd\nandify_upd_info.txt")
+        Directory.Delete(cd + "\ext_upd")
     End Sub
 End Class
