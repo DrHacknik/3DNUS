@@ -165,12 +165,12 @@ namespace _3DNUS
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(124, 574);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(137, 574);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 13);
+            this.label3.Size = new System.Drawing.Size(155, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "   For Updates.   Version: 2.6.0.1 (v29412) ";
+            this.label3.Text = "DEVELOPMENT BUILD ONLY";
             // 
             // panel1
             // 

@@ -355,7 +355,7 @@ foreach (Process worker in workers)
         private void Main_Load(object sender, EventArgs e)
         {
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
-         
+            MessageBox.Show("This is a Development build! There may or may not be Bugs or Incomplete parts of 3DNUS. Please continue with caution!", "3DNUS: Dev Build Info",MessageBoxButtons.OK ,MessageBoxIcon.Exclamation);
             t_log.Text = DateTime.Now + " | 3DNUS Log Console:";
             label4.Text = DateTime.Now + "";
 

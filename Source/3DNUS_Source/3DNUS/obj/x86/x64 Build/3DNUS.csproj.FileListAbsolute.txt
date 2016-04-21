@@ -1,2 +1,3 @@
 C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\x86\x64 Build\3DNUS.exe.config
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS_Source\3DNUS\bin\x86\x64 Build\3DNUS.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\x86\x64 Build\3DNUS.exe.config

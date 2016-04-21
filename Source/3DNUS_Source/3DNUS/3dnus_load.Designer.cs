@@ -106,7 +106,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS Loading";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.main_load_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
