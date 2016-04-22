@@ -64,6 +64,7 @@ Listening to dev_main"
 
         End Try
         Try
+        'Loads settings, then changes the Checkbox's, etc. 
             My.Settings.Reload()
             If My.Settings.settings_devmd = "1" Then
                 CheckBox1.Checked = True
