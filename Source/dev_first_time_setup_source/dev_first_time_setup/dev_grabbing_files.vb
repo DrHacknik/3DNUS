@@ -2,6 +2,13 @@
 Imports Ionic
 Imports Ionic.Zip
 
+'The following code, grabs (Downloads) the latest .zip files of the Preloaded extensions.
+'Then installs them to their Default slots. This is done by using My.Computer.Network.DownloadFile. 
+'Then it saves them to "ROOT\Extensions\_ext\Temp"; then proceedes to Extract them. 
+'You can change the URL's, and the Directorys. 
+'This Program use's Ionic.zip to Extract the Archvies (This supports: .zip, .tar, .tar.gz, and .rar)
+'If the Ionic.zip .dll fails to Extract an Archive to the Path specified, the Code will change the code of the Status label to:
+'"Installation has Failed! --dev_all.fail" or "An Extension has Failed to Install! --zip.fail". 
 Public Class dev_grabbing_files
     Dim cd = Application.StartupPath
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
