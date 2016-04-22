@@ -9,6 +9,7 @@ Imports Ionic.Zip
 'This Program use's Ionic.zip to Extract the Archvies (This supports: .zip, .tar, .tar.gz, and .rar)
 'If the Ionic.zip .dll fails to Extract an Archive to the Path specified, the Code will change the text of the Status label to:
 '"Installation has Failed! --dev_all.fail" or "An Extension has Failed to Install! --zip.fail". 
+'After that has completed, the Temporary files will be deleted, and any Directory's that were used. 
 Public Class dev_grabbing_files
     Dim cd = Application.StartupPath
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
