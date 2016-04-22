@@ -7,7 +7,7 @@ Imports Ionic.Zip
 'Then it saves them to "ROOT\Extensions\_ext\Temp"; then proceedes to Extract them. 
 'You can change the URL's, and the Directorys. 
 'This Program use's Ionic.zip to Extract the Archvies (This supports: .zip, .tar, .tar.gz, and .rar)
-'If the Ionic.zip .dll fails to Extract an Archive to the Path specified, the Code will change the code of the Status label to:
+'If the Ionic.zip .dll fails to Extract an Archive to the Path specified, the Code will change the text of the Status label to:
 '"Installation has Failed! --dev_all.fail" or "An Extension has Failed to Install! --zip.fail". 
 Public Class dev_grabbing_files
     Dim cd = Application.StartupPath
