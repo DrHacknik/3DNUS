@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
+using System.Reflection;
+
+using _3DNUS.SetupWizard;
+using System.Security.Cryptography;
 
 namespace _3DNUS
 {
@@ -20,103 +24,107 @@ namespace _3DNUS
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void main_load_Shown(object sender, EventArgs e)
         {
+            string cd = Path.GetDirectoryName(Application.ExecutablePath);
+
+            CheckAssetExtract(Path.Combine(cd, "Config"), "Config");
+            CheckAssetExtract(cd, "Binary");
+
+            if(!File.Exists(Path.Combine(cd, "Config", "setup_completed.cfg")))
+            {
+                CheckAssetExtract(Path.Combine(cd, "Music"), "Music");
+
+                using(WizardHello frm = new WizardHello())
+                {
+                    if(frm.ShowDialog() == DialogResult.Abort)
+                    {
+                        Application.Exit();
+                        return;
+                    }
+                }
+
+                Application.Restart();
+                return;
+            }
+
+
+            if(File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg")) == ("1"))
+            {
+                panel1.Visible = true;
+            }
+
+            label2.Visible = true;
+
+            System.Diagnostics.Stopwatch sw = new Stopwatch();
+            sw.Start();
+            while(sw.ElapsedMilliseconds < 5000) { Application.DoEvents(); }
+            sw.Stop();
+
+            using(Main frm = new Main())
+            {
+                frm.Show();
+            }
+
             Close();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void CheckAssetExtract(String cd, String wat, Boolean checksum = false)
         {
-            string cd = Path.GetDirectoryName(Application.ExecutablePath);
-            timer1.Stop();
-            if (File.ReadAllText(Path.Combine(cd, "Config", "setup_completed.cfg")) == (""))
+            if(!Directory.Exists(cd)) Directory.CreateDirectory(cd);
+
+            Assembly ass = Assembly.GetExecutingAssembly();
+            String prefix = "_3DNUS.RuntimeAssets." + wat + ".";
+            int prefixlen = prefix.Length;
+
+            foreach(String ss in ass.GetManifestResourceNames().Where(str => str.StartsWith(prefix)))
             {
-                Process.Start(Path.Combine(cd, "dev_first_time_setup.exe"));
-                try
+                String s = ss.Substring(prefixlen);
+                String fn = Path.Combine(cd, s);
+
+                String cs = null;
+                if(checksum)
                 {
-                    Process[] workers = Process.GetProcessesByName("3DNUS Upd - Lite");
-                    foreach (Process worker in workers)
+                    using(MD5 md = MD5.Create())
                     {
-                        worker.Kill();
-                        worker.WaitForExit();
-                        worker.Dispose();
-                    }
-                    Application.Exit();
-
-                }
-                catch
-                {
-                }
-                Application.Exit();
-            }
-            timer1.Stop();
-            if (File.ReadAllText(Path.Combine(cd, "Config", "setup_completed.cfg")) == ("1"))
-            {
-                Main form = new Main();
-                form.Show();
-                Hide();
-            }
-           
-        }
-
-        private void main_load_Load(object sender, EventArgs e)
-       { 
-            Process.Start("3DNUS Upd - Lite.exe");
-            {
-                string cd = Path.GetDirectoryName(Application.ExecutablePath);
-                {
-                    //Read all Config Files into RAM (.cfg)
-                    File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns_add_p.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns_add_s.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_dns_ip4.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px_add.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px_pass.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_px_usr.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "adv_sub_mask.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "ext_ext.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "ext_net_4.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "ext_sandbox.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "ext_sandbox_md.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "ext_sandbox_st.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "upd_auto.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "upd_custom.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "upd_custom_svr.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "ver_dis.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "vnm.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "vnm_fw.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "vnm_install_signed.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "vnm_skip_failed.cfg"));
-                    File.ReadAllText(Path.Combine(cd, "Config", "upd_checker.cfg"));
-
-
-
-                    {
-
-                        if (File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg")) == ("1"))
+                        using(Stream sr = ass.GetManifestResourceStream(ss))
                         {
-                            panel1.Visible = true;
+                            cs = BitConverter.ToString(md.ComputeHash(sr)).ToLower();
                         }
+                    }
+                }
 
+                if(File.Exists(fn))
+                    if(checksum)
+                    {
+                        using(FileStream fs = File.OpenRead(fn))
+                        {
+                            using(MD5 md = MD5.Create())
+                            {
+                                using(Stream sr = ass.GetManifestResourceStream(ss))
+                                {
+                                    if(BitConverter.ToString(md.ComputeHash(sr)).ToLower() == cs) continue;
+                                }
+                            }
+                        }
+                    }
+                    else continue;
 
-
-
-
-                        // Process create = new Process();
-                        // create.StartInfo.FileName = "3DNUS_Upd.exe";
-                        //Application.Exit();
+                using(Stream sr = ass.GetManifestResourceStream(ss))
+                {
+                    using(FileStream fs = File.OpenWrite(fn))
+                    {
+                        byte[] buf = new byte[0x1000];
+                        int read = -1;
+                        while(true)
+                        {
+                            read = sr.Read(buf, 0, buf.Length);
+                            if(read == 0) break;
+                            fs.Write(buf, 0, read);
+                        }
                     }
                 }
             }
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            label2.Visible = true;
-            timer2.Stop();
         }
     }
 }

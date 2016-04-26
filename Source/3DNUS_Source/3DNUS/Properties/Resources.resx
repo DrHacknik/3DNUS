@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="_7_zip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7-zip.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\RuntimeAssets\Binary\7-zip.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="application_xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application_xml.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_7z1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7z.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\RuntimeAssets\Binary\7z.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Donate_Nyan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donate_Nyan.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -146,7 +146,7 @@
     <value>..\Resources\3ds_bck_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_7zG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7zG.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\RuntimeAssets\Binary\7zG.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="download_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b_download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -155,7 +155,7 @@
     <value>..\Resources\blank_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_7z" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7z.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\RuntimeAssets\Binary\7z.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="console_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\console_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -176,7 +176,7 @@
     <value>..\Resources\b_download_select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_7zFM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\7zFM.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\RuntimeAssets\Binary\7zFM.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="vnm_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vnm_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -197,7 +197,7 @@
     <value>..\Resources\blank_bck_ukn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="make_cdn_cia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\make_cdn_cia.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\RuntimeAssets\Binary\make_cdn_cia.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Donate_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donate_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,5 +207,29 @@
   </data>
   <data name="ext_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ext_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Beam_Me_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beam Me Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp_1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comp-1_1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FeedbackAppList_targetsize_80_altform_unplated_contrast_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FeedbackAppList.targetsize-80_altform-unplated_contrast-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lets_Begin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lets_Begin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_3dnus_beta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_3dnus_beta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1458960538_question_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458960538_question_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

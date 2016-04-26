@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_load));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
@@ -79,12 +70,6 @@
             this.label2.Text = "Config Loaded! ";
             this.label2.Visible = false;
             // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 3500;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // main_load
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,7 +91,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS Loading";
-            this.Load += new System.EventHandler(this.main_load_Load);
+            this.Shown += new System.EventHandler(this.main_load_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -115,10 +100,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer2;
     }
 }

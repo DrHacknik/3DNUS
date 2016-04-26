@@ -1,18 +1,18 @@
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Release\3DNUS.exe.config
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Release\3DNUS.exe
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Release\3DNUS.pdb
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Release\Microsoft.VisualStudio.DebuggerVisualizers.dll
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\bin\Release\Microsoft.VisualStudio.DebuggerVisualizers.xml
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\3DNUS.csprojResolveAssemblyReference.cache
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.main_load.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.About.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.ext_mng_load.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.ext_about.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.Main.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.Properties.Resources.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.Settings.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.vnm_installer.resources
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\3DNUS.csproj.GenerateResource.Cache
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\3DNUS.exe
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\3DNUS.pdb
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\3DNUS\obj\Release\_3DNUS.ext_pick.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\bin\Release\3DNUS.exe.config
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\Interop.WMPLib.dll
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\3DNUS.csproj.ResolveComReference.cache
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\bin\Release\3DNUS.exe
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\bin\Release\3DNUS.pdb
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\ResolveAssemblyReference.cache
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.main_load.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.About.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.ext_about.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.Main.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.Properties.Resources.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.Settings.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.SetupWizard.WizardHello.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\_3DNUS.vnm_installer.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\GenerateResource.read.1.tlog
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\GenerateResource.write.1.tlog
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\3DNUS.exe
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Release\3DNUS.pdb

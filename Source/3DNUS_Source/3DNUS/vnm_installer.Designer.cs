@@ -99,7 +99,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Create Pkg Folder";
             this.in_folder.SetToolTip(this.button3, "Create a Folder Named: \"Package_Title;\"\r\nthis is used for Installing Any Packages" +
-        " (.cia, etc)\r\nNote: As of now, only one Package can be Placed Inside!");
+                    " (.cia, etc)\r\nNote: As of now, only one Package can be Placed Inside!");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -116,8 +116,8 @@
             // 
             // in_id
             // 
-            this.in_id.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.in_id.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.in_id.BackColor = System.Drawing.Color.Gainsboro;
             this.in_id.Location = new System.Drawing.Point(84, 11);
             this.in_id.Name = "in_id";
@@ -125,7 +125,7 @@
             this.in_id.TabIndex = 7;
             this.in_id.Text = "Enter Title ID Here";
             this.in_folder.SetToolTip(this.in_id, "The Name of the File Package;\r\nRemember to Remove the File Extension!!\r\nYou can a" +
-        "lso type a Different Slot # (Number).\r\nEx: 00000000 --> 9999999.");
+                    "lso type a Different Slot # (Number).\r\nEx: 00000000 --> 9999999.");
             // 
             // timer1
             // 
@@ -159,7 +159,7 @@
             this.label2.Size = new System.Drawing.Size(266, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Note: For now you\'ll need to remove the File Extension;\r\nThat say\'s \"0000000000,\"" +
-    " Ex: .cia, .3ds, .3dsx, etc.";
+                " Ex: .cia, .3ds, .3dsx, etc.";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // in_folder

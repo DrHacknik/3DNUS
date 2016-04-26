@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_3DNUS</RootNamespace>
     <AssemblyName>3DNUS</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\Luke\OneDrive\3DNUS ClickOnce Pub\</PublishUrl>
@@ -116,7 +116,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
-    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.VisualStudio.DebuggerVisualizers.dll</HintPath>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -164,6 +167,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="i18n\LocalizedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="i18n\Localizer.cs" />
+    <Compile Include="Ini.cs" />
     <Compile Include="openFileDialog1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +180,12 @@
     </Compile>
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupWizard\WizardHello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupWizard\WizardHello.Designer.cs">
+      <DependentUpon>WizardHello.cs</DependentUpon>
     </Compile>
     <Compile Include="vnm_installer.cs">
       <SubType>Form</SubType>
@@ -185,12 +199,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ext_about.resx">
       <DependentUpon>ext_about.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -204,9 +221,14 @@
     </Compile>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupWizard\WizardHello.resx">
+      <DependentUpon>WizardHello.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vnm_installer.resx">
       <DependentUpon>vnm_installer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="3DNUS_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
@@ -219,6 +241,33 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_dns.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_dns_add_p.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_dns_add_s.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_dns_ip4.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_px.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_px_add.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_px_pass.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_px_usr.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\adv_sub_mask.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\dev_mode_cfg.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_ext.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_net_4.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_priv.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_sandbox.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_sandbox_md.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_sandbox_st.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ext_sandbox_val.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\lang_selected.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\upd_auto.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\upd_checker.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\upd_custom.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\upd_custom_svr.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\ver_dis.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\vnm.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\vnm_fw.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\vnm_install_signed.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\Config\vnm_skip_failed.cfg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -230,6 +279,22 @@
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RuntimeAssets\Music\3ds_shop_bck_music.mp3" />
+    <EmbeddedResource Include="RuntimeAssets\Music\upd_bck_music.mp3" />
+    <None Include="Resources\Logo_3dnus_beta.png" />
+    <None Include="Resources\Lets_Begin.png" />
+    <None Include="Resources\FeedbackAppList.targetsize-80_altform-unplated_contrast-black.png" />
+    <None Include="Resources\comp-1_1.gif" />
+    <None Include="Resources\Close1.png" />
+    <None Include="Resources\Beam Me Up.png" />
+    <None Include="Resources\bar.png" />
+    <None Include="Resources\1458960538_question_blue.png" />
+    <EmbeddedResource Include="RuntimeAssets\Binary\7-zip.dll" />
+    <EmbeddedResource Include="RuntimeAssets\Binary\7z.dll" />
+    <EmbeddedResource Include="RuntimeAssets\Binary\7z.exe" />
+    <EmbeddedResource Include="RuntimeAssets\Binary\7zFM.exe" />
+    <EmbeddedResource Include="RuntimeAssets\Binary\7zG.exe" />
+    <EmbeddedResource Include="RuntimeAssets\Binary\make_cdn_cia.exe" />
     <None Include="Resources\ext_icon.png" />
     <None Include="Resources\vnm_bck1.png" />
     <None Include="Resources\door_out.png" />
@@ -247,12 +312,6 @@
     <None Include="Resources\3dnus_splash.png" />
     <None Include="Resources\ext_mng_logo.png" />
     <None Include="Resources\Donate_Nyan.gif" />
-    <None Include="bin\Debug\7z.dll" />
-    <None Include="bin\Debug\7z.exe" />
-    <None Include="bin\Debug\7zFM.exe" />
-    <None Include="bin\Debug\7zG.exe" />
-    <None Include="bin\Debug\7-zip.dll" />
-    <None Include="bin\Debug\make_cdn_cia.exe" />
     <Content Include="Logo_3dnus.ico" />
     <Content Include="Logo_3dnus_128x128.ico" />
     <None Include="Resources\ext_mng_logo_shdw.png" />
@@ -309,6 +368,17 @@
       <Progid>cia</Progid>
       <DefaultIcon>Logo_3dnus_128x128.ico</DefaultIcon>
     </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

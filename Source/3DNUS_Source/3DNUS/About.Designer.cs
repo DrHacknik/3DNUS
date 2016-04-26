@@ -49,10 +49,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(173, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 30);
+            this.label1.Size = new System.Drawing.Size(125, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "3DNUS 2.6:";
             // 
@@ -64,7 +64,7 @@
             this.label2.Size = new System.Drawing.Size(160, 91);
             this.label2.TabIndex = 3;
             this.label2.Text = "       3DNUS Version 2.6.0\r\n                (DEV-BLD) \r\n     Original work by: Gr" +
-    "ound\r\n\r\nNow maintained by: Dr. Hacknik\r\n\r\n      CIA and WUD: Crediar";
+                "ound\r\n\r\nNow maintained by: Dr. Hacknik\r\n\r\n      CIA and WUD: Crediar";
             // 
             // label3
             // 
