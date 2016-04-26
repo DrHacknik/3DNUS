@@ -54,39 +54,7 @@ Public Class dev_market
         Catch
         End Try
     End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub WebView1_DownloadCompleted(sender As Object, e As EO.WebBrowser.DownloadEventArgs)
-
-    End Sub
-
-    Private Sub WebView1_LoadCompleted(sender As Object, e As EO.WebBrowser.LoadCompletedEventArgs)
-
-    End Sub
-
-    Private Sub WebView1_UrlChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub WebView1_IsLoadingChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub WebBrowser1_ProgressChanged(sender As Object, e As WebBrowserProgressChangedEventArgs)
-
-    End Sub
-
-    Private Sub home_Click(sender As Object, e As EventArgs) Handles home.Click
-
-    End Sub
-
-    Private Sub refresh_Click(sender As Object, e As EventArgs) Handles refresh.Click
-
-    End Sub
-
+    
     Private Sub downloads_Click(sender As Object, e As EventArgs) Handles downloads.Click
         dev_download_manager.Show()
     End Sub
@@ -101,15 +69,7 @@ Public Class dev_market
             dl_progress.Width = 1
         End If
     End Sub
-
-    Private Sub WebBrowser1_Navigating_2(sender As Object, e As WebBrowserNavigatingEventArgs)
-
-    End Sub
-
-    Private Sub WebBrowser1_Navigated_2(sender As Object, e As WebBrowserNavigatedEventArgs)
-
-    End Sub
-
+    
     Private Sub PictureBox21_Click(sender As Object, e As EventArgs) Handles PictureBox21.Click
         Panel6.Visible = True
         pic_error.Visible = False
@@ -191,11 +151,7 @@ cd + "\Downloads\citra.zip")
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Process.Start("https://github.com/zoltx23/3DNUS")
     End Sub
-
-    Private Sub dev_market_HelpButtonClicked(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.HelpButtonClicked
-
-    End Sub
-
+    
     Private Sub dev_market_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         File.Delete(cd + "\ext_upd\citra_upd_info.txt")
         File.Delete(cd + "\ext_upd\devkit_upd_info.txt")
