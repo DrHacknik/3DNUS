@@ -64,7 +64,7 @@ namespace _3DNUS.SetupWizard
         {
             if(!File.Exists(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Config", "setup_completed.cfg")))
             {
-                MessageBox.Show("You won't be able to use 3DNUS until you don't complete the first time setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You will NOT be able to use 3DNUS, until you have Completed the Setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DialogResult = System.Windows.Forms.DialogResult.Abort;
             }
             Close();
