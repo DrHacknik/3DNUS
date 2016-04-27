@@ -11,10 +11,6 @@ Public Class Main
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             File.Delete(cd + "\\main.html")
@@ -23,15 +19,6 @@ Public Class Main
             File.Delete(cd + "\\featured.png")
             File.Delete(cd + "\\icon_banner_title.txt")
             File.Delete(cd + "\\icon_banner_desc.txt")
-            My.Computer.Network.DownloadFile(
-    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/main.html",
-    cd + "\main.html")
-            My.Computer.Network.DownloadFile(
-    "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/404_Not_Found.html",
-    cd + "\404_Not_Found.html")
-            My.Computer.Network.DownloadFile(
- "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
- cd + "\featured.png")
             My.Computer.Network.DownloadFile(
  "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/html/banner/featured/icon_banner_featured.png",
  cd + "\featured.png")
@@ -77,6 +64,7 @@ Listening to dev_main"
 
         End Try
         Try
+        'Loads settings, then changes the Checkbox's, etc. 
             My.Settings.Reload()
             If My.Settings.settings_devmd = "1" Then
                 CheckBox1.Checked = True
@@ -110,54 +98,6 @@ Listening to dev_main"
         End Try
     End Sub
 
-    Private Sub PictureBox12_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox9_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox8_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox14_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox13_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox11_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
         End
     End Sub
@@ -172,14 +112,6 @@ Listening to dev_main"
 
     Private Sub ExportSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportSettingsToolStripMenuItem.Click
         SaveFileDialog1.ShowDialog()
-    End Sub
-
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub DebuggerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DebuggerToolStripMenuItem.Click
@@ -420,19 +352,11 @@ Listening to dev_market"
         My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, My.Settings.settings_def_color + ", " + My.Settings.settings_devmd + ", " + My.Settings.settings_enable_mrkt + ", " + My.Settings.settings_encrypt + ", " + My.Settings.settings_encrypt_type + ", " + My.Settings.settings_inst_chck + ", " + My.Settings.settings_inst_sgnd + ", " + My.Settings.settings_load_text, True)
     End Sub
 
-    Private Sub Install_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
-
-    End Sub
-
     Private Sub ReloadExtensionsToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Application.Restart()
     End Sub
 
     Private Sub ReloadExtensionsToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ReloadExtensionsToolStripMenuItem.Click
         Application.Restart()
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 End Class
