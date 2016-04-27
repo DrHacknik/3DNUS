@@ -27,6 +27,17 @@ namespace _3DNUS.i18n
             String path = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Language", name + ".ini");
             if (!File.Exists(path)) return;
             dict = new Ini(path);
+            sellang = name;
+
+            foreach(LocalizedForm lm in frmlst)
+            {
+                if(lm == null) continue;
+                if(lm.Tag == null) continue;
+
+                PleaseTrigger(lm);
+            }
+
+            Application.DoEvents();
         }
 
         public static String Translate(String sect, String wat)

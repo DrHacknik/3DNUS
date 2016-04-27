@@ -26,10 +26,12 @@ namespace _3DNUS
 
         private void main_load_Shown(object sender, EventArgs e)
         {
+            Application.DoEvents();
+
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
 
             CheckAssetExtract(Path.Combine(cd, "Config"), "Config");
-            CheckAssetExtract(cd, "Binary");
+            CheckAssetExtract(cd, "Binary", true);
 
             if(!File.Exists(Path.Combine(cd, "Config", "setup_completed.cfg")))
             {
