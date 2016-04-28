@@ -73,5 +73,11 @@ namespace Translator
         {
             lang_export.ShowDialog(); 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dev_about form = new dev_about();
+            form.Show();
+        }
     }
 }
