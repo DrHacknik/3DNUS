@@ -71,9 +71,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(31, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 13);
+            this.label3.Size = new System.Drawing.Size(147, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "By: MarcusD & Dr.Hacknik";
+            this.label3.Text = "By: MarcusD & Dr.Hacknik. ";
             this.label3.UseMnemonic = false;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
