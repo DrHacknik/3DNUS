@@ -53,5 +53,25 @@ namespace Translator
         {
             Application.Exit(); 
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lang_open.ShowDialog(); 
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lang_save.ShowDialog(); 
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lang_import.ShowDialog(); 
+        }
+
+        private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lang_export.ShowDialog(); 
+        }
     }
 }
