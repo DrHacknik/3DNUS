@@ -12,3 +12,14 @@ D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\Translator\obj\x86\Debug\GenerateResou
 D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\Translator\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.exe
 D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\bin\Debug\Translator.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\bin\Debug\Translator.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\bin\Debug\Translator.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\bin\Debug\3DNUS.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\bin\Debug\3DNUS.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.FormTranslate.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\Translator\obj\x86\Debug\Translator.csproj.GenerateResource.Cache
