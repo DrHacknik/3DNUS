@@ -11,9 +11,10 @@ using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
 using System.Reflection;
+using System.Security.Cryptography;
 
 using _3DNUS.SetupWizard;
-using System.Security.Cryptography;
+using _3DNUS.i18n;
 
 namespace _3DNUS
 {
@@ -22,6 +23,8 @@ namespace _3DNUS
         public main_load()
         {
             InitializeComponent();
+            labelVersion.Text = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion + " v" + 0;
+            labelVersion.Left = this.Width - labelVersion.Width;
         }
 
         private void main_load_Shown(object sender, EventArgs e)
@@ -30,15 +33,35 @@ namespace _3DNUS
 
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
 
-            CheckAssetExtract(Path.Combine(cd, "Config"), "Config");
-            CheckAssetExtract(cd, "Binary", true);
+            do//not mess up the variable list :)
+            {
+                BackgroundWorker bgw = new BackgroundWorker();
+                bgw.DoWork += (dis, earg) =>
+                {
+                    CheckAssetExtract(Path.Combine(cd, "Config"), "Config");
+                    CheckAssetExtract(Path.Combine(cd, "Language"), "i18n", true);
+                    CheckAssetExtract(cd, "Binary", true);
+                };
+                bgw.RunWorkerAsync();
+                while(bgw.IsBusy)
+                    Application.DoEvents();
+
+            }
+            while(false);
+
+            Localizer.LoadLang(File.ReadAllText(Path.Combine(cd, "Config", "lang_selected.cfg")));
 
             if(!File.Exists(Path.Combine(cd, "Config", "setup_completed.cfg")))
             {
-                CheckAssetExtract(Path.Combine(cd, "Music"), "Music");
+                labelProgress.Text = "Preparing for first run...";
+
+                Application.DoEvents();
+
+                CheckAssetExtract(Path.Combine(cd, "Music"), "Music", true);
 
                 using(WizardHello frm = new WizardHello())
                 {
+                    Hide();
                     if(frm.ShowDialog() == DialogResult.Abort)
                     {
                         Application.Exit();
@@ -56,22 +79,21 @@ namespace _3DNUS
                 panel1.Visible = true;
             }
 
-            label2.Visible = true;
+            labelProgress.Text = Localizer.Translate("Splash", "cfg_loaded");
 
             System.Diagnostics.Stopwatch sw = new Stopwatch();
             sw.Start();
-            while(sw.ElapsedMilliseconds < 5000) { Application.DoEvents(); }
-            sw.Stop();
-
+            
             using(Main frm = new Main())
             {
-                frm.Show();
+                while(sw.ElapsedMilliseconds < 5000) { Application.DoEvents(); }
+                sw.Stop();
+                Hide();
+                frm.ShowDialog();
             }
-
-            Close();
         }
 
-        private void CheckAssetExtract(String cd, String wat, Boolean checksum = false)
+        private static void CheckAssetExtract(String cd, String wat, Boolean checksum = false)
         {
             if(!Directory.Exists(cd)) Directory.CreateDirectory(cd);
 
@@ -84,29 +106,24 @@ namespace _3DNUS
                 String s = ss.Substring(prefixlen);
                 String fn = Path.Combine(cd, s);
 
-                String cs = null;
-                if(checksum)
-                {
-                    using(MD5 md = MD5.Create())
-                    {
-                        using(Stream sr = ass.GetManifestResourceStream(ss))
-                        {
-                            cs = BitConverter.ToString(md.ComputeHash(sr)).ToLower();
-                        }
-                    }
-                }
-
                 if(File.Exists(fn))
                     if(checksum)
                     {
+                        String cs = null;
+
+                        using(Stream sr = ass.GetManifestResourceStream(ss))
+                        {
+                            using(MD5 md = MD5.Create())
+                            {
+                                cs = BitConverter.ToString(md.ComputeHash(sr)).ToLower();
+                            }
+                        }
+
                         using(FileStream fs = File.OpenRead(fn))
                         {
                             using(MD5 md = MD5.Create())
                             {
-                                using(Stream sr = ass.GetManifestResourceStream(ss))
-                                {
-                                    if(BitConverter.ToString(md.ComputeHash(sr)).ToLower() == cs) continue;
-                                }
+                                if(BitConverter.ToString(md.ComputeHash(fs)).ToLower() == cs) continue;
                             }
                         }
                     }

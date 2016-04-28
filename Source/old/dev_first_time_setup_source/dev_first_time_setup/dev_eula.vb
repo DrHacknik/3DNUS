@@ -35,4 +35,8 @@
             Button1.Enabled = True
         End If
     End Sub
+
+    Private Sub PictureBox5_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox5.Click
+
+    End Sub
 End Class

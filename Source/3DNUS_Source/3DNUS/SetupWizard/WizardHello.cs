@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using _3DNUS.i18n;
+using MarcusD.Util;
 
 namespace _3DNUS.SetupWizard
 {
@@ -18,11 +19,27 @@ namespace _3DNUS.SetupWizard
         int posx, posy;
         Boolean dragging = false;
 
+        List<String> langs = new List<String>();
 
         public WizardHello()
         {
             InitializeComponent();
             mp = new WMPLib.WindowsMediaPlayer();
+            dropLangsel.Items.Clear();
+
+            foreach(String file in Directory.GetFiles(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Language"), "*.ini", SearchOption.TopDirectoryOnly))
+            {
+                try
+                {
+                    dropLangsel.Items.Add(new Ini(file)["_meta"].Read("name", Path.GetFileNameWithoutExtension(file).ToUpper()));
+                    langs.Add(Path.GetFileNameWithoutExtension(file));
+                }
+                catch
+                {
+                    MessageBox.Show("Language file \"" + Path.GetFileName(file) + "\" is invalid, so it will be discarded",
+                    "Language file error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void WizardHello_Load(object sender, EventArgs e)
@@ -64,8 +81,8 @@ namespace _3DNUS.SetupWizard
         {
             if(!File.Exists(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Config", "setup_completed.cfg")))
             {
-                MessageBox.Show("You will NOT be able to use 3DNUS, until you have Completed the Setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                DialogResult = System.Windows.Forms.DialogResult.Abort;
+                MessageBox.Show("You will NOT be able to use 3DNUS until you have completed the setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = System.Windows.Forms.DialogResult.Abort;
             }
             Close();
         }
@@ -74,6 +91,30 @@ namespace _3DNUS.SetupWizard
         {
             yield return Label1;
             yield return Label5;
+            yield return Label2;
+        }
+
+        public override void PostTranslate()
+        {
+            Label2.Left = (this.Width / 2) - (Label2.Width / 2);
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            using(WizardEula frm = new WizardEula())
+            {
+                Hide();
+                this.DialogResult = frm.ShowDialog();
+            }
+            Close();
+        }
+
+        private void dropLangsel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(dropLangsel.SelectedIndex != -1)
+            {
+                Localizer.LoadLang(langs[dropLangsel.SelectedIndex]);
+            }
         }
     }
 }

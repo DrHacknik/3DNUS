@@ -179,7 +179,7 @@ tipo.</value>
     <value>592, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <!--<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIADjSwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAENAAABAAgGAAAAqYwj1gAAIABJ
         REFUeJztfXm8HUWZ9lN9lrtmgSQmJIFAAgQGSBQGUAQJDIQZWUJkD0RxBlzRmRGQb2RGHcdlBmHGcXB0
@@ -507,5 +507,5 @@ tipo.</value>
         1tfv7+7d8y6CNTwZWfgA6tePnohDii1kv0KJ/QyZyWLFhBmkTikqoN6xW9ZlDiP//zU7MIkRiBM1AAAA
         AElFTkSuQmCC
 </value>
-  </data>
+  </data>-->
 </root>

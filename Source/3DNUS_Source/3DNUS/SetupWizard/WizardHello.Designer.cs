@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.Timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
+            this.dropLangsel = new System.Windows.Forms.ComboBox();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -67,31 +65,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.White;
             this.Label2.Location = new System.Drawing.Point(155, 188);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(262, 74);
+            this.Label2.Size = new System.Drawing.Size(284, 62);
             this.Label2.TabIndex = 11;
-            this.Label2.Tag = "ftsetup|getstart";
+            this.Label2.Tag = "hello";
             this.Label2.Text = "Welcome to 3DNUS! \r\nShall we Get Started? ";
+            this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Timer1
+            // dropLangsel
             // 
-            this.Timer1.Interval = 20;
-            // 
-            // ComboBox1
-            // 
-            this.ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dropLangsel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBox1.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Location = new System.Drawing.Point(174, 291);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(221, 23);
-            this.ComboBox1.TabIndex = 16;
-            this.ComboBox1.Text = "Please Select a Language, de mi amigo";
+            this.dropLangsel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dropLangsel.FormattingEnabled = true;
+            this.dropLangsel.Location = new System.Drawing.Point(174, 291);
+            this.dropLangsel.Name = "dropLangsel";
+            this.dropLangsel.Size = new System.Drawing.Size(221, 23);
+            this.dropLangsel.TabIndex = 16;
+            this.dropLangsel.Text = "Please Select a Language, de mi amigo";
+            this.dropLangsel.SelectedIndexChanged += new System.EventHandler(this.dropLangsel_SelectedIndexChanged);
             // 
             // PictureBox3
             // 
@@ -107,17 +103,18 @@
             this.PictureBox3.Size = new System.Drawing.Size(120, 55);
             this.PictureBox3.TabIndex = 15;
             this.PictureBox3.TabStop = false;
+            this.PictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.ForeColor = System.Drawing.Color.LightGray;
-            this.Label5.Location = new System.Drawing.Point(3, 36);
+            this.Label5.Location = new System.Drawing.Point(3, 27);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(158, 39);
+            this.Label5.Size = new System.Drawing.Size(160, 39);
             this.Label5.TabIndex = 12;
-            this.Label5.Tag = "ftsetup|langmiss";
+            this.Label5.Tag = "lang_unfinished";
             this.Label5.Text = "Note: Some Language \r\nTranslations are NOT\r\ncomplete or aren\'t fully Finished! ";
             // 
             // Label4
@@ -126,11 +123,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label4.ForeColor = System.Drawing.Color.LightGray;
             this.Label4.Location = new System.Drawing.Point(278, 262);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(124, 26);
+            this.Label4.Size = new System.Drawing.Size(125, 26);
             this.Label4.TabIndex = 13;
             this.Label4.Text = "Bienvenue à 3DNUS !\r\nAllons-nous commencer?";
             // 
@@ -140,11 +137,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.Color.LightGray;
             this.Label3.Location = new System.Drawing.Point(171, 262);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(114, 26);
+            this.Label3.Size = new System.Drawing.Size(121, 26);
             this.Label3.TabIndex = 14;
             this.Label3.Text = "Bienvenido a 3DNUS !  \r\n¿Empezamos ? ";
             // 
@@ -181,13 +178,13 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.White;
             this.Label1.Location = new System.Drawing.Point(3, 6);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(128, 15);
+            this.Label1.Size = new System.Drawing.Size(140, 15);
             this.Label1.TabIndex = 3;
-            this.Label1.Tag = "ftwizard|title";
+            this.Label1.Tag = "title";
             this.Label1.Text = "3DNUS: First time Setup";
             // 
             // PictureBox1
@@ -211,7 +208,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(553, 395);
             this.Controls.Add(this.Label2);
-            this.Controls.Add(this.ComboBox1);
+            this.Controls.Add(this.dropLangsel);
             this.Controls.Add(this.PictureBox3);
             this.Controls.Add(this.Label5);
             this.Controls.Add(this.Label4);
@@ -221,6 +218,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WizardHello";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Tag = "WizardHello";
             this.Text = "WizardHello";
             this.Load += new System.EventHandler(this.WizardHello_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
@@ -238,8 +236,7 @@
 
         internal System.Windows.Forms.PictureBox PictureBox4;
         internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Timer Timer1;
-        internal System.Windows.Forms.ComboBox ComboBox1;
+        internal System.Windows.Forms.ComboBox dropLangsel;
         internal System.Windows.Forms.PictureBox PictureBox3;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label4;

@@ -30,5 +30,7 @@ namespace _3DNUS.i18n
         {
             return null;
         }
+
+        public virtual void PostTranslate() { }
     }
 }

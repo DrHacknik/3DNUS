@@ -181,6 +181,18 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetupWizard\WizardComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupWizard\WizardComponents.Designer.cs">
+      <DependentUpon>WizardComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupWizard\WizardEula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupWizard\WizardEula.Designer.cs">
+      <DependentUpon>WizardEula.cs</DependentUpon>
+    </Compile>
     <Compile Include="SetupWizard\WizardHello.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,9 +231,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RuntimeAssets\i18n\default.ini" />
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupWizard\WizardComponents.resx">
+      <DependentUpon>WizardComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupWizard\WizardEula.resx">
+      <DependentUpon>WizardEula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetupWizard\WizardHello.resx">
       <DependentUpon>WizardHello.cs</DependentUpon>
@@ -268,6 +287,7 @@
     <EmbeddedResource Include="RuntimeAssets\Config\vnm_fw.cfg" />
     <EmbeddedResource Include="RuntimeAssets\Config\vnm_install_signed.cfg" />
     <EmbeddedResource Include="RuntimeAssets\Config\vnm_skip_failed.cfg" />
+    <EmbeddedResource Include="RuntimeAssets\i18n\hu.ini" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -279,6 +299,9 @@
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RuntimeAssets\i18n\default_eula.txt" />
+    <EmbeddedResource Include="RuntimeAssets\i18n\hu_eula.txt" />
+    <None Include="Resources\3dnus_splash_beta.png" />
     <EmbeddedResource Include="RuntimeAssets\Music\3ds_shop_bck_music.mp3" />
     <EmbeddedResource Include="RuntimeAssets\Music\upd_bck_music.mp3" />
     <None Include="Resources\Logo_3dnus_beta.png" />
@@ -289,11 +312,11 @@
     <None Include="Resources\Beam Me Up.png" />
     <None Include="Resources\bar.png" />
     <None Include="Resources\1458960538_question_blue.png" />
-    <EmbeddedResource Include="RuntimeAssets\Binary\7-zip.dll" />
-    <EmbeddedResource Include="RuntimeAssets\Binary\7z.dll" />
+    <None Include="RuntimeAssets\Binary\7-zip.dll" />
+    <None Include="RuntimeAssets\Binary\7z.dll" />
     <EmbeddedResource Include="RuntimeAssets\Binary\7z.exe" />
-    <EmbeddedResource Include="RuntimeAssets\Binary\7zFM.exe" />
-    <EmbeddedResource Include="RuntimeAssets\Binary\7zG.exe" />
+    <None Include="RuntimeAssets\Binary\7zFM.exe" />
+    <None Include="RuntimeAssets\Binary\7zG.exe" />
     <EmbeddedResource Include="RuntimeAssets\Binary\make_cdn_cia.exe" />
     <None Include="Resources\ext_icon.png" />
     <None Include="Resources\vnm_bck1.png" />

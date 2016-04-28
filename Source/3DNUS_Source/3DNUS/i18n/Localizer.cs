@@ -5,19 +5,23 @@ using System.Text;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 using MarcusD.Util;
 
 namespace _3DNUS.i18n
 {
     public static class Localizer
     {
-        private static Ini dict;
-        private static String sellang = "default";
+        public static String sellang { get; private set; }
+        private static Dictionary<String, Dictionary<String, String>> dict;
         private static HashSet<LocalizedForm> frmlst;
 
         static Localizer()
         {
+            sellang = "default";
             frmlst = new HashSet<LocalizedForm>();
+            dict = new Dictionary<String, Dictionary<String, String>>();
 
             LoadLang(sellang);
         }
@@ -26,8 +30,25 @@ namespace _3DNUS.i18n
         {
             String path = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Language", name + ".ini");
             if (!File.Exists(path)) return;
-            dict = new Ini(path);
+            Ini ini = new Ini(path);
             sellang = name;
+
+            dict.Clear();
+
+            foreach(String sect in ini.List())
+            {
+                Dictionary<String, String> di = new Dictionary<String, String>();
+                foreach(String k in ini[sect].List())
+                {
+                    String[] sp = k.Split(new char[] { '=' }, 2);
+                    try
+                    {
+                        di[sp[0]] = Regex.Unescape(sp[1]);
+                    }
+                    catch { }
+                }
+                dict[sect] = di;
+            }
 
             foreach(LocalizedForm lm in frmlst)
             {
@@ -42,7 +63,12 @@ namespace _3DNUS.i18n
 
         public static String Translate(String sect, String wat)
         {
-            return dict[sect].Read(wat, "!nodef%" + wat);
+            if(dict == null) return "!MISSINGNO.%";
+            Dictionary<String, String> s;
+            if(!dict.TryGetValue(sect, out s)) return "!nosect%" + sect;
+            String tr;
+            if(!s.TryGetValue(wat, out tr)) return "!nokey%" + sect + "?" + wat;
+            return tr;
         }
 
         public static void SubscribeHook(LocalizedForm frm)
@@ -69,6 +95,7 @@ namespace _3DNUS.i18n
                 if(ctl.Tag == null) continue;
                 ctl.Text = Translate(frm.Tag.ToString(), ctl.Tag.ToString());
             }
+            frm.PostTranslate();
         }
     }
 }

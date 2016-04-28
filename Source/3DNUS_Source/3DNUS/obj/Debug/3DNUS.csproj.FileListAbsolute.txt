@@ -16,3 +16,6 @@ D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\GenerateResource.read.
 D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\GenerateResource.write.1.tlog
 D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\3DNUS.exe
 D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\3DNUS.pdb
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.SetupWizard.WizardEula.resources
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\GenerateResource.read.292.tlog
+D:\MYDATA\3DNUS_zoltx\Source\3DNUS_Source\3DNUS\obj\Debug\GenerateResource.read.291.tlog
