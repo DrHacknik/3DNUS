@@ -8,6 +8,8 @@ The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-ha
 #########################
 # COPYWRITE (C) 2014-2016
 #########################
+
+## The Next version has been delayed, for now. 
 Current Version: 2.6.0.1 v29412 (x64)
 
 Current Version: 2.6.0.1 v29412 (x86) 
