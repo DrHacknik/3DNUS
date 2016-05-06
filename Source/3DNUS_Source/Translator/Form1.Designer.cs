@@ -32,19 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTranslate));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lang_save = new System.Windows.Forms.SaveFileDialog();
             this.lang_open = new System.Windows.Forms.OpenFileDialog();
-            this.lang_import = new System.Windows.Forms.OpenFileDialog();
-            this.lang_export = new System.Windows.Forms.SaveFileDialog();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rch_trans = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,7 +63,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.rch_trans);
             this.splitContainer1.Size = new System.Drawing.Size(504, 328);
             this.splitContainer1.SplitterDistance = 120;
             this.splitContainer1.TabIndex = 0;
@@ -87,16 +83,6 @@
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(376, 324);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -112,8 +98,6 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
-            this.exportToolStripMenuItem,
-            this.importToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -136,19 +120,12 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // exportToolStripMenuItem
+            // aboutToolStripMenuItem
             // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exportToolStripMenuItem.Text = "Export ";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
-            // 
-            // importToolStripMenuItem
-            // 
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.importToolStripMenuItem.Text = "Import ";
-            this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "About ";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -160,35 +137,26 @@
             // lang_save
             // 
             this.lang_save.DefaultExt = "lang";
-            this.lang_save.Filter = "Language File (.lang)|*.lang ";
+            this.lang_save.Filter = "Language File (.ini)|*.ini ";
             this.lang_save.Title = "Save Language File: ";
+            this.lang_save.FileOk += new System.ComponentModel.CancelEventHandler(this.lang_save_FileOk);
             // 
             // lang_open
             // 
             this.lang_open.DefaultExt = "lang";
-            this.lang_open.Filter = "Language File (.lang)|*.lang ";
+            this.lang_open.Filter = "Language File (.ini)|*.ini |All Files |*";
             this.lang_open.ShowReadOnly = true;
             this.lang_open.Title = "Open Language File: ";
+            this.lang_open.FileOk += new System.ComponentModel.CancelEventHandler(this.lang_open_FileOk);
             // 
-            // lang_import
+            // rch_trans
             // 
-            this.lang_import.DefaultExt = "lang";
-            this.lang_import.Filter = "INI Lang File (.ini)|*.ini";
-            this.lang_import.ShowReadOnly = true;
-            this.lang_import.Title = "Import  Language File: ";
-            // 
-            // lang_export
-            // 
-            this.lang_export.DefaultExt = "lang";
-            this.lang_export.Filter = "INI Lang File (.ini)|*.ini";
-            this.lang_export.Title = "Export Language File: ";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About ";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.rch_trans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rch_trans.Location = new System.Drawing.Point(0, 0);
+            this.rch_trans.Name = "rch_trans";
+            this.rch_trans.Size = new System.Drawing.Size(376, 324);
+            this.rch_trans.TabIndex = 0;
+            this.rch_trans.Text = "";
             // 
             // FormTranslate
             // 
@@ -203,7 +171,6 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -216,19 +183,15 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog lang_save;
         private System.Windows.Forms.OpenFileDialog lang_open;
-        private System.Windows.Forms.OpenFileDialog lang_import;
-        private System.Windows.Forms.SaveFileDialog lang_export;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox rch_trans;
     }
 }
 
