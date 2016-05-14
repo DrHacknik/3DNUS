@@ -23,3 +23,7 @@ C:\Users\Luke\Documents\GitHub\3DNUS\NANDify_Source\NANDify\obj\Debug\NANDify.Fo
 C:\Users\Luke\Documents\GitHub\3DNUS\NANDify_Source\NANDify\obj\Debug\NANDify.Resources.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\NANDify_Source\NANDify\obj\Debug\NANDify.vbproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\3DNUS\NANDify_Source\NANDify\bin\Debug\Ionic.Zip.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\NANDify_Source\NANDify\bin\Debug\NANDify.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\NANDify_Source\NANDify\obj\Debug\NANDify.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\NANDify_Source\NANDify\obj\Debug\NANDify.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\NANDify_Source\NANDify\obj\Debug\NANDify.pdb
