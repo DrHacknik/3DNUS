@@ -38,7 +38,6 @@ Public Class DevKit___Compile_Extension
 
                 System.IO.File.Copy(FileToCopy, NewCopy)
 
-
             End If
             FileToCopy = Short_Desc.FileName
             NewCopy = cd + "\\Temp\\" + "\\ext_desc.ini"
@@ -46,7 +45,6 @@ Public Class DevKit___Compile_Extension
             If System.IO.File.Exists(FileToCopy) = True Then
 
                 System.IO.File.Copy(FileToCopy, NewCopy)
-
 
             End If
             FileToCopy = Long_Desc.FileName
@@ -56,18 +54,14 @@ Public Class DevKit___Compile_Extension
 
                 System.IO.File.Copy(FileToCopy, NewCopy)
 
-
             End If
-
-
 
             Label7.Text = "Compiling .ZIP...."
             ' ZIP ALL FILES IN THE FOLDER.
             Using zip As New Ionic.Zip.ZipFile()
 
-                ' CREATE A FILE USING A STRING. 
+                ' CREATE A FILE USING A STRING.
                 ' THE FILE WILL BE STORED INSIDE THE ZIP FILE.
-           
 
                 ' ZIP THE FOLDER WITH THE FILES IN IT.
                 zip.AddFiles(cd + "\\Temp")
@@ -75,8 +69,6 @@ Public Class DevKit___Compile_Extension
                 zip.Save(cd + "\\" + TextBox2.Text + ".zip")           ' SAVE THE ZIP FILE.
                 Label7.Text = "All Done!"
             End Using
-
-
 
             ' My.Computer.FileSystem.RenameFile(cd + "False", TextBox2.Text + ".zip")
         Catch ex1 As Exception

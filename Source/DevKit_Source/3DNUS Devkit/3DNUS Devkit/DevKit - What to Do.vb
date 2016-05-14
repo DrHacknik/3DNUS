@@ -21,4 +21,14 @@ Public Class DevKit___What_to_Do
         DevKit___Compile_Extension.Show()
         Me.Close()
     End Sub
+
+    Private Sub DevKit___What_to_Do_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.dev_init_com = Nothing Then
+            Me.Close()
+            init_config.Show()
+
+        Else
+
+        End If
+    End Sub
 End Class

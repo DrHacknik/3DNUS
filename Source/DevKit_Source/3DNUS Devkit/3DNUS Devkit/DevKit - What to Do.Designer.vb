@@ -178,7 +178,6 @@ Partial Class DevKit___What_to_Do
         Me.Name = "DevKit___What_to_Do"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DevKit: What to do"
-        Me.TopMost = True
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -113,6 +113,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="init_config.Designer.vb">
+      <DependentUpon>init_config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="init_config.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -152,6 +158,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="init_config.resx">
+      <DependentUpon>init_config.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -180,6 +189,7 @@
   <ItemGroup>
     <Content Include="ext_mng_logo.ico" />
     <Content Include="Logo_3dnus_beta.ico" />
+    <None Include="Resources\service_manager1.png" />
     <None Include="Resources\1456023042_ic_keyboard_return_48px.png" />
     <None Include="Resources\arrow_undo.png" />
     <None Include="Resources\ext_mng_logo.png" />

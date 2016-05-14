@@ -35,6 +35,18 @@ C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj
 C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.Settings.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.vbproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Release\3DNUS Devkit.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Release\3DNUS Devkit.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Release\3DNUS Devkit.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\bin\Release\3DNUS Devkit.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.sys_about.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.DevKit___Compile_Extension.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.DevKit___What_to_Do.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.Devkit_main.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.Form1.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.init_config.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.Resources.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\_3DNUS_Devkit.Settings.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.vbproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.exe
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.xml
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.pdb

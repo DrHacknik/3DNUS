@@ -127,6 +127,9 @@
   <data name="DevKit_bck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DevKit_bck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1456023042_ic_keyboard_return_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1456023042_ic_keyboard_return_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="service_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\service_manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +148,7 @@
   <data name="ext_mng_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ext_mng_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1456023042_ic_keyboard_return_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1456023042_ic_keyboard_return_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="service_manager1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\service_manager1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -101,6 +101,30 @@ Namespace My
                 Me("settings_code_lang_sel") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dev_vs() As String
+            Get
+                Return CType(Me("dev_vs"),String)
+            End Get
+            Set
+                Me("dev_vs") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property dev_init_com() As String
+            Get
+                Return CType(Me("dev_init_com"),String)
+            End Get
+            Set
+                Me("dev_init_com") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

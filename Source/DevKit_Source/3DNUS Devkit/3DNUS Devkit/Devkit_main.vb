@@ -9,11 +9,9 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
-
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
-
 
     End Sub
 
@@ -23,7 +21,6 @@
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs)
         OpenFileDialog1.ShowDialog()
-
 
     End Sub
 
@@ -237,7 +234,6 @@ Public Class Devkit_main
 
         End If
 
-
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -326,5 +322,17 @@ Public Class Devkit_main
 
         End If
         Timer3.Stop()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub ForumsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForumsToolStripMenuItem.Click
+        Process.Start("https://gbatemp.net/threads/3dnus-mod-by-dr-hacknik.392360/#post-5564810")
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        My.Settings.Reset()
     End Sub
 End Class

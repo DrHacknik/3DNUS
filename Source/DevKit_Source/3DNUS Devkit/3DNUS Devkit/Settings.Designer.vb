@@ -35,6 +35,8 @@ Partial Class Settings
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -46,7 +48,7 @@ Partial Class Settings
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.ReturnToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(215, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(216, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -73,8 +75,10 @@ Partial Class Settings
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.ComboBox2)
         Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.CheckBox2)
         Me.Panel1.Controls.Add(Me.CheckBox1)
@@ -82,13 +86,13 @@ Partial Class Settings
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 24)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(215, 249)
+        Me.Panel1.Size = New System.Drawing.Size(216, 302)
         Me.Panel1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 89)
+        Me.Label1.Location = New System.Drawing.Point(3, 152)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 13)
         Me.Label1.TabIndex = 5
@@ -96,7 +100,7 @@ Partial Class Settings
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 105)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 168)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(189, 110)
@@ -110,7 +114,7 @@ Partial Class Settings
         Me.ComboBox1.Items.AddRange(New Object() {"Default", "", "C", "C++", "C#", "", "F", "F++", "F#", "", "BASIC", "ADV-BASIC", "", "Java", "Java-Script", "", "HTML", "CSS", "PHP"})
         Me.ComboBox1.Location = New System.Drawing.Point(12, 59)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(133, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(183, 21)
         Me.ComboBox1.TabIndex = 3
         Me.ComboBox1.Text = "Default"
         '
@@ -137,9 +141,9 @@ Partial Class Settings
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 227)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 280)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(215, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(216, 22)
         Me.StatusStrip1.TabIndex = 0
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -148,12 +152,31 @@ Partial Class Settings
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Visual Studio 2008", "Visual Studio 2010", "Visual Studio 2012/2013", "Visual Sudio 2015/2016", "I don't use VS", "I don't have VS Installed"})
+        Me.ComboBox2.Location = New System.Drawing.Point(12, 109)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(183, 21)
+        Me.ComboBox2.TabIndex = 3
+        Me.ComboBox2.Text = "Default"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(109, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Visual Studio Version:"
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(215, 273)
+        Me.ClientSize = New System.Drawing.Size(216, 326)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
@@ -188,4 +211,6 @@ Partial Class Settings
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents ReturnToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

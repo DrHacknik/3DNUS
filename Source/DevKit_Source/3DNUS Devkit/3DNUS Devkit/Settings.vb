@@ -10,7 +10,7 @@ Public Class Settings
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged, ComboBox2.SelectedIndexChanged
 
     End Sub
 
@@ -30,6 +30,7 @@ Public Class Settings
 
             End If
             TextBox1.Text = My.Settings.settings_flags
+            ComboBox2.Text = My.Settings.dev_vs
             ComboBox1.Text = My.Settings.settings_code_lang_sel
         Catch ex As Exception
 
