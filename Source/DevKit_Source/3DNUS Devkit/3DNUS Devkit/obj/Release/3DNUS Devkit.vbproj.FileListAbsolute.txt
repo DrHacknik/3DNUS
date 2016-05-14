@@ -50,3 +50,4 @@ C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Dev
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.exe
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.xml
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\DevKit_Source\3DNUS Devkit\3DNUS Devkit\obj\Release\3DNUS Devkit.vbprojResolveAssemblyReference.cache
