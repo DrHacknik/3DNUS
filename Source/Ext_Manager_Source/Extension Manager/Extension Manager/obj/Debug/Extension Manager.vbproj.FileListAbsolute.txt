@@ -103,3 +103,4 @@ C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.dev_console_debug.dje.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension Manager.vbproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\dje\Extension Manager.resources.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\Debug\Extension_Manager.dev_ext_market_about.resources

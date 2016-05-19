@@ -13,9 +13,11 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -23,12 +25,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://localhost:54410/3DNUS.Update/</InstallUrl>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
+    <ApplicationVersion>1.1.4.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -161,6 +164,12 @@
     <Compile Include="dev_download_manager.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dev_ext_market_about.Designer.vb">
+      <DependentUpon>dev_ext_market_about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dev_ext_market_about.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dev_market.Designer.vb">
       <DependentUpon>dev_market.vb</DependentUpon>
     </Compile>
@@ -220,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dev_download_manager.resx">
       <DependentUpon>dev_download_manager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_ext_market_about.resx">
+      <DependentUpon>dev_ext_market_about.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dev_market.resx">
       <DependentUpon>dev_market.vb</DependentUpon>
@@ -292,7 +304,9 @@
     <None Include="Resources\Preloader_21.gif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ext_icon.ico" />
     <Content Include="ext_mng_logo.ico" />
+    <None Include="Resources\logo.png" />
     <None Include="Resources\Dock.png" />
     <None Include="Resources\main_bar.png" />
     <None Include="Resources\bar.png" />
@@ -307,6 +321,11 @@
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -333,6 +352,14 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".ext">
+      <Visible>False</Visible>
+      <Description>3DNUS Extension Package</Description>
+      <Progid>EXT</Progid>
+      <DefaultIcon>ext_icon.ico</DefaultIcon>
+    </FileAssociation>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

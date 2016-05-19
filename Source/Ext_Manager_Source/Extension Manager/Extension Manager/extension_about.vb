@@ -51,19 +51,15 @@ Listening dev_main"
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            Directory.Delete(cd + "\_res")
-            Directory.Delete(cd + "\_bin")
-            Directory.Delete(cd + "\upd")
-            File.Delete(cd + "boot_ext.exe")
-            My.Computer.FileSystem.WriteAllText(cd + "ext_desc.ini",
-"There is No Extension Installed in 
-This Slot! 
-Version: ?????", True)
-            My.Computer.FileSystem.WriteAllText(cd + "ext_desc_long.ini",
-"", True)
-            My.Computer.FileSystem.WriteAllText(cd + "ext_info.ini",
-"No Extension", True)
-            File.Copy(Application.StartupPath + "\Extensions\_ext\ext_icon.png", cd + "ext_icon.png")
+            For Each foundFile As String In My.Computer.FileSystem.GetFiles(
+   My.Settings.ext_launch,
+    Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories, "*.*")
+
+                My.Computer.FileSystem.DeleteFile(foundFile,
+                    Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs,
+                    Microsoft.VisualBasic.FileIO.RecycleOption.DeletePermanently)
+            Next
+
         Catch
             MessageBox.Show("Error: There were some Problems when trying to Uninstall The Extension!", "Extension Manager: Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

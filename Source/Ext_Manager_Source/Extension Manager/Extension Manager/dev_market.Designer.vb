@@ -25,10 +25,12 @@ Partial Class dev_market
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dev_market))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dl_progress = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lb_download_status = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.downloads = New System.Windows.Forms.PictureBox()
@@ -95,8 +97,8 @@ Partial Class dev_market
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.em_check = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +144,6 @@ Partial Class dev_market
         Me.Panel6.SuspendLayout()
         CType(Me.em_bck_music, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_error, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -153,6 +154,7 @@ Partial Class dev_market
         Me.Panel2.Controls.Add(Me.PictureBox19)
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.lb_download_status)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.downloads)
@@ -164,10 +166,23 @@ Partial Class dev_market
         Me.Panel2.Size = New System.Drawing.Size(830, 56)
         Me.Panel2.TabIndex = 4
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Location = New System.Drawing.Point(718, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(42, 33)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Tag = "github"
+        '
         'PictureBox19
         '
-        Me.PictureBox19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox19.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox19.BackgroundImage = CType(resources.GetObject("PictureBox19.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
@@ -180,6 +195,7 @@ Partial Class dev_market
         '
         'TextBox1
         '
+        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Location = New System.Drawing.Point(502, 11)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(156, 20)
@@ -188,9 +204,7 @@ Partial Class dev_market
         '
         'Panel3
         '
-        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel3.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel3.Controls.Add(Me.dl_progress)
         Me.Panel3.Location = New System.Drawing.Point(785, 40)
@@ -207,8 +221,22 @@ Partial Class dev_market
         Me.dl_progress.TabIndex = 0
         Me.dl_progress.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(3, 39)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(45, 17)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "About "
+        '
         'lb_download_status
         '
+        Me.lb_download_status.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lb_download_status.AutoSize = True
         Me.lb_download_status.BackColor = System.Drawing.Color.Transparent
         Me.lb_download_status.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -233,8 +261,7 @@ Partial Class dev_market
         '
         'downloads
         '
-        Me.downloads.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.downloads.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.downloads.BackColor = System.Drawing.Color.Transparent
         Me.downloads.BackgroundImage = CType(resources.GetObject("downloads.BackgroundImage"), System.Drawing.Image)
         Me.downloads.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
@@ -1112,21 +1139,6 @@ Partial Class dev_market
         '
         Me.em_check.Enabled = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(718, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(42, 33)
-        Me.PictureBox1.TabIndex = 11
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Tag = "github"
-        '
         'dev_market
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1150,6 +1162,7 @@ Partial Class dev_market
         Me.Text = "Extension Market - Concept"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         CType(Me.dl_progress, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1198,7 +1211,6 @@ Partial Class dev_market
         Me.Panel6.PerformLayout()
         CType(Me.em_bck_music, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_error, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1275,4 +1287,5 @@ Partial Class dev_market
     Friend WithEvents em_bck_music As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents em_check As Timer
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

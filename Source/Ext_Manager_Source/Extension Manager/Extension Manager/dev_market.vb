@@ -20,8 +20,10 @@ Public Class dev_market
 
     Private Sub dev_market_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Download the HTML Files & Save them.
+        em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+
         Try
-            My.Computer.Network.DownloadFile(
+        My.Computer.Network.DownloadFile(
  "https://raw.githubusercontent.com/zoltx23/3DNUS/master/ext_market/packages/updates/@dr_hacknik/citra_emu/upd_info.txt",
  cd + "\ext_upd\citra_upd_info.txt")
             My.Computer.Network.DownloadFile(
@@ -36,7 +38,7 @@ Public Class dev_market
             If File.ReadAllText(cd + "\ext_upd\citra_upd_info.txt") = cd + "\Extensions\_ext\Slot1\upd_info.txt" Then
                 MessageBox.Show("An Update for: Citra Emu; is Available!", "Update Manager:", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
-            em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
+
             If em_bck_music.playState = WMPLib.WMPPlayState.wmppsStopped Then
                 em_bck_music.URL = cd + "\\sds\\3ds_shop_bck_music.mp3"
             End If
@@ -59,13 +61,7 @@ Public Class dev_market
 
     End Sub
 
-    Private Sub WebView1_DownloadCompleted(sender As Object, e As EO.WebBrowser.DownloadEventArgs)
 
-    End Sub
-
-    Private Sub WebView1_LoadCompleted(sender As Object, e As EO.WebBrowser.LoadCompletedEventArgs)
-
-    End Sub
 
     Private Sub WebView1_UrlChanged(sender As Object, e As EventArgs)
 
@@ -202,5 +198,9 @@ cd + "\Downloads\citra.zip")
         File.Delete(cd + "\ext_upd\nandtool_upd_info.txt")
         File.Delete(cd + "\ext_upd\nandify_upd_info.txt")
         Directory.Delete(cd + "\ext_upd")
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        dev_ext_market_about.Show()
     End Sub
 End Class
