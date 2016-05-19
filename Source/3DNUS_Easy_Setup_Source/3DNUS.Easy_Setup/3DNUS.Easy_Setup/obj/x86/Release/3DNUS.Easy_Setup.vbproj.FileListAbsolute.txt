@@ -1,0 +1,15 @@
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\bin\x86\Release\3DNUS.Easy_Setup.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\bin\x86\Release\3DNUS.Easy_Setup.exe.manifest
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\bin\x86\Release\3DNUS.Easy_Setup.application
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\bin\x86\Release\3DNUS.Easy_Setup.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\bin\x86\Release\3DNUS.Easy_Setup.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\bin\x86\Release\3DNUS.Easy_Setup.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\_3DNUS.Easy_Setup.Form1.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\_3DNUS.Easy_Setup.Resources.resources
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.vbproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.exe.manifest
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.application
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.xml
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Easy_Setup_Source\3DNUS.Easy_Setup\3DNUS.Easy_Setup\obj\x86\Release\3DNUS.Easy_Setup.vbprojResolveAssemblyReference.cache

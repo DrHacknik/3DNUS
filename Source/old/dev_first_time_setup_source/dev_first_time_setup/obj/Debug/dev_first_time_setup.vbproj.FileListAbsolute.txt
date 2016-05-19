@@ -1,0 +1,4 @@
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\old\dev_first_time_setup_source\dev_first_time_setup\bin\Debug\dev_first_time_setup.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\old\dev_first_time_setup_source\dev_first_time_setup\obj\Debug\Interop.WMPLib.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\old\dev_first_time_setup_source\dev_first_time_setup\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\old\dev_first_time_setup_source\dev_first_time_setup\obj\Debug\dev_first_time_setup.vbproj.ResolveComReference.cache
