@@ -15,7 +15,7 @@ Public Class Form1
         Button2.Enabled = True
         TextBox1.Enabled = False
         Label3.Visible = False
-        Label2.Text = "        Select a Folder to install to"
+        Label2.Text = "         Select a Folder to install to"
 
 
 
@@ -35,13 +35,23 @@ Public Class Form1
                     f.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
 
                 Next
-                Try
-                    MessageBox.Show("The Install has Completed, the First time Setup wizard will now (try to) start.", "Installing 3DNUS: Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    File.Delete(cd + "\\Temp\\3DNUS_Latest.zip")
-                    Directory.Delete(cd + "\\Temp")
-                Catch
-                    MessageBox.Show("It seems that some Errors have occurred when Deleting the Temporary Files!", "Installing 3DNUS: Error(s)", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End Try
+
+                MessageBox.Show("The Install has Completed, the First time Setup wizard will now (try to) start.", "Installing 3DNUS: Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Try
+                        For Each foundFile As String In My.Computer.FileSystem.GetFiles(
+               cd + "\\Temp",
+                Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories, "*.*")
+
+                            My.Computer.FileSystem.DeleteFile(foundFile,
+                                FileIO.UIOption.OnlyErrorDialogs,
+                                Microsoft.VisualBasic.FileIO.RecycleOption.DeletePermanently)
+                        Next
+                    Catch
+                        MessageBox.Show("It seems that some Errors have occurred when Deleting the Temporary Files!", "Installing 3DNUS: Error(s)", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                    End Try
+
+
                 Try
                     Process.Start(install_to.SelectedPath + "\\3DNUS.Update\\dev_first_time_setup.exe")
                     End
@@ -74,6 +84,6 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        install_to.SelectedPath = TextBox1.Text
+        TextBox1.Text = install_to.SelectedPath
     End Sub
 End Class

@@ -140,6 +140,7 @@ Partial Class Form1
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
         '
         'Form1
         '
