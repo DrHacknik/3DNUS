@@ -29,7 +29,9 @@ Partial Class Form1
         Me.label2 = New System.Windows.Forms.Label()
         Me.timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel1
@@ -51,7 +53,7 @@ Partial Class Form1
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(259, 14)
         Me.label1.TabIndex = 1
-        Me.label1.Text = "3DNUS Devkit, based on 3DNUS 2.6.0.1"
+        Me.label1.Text = "3DNUS Devkit, based on 3DNUS 2.7.0.0"
         '
         'label2
         '
@@ -76,6 +78,21 @@ Partial Class Form1
         Me.timer1.Enabled = True
         Me.timer1.Interval = 5500
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(103, 115)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(52, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -86,6 +103,7 @@ Partial Class Form1
         Me.ControlBox = False
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.panel1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -97,6 +115,7 @@ Partial Class Form1
         Me.TopMost = True
         Me.panel1.ResumeLayout(False)
         Me.panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -107,4 +126,5 @@ Partial Class Form1
     Private WithEvents label2 As Label
     Private WithEvents timer2 As Timer
     Private WithEvents timer1 As Timer
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

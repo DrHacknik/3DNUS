@@ -31,4 +31,8 @@ Public Class DevKit___What_to_Do
 
         End If
     End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        sys_about.Show()
+    End Sub
 End Class

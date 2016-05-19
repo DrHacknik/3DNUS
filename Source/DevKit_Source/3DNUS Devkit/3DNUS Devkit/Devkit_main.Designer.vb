@@ -366,8 +366,8 @@ Partial Class Devkit_main
         '
         Me.AboutToolStripMenuItem.Image = Global._3DNUS_Devkit.My.Resources.Resources.ext_mng_logo
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
-        Me.AboutToolStripMenuItem.Text = "About (v1.0.8; Build: 124)"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.AboutToolStripMenuItem.Text = "About (v1.0.8; Build: pve5ddp"
         '
         'Panel1
         '
@@ -400,11 +400,11 @@ Partial Class Devkit_main
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(647, 0)
+        Me.Label2.Location = New System.Drawing.Point(581, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(109, 13)
         Me.Label2.TabIndex = 8
-        Me.Label2.Text = "v1.0.8"
+        Me.Label2.Text = "v1.0.8 -- pve5ddp"
         '
         'Timer2
         '
@@ -419,7 +419,7 @@ Partial Class Devkit_main
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(562, 0)
+        Me.Label3.Location = New System.Drawing.Point(487, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 13)
         Me.Label3.TabIndex = 9

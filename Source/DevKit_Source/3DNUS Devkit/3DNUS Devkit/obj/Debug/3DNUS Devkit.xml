@@ -32,6 +32,16 @@
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:_3DNUS_Devkit.My.Resources.Resources._1463714457_Help_book">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:_3DNUS_Devkit.My.Resources.Resources._1463714493_Question">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:_3DNUS_Devkit.My.Resources.Resources._4334804">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -68,6 +78,11 @@
 </summary>
 </member>
 <member name="P:_3DNUS_Devkit.My.Resources.Resources.service_manager">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:_3DNUS_Devkit.My.Resources.Resources.service_manager1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

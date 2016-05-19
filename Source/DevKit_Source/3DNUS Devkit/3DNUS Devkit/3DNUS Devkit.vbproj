@@ -189,6 +189,8 @@
   <ItemGroup>
     <Content Include="ext_mng_logo.ico" />
     <Content Include="Logo_3dnus_beta.ico" />
+    <None Include="Resources\1463714493_Question.png" />
+    <None Include="Resources\1463714457_Help_book.png" />
     <None Include="Resources\service_manager1.png" />
     <None Include="Resources\1456023042_ic_keyboard_return_48px.png" />
     <None Include="Resources\arrow_undo.png" />
