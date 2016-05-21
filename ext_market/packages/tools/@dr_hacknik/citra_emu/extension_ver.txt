@@ -1,2 +1,2 @@
 A simple ROM Emulator for the 3DS.
-Version: Nightly Build-HEAD-d299f7e
+Version: Nightly Build-HEAD-51ee2d2
