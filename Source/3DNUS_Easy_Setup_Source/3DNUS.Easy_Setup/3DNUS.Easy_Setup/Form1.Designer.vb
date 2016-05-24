@@ -34,6 +34,9 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.install_to = New System.Windows.Forms.FolderBrowserDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -94,7 +97,7 @@ Partial Class Form1
         '
         Me.btn_cancel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_cancel.Location = New System.Drawing.Point(86, 162)
+        Me.btn_cancel.Location = New System.Drawing.Point(86, 171)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(75, 22)
         Me.btn_cancel.TabIndex = 5
@@ -106,7 +109,7 @@ Partial Class Form1
         Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(179, 162)
+        Me.Button1.Location = New System.Drawing.Point(179, 171)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 22)
         Me.Button1.TabIndex = 6
@@ -116,7 +119,7 @@ Partial Class Form1
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(86, 120)
+        Me.TextBox1.Location = New System.Drawing.Point(86, 105)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(144, 20)
         Me.TextBox1.TabIndex = 7
@@ -127,7 +130,7 @@ Partial Class Form1
         Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(236, 120)
+        Me.Button2.Location = New System.Drawing.Point(236, 105)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(34, 20)
         Me.Button2.TabIndex = 8
@@ -142,6 +145,49 @@ Partial Class Form1
         '
         Me.Timer1.Enabled = True
         '
+        'RadioButton1
+        '
+        Me.RadioButton1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.ForeColor = System.Drawing.Color.White
+        Me.RadioButton1.Location = New System.Drawing.Point(106, 131)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(71, 17)
+        Me.RadioButton1.TabIndex = 9
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "x86 (x32) "
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.ForeColor = System.Drawing.Color.White
+        Me.RadioButton2.Location = New System.Drawing.Point(183, 131)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(45, 17)
+        Me.RadioButton2.TabIndex = 9
+        Me.RadioButton2.Text = "x64 "
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Silver
+        Me.Label4.Location = New System.Drawing.Point(3, 180)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Revision: 0.4 "
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,6 +195,9 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.DimGray
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(351, 196)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.RadioButton2)
+        Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
@@ -180,4 +229,7 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents install_to As FolderBrowserDialog
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents Label4 As Label
 End Class

@@ -30,7 +30,7 @@
     <MinimumRequiredVersion>1.0.0.3</MinimumRequiredVersion>
     <AutorunEnabled>true</AutorunEnabled>
     <DisallowUrlActivation>true</DisallowUrlActivation>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -200,6 +200,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Ionic.Zip.dll" />
     <None Include="bin\x86\Release\Ionic.Zip.dll" />
     <Content Include="Logo_3dnus.ico" />
   </ItemGroup>
