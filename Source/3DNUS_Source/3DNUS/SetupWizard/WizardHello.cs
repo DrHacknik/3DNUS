@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using _3DNUS.i18n;
+﻿using _3DNUS.i18n;
 using MarcusD.Util;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Windows.Forms;
 
 namespace _3DNUS.SetupWizard
 {
     public partial class WizardHello : LocalizedForm
     {
-        WMPLib.WindowsMediaPlayer mp;
-        int posx, posy;
-        Boolean dragging = false;
+        private WMPLib.WindowsMediaPlayer mp;
+        private int posx, posy;
+        private Boolean dragging = false;
 
-        List<String> langs = new List<String>();
+        private List<String> langs = new List<String>();
 
         public WizardHello()
         {
@@ -27,7 +21,7 @@ namespace _3DNUS.SetupWizard
             mp = new WMPLib.WindowsMediaPlayer();
             dropLangsel.Items.Clear();
 
-            foreach(String file in Directory.GetFiles(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Language"), "*.ini", SearchOption.TopDirectoryOnly))
+            foreach (String file in Directory.GetFiles(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Language"), "*.ini", SearchOption.TopDirectoryOnly))
             {
                 try
                 {
@@ -55,15 +49,15 @@ namespace _3DNUS.SetupWizard
         {
             dragging = false;
             Screen scr = Screen.FromControl(this);
-            if(Bottom > scr.WorkingArea.Height + scr.WorkingArea.Y) { Top = scr.WorkingArea.Height - Height + scr.WorkingArea.Y; };
-            if(Left > scr.WorkingArea.Width - Width + scr.WorkingArea.X) { Left = scr.WorkingArea.Width - Width + scr.WorkingArea.X; };
-            if(Top < 0) { Top = 0; };
-            if(Left < 0) { Left = 0; };
+            if (Bottom > scr.WorkingArea.Height + scr.WorkingArea.Y) { Top = scr.WorkingArea.Height - Height + scr.WorkingArea.Y; };
+            if (Left > scr.WorkingArea.Width - Width + scr.WorkingArea.X) { Left = scr.WorkingArea.Width - Width + scr.WorkingArea.X; };
+            if (Top < 0) { Top = 0; };
+            if (Left < 0) { Left = 0; };
         }
 
         private void Panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if(dragging)
+            if (dragging)
             {
                 Left = MousePosition.X - posx;
                 Top = MousePosition.Y - posy;
@@ -79,7 +73,7 @@ namespace _3DNUS.SetupWizard
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            if(!File.Exists(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Config", "setup_completed.cfg")))
+            if (!File.Exists(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Config", "setup_completed.cfg")))
             {
                 MessageBox.Show("You will NOT be able to use 3DNUS until you have completed the setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = System.Windows.Forms.DialogResult.Abort;
@@ -101,7 +95,7 @@ namespace _3DNUS.SetupWizard
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            using(WizardEula frm = new WizardEula())
+            using (WizardEula frm = new WizardEula())
             {
                 Hide();
                 this.DialogResult = frm.ShowDialog();
@@ -111,7 +105,7 @@ namespace _3DNUS.SetupWizard
 
         private void dropLangsel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(dropLangsel.SelectedIndex != -1)
+            if (dropLangsel.SelectedIndex != -1)
             {
                 Localizer.LoadLang(langs[dropLangsel.SelectedIndex]);
             }

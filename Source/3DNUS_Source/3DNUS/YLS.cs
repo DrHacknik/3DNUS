@@ -18,7 +18,7 @@ namespace _3DNUS
 
         public void Entry(char region, YLS_Title wat)
         {
-            if(!regions.ContainsKey(region))
+            if (!regions.ContainsKey(region))
             {
                 regions[region] = new List<YLS_Title>();
             }
@@ -28,39 +28,39 @@ namespace _3DNUS
 
         public static YLS Import(String wat)
         {
-            if(!File.Exists(wat)) return null;
+            if (!File.Exists(wat)) return null;
             YLS yls = new YLS();
             YLS_Title titl = null;
             String[] line = null;
-            using(StreamReader str = File.OpenText(wat))
+            using (StreamReader str = File.OpenText(wat))
             {
                 str.ReadLine();
 
-                while(!str.EndOfStream)
+                while (!str.EndOfStream)
                 {
                     line = str.ReadLine().Split(',');
-                    if(line.Length != 4) continue;
+                    if (line.Length != 4) continue;
 
                     titl = new YLS_Title();
 
                     titl.id = Convert.ToUInt64(line[0], 16);
 
-                    if(titl.id == 0x4013000001B02) line[3] = line[3].Replace("02-11-15 GPIO", "9.5.0-22");
-                    if(titl.id == 0x400102002CA00) line[3] = line[3].Replace("10-02-14 JPN", "9.1.0-20J");
+                    if (titl.id == 0x4013000001B02) line[3] = line[3].Replace("02-11-15 GPIO", "9.5.0-22");
+                    if (titl.id == 0x400102002CA00) line[3] = line[3].Replace("10-02-14 JPN", "9.1.0-20J");
 
                     Match mat = Regex.Match(line[3], @"(\d+)\.(\d+)\.(\d+)-(\d+)");
 
-                    foreach(String ver in line[2].Split(' '))
+                    foreach (String ver in line[2].Split(' '))
                     {
-                        while(mat.Success && String.IsNullOrEmpty(mat.ToString())) mat = mat.NextMatch(); //stupid dotNOT Regex engine ¬_¬
-                        if(!mat.Success) throw new InvalidDataException("Invalid report file!");
+                        while (mat.Success && String.IsNullOrEmpty(mat.ToString())) mat = mat.NextMatch(); //stupid dotNOT Regex engine ¬_¬
+                        if (!mat.Success) throw new InvalidDataException("Invalid report file!");
 
                         titl.ver.Add(new YLS_Titlever() { version = int.Parse(ver.Substring(1)), sysver = new YLS_Sysver() { label = mat.ToString() } });
 
                         mat = mat.NextMatch();
                     }
 
-                    if(mat != null && mat.Success) throw new InvalidDataException("Invalid report file!");
+                    if (mat != null && mat.Success) throw new InvalidDataException("Invalid report file!");
                     else
                         yls.Entry(line[1][0], titl);
                 }
@@ -102,7 +102,7 @@ namespace _3DNUS
             set
             {
                 Match match = Regex.Match(value, @"(\d+)\.(\d+)\.(\d+)-(\d+)");
-                if(!match.Success) throw new ArgumentException("Invalid pattern!");
+                if (!match.Success) throw new ArgumentException("Invalid pattern!");
                 _major = int.Parse(match.Groups[1].Value);
                 _minor = int.Parse(match.Groups[2].Value);
                 _build = int.Parse(match.Groups[3].Value);
@@ -180,15 +180,15 @@ namespace _3DNUS
         {
             //if (other == null) throw new NullReferenceException();
             //return this.str.CompareTo(other.str);
-            if(this.major < other.major) return -1;
-            if(this.major > other.major) return 1;
-            if(this.minor < other.minor) return -1;
-            if(this.minor > other.minor) return 1;
-            if(this.build < other.build) return -1;
-            if(this.build > other.build) return 1;
-            if(this.rev == 999 || other.rev == 999) return 0;
-            if(this.rev < other.rev) return -1;
-            if(this.rev > other.rev) return 1;
+            if (this.major < other.major) return -1;
+            if (this.major > other.major) return 1;
+            if (this.minor < other.minor) return -1;
+            if (this.minor > other.minor) return 1;
+            if (this.build < other.build) return -1;
+            if (this.build > other.build) return 1;
+            if (this.rev == 999 || other.rev == 999) return 0;
+            if (this.rev < other.rev) return -1;
+            if (this.rev > other.rev) return 1;
             return 0;
         }
 

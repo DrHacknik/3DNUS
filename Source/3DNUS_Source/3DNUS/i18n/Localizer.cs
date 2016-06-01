@@ -1,13 +1,9 @@
-﻿using System;
+﻿using MarcusD.Util;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
-using System.Reflection;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
-using MarcusD.Util;
+using System.Windows.Forms;
 
 namespace _3DNUS.i18n
 {
@@ -35,10 +31,10 @@ namespace _3DNUS.i18n
 
             dict.Clear();
 
-            foreach(String sect in ini.List())
+            foreach (String sect in ini.List())
             {
                 Dictionary<String, String> di = new Dictionary<String, String>();
-                foreach(String k in ini[sect].List())
+                foreach (String k in ini[sect].List())
                 {
                     String[] sp = k.Split(new char[] { '=' }, 2);
                     try
@@ -50,10 +46,10 @@ namespace _3DNUS.i18n
                 dict[sect] = di;
             }
 
-            foreach(LocalizedForm lm in frmlst)
+            foreach (LocalizedForm lm in frmlst)
             {
-                if(lm == null) continue;
-                if(lm.Tag == null) continue;
+                if (lm == null) continue;
+                if (lm.Tag == null) continue;
 
                 PleaseTrigger(lm);
             }
@@ -63,36 +59,36 @@ namespace _3DNUS.i18n
 
         public static String Translate(String sect, String wat)
         {
-            if(dict == null) return "!MISSINGNO.%";
+            if (dict == null) return "!MISSINGNO.%";
             Dictionary<String, String> s;
-            if(!dict.TryGetValue(sect, out s)) return "!nosect%" + sect;
+            if (!dict.TryGetValue(sect, out s)) return "!nosect%" + sect;
             String tr;
-            if(!s.TryGetValue(wat, out tr)) return "!nokey%" + sect + "?" + wat;
+            if (!s.TryGetValue(wat, out tr)) return "!nokey%" + sect + "?" + wat;
             return tr;
         }
 
         public static void SubscribeHook(LocalizedForm frm)
         {
-            if(frm == null) return;
+            if (frm == null) return;
             frmlst.Add(frm);
         }
 
         public static void UnsubscribeHook(LocalizedForm frm)
         {
-            if(frm == null) return;
+            if (frm == null) return;
             frmlst.Remove(frm);
         }
 
         public static void PleaseTrigger(LocalizedForm frm)
         {
-            if(frm == null) return;
-            if(frm.Tag == null) return;
+            if (frm == null) return;
+            if (frm.Tag == null) return;
             IEnumerable<Control> ie = frm.TranslationTrigger();
-            if(ie == null) return;
-            foreach(Control ctl in ie)
+            if (ie == null) return;
+            foreach (Control ctl in ie)
             {
-                if(ctl == null) continue;
-                if(ctl.Tag == null) continue;
+                if (ctl == null) continue;
+                if (ctl.Tag == null) continue;
                 ctl.Text = Translate(frm.Tag.ToString(), ctl.Tag.ToString());
             }
             frm.PostTranslate();

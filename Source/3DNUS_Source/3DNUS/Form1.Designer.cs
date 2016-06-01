@@ -698,6 +698,7 @@ namespace _3DNUS
             this.pictureBox4.Size = new System.Drawing.Size(106, 80);
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // t_new
             // 
@@ -873,4 +874,4 @@ namespace _3DNUS
     }
 }
 
- 
+

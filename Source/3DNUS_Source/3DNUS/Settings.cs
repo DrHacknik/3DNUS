@@ -1,13 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _3DNUS
@@ -31,7 +25,6 @@ namespace _3DNUS
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -47,33 +40,27 @@ namespace _3DNUS
 
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-
         }
 
         private void trackBar1_ControlAdded(object sender, ControlEventArgs e)
         {
             progressBar1.Value += 2;
-
         }
 
         private void trackBar1_ControlRemoved(object sender, ControlEventArgs e)
@@ -89,19 +76,15 @@ namespace _3DNUS
             }
             catch
             {
-
             }
-
         }
 
         private void comboBox4_TextUpdate(object sender, EventArgs e)
         {
-
         }
 
         private void st_ext_mng_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -145,18 +128,18 @@ namespace _3DNUS
             {
                 checkBox11.Checked = false;
             }
-                if (File.ReadAllText(cd + "\\Config\\vnm.cfg") == ("1"))
-                {
-                    checkBox3.Checked = true;
-                }
-                if (File.ReadAllText(cd + "\\Config\\vnm.cfg") == ("0"))
-                {
-                    checkBox3.Checked = false;
-                }
-                if (File.ReadAllText(cd + "\\Config\\vnm.cfg") == (""))
-                {
-                    checkBox3.Checked = false;
-                }
+            if (File.ReadAllText(cd + "\\Config\\vnm.cfg") == ("1"))
+            {
+                checkBox3.Checked = true;
+            }
+            if (File.ReadAllText(cd + "\\Config\\vnm.cfg") == ("0"))
+            {
+                checkBox3.Checked = false;
+            }
+            if (File.ReadAllText(cd + "\\Config\\vnm.cfg") == (""))
+            {
+                checkBox3.Checked = false;
+            }
             if (File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg") == ("1"))
             {
                 checkBox6.Checked = true;
@@ -204,44 +187,44 @@ namespace _3DNUS
             label18.Text = File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg");
             //Reads All the Config Files
             File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns_add_s.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns_ip4.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px_add.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_sub_mask.cfg");
-                File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_ext.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_net_4.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_sandbox.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_sandbox_md.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_sandbox_st.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_auto.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_custom.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_custom_svr.cfg");
-                File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm_fw.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm_skip_failed.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
-                
-                label13.Text = File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
-                //If ext_sandbox_val.cfg has Text stating the Size in MB, then this will determine the setting. 
-                //For example; "if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "Whatever in MB")"
-                //{
-                // Label18.Text = "Whatever in MB" 
-                //picturebox4.Width = Whatever Value, same as Setting. 
-                //progressBar1.Value = Whatever Value, same as Setting. 
-                //}
+            File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns_add_s.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns_ip4.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px_add.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_sub_mask.cfg");
+            File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_ext.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_net_4.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_sandbox.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_sandbox_md.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_sandbox_st.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_auto.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_custom.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_custom_svr.cfg");
+            File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm_fw.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm_skip_failed.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
+
+            label13.Text = File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
+            //If ext_sandbox_val.cfg has Text stating the Size in MB, then this will determine the setting.
+            //For example; "if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "Whatever in MB")"
+            //{
+            // Label18.Text = "Whatever in MB"
+            //picturebox4.Width = Whatever Value, same as Setting.
+            //progressBar1.Value = Whatever Value, same as Setting.
+            //}
             if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "0MB")
             {
                 label18.Text = "0MB";
                 pictureBox4.Width = 0;
-                progressBar1.Value = 0; 
+                progressBar1.Value = 0;
             }
             if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "10MB")
             {
@@ -291,7 +274,7 @@ namespace _3DNUS
                 pictureBox4.Width = 80;
                 progressBar1.Value = 80;
             }
-           
+
             if (File.ReadAllText(cd + "\\Config\\ext_sandbox_val.cfg") == "90MB")
             {
                 label18.Text = "90MB";
@@ -305,7 +288,6 @@ namespace _3DNUS
                 progressBar1.Value = 100;
             }
         }
-     
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -316,12 +298,10 @@ namespace _3DNUS
 
         private void button5_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -331,7 +311,6 @@ namespace _3DNUS
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -341,7 +320,6 @@ namespace _3DNUS
 
         private void button5_Click_3(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click_2(object sender, EventArgs e)
@@ -356,124 +334,104 @@ namespace _3DNUS
             webBrowser1.Refresh();
             webBrowser2.Refresh();
 
-
             //Refresh Configuration
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
             File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns_add_s.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_dns_ip4.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px_add.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
-                File.ReadAllText(cd + "\\Config\\adv_sub_mask.cfg");
-                File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_ext.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_net_4.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_sandbox.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_sandbox_md.cfg");
-                File.ReadAllText(cd + "\\Config\\ext_sandbox_st.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_auto.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_custom.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_custom_svr.cfg");
-                File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm_fw.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg");
-                File.ReadAllText(cd + "\\Config\\vnm_skip_failed.cfg");
-                File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns_add_p.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns_add_s.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_dns_ip4.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px_add.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px_pass.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_px_usr.cfg");
+            File.ReadAllText(cd + "\\Config\\adv_sub_mask.cfg");
+            File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_ext.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_net_4.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_sandbox.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_sandbox_md.cfg");
+            File.ReadAllText(cd + "\\Config\\ext_sandbox_st.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_auto.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_custom.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_custom_svr.cfg");
+            File.ReadAllText(cd + "\\Config\\ver_dis.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm_fw.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm_install_signed.cfg");
+            File.ReadAllText(cd + "\\Config\\vnm_skip_failed.cfg");
+            File.ReadAllText(cd + "\\Config\\upd_checker.cfg");
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         //Code for when saving Config's from a Text Field or Checkbox, to either val's "0" or "1"
-        //To do this, use a StreamWrite Line, and an If or Else Statement, or None. 
+        //To do this, use a StreamWrite Line, and an If or Else Statement, or None.
         //It's not too Clean for now, sorry.
         {
-
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
 
             {
                 File.ReadAllText(cd + "\\Config\\dev_mode_cfg.cfg");
                 {
-
                     using (StreamWriter dev_modeWriter = new StreamWriter(cd + "\\Config\\dev_mode_cfg.cfg"))
                     {
-
                         if (checkBox11.Checked == true)
                         {
-
                             dev_modeWriter.Write("1");
                         }
                         if (checkBox11.Checked == false)
                         {
-
                             dev_modeWriter.Write("0");
                         }
                         using (StreamWriter vnm_cfg = new StreamWriter(cd + "\\Config\\vnm.cfg"))
                         {
-
                             if (checkBox3.Checked == true)
                             {
-
                                 vnm_cfg.Write("1");
                             }
                             if (checkBox3.Checked == false)
                             {
-
                                 vnm_cfg.Write("0");
                             }
                             using (StreamWriter vnm_fw_cfg = new StreamWriter(cd + "\\Config\\vnm_fw.cfg"))
                             {
-
                                 if (textBox10.Text == "default")
                                 {
-
                                     vnm_fw_cfg.Write("default");
                                 }
                                 if (textBox10.Text == "default")
                                 {
-
                                     vnm_fw_cfg.Write("default");
                                 }
                                 using (StreamWriter vnm_inst_cfg = new StreamWriter(cd + "\\Config\\vnm_install_signed.cfg"))
                                 {
-
                                     if (checkBox6.Checked == true)
                                     {
-
                                         vnm_inst_cfg.Write("1");
                                     }
                                     if (checkBox6.Checked == false)
                                     {
-
                                         vnm_inst_cfg.Write("0");
                                     }
 
                                     using (StreamWriter vnm_skip_failed_cfg = new StreamWriter(cd + "\\Config\\vnm_skip_failed.cfg"))
                                     {
-
                                         if (checkBox7.Checked == true)
                                         {
-
                                             vnm_skip_failed_cfg.Write("1");
                                         }
                                         if (checkBox7.Checked == false)
                                         {
-
                                             vnm_skip_failed_cfg.Write("0");
                                         }
                                         using (StreamWriter adv_dns = new StreamWriter(cd + "\\Config\\adv_dns.cfg"))
                                         {
                                             if (checkBox5.Checked == true)
                                             {
-
                                                 adv_dns.Write("1");
                                             }
                                             if (checkBox5.Checked == false)
                                             {
-
                                                 adv_dns.Write("0");
                                             }
                                             using (StreamWriter adv_dns_add_p = new StreamWriter(cd + "\\Config\\adv_dns_add_p.cfg"))
@@ -482,8 +440,6 @@ namespace _3DNUS
                                             }
                                             using (StreamWriter obdWriter = new StreamWriter("config.cfg"))
                                             {
-                                               
-
                                             }
                                             using (StreamWriter adv_dns_add_s = new StreamWriter(cd + "\\Config\\adv_dns_add_s.cfg"))
                                             {
@@ -501,12 +457,10 @@ namespace _3DNUS
                                             {
                                                 if (checkBox4.Checked == true)
                                                 {
-
                                                     adv_px.Write("1");
                                                 }
                                                 if (checkBox4.Checked == false)
                                                 {
-
                                                     adv_px.Write("0");
                                                 }
                                                 using (StreamWriter adv_px_pass = new StreamWriter(cd + "\\Config\\adv_px_add.cfg"))
@@ -547,12 +501,10 @@ namespace _3DNUS
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void webBrowser2_Navigated(object sender, WebBrowserNavigatedEventArgs e)
@@ -577,12 +529,11 @@ namespace _3DNUS
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label16_Click(object sender, EventArgs e)
         {
-           try
+            try
             {
                 progressBar1.Value -= 10;
                 pictureBox4.Width -= 10;
@@ -635,13 +586,10 @@ namespace _3DNUS
                     label18.Text = "100MB";
                 }
             }
-
             catch
             {
-                MessageBox.Show("You can't Decrease the Value any More!","Settings Manager:", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); 
+                MessageBox.Show("You can't Decrease the Value any More!", "Settings Manager:", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            
-      
         }
 
         private void label15_Click(object sender, EventArgs e)
@@ -652,7 +600,7 @@ namespace _3DNUS
                 pictureBox4.Width += 10;
                 if (pictureBox4.Width == 178)
                 {
-                    label18.Text = "0MB"; 
+                    label18.Text = "0MB";
                 }
                 if (progressBar1.Value == 5)
                 {
@@ -707,7 +655,6 @@ namespace _3DNUS
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-           
             if (progressBar1.Value == 0)
             {
                 label18.Text = "0MB";
@@ -759,6 +706,3 @@ namespace _3DNUS
         }
     }
 }
-
-
-

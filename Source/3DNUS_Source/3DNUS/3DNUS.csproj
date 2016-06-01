@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_3DNUS</RootNamespace>
     <AssemblyName>3DNUS</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\Luke\OneDrive\3DNUS ClickOnce Pub\</PublishUrl>
@@ -29,7 +29,8 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,6 +41,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,6 +51,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Logo_3dnus.ico</ApplicationIcon>
@@ -78,42 +81,55 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x32 Build|AnyCPU'">
     <OutputPath>bin\x32 Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x32 Build|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\x32 Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x64 Build|AnyCPU'">
     <OutputPath>bin\x64 Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x64 Build|x86'">
     <OutputPath>bin\x86\x64 Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x32 Build|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\x32 Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x64 Build|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\x64 Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\..\..\Desktop\MaterialSkin-master\MaterialSkinExample\bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -155,6 +171,12 @@
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="debugger.cs" />
+    <Compile Include="dev_material_gui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev_material_gui.Designer.cs">
+      <DependentUpon>dev_material_gui.cs</DependentUpon>
+    </Compile>
     <Compile Include="ext_about.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,12 +221,6 @@
     <Compile Include="SetupWizard\WizardHello.Designer.cs">
       <DependentUpon>WizardHello.cs</DependentUpon>
     </Compile>
-    <Compile Include="vnm_installer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vnm_installer.Designer.cs">
-      <DependentUpon>vnm_installer.cs</DependentUpon>
-    </Compile>
     <Compile Include="YLS.cs" />
     <EmbeddedResource Include="3dnus_load.resx">
       <DependentUpon>3dnus_load.cs</DependentUpon>
@@ -212,6 +228,9 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_material_gui.resx">
+      <DependentUpon>dev_material_gui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ext_about.resx">
       <DependentUpon>ext_about.cs</DependentUpon>
@@ -244,10 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SetupWizard\WizardHello.resx">
       <DependentUpon>WizardHello.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vnm_installer.resx">
-      <DependentUpon>vnm_installer.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="3DNUS_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
@@ -402,6 +417,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

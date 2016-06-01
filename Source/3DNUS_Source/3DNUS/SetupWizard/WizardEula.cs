@@ -1,20 +1,15 @@
-﻿using System;
+﻿using _3DNUS.i18n;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
-using _3DNUS.i18n;
+using System.Windows.Forms;
 
 namespace _3DNUS.SetupWizard
 {
     public partial class WizardEula : LocalizedForm
     {
-        int posx, posy;
-        Boolean dragging = false;
+        private int posx, posy;
+        private Boolean dragging = false;
 
         public WizardEula()
         {
@@ -55,15 +50,15 @@ namespace _3DNUS.SetupWizard
         {
             dragging = false;
             Screen scr = Screen.FromControl(this);
-            if(Bottom > scr.WorkingArea.Height + scr.WorkingArea.Y) { Top = scr.WorkingArea.Height - Height + scr.WorkingArea.Y; };
-            if(Left > scr.WorkingArea.Width - Width + scr.WorkingArea.X) { Left = scr.WorkingArea.Width - Width + scr.WorkingArea.X; };
-            if(Top < 0) { Top = 0; };
-            if(Left < 0) { Left = 0; };
+            if (Bottom > scr.WorkingArea.Height + scr.WorkingArea.Y) { Top = scr.WorkingArea.Height - Height + scr.WorkingArea.Y; };
+            if (Left > scr.WorkingArea.Width - Width + scr.WorkingArea.X) { Left = scr.WorkingArea.Width - Width + scr.WorkingArea.X; };
+            if (Top < 0) { Top = 0; };
+            if (Left < 0) { Left = 0; };
         }
 
         private void Panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if(dragging)
+            if (dragging)
             {
                 Left = MousePosition.X - posx;
                 Top = MousePosition.Y - posy;
@@ -79,7 +74,7 @@ namespace _3DNUS.SetupWizard
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            if(!File.Exists(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Config", "setup_completed.cfg")))
+            if (!File.Exists(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Config", "setup_completed.cfg")))
             {
                 MessageBox.Show("You won't be able to use 3DNUS until you don't complete the first time setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = System.Windows.Forms.DialogResult.Abort;
@@ -89,8 +84,6 @@ namespace _3DNUS.SetupWizard
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
         }
-
     }
 }
