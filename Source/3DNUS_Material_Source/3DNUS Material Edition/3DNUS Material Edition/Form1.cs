@@ -52,7 +52,7 @@ namespace _3DNUS_Material_Edition
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-
+            materialProgressBar1.Value = 0; 
             {
 
 
@@ -145,6 +145,7 @@ namespace _3DNUS_Material_Edition
                 create.Start();
                 create.WaitForExit();
                 Directory.Delete(ftmp, true);
+                materialProgressBar1.Value += 10;
             }
             else
             {
@@ -159,6 +160,7 @@ namespace _3DNUS_Material_Edition
 
             }
             log("Done.");
+            materialProgressBar1.Value = 100;
         }
         private void firmwdownload(string firm, string reg)
         {
@@ -217,10 +219,25 @@ namespace _3DNUS_Material_Edition
                 }
             }
             log("\r\nDownloading firmware complete!");
+            materialProgressBar1.Value = 100;
         }
         private void log(string msg)
         {
             t_log.AppendText("\r\n" + msg);
+        }
+
+        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            WebClient titlelist = new WebClient();
+            String cd = Path.GetDirectoryName(Application.ExecutablePath);
+            titlelist.DownloadFile("https://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
+        }
+
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            WebClient titlelist = new WebClient();
+            String cd = Path.GetDirectoryName(Application.ExecutablePath);
+            titlelist.DownloadFile("https://yls8.mtheall.com/ninupdates/titlelist.php?sys=ktr&csv=1", cd + "\\titlelist.csv");
         }
     }
 }

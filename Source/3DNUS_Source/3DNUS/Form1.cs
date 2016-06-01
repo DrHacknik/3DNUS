@@ -429,8 +429,7 @@ namespace _3DNUS
 
         private void titleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vnm_installer form = new vnm_installer();
-            form.Show();
+        
         }
 
         private void vnm_open_3ds_package_FileOk(object sender, CancelEventArgs e)
