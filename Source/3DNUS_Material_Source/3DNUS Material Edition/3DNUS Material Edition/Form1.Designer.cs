@@ -62,7 +62,6 @@
             this.materialFlatButton1.TabIndex = 0;
             this.materialFlatButton1.Text = "Begin Download";
             this.materialFlatButton1.UseVisualStyleBackColor = false;
-            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // c_cia
             // 

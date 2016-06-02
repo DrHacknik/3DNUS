@@ -20,7 +20,7 @@ namespace _3DNUS_Material_Edition
     public partial class Form1 : MaterialForm
     {
         private string server = "http://nus.cdn.c.shop.nintendowifi.net/ccs/download/";
-        private object yls;
+        private YLS yls;
 
         public Form1()
         {
@@ -59,14 +59,14 @@ namespace _3DNUS_Material_Edition
         {
             string cd = Path.GetDirectoryName(Application.ExecutablePath);
 
-            if (reg == null || reg.Length != 1 || !yls.regions.ContainsKey(reg[0]))
+            if(reg == null || reg.Length != 1 || !yls.regions.ContainsKey(reg[0]))
             {
                 MessageBox.Show("Invalid region! Valid regions are:\r\n" + String.Join(", ", yls.regions.Keys.ToArray()), "Invalid region", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             //better be safe'n'paranoid
-            if (yls == null) if (File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv");
+            if(yls == null) if(File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv");
                 else
                 {
                     MessageBox.Show("Can't read title list, file doesn't exist.", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -80,17 +80,17 @@ namespace _3DNUS_Material_Edition
             YLS_Sysver sys = new YLS_Sysver();
             sys.label = firm;
 
-            foreach (YLS_Title t in yls.regions[reg[0]])
+            foreach(YLS_Title t in yls.regions[reg[0]])
             {
                 YLS_Titlever optimal = null;
 
-                foreach (YLS_Titlever tv in t.ver)
+                foreach(YLS_Titlever tv in t.ver)
                 {
-                    if (tv.sysver == sys) { optimal = tv; break; }
-                    if (tv.sysver < sys && (optimal == null || tv.sysver > optimal.sysver)) optimal = tv;
+                    if(tv.sysver == sys) { optimal = tv; break; }
+                    if(tv.sysver < sys && (optimal == null || tv.sysver > optimal.sysver)) optimal = tv;
                 }
 
-                if (optimal == null) continue;
+                if(optimal == null) continue;
 
                 singledownload(t.id.ToString("X16"), optimal.version.ToString());
                 Application.DoEvents();
@@ -108,13 +108,13 @@ namespace _3DNUS_Material_Edition
             t_titleid.Text = t_titleid.Text.Trim();
             t_version.Text = t_version.Text.Trim();
 
-            if (t_titleid.Text.Length == 0 || t_version.Text.Length == 0)
+            if(t_titleid.Text.Length == 0 || t_version.Text.Length == 0)
             {
                 MessageBox.Show("Please enter a Firmware or Title to download;" +
                     "Ex: 8.1.0-23 ---- USA; Or 00000000000 ---- v1024 ");
                 return;
             }
-            if (c_cia.Checked && !File.Exists("make_cdn_cia.exe"))
+            if(c_cia.Checked && !File.Exists("make_cdn_cia.exe"))
             {
                 MessageBox.Show("Error: make_cdn_cia.exe can't be found in the working directory!\r\n" +
                     "This option will be unavailable while make_cdn_cia.exe is not found", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,20 +123,20 @@ namespace _3DNUS_Material_Edition
 
             String cd = Path.GetDirectoryName(Application.ExecutablePath);
 
-            if (yls == null) if (File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv");
+            if(yls == null) if(File.Exists(cd + "\\titlelist.csv")) yls = YLS.Import(cd + "\\titlelist.csv");
                 else
                 {
                     MessageBox.Show("Can't read title list, file doesn't exist.", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-            if (t_titleid.Text.Contains("."))
+            if(t_titleid.Text.Contains("."))
             {
                 string firmw = t_titleid.Text;
                 string reg = t_version.Text;
 
                 Match match = Regex.Match(firmw, @"(\d+)\.(\d+)(\.(\d+))?(-(\d+))?([a-zA-Z])?");
-                if (!match.Success)
+                if(!match.Success)
                 {
                     MessageBox.Show("Invalid firmware string format!");
                     return;
@@ -146,7 +146,7 @@ namespace _3DNUS_Material_Edition
                 t_titleid.Text = firmw;
                 t_titleid.Update();
 
-                switch (reg.ToUpper())
+                switch(reg.ToUpper())
                 {
                     case "EUR": reg = "E"; break;
                     case "USA": reg = "U"; break;
@@ -167,7 +167,7 @@ namespace _3DNUS_Material_Edition
             {
                 string title = t_titleid.Text;
                 string version = t_version.Text;
-                if (version[0] == 'v') { version = version.Substring(1); t_version.Text = version; t_version.Update(); }
+                if(version[0] == 'v') { version = version.Substring(1); t_version.Text = version; t_version.Update(); }
                 singledownload(title, version);
             }
         }
@@ -195,41 +195,39 @@ namespace _3DNUS_Material_Edition
             }
 
 
-        //amount of contents
-        private FileStream tmd = File.Open(ftmp + "\\tmd", FileMode.Open, FileAccess.Read);
+            //amount of contents
+            FileStream tmd = File.Open(ftmp + "\\tmd", FileMode.Open, FileAccess.Read);
 
-        tmd.Seek(518, SeekOrigin.Begin);
-            private byte[] cc = new byte[2];
-        tmd.Read(cc, 0, 2);
+            tmd.Seek(518, SeekOrigin.Begin);
+            byte[] cc = new byte[2];
+            tmd.Read(cc, 0, 2);
             Array.Reverse(cc);
-            private int contentcounter = BitConverter.ToInt16(cc, 0);
-        private
-                    log("Title has " + contentcounter + " contents");
+            int contentcounter = BitConverter.ToInt16(cc, 0);
 
-        //notifyIcon1.BalloonTipText = "Title has " + contentcounter + " contents";
-        // notifyIcon1.ShowBalloonTip(1);
+            log("Title has " + contentcounter + " contents");
 
-        //download files
-        private WebClient contd = new WebClient();
+            //notifyIcon1.BalloonTipText = "Title has " + contentcounter + " contents";
+            // notifyIcon1.ShowBalloonTip(1);
 
-            for (private int i = 1; i <= contentcounter; i++)
+            //download files
+            WebClient contd = new WebClient();
 
+            for(int i = 1; i <= contentcounter; i++)
             {
                 try
                 {
-                    private int contentoffset = 2820 + (48 * (i - 1));
-        tmd.Seek(contentoffset, SeekOrigin.Begin);
-                    private byte[] cid = new byte[4];
-        tmd.Read(cid, 0, 4);
-                    private string contentid = BitConverter.ToString(cid).Replace("-", "");
-        private string downname = ftmp + "\\" + contentid;
-        contd.DownloadFile(server + title + "/" + contentid, @downname);
-private
+                    int contentoffset = 2820 + (48 * (i - 1));
+                    tmd.Seek(contentoffset, SeekOrigin.Begin);
+                    byte[] cid = new byte[4];
+                    tmd.Read(cid, 0, 4);
+                    string contentid = BitConverter.ToString(cid).Replace("-", "");
+                    string downname = ftmp + "\\" + contentid;
+                    contd.DownloadFile(server + title + "/" + contentid, @downname);
                     log(DateTime.Now + " Downloading complete");
 
-        //notifyIcon1.BalloonTipText = "Download complete";
-        // notifyIcon1.ShowBalloonTip(1);
-    }
+                    //notifyIcon1.BalloonTipText = "Download complete";
+                    // notifyIcon1.ShowBalloonTip(1);
+                }
 
                 catch
                 {
@@ -237,12 +235,12 @@ private
             }
 
             tmd.Close();
-            if (c_cia.Checked)
+            if(c_cia.Checked)
             {
                 //create cia
                 log(DateTime.Now + " Packing as .cia ...");
-string command;
-                if (t_titleid.Text.Contains("."))
+                string command;
+                if(t_titleid.Text.Contains("."))
                 {
                     command = " " + "tmp" + " " + t_titleid.Text + "\\" + title + ".cia";
                 }
@@ -252,7 +250,7 @@ string command;
                 }
 
                 Process create = new Process();
-create.StartInfo.FileName = "make_cdn_cia.exe";
+                create.StartInfo.FileName = "make_cdn_cia.exe";
                 create.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 create.StartInfo.Arguments = command;
                 create.Start();
@@ -261,7 +259,7 @@ create.StartInfo.FileName = "make_cdn_cia.exe";
             }
             else
             {
-                if (t_titleid.Text.Contains("."))
+                if(t_titleid.Text.Contains("."))
                 {
                     Directory.Move(ftmp, cd + "\\" + t_titleid.Text + "\\" + title);
                 }
@@ -274,31 +272,31 @@ create.StartInfo.FileName = "make_cdn_cia.exe";
         }
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
-{
-    try
-    {
-        WebClient titlelist = new WebClient();
-        String cd = Path.GetDirectoryName(Application.ExecutablePath);
-        titlelist.DownloadFile("https://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
-    }
-    catch
-    {
-        MessageBox.Show("Unable to grab Titlelist; Make sure you have an Internet Connection!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    }
-}
+        {
+            try
+            {
+                WebClient titlelist = new WebClient();
+                String cd = Path.GetDirectoryName(Application.ExecutablePath);
+                titlelist.DownloadFile("https://yls8.mtheall.com/ninupdates/titlelist.php?sys=ctr&csv=1", cd + "\\titlelist.csv");
+            }
+            catch
+            {
+                MessageBox.Show("Unable to grab Titlelist; Make sure you have an Internet Connection!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
-{
-    try
-    {
-        WebClient titlelist = new WebClient();
-        String cd = Path.GetDirectoryName(Application.ExecutablePath);
-        titlelist.DownloadFile("https://yls8.mtheall.com/ninupdates/titlelist.php?sys=ktr&csv=1", cd + "\\titlelist.csv");
-    }
-    catch
-    {
-        MessageBox.Show("Unable to grab Titlelist; Make sure you have an Internet Connection!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    }
-}
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                WebClient titlelist = new WebClient();
+                String cd = Path.GetDirectoryName(Application.ExecutablePath);
+                titlelist.DownloadFile("https://yls8.mtheall.com/ninupdates/titlelist.php?sys=ktr&csv=1", cd + "\\titlelist.csv");
+            }
+            catch
+            {
+                MessageBox.Show("Unable to grab Titlelist; Make sure you have an Internet Connection!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
