@@ -38,6 +38,9 @@ namespace _3DNUS.SetupWizard
 
         private void WizardHello_Load(object sender, EventArgs e)
         {
+            Main form = new Main();
+            form.Show();
+            Hide();
             String teste = "file:///" + Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Music", "upd_bck_music.mp3").Replace("\\", "/");
             mp.URL = teste;
             mp.settings.volume = 20;
@@ -78,7 +81,6 @@ namespace _3DNUS.SetupWizard
                 MessageBox.Show("You will NOT be able to use 3DNUS until you have completed the setup!", "3DNUS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = System.Windows.Forms.DialogResult.Abort;
             }
-            Close();
         }
 
         public override IEnumerable<Control> TranslationTrigger()

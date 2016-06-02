@@ -13,5 +13,10 @@ namespace _3DNUS.SetupWizard
         private void WizardComponents_Load(object sender, EventArgs e)
         {
         }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

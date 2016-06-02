@@ -291,7 +291,7 @@ namespace _3DNUS
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -610,7 +610,7 @@ namespace _3DNUS
             // dumpLogToolStripMenuItem
             // 
             this.dumpLogToolStripMenuItem.Name = "dumpLogToolStripMenuItem";
-            this.dumpLogToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            this.dumpLogToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
             | System.Windows.Forms.Keys.D)));
             this.dumpLogToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.dumpLogToolStripMenuItem.Text = "Dump Log";
@@ -619,7 +619,7 @@ namespace _3DNUS
             // extensionManagerToolStripMenuItem
             // 
             this.extensionManagerToolStripMenuItem.Name = "extensionManagerToolStripMenuItem";
-            this.extensionManagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            this.extensionManagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
             | System.Windows.Forms.Keys.E)));
             this.extensionManagerToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.extensionManagerToolStripMenuItem.Text = "Extension Manager";
@@ -683,7 +683,7 @@ namespace _3DNUS
             // 
             this.about3DNUSToolStripMenuItem.AutoToolTip = true;
             this.about3DNUSToolStripMenuItem.Name = "about3DNUSToolStripMenuItem";
-            this.about3DNUSToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            this.about3DNUSToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
             | System.Windows.Forms.Keys.A)));
             this.about3DNUSToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.about3DNUSToolStripMenuItem.Text = "About 3DNUS";

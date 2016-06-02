@@ -245,6 +245,7 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(553, 24);
             this.Panel1.TabIndex = 10;
+            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // WizardComponents
             // 

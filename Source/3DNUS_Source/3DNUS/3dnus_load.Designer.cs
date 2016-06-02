@@ -108,6 +108,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS Loading";
             this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.Load += new System.EventHandler(this.main_load_Load);
             this.Shown += new System.EventHandler(this.main_load_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

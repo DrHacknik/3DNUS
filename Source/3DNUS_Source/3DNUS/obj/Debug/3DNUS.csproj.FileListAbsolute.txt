@@ -35,5 +35,10 @@ C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.SetupWizard.WizardComponents.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.SetupWizard.WizardEula.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.SetupWizard.WizardHello.resources
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\obj\Debug\_3DNUS.vnm_installer.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\obj\Debug\3DNUS.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\Debug\3DNUS.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\Debug\3DNUS.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\Debug\MaterialSkin.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\Debug\MaterialSkin.pdb
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Source\3DNUS\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml

@@ -1,20 +1,19 @@
+using _3DNUS.i18n;
+using _3DNUS.SetupWizard;
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Diagnostics;
-using System.Reflection;
-using System.Security.Cryptography;
-
-using _3DNUS.SetupWizard;
-using _3DNUS.i18n;
 
 namespace _3DNUS
 {
@@ -43,15 +42,14 @@ namespace _3DNUS
                     CheckAssetExtract(cd, "Binary", true);
                 };
                 bgw.RunWorkerAsync();
-                while(bgw.IsBusy)
+                while (bgw.IsBusy)
                     Application.DoEvents();
-
             }
-            while(false);
+            while (false);
 
             Localizer.LoadLang(File.ReadAllText(Path.Combine(cd, "Config", "lang_selected.cfg")));
 
-            if(!File.Exists(Path.Combine(cd, "Config", "setup_completed.cfg")))
+            if (!File.Exists(Path.Combine(cd, "Config", "setup_completed.cfg")))
             {
                 labelProgress.Text = "Preparing for first run...";
 
@@ -59,10 +57,10 @@ namespace _3DNUS
 
                 CheckAssetExtract(Path.Combine(cd, "Music"), "Music", true);
 
-                using(WizardHello frm = new WizardHello())
+                using (WizardHello frm = new WizardHello())
                 {
                     Hide();
-                    if(frm.ShowDialog() == DialogResult.Abort)
+                    if (frm.ShowDialog() == DialogResult.Abort)
                     {
                         Application.Exit();
                         return;
@@ -73,8 +71,7 @@ namespace _3DNUS
                 return;
             }
 
-
-            if(File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg")) == ("1"))
+            if (File.ReadAllText(Path.Combine(cd, "Config", "dev_mode_cfg.cfg")) == ("1"))
             {
                 panel1.Visible = true;
             }
@@ -83,10 +80,10 @@ namespace _3DNUS
 
             System.Diagnostics.Stopwatch sw = new Stopwatch();
             sw.Start();
-            
-            using(Main frm = new Main())
+
+            using (Main frm = new Main())
             {
-                while(sw.ElapsedMilliseconds < 5000) { Application.DoEvents(); }
+                while (sw.ElapsedMilliseconds < 5000) { Application.DoEvents(); }
                 sw.Stop();
                 Hide();
                 frm.ShowDialog();
@@ -95,56 +92,59 @@ namespace _3DNUS
 
         private static void CheckAssetExtract(String cd, String wat, Boolean checksum = false)
         {
-            if(!Directory.Exists(cd)) Directory.CreateDirectory(cd);
+            if (!Directory.Exists(cd)) Directory.CreateDirectory(cd);
 
             Assembly ass = Assembly.GetExecutingAssembly();
             String prefix = "_3DNUS.RuntimeAssets." + wat + ".";
             int prefixlen = prefix.Length;
 
-            foreach(String ss in ass.GetManifestResourceNames().Where(str => str.StartsWith(prefix)))
+            foreach (String ss in ass.GetManifestResourceNames().Where(str => str.StartsWith(prefix)))
             {
                 String s = ss.Substring(prefixlen);
                 String fn = Path.Combine(cd, s);
 
-                if(File.Exists(fn))
-                    if(checksum)
+                if (File.Exists(fn))
+                    if (checksum)
                     {
                         String cs = null;
 
-                        using(Stream sr = ass.GetManifestResourceStream(ss))
+                        using (Stream sr = ass.GetManifestResourceStream(ss))
                         {
-                            using(MD5 md = MD5.Create())
+                            using (MD5 md = MD5.Create())
                             {
                                 cs = BitConverter.ToString(md.ComputeHash(sr)).ToLower();
                             }
                         }
 
-                        using(FileStream fs = File.OpenRead(fn))
+                        using (FileStream fs = File.OpenRead(fn))
                         {
-                            using(MD5 md = MD5.Create())
+                            using (MD5 md = MD5.Create())
                             {
-                                if(BitConverter.ToString(md.ComputeHash(fs)).ToLower() == cs) continue;
+                                if (BitConverter.ToString(md.ComputeHash(fs)).ToLower() == cs) continue;
                             }
                         }
                     }
                     else continue;
 
-                using(Stream sr = ass.GetManifestResourceStream(ss))
+                using (Stream sr = ass.GetManifestResourceStream(ss))
                 {
-                    using(FileStream fs = File.OpenWrite(fn))
+                    using (FileStream fs = File.OpenWrite(fn))
                     {
                         byte[] buf = new byte[0x1000];
                         int read = -1;
-                        while(true)
+                        while (true)
                         {
                             read = sr.Read(buf, 0, buf.Length);
-                            if(read == 0) break;
+                            if (read == 0) break;
                             fs.Write(buf, 0, read);
                         }
                     }
                 }
             }
         }
+
+        private void main_load_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
-
