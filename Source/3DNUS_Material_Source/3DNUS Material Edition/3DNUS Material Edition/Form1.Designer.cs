@@ -155,7 +155,8 @@
             this.exitToolStripMenuItem});
             this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
-            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 48);
+            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 70);
+            this.materialContextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.materialContextMenuStrip1_Opening);
             // 
             // extensionManagerToolStripMenuItem
             // 

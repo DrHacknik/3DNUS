@@ -35,7 +35,7 @@ namespace _3DNUS_Material_Edition
         private void Form1_Load(object sender, EventArgs e)
         {
             t_log.Text += " " + DateTime.Now;
-            MessageBox.Show("Do keep in mind, that this very early Dev Build uses the old Download Code, and some (most) Titles will fail!", "Keep in Mind:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Do keep in mind, that this very early Dev Build.", "Keep in Mind:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void firmwdownload(string firm, string reg)
@@ -295,6 +295,10 @@ namespace _3DNUS_Material_Edition
                 }
             }
             log(DateTime.Now + " Done.");
+        }
+
+        private void materialContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
         }
     }
 }
