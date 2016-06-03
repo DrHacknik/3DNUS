@@ -62,6 +62,7 @@
             this.materialFlatButton1.TabIndex = 0;
             this.materialFlatButton1.Text = "Begin Download";
             this.materialFlatButton1.UseVisualStyleBackColor = false;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // c_cia
             // 
@@ -218,7 +219,7 @@
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(216, 19);
             this.materialLabel1.TabIndex = 8;
-            this.materialLabel1.Text = "3DNUS Version: 2.7.0.0 v30034";
+            this.materialLabel1.Text = "3DNUS Version: 2.7.0.0 v30038";
             // 
             // materialDivider1
             // 
