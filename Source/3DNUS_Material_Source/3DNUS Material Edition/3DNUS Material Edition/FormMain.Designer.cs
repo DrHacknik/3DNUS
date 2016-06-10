@@ -205,9 +205,9 @@
             this.materialLabel1.Location = new System.Drawing.Point(-2, 454);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(171, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
             this.materialLabel1.TabIndex = 8;
-            this.materialLabel1.Text = "Development Build Only!";
+            this.materialLabel1.Text = "Stable Build";
             // 
             // materialDivider1
             // 
@@ -297,6 +297,7 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS: Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResizeEnd += new System.EventHandler(this.FormMain_ResizeEnd);
             this.Resize += new System.EventHandler(this.FormMain_ResizeEnd);

@@ -78,6 +78,7 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Process.Start(cd + "\\3DNUS Upd - Lite.exe");
             t_log.Text += " " + DateTime.Now;
             MessageBox.Show("Please keep in mind, that this is a very early Dev Build!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
@@ -395,7 +396,22 @@ namespace _3DNUS_Material_Edition
 
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: 2.7.0.1" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info.", "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: 2.7.0.1 x64" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info.", "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("3DNUS Upd - Lite.exe"))
+                {
+                    proc.Kill();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
