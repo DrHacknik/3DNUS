@@ -44,6 +44,7 @@
             this.check_noerr = new MaterialSkin.Controls.MaterialCheckBox();
             this.prog_sub = new MaterialSkin.Controls.MaterialProgressBar();
             this.panel_ctl = new System.Windows.Forms.Panel();
+            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             this.b_download.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.b_download.AutoEllipsis = true;
+            this.b_download.AutoSize = true;
             this.b_download.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.b_download.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.b_download.Depth = 0;
@@ -131,7 +132,7 @@
             this.t_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.t_log.Size = new System.Drawing.Size(441, 209);
             this.t_log.TabIndex = 4;
-            this.t_log.Text = "Console:";
+            this.t_log.Text = "Console: ";
             // 
             // materialContextMenuStrip1
             // 
@@ -204,9 +205,9 @@
             this.materialLabel1.Location = new System.Drawing.Point(-2, 454);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(216, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(171, 19);
             this.materialLabel1.TabIndex = 8;
-            this.materialLabel1.Text = "3DNUS Version: 2.7.0.0 v30038";
+            this.materialLabel1.Text = "Development Build Only!";
             // 
             // materialDivider1
             // 
@@ -260,11 +261,29 @@
             this.panel_ctl.Size = new System.Drawing.Size(363, 24);
             this.panel_ctl.TabIndex = 11;
             // 
+            // materialFlatButton1
+            // 
+            this.materialFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.Depth = 0;
+            this.materialFlatButton1.Location = new System.Drawing.Point(445, 68);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton1.Name = "materialFlatButton1";
+            this.materialFlatButton1.Primary = false;
+            this.materialFlatButton1.Size = new System.Drawing.Size(19, 36);
+            this.materialFlatButton1.TabIndex = 12;
+            this.materialFlatButton1.Text = "?";
+            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click_1);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(465, 471);
             this.ContextMenuStrip = this.materialContextMenuStrip1;
+            this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.panel_ctl);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.materialLabel1);
@@ -306,6 +325,7 @@
         private MaterialSkin.Controls.MaterialCheckBox check_noerr;
         private MaterialSkin.Controls.MaterialProgressBar prog_sub;
         private System.Windows.Forms.Panel panel_ctl;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
     }
 }
 

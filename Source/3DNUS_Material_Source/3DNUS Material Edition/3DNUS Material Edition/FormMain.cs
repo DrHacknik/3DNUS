@@ -1,20 +1,14 @@
 ﻿using _3DNUS;
+using MarcusD.at;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MarcusD.at;
 
 namespace _3DNUS_Material_Edition
 {
@@ -23,10 +17,12 @@ namespace _3DNUS_Material_Edition
         public static readonly String server = "http://nus.cdn.c.shop.nintendowifi.net/ccs/download/";
 
         public static readonly String ninupdate = "http://yls8.mtheall.com/ninupdates/titlelist.php?csv=1&sys=";
+
         public static readonly String[] sysarr = new String[]
         {
             "ctr",  "ktr"
         };
+
         public static int selsys = 0;
 
         private YLS yls;
@@ -55,10 +51,10 @@ namespace _3DNUS_Material_Edition
 
             sd = new SyncDown(op);
 
-            if(!File.Exists("make_cdn_cia.exe")) c_cia.Checked = false;
+            if (!File.Exists("make_cdn_cia.exe")) c_cia.Checked = false;
             c_cia.CheckedChanged += (_dmy_sndr, _dmy_evt) =>
             {
-                if(c_cia.Checked && !File.Exists("make_cdn_cia.exe"))
+                if (c_cia.Checked && !File.Exists("make_cdn_cia.exe"))
                 {
                     MessageBox.Show("Error: make_cdn_cia.exe is not in the working directory!\r\n" +
                         "This option is unavailable while make_cdn_cia.exe is not found", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,11 +63,11 @@ namespace _3DNUS_Material_Edition
             };
             t_titleid.KeyUp += (_dmy_sndr__, _keyevt) =>
             {
-                if(_keyevt.KeyCode == Keys.Enter || _keyevt.KeyCode == Keys.Return)
+                if (_keyevt.KeyCode == Keys.Enter || _keyevt.KeyCode == Keys.Return)
                 {
                     t_titleid.Text = t_titleid.Text.Trim();
 
-                    if(b_download.Enabled) b_download.PerformClick();
+                    if (b_download.Enabled) b_download.PerformClick();
                 }
             };
             b_download.SizeChanged += (__dmy_sndr_, __wat) =>
@@ -88,10 +84,10 @@ namespace _3DNUS_Material_Edition
 
         private void firmwdownload(YLS_Sysver sys, char region)
         {
-            if(!yls.regions.ContainsKey(region))
+            if (!yls.regions.ContainsKey(region))
             {
                 StringBuilder sb = new StringBuilder();
-                foreach(char chr in yls.regions.Keys)
+                foreach (char chr in yls.regions.Keys)
                 {
                     sb.Append(chr);
                     sb.Append(", ");
@@ -108,44 +104,45 @@ namespace _3DNUS_Material_Edition
             Boolean showerror = true;
             int errorn = 0;
 
-            foreach(YLS_Title t in yls.regions[region])
+            foreach (YLS_Title t in yls.regions[region])
             {
                 sd.op.setProgValue(sd.op.getProgValue() + 1);
 
                 YLS_Titlever optimal = null;
 
-                foreach(YLS_Titlever tv in t.ver)
+                foreach (YLS_Titlever tv in t.ver)
                 {
-                    if(tv.sysver == sys) { optimal = tv; break; }
-                    if(tv.sysver < sys && (optimal == null || tv.sysver > optimal.sysver)) optimal = tv;
+                    if (tv.sysver == sys) { optimal = tv; break; }
+                    if (tv.sysver < sys && (optimal == null || tv.sysver > optimal.sysver)) optimal = tv;
                 }
 
-                if(optimal == null) continue;
+                if (optimal == null) continue;
 
-                if(!singledownload(t.id, optimal.version) && showerror && !check_noerr.Checked && !cancel)
+                if (!singledownload(t.id, optimal.version) && showerror && !check_noerr.Checked && !cancel)
                 {
                     errorn++;
-                    if(!showerror || check_noerr.Checked) continue;
+                    if (!showerror || check_noerr.Checked) continue;
 
                     DialogResult dr = MessageBox.Show("Do you want to dismiss further errors?", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                    switch(dr)
+                    switch (dr)
                     {
                         case System.Windows.Forms.DialogResult.Yes:
                             showerror = false;
                             break;
+
                         case System.Windows.Forms.DialogResult.No:
                             continue;
                         default: return;
                     }
                 }
-                if(cancel) return;
+                if (cancel) return;
             }
 
             log("Firmware downloading finished with " + (errorn == 0 ? "no" : errorn.ToString()) + " error" + (errorn == 1 ? "" : "s"));
 
-            if(!check_noerr.Checked) MessageBox.Show("Firmware downloading finished with " + errorn + " error" + (errorn == 1 ? "" : "s") +
-                (errorn == 0 ? ". Yay! ^^" : " :("), "Download completed", MessageBoxButtons.OK,
-                (errorn == 0) ? MessageBoxIcon.Information : MessageBoxIcon.Error);
+            if (!check_noerr.Checked) MessageBox.Show("Firmware downloading finished with " + errorn + " error" + (errorn == 1 ? "" : "s") +
+                 (errorn == 0 ? ". Yay! ^^" : " :("), "Download completed", MessageBoxButtons.OK,
+                 (errorn == 0) ? MessageBoxIcon.Information : MessageBoxIcon.Error);
 
             sd.op.setProgValue(0);
             sd.op.setSubValue(0);
@@ -192,7 +189,7 @@ namespace _3DNUS_Material_Edition
             b_download.Enabled = false;
             cancel = false;
 
-            if(working)
+            if (working)
             {
                 cancel = true;
                 sd.stahp();
@@ -205,16 +202,16 @@ namespace _3DNUS_Material_Edition
 
             Match match = Regex.Match(t_titleid.Text, @"(\d+)\.(\d+)(\.(\d+))?(-(\d+))?([a-zA-Z])+");
 
-            if(match.Success)
+            if (match.Success)
             {
-                if(yls == null)
+                if (yls == null)
                 {
                     log("Checking title database, please wait...");
                     String csvname = sysarr[selsys] + ".csv";
-                    if(sd.syncDown(ninupdate + sysarr[selsys], csvname)) yls = YLS.Import(csvname);
+                    if (sd.syncDown(ninupdate + sysarr[selsys], csvname)) yls = YLS.Import(csvname);
                     else
                     {
-                        if(File.Exists(csvname))
+                        if (File.Exists(csvname))
                         {
                             MessageBox.Show("Can't update titlelist! The current (possibly older) titlelist will be used instead.",
                                 "Can't update titlelist", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -247,7 +244,7 @@ namespace _3DNUS_Material_Edition
 
             match = Regex.Match(t_titleid.Text, @"(\d{16})([\s_]+v?(\d+))?");
 
-            if(match.Success)
+            if (match.Success)
             {
                 ulong title = Convert.ToUInt64(match.Groups[1].ToString(), 16);
                 int version = int.Parse(match.Groups[3].ToString());
@@ -279,15 +276,14 @@ namespace _3DNUS_Material_Edition
 
             Directory.CreateDirectory(ftmp);
 
-            if(!sd.syncDown(downloadtmd, ftmp + "\\tmd") || !sd.syncDown(downloadcetk, ftmp + "\\cetk"))
+            if (!sd.syncDown(downloadtmd, ftmp + "\\tmd") || !sd.syncDown(downloadcetk, ftmp + "\\cetk"))
             {
                 log("\r\nError downloading title " + title + " v" + version + " make sure the entered title ID and versions are correct");
-                if(!check_noerr.Checked && !cancel)
+                if (!check_noerr.Checked && !cancel)
                 {
                     MessageBox.Show("Error downloading title " + title + " v" + version + ".\r\n" +
                         "Make sure the entered title ID and versions are correct",
                         "Invalid title ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
                 return false;
             }
@@ -304,7 +300,7 @@ namespace _3DNUS_Material_Edition
             sd.op.setProgText("Downloading " + title + " v" + version + "\nTitle has " + contentcounter + " contents");
 
             //download files
-            for(int i = 1; i <= contentcounter; i++)
+            for (int i = 1; i <= contentcounter; i++)
             {
                 int contentoffset = 2820 + (48 * (i - 1));
                 tmd.Seek(contentoffset, SeekOrigin.Begin);
@@ -313,11 +309,11 @@ namespace _3DNUS_Material_Edition
                 string contentid = BitConverter.ToString(cid).Replace("-", "");
                 string downname = ftmp + "\\" + contentid;
                 sd.op.setSubText(i + " / " + contentcounter + "\nDownloading " + title + " (" + contentid + ")");
-                if(!sd.syncDown(server + title + "/" + contentid, @downname) && !cancel)
+                if (!sd.syncDown(server + title + "/" + contentid, @downname) && !cancel)
                 {
                     tmd.Close();
-                    if(check_noerr.Checked) return false;
-                    if(sd.ex.Message.Contains("404"))
+                    if (check_noerr.Checked) return false;
+                    if (sd.ex.Message.Contains("404"))
                     {
                         sd.ex = new Exception("The given title (" + title + " v" + version + " (" + "[" + contentid + "]) doesn't exist on Nintendo's servers", sd.ex);
                     }
@@ -329,19 +325,19 @@ namespace _3DNUS_Material_Edition
 
                     return false;
                 }
-                else if(cancel) { tmd.Close(); return false; }
+                else if (cancel) { tmd.Close(); return false; }
                 log("Downloading complete");
             }
 
             tmd.Close();
-            if(c_cia.Checked)
+            if (c_cia.Checked)
             {
                 sd.op.setProgText("Packing " + title + " v" + version);
 
                 //create cia
                 log("Packing as .cia ...");
                 string command;
-                if(t_titleid.Text.Contains("."))
+                if (t_titleid.Text.Contains("."))
                 {
                     command = " " + "tmp" + " " + t_titleid.Text + "\\" + title + ".cia";
                 }
@@ -359,7 +355,7 @@ namespace _3DNUS_Material_Edition
             }
             else
             {
-                if(t_titleid.Text.Contains("."))
+                if (t_titleid.Text.Contains("."))
                 {
                     Directory.Move(ftmp, t_titleid.Text + "\\" + title);
                 }
@@ -367,7 +363,6 @@ namespace _3DNUS_Material_Edition
                 {
                     Directory.Move(ftmp, title);
                 }
-
             }
 
             sd.op.setSubText(" ");
@@ -383,7 +378,7 @@ namespace _3DNUS_Material_Edition
             sb.Append(": ");
             sb.AppendLine(wat.Message);
             sb.AppendLine(wat.StackTrace);
-            if(inner && wat.InnerException != null)
+            if (inner && wat.InnerException != null)
             {
                 sb.Append("Caused by ");
                 sb.AppendLine(printstack(wat.InnerException));
@@ -396,6 +391,11 @@ namespace _3DNUS_Material_Edition
         {
             panel_ctl.Left = (this.Width / 2) - (panel_ctl.Width / 2);
             b_download.Left = (this.Width / 2) - (b_download.Width / 2);
+        }
+
+        private void materialFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: 2.7.0.1" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info.", "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
