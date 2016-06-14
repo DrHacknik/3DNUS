@@ -60,6 +60,9 @@
     <StartupObject>_3DNUS_Material_Edition.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\old\upd_extract_Source\upd_extract\bin\x86\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MaterialSkin.dll</HintPath>
@@ -88,6 +91,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SyncDown.cs" />
+    <Compile Include="upd.cs" />
     <Compile Include="YLS.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

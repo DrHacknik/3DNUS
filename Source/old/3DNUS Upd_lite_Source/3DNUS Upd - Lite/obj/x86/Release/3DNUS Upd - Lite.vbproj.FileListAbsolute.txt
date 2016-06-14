@@ -6,3 +6,5 @@ C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS Upd_lite_Source\3DNUS Upd - Lite\obj\
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS Upd_lite_Source\3DNUS Upd - Lite\obj\x86\Release\_3DNUS_Upd___Lite.Resources.resources
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS Upd_lite_Source\3DNUS Upd - Lite\obj\x86\Release\3DNUS Upd - Lite.vbproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\3DNUS\3DNUS Upd_lite_Source\3DNUS Upd - Lite\obj\x86\Release\3DNUS Upd - Lite.exe
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\old\3DNUS Upd_lite_Source\3DNUS Upd - Lite\bin\x86\Release\3DNUS Upd - Lite.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\old\3DNUS Upd_lite_Source\3DNUS Upd - Lite\obj\x86\Release\3DNUS Upd - Lite.exe
