@@ -39,12 +39,13 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.check_noerr = new MaterialSkin.Controls.MaterialCheckBox();
             this.prog_sub = new MaterialSkin.Controls.MaterialProgressBar();
             this.panel_ctl = new System.Windows.Forms.Panel();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.upd_status = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,7 @@
             this.b_download.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.b_download.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.b_download.Depth = 0;
-            this.b_download.Location = new System.Drawing.Point(161, 385);
+            this.b_download.Location = new System.Drawing.Point(156, 385);
             this.b_download.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.b_download.MouseState = MaterialSkin.MouseState.HOVER;
             this.b_download.Name = "b_download";
@@ -94,7 +95,7 @@
             this.prog_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.prog_main.Depth = 0;
-            this.prog_main.Location = new System.Drawing.Point(12, 433);
+            this.prog_main.Location = new System.Drawing.Point(12, 430);
             this.prog_main.MouseState = MaterialSkin.MouseState.HOVER;
             this.prog_main.Name = "prog_main";
             this.prog_main.Size = new System.Drawing.Size(441, 5);
@@ -195,20 +196,6 @@
             this.materialRadioButton2.UseVisualStyleBackColor = true;
             this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(-2, 454);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
-            this.materialLabel1.TabIndex = 8;
-            this.materialLabel1.Text = "Stable Build";
-            // 
             // materialDivider1
             // 
             this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -243,7 +230,7 @@
             this.prog_sub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.prog_sub.Depth = 0;
-            this.prog_sub.Location = new System.Drawing.Point(12, 444);
+            this.prog_sub.Location = new System.Drawing.Point(12, 441);
             this.prog_sub.MouseState = MaterialSkin.MouseState.HOVER;
             this.prog_sub.Name = "prog_sub";
             this.prog_sub.Size = new System.Drawing.Size(441, 5);
@@ -278,15 +265,40 @@
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click_1);
             // 
+            // upd_status
+            // 
+            this.upd_status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.upd_status.AutoSize = true;
+            this.upd_status.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upd_status.Location = new System.Drawing.Point(-1, 452);
+            this.upd_status.Name = "upd_status";
+            this.upd_status.Size = new System.Drawing.Size(95, 15);
+            this.upd_status.TabIndex = 13;
+            this.upd_status.Text = "%UPD_STATUS%";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(401, 452);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Dump Log";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(465, 471);
             this.ContextMenuStrip = this.materialContextMenuStrip1;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.upd_status);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.panel_ctl);
             this.Controls.Add(this.materialDivider1);
-            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.t_log);
             this.Controls.Add(this.t_titleid);
             this.Controls.Add(this.prog_sub);
@@ -322,12 +334,13 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialCheckBox check_noerr;
         private MaterialSkin.Controls.MaterialProgressBar prog_sub;
         private System.Windows.Forms.Panel panel_ctl;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private System.Windows.Forms.Label upd_status;
+        private System.Windows.Forms.Label label1;
     }
 }
 

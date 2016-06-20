@@ -28,6 +28,7 @@ namespace _3DNUS_Material_Edition
         private YLS yls;
         private Operation op;
         private SyncDown sd;
+        private upd upd;
 
         private volatile Boolean working = false;
         private volatile Boolean cancel = false;
@@ -78,16 +79,35 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                Process.Start(cd + "\\3DNUS Upd - Lite.exe");
-                t_log.Text += " " + DateTime.Now;
-                MessageBox.Show("Please keep in mind, that this is a very early Dev Build!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                upd_status.Text = "Unable to start Updater -- Code Not Ready";
+                upd_status.Visible = true;
             }
-            catch
+            else
             {
-                MessageBox.Show("Unable to Start the updater; \r\nMake sure it is in the Directory.", "Updater Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                upd_status.Text = "Update Check Failed -- No Network Connection";
+                upd_status.Visible = true;
             }
+            //try
+            //{
+            //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
+            t_log.Text += " " + DateTime.Now;
+
+            DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms?", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("You have chosen to NOT agree to the Terms, therefor the Program will now Close.", "Legal Terms:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Application.Exit();
+            }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Unable to Start the updater; \r\nMake sure it is in the Directory.", "Updater Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void firmwdownload(YLS_Sysver sys, char region)
@@ -403,7 +423,7 @@ namespace _3DNUS_Material_Edition
 
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: 2.7.0.1 x64" + "\r\nCurrent Windows Ver: " + "%System Version%" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info.", "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: " + Application.ProductVersion + "" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info." + "\r\n" + "\r\nThanks a Ton to @MarcusD for alot of His work.", "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -414,15 +434,22 @@ namespace _3DNUS_Material_Edition
         {
             try
             {
-                foreach (Process proc in Process.GetProcessesByName("3DNUS Upd - Lite.exe"))
+                foreach (var process in Process.GetProcessesByName("3DNUS Upd - Lite.exe"))
                 {
-                    proc.Kill();
+                    process.Kill();
                 }
             }
             catch
             {
                 MessageBox.Show("Unable to Kill the Process Specified; Please try again.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
+            File.WriteAllText(cd + "\\LOG_DUMP.log", t_log.Text);
+            MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

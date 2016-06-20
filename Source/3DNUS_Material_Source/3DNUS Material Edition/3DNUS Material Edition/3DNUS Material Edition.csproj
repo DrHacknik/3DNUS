@@ -124,6 +124,8 @@
     <Content Include="make_cdn_cia.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\NDP461-KB3102438-Web.exe" />
+    <None Include="Resources\make_cdn_cia.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
