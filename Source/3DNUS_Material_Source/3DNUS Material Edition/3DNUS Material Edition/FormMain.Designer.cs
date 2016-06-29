@@ -46,6 +46,7 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.upd_status = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.faqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
             this.SuspendLayout();
@@ -141,10 +142,11 @@
             this.materialContextMenuStrip1.Depth = 0;
             this.materialContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.extensionManagerToolStripMenuItem,
+            this.faqToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
-            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 48);
+            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 92);
             // 
             // extensionManagerToolStripMenuItem
             // 
@@ -289,6 +291,13 @@
             this.label1.Text = "Dump Log";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // faqToolStripMenuItem
+            // 
+            this.faqToolStripMenuItem.Name = "faqToolStripMenuItem";
+            this.faqToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.faqToolStripMenuItem.Text = "Help/Faq";
+            this.faqToolStripMenuItem.Click += new System.EventHandler(this.faqToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.White;
@@ -341,6 +350,7 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.Label upd_status;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem faqToolStripMenuItem;
     }
 }
 

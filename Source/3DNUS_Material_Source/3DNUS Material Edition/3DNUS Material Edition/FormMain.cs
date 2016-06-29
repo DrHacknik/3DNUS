@@ -1,4 +1,30 @@
-﻿using _3DNUS;
+﻿/* ====================================
+
+   Thanks to MarcusD for his Parser & other
+   additions.
+
+   Credits:
+
+   @Dr.Hacknik -- Project Leader, Minor Coding, and Designer
+   @MarcusD -- Project Partner, Major Coding, Bug Fixer, and Tips
+   @IgnaceMaes -- Material Skin Lib for C#
+   @GitHub -- For hosting
+   @FileTrip -- For Downloads (In the past)
+   @OneDrive -- For Backups
+   @GBATemp & Users -- For Your support
+   @YouTube & DreamInCode for a little help
+
+   License:
+
+   3DNUS is licensed under the Open-GPL v3 License.
+   All code made in this Project is Open-Source, nothing
+   is closed source.
+   For the full license, open the LICENSE.txt file for the GPL License
+   v2/v3.
+*/
+
+//=====================================
+using _3DNUS;
 using MarcusD.at;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -307,6 +333,7 @@ namespace _3DNUS_Material_Edition
             if (!sd.syncDown(downloadtmd, ftmp + "\\tmd") || !sd.syncDown(downloadcetk, ftmp + "\\cetk"))
             {
                 log("\r\nError downloading title " + title + " v" + version + " make sure the entered title ID and versions are correct");
+                log("\r\nMake sure that you haven't blocked the NUS Servers!");
                 if (!check_noerr.Checked && !cancel)
                 {
                     MessageBox.Show("Error downloading title " + title + " v" + version + ".\r\n" +
@@ -448,8 +475,14 @@ namespace _3DNUS_Material_Edition
         private void label1_Click(object sender, EventArgs e)
         {
             if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
-            File.WriteAllText(cd + "\\LOG_DUMP.log", t_log.Text);
+            File.WriteAllText(cd + "\\LOG_DUMP.log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
             MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void faqToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dev_faq f = new dev_faq();
+            f.Show();
         }
     }
 }
