@@ -138,6 +138,10 @@ Completed.
               this shouldn't be an issue. 
 
       (*) If you have any other Issue, please report it on the GBATemp Forum post
-            -Do keep in mind, this Faq isn't completed; but will be in the distant future. </value>
+            -Do keep in mind, this Faq isn't completed; but will be in the distant future. 
+
+      (*) If you get an Error saying that 3DNUS can't delete the Directory "\Temp" then
+            -Cancel, and check the Option "Silent". This will ignore all errors, and will continue
+            -to download all Titles and/or pack them. </value>
   </data>
 </root>

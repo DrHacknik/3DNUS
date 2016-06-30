@@ -344,86 +344,108 @@ namespace _3DNUS_Material_Edition
             }
 
             //amount of contents
-            FileStream tmd = File.Open(ftmp + "\\tmd", FileMode.Open, FileAccess.Read);
-            tmd.Seek(518, SeekOrigin.Begin);
-            byte[] cc = new byte[2];
-            tmd.Read(cc, 0, 2);
-            Array.Reverse(cc);
-            int contentcounter = BitConverter.ToInt16(cc, 0);
-            log("Title has " + contentcounter + " content" + (contentcounter == 1 ? "" : "s"));
-
-            sd.op.setProgText("Downloading " + title + " v" + version + "\nTitle has " + contentcounter + " contents");
-
-            //download files
-            for (int i = 1; i <= contentcounter; i++)
+            try
             {
-                int contentoffset = 2820 + (48 * (i - 1));
-                tmd.Seek(contentoffset, SeekOrigin.Begin);
-                byte[] cid = new byte[4];
-                tmd.Read(cid, 0, 4);
-                string contentid = BitConverter.ToString(cid).Replace("-", "");
-                string downname = ftmp + "\\" + contentid;
-                sd.op.setSubText(i + " / " + contentcounter + "\nDownloading " + title + " (" + contentid + ")");
-                if (!sd.syncDown(server + title + "/" + contentid, @downname) && !cancel)
+                FileStream tmd = File.Open(ftmp + "\\tmd", FileMode.Open, FileAccess.Read);
+                tmd.Seek(518, SeekOrigin.Begin);
+                byte[] cc = new byte[2];
+                tmd.Read(cc, 0, 2);
+                Array.Reverse(cc);
+                int contentcounter = BitConverter.ToInt16(cc, 0);
+                log("Title has " + contentcounter + " content" + (contentcounter == 1 ? "" : "s"));
+
+                sd.op.setProgText("Downloading " + title + " v" + version + "\nTitle has " + contentcounter + " contents");
+
+                //download files
+                for (int i = 1; i <= contentcounter; i++)
                 {
-                    tmd.Close();
-                    if (check_noerr.Checked) return false;
-                    if (sd.ex.Message.Contains("404"))
+                    int contentoffset = 2820 + (48 * (i - 1));
+                    tmd.Seek(contentoffset, SeekOrigin.Begin);
+                    byte[] cid = new byte[4];
+                    tmd.Read(cid, 0, 4);
+                    string contentid = BitConverter.ToString(cid).Replace("-", "");
+                    string downname = ftmp + "\\" + contentid;
+                    sd.op.setSubText(i + " / " + contentcounter + "\nDownloading " + title + " (" + contentid + ")");
+                    if (!sd.syncDown(server + title + "/" + contentid, @downname) && !cancel)
                     {
-                        sd.ex = new Exception("The given title (" + title + " v" + version + " (" + "[" + contentid + "]) doesn't exist on Nintendo's servers", sd.ex);
+                        tmd.Close();
+                        if (check_noerr.Checked) return false;
+                        if (sd.ex.Message.Contains("404"))
+                        {
+                            sd.ex = new Exception("The given title (" + title + " v" + version + " (" + "[" + contentid + "]) doesn't exist on Nintendo's servers", sd.ex);
+                        }
+                        else
+                        {
+                            log("Can't download title:");
+                            log(printstack(sd.ex));
+                        }
+
+                        return false;
+                    }
+                    else if (cancel) { tmd.Close(); return false; }
+                    log("Downloading complete");
+                }
+
+                tmd.Close();
+                if (c_cia.Checked)
+                {
+                    sd.op.setProgText("Packing " + title + " v" + version);
+
+                    //create cia
+                    log("Packing as .cia ...");
+                    string command;
+                    if (t_titleid.Text.Contains("."))
+                    {
+                        command = " " + "tmp" + " " + t_titleid.Text + "\\" + title + ".cia";
                     }
                     else
                     {
-                        log("Can't download title:");
-                        log(printstack(sd.ex));
+                        command = " " + "tmp" + " " + title + ".cia";
                     }
-
-                    return false;
-                }
-                else if (cancel) { tmd.Close(); return false; }
-                log("Downloading complete");
-            }
-
-            tmd.Close();
-            if (c_cia.Checked)
-            {
-                sd.op.setProgText("Packing " + title + " v" + version);
-
-                //create cia
-                log("Packing as .cia ...");
-                string command;
-                if (t_titleid.Text.Contains("."))
-                {
-                    command = " " + "tmp" + " " + t_titleid.Text + "\\" + title + ".cia";
-                }
-                else
-                {
-                    command = " " + "tmp" + " " + title + ".cia";
-                }
-                Process create = new Process();
-                create.StartInfo.FileName = "make_cdn_cia.exe";
-                create.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                create.StartInfo.Arguments = command;
-                create.Start();
-                create.WaitForExit();
-                Directory.Delete(ftmp, true);
-            }
-            else
-            {
-                if (t_titleid.Text.Contains("."))
-                {
-                    Directory.Move(ftmp, t_titleid.Text + "\\" + title);
+                    try
+                    {
+                        Process create = new Process();
+                        create.StartInfo.FileName = "make_cdn_cia.exe";
+                        create.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        create.StartInfo.Arguments = command;
+                        create.Start();
+                        create.WaitForExit();
+                        Directory.Delete(ftmp, true);
+                    }
+                    catch
+                    {
+                        if (check_noerr.Checked == false)
+                        {
+                            MessageBox.Show("There was a Problem when trying to Delete the Diretory 'Temp'.", "Error: Deleting Dir", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
                 }
                 else
                 {
-                    Directory.Move(ftmp, title);
+                    if (t_titleid.Text.Contains("."))
+                    {
+                        Directory.Move(ftmp, t_titleid.Text + "\\" + title);
+                    }
+                    else
+                    {
+                        Directory.Move(ftmp, title);
+                    }
                 }
+
+                sd.op.setSubText(" ");
+
+                log("Done.");
+                return true;
             }
-
-            sd.op.setSubText(" ");
-
-            log("Done.");
-            return true;
+            catch
+            {
+                return true;
+            }
         }
 
         private static String printstack(Exception wat, Boolean inner = true)
