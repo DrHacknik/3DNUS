@@ -5,12 +5,10 @@
 
 Copyright System.DateTime.Now.Year
 
-
   Extracted from MarcusD's ATLauncher
 
 */
 //=====================================
-
 
 using System;
 using System.Collections.Generic;
@@ -25,7 +23,7 @@ namespace MarcusD.at
     public class SyncDown
     {
         public Operation op;
-        byte isset = 3;
+        private byte isset = 3;
         public Exception ex = null;
         public Boolean cancel = false;
 
@@ -59,10 +57,10 @@ namespace MarcusD.at
                     while (wc.IsBusy)
                     {
                         Application.DoEvents();
-                        if(_stahp)
+                        if (_stahp)
                         {
                             wc.CancelAsync();
-                            while(wc.IsBusy) Application.DoEvents();
+                            while (wc.IsBusy) Application.DoEvents();
                             _stahp = false;
                             goto ejj;
                         }
@@ -74,7 +72,7 @@ namespace MarcusD.at
                 File.Delete(tmpfeil);
                 return true;
 
-                ejj:
+            ejj:
 
                 File.Delete(to);
                 if (File.Exists(tmpfeil)) File.Move(tmpfeil, to);
@@ -91,7 +89,7 @@ namespace MarcusD.at
         {
             if (isset != 0)
             {
-                if (param2.TotalBytesToReceive > op.getSubMax()) 
+                if (param2.TotalBytesToReceive > op.getSubMax())
                     op.setSubMax(param2.TotalBytesToReceive);
                 isset--;
             }

@@ -455,6 +455,7 @@ namespace _3DNUS_Material_Edition
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
         }
 
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
