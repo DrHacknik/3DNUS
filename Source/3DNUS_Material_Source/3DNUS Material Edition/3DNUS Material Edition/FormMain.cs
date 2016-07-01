@@ -177,7 +177,7 @@ namespace _3DNUS_Material_Edition
                     errorn++;
                     if (!showerror || check_noerr.Checked) continue;
 
-                    MessageBox.Show(printstack(sd.ex), "Exception dump", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(sd.ex != null) MessageBox.Show(printstack(sd.ex), "Exception dump", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DialogResult dr = MessageBox.Show("Do you want to dismiss further errors?", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     switch (dr)
                     {
