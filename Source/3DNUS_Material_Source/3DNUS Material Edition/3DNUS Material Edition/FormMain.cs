@@ -177,6 +177,7 @@ namespace _3DNUS_Material_Edition
                     errorn++;
                     if (!showerror || check_noerr.Checked) continue;
 
+                    MessageBox.Show(printstack(sd.ex), "Exception dump", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DialogResult dr = MessageBox.Show("Do you want to dismiss further errors?", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     switch (dr)
                     {
@@ -410,7 +411,11 @@ namespace _3DNUS_Material_Edition
                         create.StartInfo.Arguments = command;
                         create.Start();
                         create.WaitForExit();
-                        Directory.Delete(ftmp, true);
+                        try
+                        {
+                            Directory.Delete(ftmp, true);
+                        }
+                        catch { log("Can't delete /tmp"); }
                     }
                     catch
                     {
