@@ -172,7 +172,7 @@ namespace _3DNUS_Material_Edition
 
                 if (optimal == null) continue;
 
-                if (!singledownload(t.id, optimal.version) && showerror && !check_noerr.Checked && !cancel)
+                if (!singledownload(t.id, optimal.version) && !cancel)
                 {
                     errorn++;
                     if (!showerror || check_noerr.Checked) continue;
