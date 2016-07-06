@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.extensionManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.b_download = new MaterialSkin.Controls.MaterialFlatButton();
@@ -47,7 +48,6 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.upd_status = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,13 @@
             this.extensionManagerToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.extensionManagerToolStripMenuItem.Text = "Extension Manager";
             this.extensionManagerToolStripMenuItem.Click += new System.EventHandler(this.extensionManagerToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // faqToolStripMenuItem
             // 
@@ -179,7 +186,7 @@
             this.materialRadioButton2.AutoSize = true;
             this.materialRadioButton2.Checked = true;
             this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
             this.materialRadioButton2.Location = new System.Drawing.Point(278, -1);
             this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -197,7 +204,7 @@
             // 
             this.check_noerr.AutoSize = true;
             this.check_noerr.Depth = 0;
-            this.check_noerr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.check_noerr.Font = new System.Drawing.Font("Roboto", 10F);
             this.check_noerr.Location = new System.Drawing.Point(0, 0);
             this.check_noerr.Margin = new System.Windows.Forms.Padding(0);
             this.check_noerr.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -213,7 +220,7 @@
             // 
             this.materialRadioButton1.AutoSize = true;
             this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
             this.materialRadioButton1.Location = new System.Drawing.Point(185, -1);
             this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -235,7 +242,7 @@
             this.c_cia.Checked = true;
             this.c_cia.CheckState = System.Windows.Forms.CheckState.Checked;
             this.c_cia.Depth = 0;
-            this.c_cia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.c_cia.Font = new System.Drawing.Font("Roboto", 10F);
             this.c_cia.Location = new System.Drawing.Point(73, 0);
             this.c_cia.Margin = new System.Windows.Forms.Padding(0);
             this.c_cia.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -299,12 +306,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Dump Log";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // FormMain
             // 

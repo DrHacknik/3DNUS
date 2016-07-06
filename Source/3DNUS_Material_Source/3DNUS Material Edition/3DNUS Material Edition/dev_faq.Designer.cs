@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dev_faq));
-            this.dev_tab_control = new MaterialSkin.Controls.MaterialTabSelector();
             this.devtab = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -41,44 +40,35 @@
             this.txt_type = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.rch_debug = new System.Windows.Forms.RichTextBox();
             this.txt_user = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.dev_tab_control = new MaterialSkin.Controls.MaterialTabSelector();
             this.devtab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dev_tab_control
-            // 
-            this.dev_tab_control.BaseTabControl = this.devtab;
-            this.dev_tab_control.Depth = 0;
-            this.dev_tab_control.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dev_tab_control.Location = new System.Drawing.Point(0, 0);
-            this.dev_tab_control.MouseState = MaterialSkin.MouseState.HOVER;
-            this.dev_tab_control.Name = "dev_tab_control";
-            this.dev_tab_control.Size = new System.Drawing.Size(580, 23);
-            this.dev_tab_control.TabIndex = 0;
-            this.dev_tab_control.Click += new System.EventHandler(this.dev_tab_control_Click);
-            // 
             // devtab
             // 
+            this.devtab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.devtab.Controls.Add(this.tabPage1);
             this.devtab.Controls.Add(this.tabPage3);
             this.devtab.Controls.Add(this.tabPage2);
             this.devtab.Depth = 0;
-            this.devtab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.devtab.Location = new System.Drawing.Point(0, 23);
+            this.devtab.Location = new System.Drawing.Point(0, 109);
             this.devtab.MouseState = MaterialSkin.MouseState.HOVER;
             this.devtab.Name = "devtab";
             this.devtab.SelectedIndex = 0;
-            this.devtab.Size = new System.Drawing.Size(580, 490);
-            this.devtab.TabIndex = 1;
+            this.devtab.Size = new System.Drawing.Size(580, 404);
+            this.devtab.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(572, 464);
+            this.tabPage1.Size = new System.Drawing.Size(572, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Offline Faq";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -90,7 +80,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(572, 464);
+            this.richTextBox1.Size = new System.Drawing.Size(572, 378);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -147,7 +137,6 @@
             this.btn_prep.TabIndex = 6;
             this.btn_prep.Text = "Prepare Report";
             this.btn_prep.UseVisualStyleBackColor = true;
-            this.btn_prep.Click += new System.EventHandler(this.btn_prep_Click);
             // 
             // lbl_info
             // 
@@ -202,6 +191,19 @@
             this.txt_user.TabStop = false;
             this.txt_user.UseSystemPasswordChar = false;
             // 
+            // dev_tab_control
+            // 
+            this.dev_tab_control.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dev_tab_control.BaseTabControl = this.devtab;
+            this.dev_tab_control.Depth = 0;
+            this.dev_tab_control.Location = new System.Drawing.Point(0, 63);
+            this.dev_tab_control.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dev_tab_control.Name = "dev_tab_control";
+            this.dev_tab_control.Size = new System.Drawing.Size(580, 40);
+            this.dev_tab_control.TabIndex = 2;
+            // 
             // dev_faq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,8 +212,6 @@
             this.ClientSize = new System.Drawing.Size(580, 513);
             this.Controls.Add(this.devtab);
             this.Controls.Add(this.dev_tab_control);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "dev_faq";
@@ -232,17 +232,17 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialTabSelector dev_tab_control;
         private MaterialSkin.Controls.MaterialTabControl devtab;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TabPage tabPage3;
         private MaterialSkin.Controls.MaterialLabel dev_label_error;
         private System.Windows.Forms.TabPage tabPage2;
+        private MaterialSkin.Controls.MaterialFlatButton btn_prep;
         private System.Windows.Forms.Label lbl_info;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt_type;
         private System.Windows.Forms.RichTextBox rch_debug;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt_user;
-        private MaterialSkin.Controls.MaterialFlatButton btn_prep;
+        private MaterialSkin.Controls.MaterialTabSelector dev_tab_control;
     }
 }

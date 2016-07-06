@@ -120,7 +120,7 @@ namespace _3DNUS_Material_Edition
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
             t_log.Text += " " + DateTime.Now;
 
-            DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms?", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms? \r\n \r\nIn order to access other menu's, right-click the main Window.", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
             }
@@ -177,7 +177,7 @@ namespace _3DNUS_Material_Edition
                     errorn++;
                     if (!showerror || check_noerr.Checked) continue;
 
-                    if(sd.ex != null) MessageBox.Show(printstack(sd.ex), "Exception dump", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (sd.ex != null) MessageBox.Show(printstack(sd.ex), "Exception dump", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DialogResult dr = MessageBox.Show("Do you want to dismiss further errors?", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     switch (dr)
                     {
@@ -510,6 +510,12 @@ namespace _3DNUS_Material_Edition
         private void faqToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dev_faq f = new dev_faq();
+            f.Show();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dev_settings f = new dev_settings();
             f.Show();
         }
     }

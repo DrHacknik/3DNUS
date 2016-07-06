@@ -13,11 +13,12 @@ using System.Xml.Linq;
 
 namespace _3DNUS_Material_Edition
 {
-    public partial class dev_faq : Form
+    public partial class dev_faq : MaterialForm
     {
         public dev_faq()
         {
             InitializeComponent();
+            MaterialSkinManager.Instance.AddFormToManage(this);
         }
 
         private void dev_faq_Load(object sender, EventArgs e)
