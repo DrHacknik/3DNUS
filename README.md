@@ -1,4 +1,4 @@
-![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/new_3dnus_logo.png)
+![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/new_3dnus_logo_128.png)
 # 3DNUS
 A Simple NUS Downloader for 3DS Content, and Pack them as .cia's. 
 The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-hacknik.392360/
