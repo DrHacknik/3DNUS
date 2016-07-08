@@ -108,7 +108,7 @@ namespace _3DNUS_Material_Edition
         {
             try
             {
-                File.Delete(Path.Combine(cd, "Update_Info.txt"));
+                File.Delete(Path.Combine(cd, "Update_info.txt"));
                 File.Delete(Path.Combine(cd, "Update_URI.txt"));
                 File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
                 File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
@@ -121,10 +121,9 @@ namespace _3DNUS_Material_Edition
                     using (StreamReader reader = new StreamReader(upd))
                     {
                         string rd_upd = null;
-                        for (int i = 0; i < 0; ++i)
-                        {
-                            rd_upd = reader.ReadLine();
-                        }
+
+                        rd_upd = reader.ReadToEnd();
+
                         if (rd_upd == Application.ProductVersion)
                         {
                             upd_status.Text = "No new Updates";
