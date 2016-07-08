@@ -40,7 +40,7 @@ namespace _3DNUS_Material_Edition
                     {
                         chck_auto_upd.Checked = true;
                     }
-                    else
+                    if (line == "Auto_upd=0")
                     {
                         chck_auto_upd.Checked = false;
                     }
@@ -59,9 +59,21 @@ namespace _3DNUS_Material_Edition
                         {
                             chck_dump_info.Checked = true;
                         }
-                        else
+                        if (line2 == "Dump_log_sys_info=0")
                         {
                             chck_dump_info.Checked = false;
+                        }
+                    }
+                    using (Stream flags = File.Open(cd + "\\Config.ini", FileMode.Open))
+                    {
+                        using (StreamReader reader = new StreamReader(flags))
+                        {
+                            string line6 = null;
+                            for (int i = 0; i < 6; ++i)
+                            {
+                                line6 = reader.ReadLine();
+                                txtbx_flags.Text = line6;
+                            }
                         }
                     }
                 }
@@ -72,7 +84,7 @@ namespace _3DNUS_Material_Edition
         {
             using (StreamWriter config = new StreamWriter(cd + "\\Config.ini"))
             {
-                config.Write("[Config] \r\nLanguage=Defualt \r\nArch_is_64=" + is64 + " \r\nAuto_upd=1 \r\nDump_log_sys_info=1 \r\nFlags=");
+                config.Write("[Config] \r\nLanguage=Defualt \r\nArch_is_64=" + is64 + " \r\nAuto_upd=1 \r\nDump_log_sys_info=1 \r\nFlags=" + txtbx_flags.Text);
             }
             Close();
         }

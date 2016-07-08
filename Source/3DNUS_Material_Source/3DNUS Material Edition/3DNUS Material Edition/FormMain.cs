@@ -29,6 +29,7 @@ using MarcusD.at;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -41,7 +42,7 @@ namespace _3DNUS_Material_Edition
     public partial class FormMain : MaterialForm
     {
         public static readonly String server = "http://nus.cdn.c.shop.nintendowifi.net/ccs/download/";
-
+        private bool is64 = System.Environment.Is64BitOperatingSystem;
         public static readonly String ninupdate = "http://yls8.mtheall.com/ninupdates/titlelist.php?csv=1&sys=";
 
         public static readonly String[] sysarr = new String[]
@@ -105,16 +106,59 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            try
             {
-                upd_status.Text = "Unable to start Updater -- Code Not Ready";
-                upd_status.Visible = true;
+                File.Delete(Path.Combine(cd, "Update_Info.txt"));
+                File.Delete(Path.Combine(cd, "Update_URI.txt"));
+                File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
+                File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
+                File.Delete(Path.Combine(cd, "upd_fin.exe"));
+                WebClient get_info = new WebClient();
+                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
+                WebClient upd_dwld = new WebClient();
+                using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                {
+                    using (StreamReader reader = new StreamReader(upd))
+                    {
+                        string rd_upd = null;
+                        for (int i = 0; i < 0; ++i)
+                        {
+                            rd_upd = reader.ReadLine();
+                        }
+                        if (rd_upd == Application.ProductVersion)
+                        {
+                            upd_status.Text = "No new Updates";
+                        }
+                        else
+                        {
+                            upd_status.Text = "Downloading New update...";
+                            if (is64 == true)
+                            {
+                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x64/3DNUS.exe"), cd + "\\3DNUS_new.exe");
+                                WebClient get_fin = new WebClient();
+                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
+                                Process.Start(cd + "\\upd_fin.exe");
+                                upd_status.Text = "Preparing...";
+                                Application.Exit();
+                            }
+                            if (is64 == false)
+                            {
+                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x32/3DNUS.exe"), cd + "\\3DNUS_new.exe");
+                                WebClient get_fin = new WebClient();
+                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
+                                Process.Start(cd + "\\upd_fin.exe");
+                                upd_status.Text = "Preparing...";
+                                Application.Exit();
+                            }
+                        }
+                    }
+                }
             }
-            else
+            catch
             {
-                upd_status.Text = "Update Check Failed -- No Network Connection";
-                upd_status.Visible = true;
+                MessageBox.Show("There was an Error when attempting to Update! --error_file_ren", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             //try
             //{
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");

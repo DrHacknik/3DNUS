@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dev_settings));
             this.btn_save = new MaterialSkin.Controls.MaterialFlatButton();
             this.chck_dump_info = new MaterialSkin.Controls.MaterialCheckBox();
             this.chck_auto_upd = new MaterialSkin.Controls.MaterialCheckBox();
@@ -35,6 +36,7 @@
             this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
             this.lbl_sys_type = new MaterialSkin.Controls.MaterialLabel();
             this.txtbx_flags = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // btn_save
@@ -58,6 +60,8 @@
             // 
             this.chck_dump_info.AutoSize = true;
             this.chck_dump_info.BackColor = System.Drawing.Color.Transparent;
+            this.chck_dump_info.Checked = true;
+            this.chck_dump_info.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chck_dump_info.Depth = 0;
             this.chck_dump_info.Font = new System.Drawing.Font("Roboto", 10F);
             this.chck_dump_info.Location = new System.Drawing.Point(9, 84);
@@ -75,6 +79,8 @@
             // 
             this.chck_auto_upd.AutoSize = true;
             this.chck_auto_upd.BackColor = System.Drawing.Color.Transparent;
+            this.chck_auto_upd.Checked = true;
+            this.chck_auto_upd.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chck_auto_upd.Depth = 0;
             this.chck_auto_upd.Font = new System.Drawing.Font("Roboto", 10F);
             this.chck_auto_upd.Location = new System.Drawing.Point(9, 137);
@@ -139,7 +145,7 @@
             // 
             this.txtbx_flags.Depth = 0;
             this.txtbx_flags.Hint = "Enter any Application Flags here";
-            this.txtbx_flags.Location = new System.Drawing.Point(9, 317);
+            this.txtbx_flags.Location = new System.Drawing.Point(9, 328);
             this.txtbx_flags.MaxLength = 32767;
             this.txtbx_flags.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtbx_flags.Name = "txtbx_flags";
@@ -152,6 +158,19 @@
             this.txtbx_flags.TabStop = false;
             this.txtbx_flags.UseSystemPasswordChar = false;
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(12, 306);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(196, 19);
+            this.materialLabel1.TabIndex = 7;
+            this.materialLabel1.Text = "As of now, Remove \"Flags=\"";
+            // 
             // dev_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +178,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(442, 414);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.txtbx_flags);
             this.Controls.Add(this.lbl_sys_type);
             this.Controls.Add(this.materialRadioButton2);
@@ -166,6 +186,7 @@
             this.Controls.Add(this.chck_auto_upd);
             this.Controls.Add(this.chck_dump_info);
             this.Controls.Add(this.btn_save);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "dev_settings";
@@ -188,5 +209,6 @@
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
         private MaterialSkin.Controls.MaterialLabel lbl_sys_type;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtbx_flags;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

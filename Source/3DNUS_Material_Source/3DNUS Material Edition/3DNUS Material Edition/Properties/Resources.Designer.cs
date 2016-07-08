@@ -83,6 +83,36 @@ namespace _3DNUS_Material_Edition.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_3dnus_logo {
+            get {
+                object obj = ResourceManager.GetObject("new_3dnus_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_3dnus_logo_128 {
+            get {
+                object obj = ResourceManager.GetObject("new_3dnus_logo_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_3dnus_splash_bck {
+            get {
+                object obj = ResourceManager.GetObject("new_3dnus_splash_bck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vyV7NzW {
             get {
                 object obj = ResourceManager.GetObject("vyV7NzW", resourceCulture);

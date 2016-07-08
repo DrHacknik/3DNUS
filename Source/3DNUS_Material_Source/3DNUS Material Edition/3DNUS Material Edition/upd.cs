@@ -16,7 +16,7 @@ namespace _3DNUS_Material_Edition
             {
                 // A.
                 // Try to delete the file.
-                File.Delete("");
+                File.Delete("3DNUS.old.exe");
                 return true;
             }
             catch (IOException)

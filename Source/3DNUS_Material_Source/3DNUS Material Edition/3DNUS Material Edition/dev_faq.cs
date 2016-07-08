@@ -38,7 +38,7 @@ namespace _3DNUS_Material_Edition
         {
         }
 
-        private void btn_prep_Click(object sender, EventArgs e)
+        private void btn_prep_Click_1(object sender, EventArgs e)
         {
             Process.Start("https://mail.google.com/mail/?view=cm&fs=1&to=3dnus.feedback@gmail.com&su=" + "3DNUS_Feedback - " + txt_user.Text + "&body=" + rch_debug.Text + " Type of Crash: " + txt_type.Text);
         }

@@ -89,7 +89,7 @@
             this.tabPage3.Controls.Add(this.dev_label_error);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(572, 464);
+            this.tabPage3.Size = new System.Drawing.Size(572, 378);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Online Faq";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.tabPage2.Controls.Add(this.txt_user);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(572, 464);
+            this.tabPage2.Size = new System.Drawing.Size(572, 378);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Report a Bug ";
             // 
@@ -137,6 +137,7 @@
             this.btn_prep.TabIndex = 6;
             this.btn_prep.Text = "Prepare Report";
             this.btn_prep.UseVisualStyleBackColor = true;
+            this.btn_prep.Click += new System.EventHandler(this.btn_prep_Click_1);
             // 
             // lbl_info
             // 
@@ -212,6 +213,7 @@
             this.ClientSize = new System.Drawing.Size(580, 513);
             this.Controls.Add(this.devtab);
             this.Controls.Add(this.dev_tab_control);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "dev_faq";
