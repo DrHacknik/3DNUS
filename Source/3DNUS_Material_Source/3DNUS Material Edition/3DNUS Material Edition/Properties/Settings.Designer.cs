@@ -26,12 +26,48 @@ namespace _3DNUS_Material_Edition.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string dev_arch {
+        public string dev_auto_upd {
             get {
-                return ((string)(this["dev_arch"]));
+                return ((string)(this["dev_auto_upd"]));
             }
             set {
-                this["dev_arch"] = value;
+                this["dev_auto_upd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_dump_info {
+            get {
+                return ((string)(this["dev_dump_info"]));
+            }
+            set {
+                this["dev_dump_info"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_flags {
+            get {
+                return ((string)(this["dev_flags"]));
+            }
+            set {
+                this["dev_flags"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_def_titlelist {
+            get {
+                return ((string)(this["dev_def_titlelist"]));
+            }
+            set {
+                this["dev_def_titlelist"] = value;
             }
         }
     }

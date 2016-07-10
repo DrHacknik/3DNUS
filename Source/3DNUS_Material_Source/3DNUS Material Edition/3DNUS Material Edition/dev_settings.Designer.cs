@@ -32,11 +32,11 @@
             this.btn_save = new MaterialSkin.Controls.MaterialFlatButton();
             this.chck_dump_info = new MaterialSkin.Controls.MaterialCheckBox();
             this.chck_auto_upd = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.new_3ds = new MaterialSkin.Controls.MaterialRadioButton();
+            this.old_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.lbl_sys_type = new MaterialSkin.Controls.MaterialLabel();
             this.txtbx_flags = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.btn_update = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // btn_save
@@ -60,8 +60,6 @@
             // 
             this.chck_dump_info.AutoSize = true;
             this.chck_dump_info.BackColor = System.Drawing.Color.Transparent;
-            this.chck_dump_info.Checked = true;
-            this.chck_dump_info.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chck_dump_info.Depth = 0;
             this.chck_dump_info.Font = new System.Drawing.Font("Roboto", 10F);
             this.chck_dump_info.Location = new System.Drawing.Point(9, 84);
@@ -79,8 +77,6 @@
             // 
             this.chck_auto_upd.AutoSize = true;
             this.chck_auto_upd.BackColor = System.Drawing.Color.Transparent;
-            this.chck_auto_upd.Checked = true;
-            this.chck_auto_upd.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chck_auto_upd.Depth = 0;
             this.chck_auto_upd.Font = new System.Drawing.Font("Roboto", 10F);
             this.chck_auto_upd.Location = new System.Drawing.Point(9, 137);
@@ -94,39 +90,37 @@
             this.chck_auto_upd.Text = "Enable Auto-Updates? ";
             this.chck_auto_upd.UseVisualStyleBackColor = false;
             // 
-            // materialRadioButton1
+            // new_3ds
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton1.Location = new System.Drawing.Point(9, 218);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(85, 30);
-            this.materialRadioButton1.TabIndex = 3;
-            this.materialRadioButton1.Text = "New 3DS";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.new_3ds.AutoSize = true;
+            this.new_3ds.Depth = 0;
+            this.new_3ds.Font = new System.Drawing.Font("Roboto", 10F);
+            this.new_3ds.Location = new System.Drawing.Point(9, 218);
+            this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
+            this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.new_3ds.MouseState = MaterialSkin.MouseState.HOVER;
+            this.new_3ds.Name = "new_3ds";
+            this.new_3ds.Ripple = true;
+            this.new_3ds.Size = new System.Drawing.Size(85, 30);
+            this.new_3ds.TabIndex = 3;
+            this.new_3ds.Text = "New 3DS";
+            this.new_3ds.UseVisualStyleBackColor = true;
             // 
-            // materialRadioButton2
+            // old_3ds
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.Checked = true;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton2.Location = new System.Drawing.Point(9, 258);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(78, 30);
-            this.materialRadioButton2.TabIndex = 4;
-            this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Old 3DS";
-            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.old_3ds.AutoSize = true;
+            this.old_3ds.Depth = 0;
+            this.old_3ds.Font = new System.Drawing.Font("Roboto", 10F);
+            this.old_3ds.Location = new System.Drawing.Point(9, 258);
+            this.old_3ds.Margin = new System.Windows.Forms.Padding(0);
+            this.old_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.old_3ds.MouseState = MaterialSkin.MouseState.HOVER;
+            this.old_3ds.Name = "old_3ds";
+            this.old_3ds.Ripple = true;
+            this.old_3ds.Size = new System.Drawing.Size(78, 30);
+            this.old_3ds.TabIndex = 4;
+            this.old_3ds.Text = "Old 3DS";
+            this.old_3ds.UseVisualStyleBackColor = true;
             // 
             // lbl_sys_type
             // 
@@ -158,18 +152,22 @@
             this.txtbx_flags.TabStop = false;
             this.txtbx_flags.UseSystemPasswordChar = false;
             // 
-            // materialLabel1
+            // btn_update
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 306);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(196, 19);
-            this.materialLabel1.TabIndex = 7;
-            this.materialLabel1.Text = "As of now, Remove \"Flags=\"";
+            this.btn_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_update.AutoSize = true;
+            this.btn_update.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_update.Depth = 0;
+            this.btn_update.Location = new System.Drawing.Point(9, 376);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_update.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Primary = false;
+            this.btn_update.Size = new System.Drawing.Size(64, 36);
+            this.btn_update.TabIndex = 8;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // dev_settings
             // 
@@ -178,11 +176,11 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(442, 414);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.txtbx_flags);
             this.Controls.Add(this.lbl_sys_type);
-            this.Controls.Add(this.materialRadioButton2);
-            this.Controls.Add(this.materialRadioButton1);
+            this.Controls.Add(this.old_3ds);
+            this.Controls.Add(this.new_3ds);
             this.Controls.Add(this.chck_auto_upd);
             this.Controls.Add(this.chck_dump_info);
             this.Controls.Add(this.btn_save);
@@ -205,10 +203,10 @@
         private MaterialSkin.Controls.MaterialFlatButton btn_save;
         private MaterialSkin.Controls.MaterialCheckBox chck_dump_info;
         private MaterialSkin.Controls.MaterialCheckBox chck_auto_upd;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
+        private MaterialSkin.Controls.MaterialRadioButton new_3ds;
+        private MaterialSkin.Controls.MaterialRadioButton old_3ds;
         private MaterialSkin.Controls.MaterialLabel lbl_sys_type;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtbx_flags;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialFlatButton btn_update;
     }
 }

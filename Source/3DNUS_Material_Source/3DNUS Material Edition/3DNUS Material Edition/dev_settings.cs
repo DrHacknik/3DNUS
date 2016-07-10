@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Windows.Forms;
 
@@ -25,68 +27,124 @@ namespace _3DNUS_Material_Edition
         }
 
         private void dev_settings_Load(object sender, EventArgs e)
-
         {
-            using (Stream upd = File.Open(cd + "\\Config.ini", FileMode.Open))
+            Properties.Settings.Default.Reload();
+            if (Properties.Settings.Default.dev_auto_upd == "1")
             {
-                using (StreamReader reader = new StreamReader(upd))
-                {
-                    string line = null;
-                    for (int i = 0; i < 3; ++i)
-                    {
-                        line = reader.ReadLine();
-                    }
-                    if (line == "Auto_upd=1")
-                    {
-                        chck_auto_upd.Checked = true;
-                    }
-                    if (line == "Auto_upd=0")
-                    {
-                        chck_auto_upd.Checked = false;
-                    }
-                }
-                using (Stream log = File.Open(cd + "\\Config.ini", FileMode.Open))
-                {
-                    using (StreamReader reader = new StreamReader(log))
-                    {
-                        string line2 = null;
-                        for (int i = 0; i < 4; ++i)
-                        {
-                            line2 = reader.ReadLine();
-                        }
+                chck_auto_upd.Checked = true;
+            }
+            else
+            {
+                chck_auto_upd.Checked = false;
+            }
+            if (Properties.Settings.Default.dev_dump_info == "1")
+            {
+                chck_dump_info.Checked = true;
+            }
+            else
+            {
+                chck_dump_info.Checked = false;
+            }
+            if (Properties.Settings.Default.dev_def_titlelist == "old")
+            {
+                old_3ds.Checked = true;
+            }
+            else
 
-                        if (line2 == "Dump_log_sys_info=1 ")
-                        {
-                            chck_dump_info.Checked = true;
-                        }
-                        if (line2 == "Dump_log_sys_info=0")
-                        {
-                            chck_dump_info.Checked = false;
-                        }
-                    }
-                    using (Stream flags = File.Open(cd + "\\Config.ini", FileMode.Open))
+            if (Properties.Settings.Default.dev_def_titlelist == "new")
+            {
+                new_3ds.Checked = true;
+            }
+            Properties.Settings.Default.dev_flags = txtbx_flags.Text;
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            if (chck_auto_upd.Checked == true)
+            {
+                Properties.Settings.Default.dev_auto_upd = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_auto_upd = "0";
+            }
+            if (chck_dump_info.Checked == true)
+            {
+                Properties.Settings.Default.dev_dump_info = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_dump_info = "0";
+            }
+            if (old_3ds.Checked == true)
+            {
+                Properties.Settings.Default.dev_def_titlelist = "old";
+            }
+
+            if (new_3ds.Checked == true)
+            {
+                Properties.Settings.Default.dev_def_titlelist = "new";
+            }
+
+            txtbx_flags.Text = Properties.Settings.Default.dev_flags;
+            Properties.Settings.Default.Save();
+            Close();
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btn_update.Text = "....";
+                File.Delete(Path.Combine(cd, "Update_info.txt"));
+                File.Delete(Path.Combine(cd, "Update_URI.txt"));
+                File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
+                File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
+                File.Delete(Path.Combine(cd, "upd_fin.exe"));
+                WebClient get_info = new WebClient();
+                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
+                WebClient upd_dwld = new WebClient();
+                using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                {
+                    using (StreamReader reader = new StreamReader(upd))
                     {
-                        using (StreamReader reader = new StreamReader(flags))
+                        string rd_upd = null;
+
+                        rd_upd = reader.ReadToEnd();
+
+                        if (rd_upd == Application.ProductVersion)
                         {
-                            string line6 = null;
-                            for (int i = 0; i < 6; ++i)
+                            MessageBox.Show("No new Updates!");
+                        }
+                        else
+                        {
+                            btn_update.Text = "Updating";
+                            if (is64 == true)
                             {
-                                line6 = reader.ReadLine();
-                                txtbx_flags.Text = line6;
+                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x64/3DNUS.exe"), cd + "\\3DNUS_new.exe");
+                                WebClient get_fin = new WebClient();
+                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
+                                Process.Start(cd + "\\upd_fin.exe");
+                                btn_update.Text = "Preparing...";
+                                Application.Exit();
+                            }
+                            if (is64 == false)
+                            {
+                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x32/3DNUS.exe"), cd + "\\3DNUS_new.exe");
+                                WebClient get_fin = new WebClient();
+                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
+                                Process.Start(cd + "\\upd_fin.exe");
+                                btn_update.Text = "Preparing...";
+                                Application.Exit();
                             }
                         }
                     }
                 }
             }
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            using (StreamWriter config = new StreamWriter(cd + "\\Config.ini"))
+            catch
             {
-                config.Write("[Config] \r\nLanguage=Defualt \r\nArch_is_64=" + is64 + " \r\nAuto_upd=1 \r\nDump_log_sys_info=1 \r\nFlags=" + txtbx_flags.Text);
+                btn_update.Text = "Unable to update...";
             }
-            Close();
         }
     }
 }

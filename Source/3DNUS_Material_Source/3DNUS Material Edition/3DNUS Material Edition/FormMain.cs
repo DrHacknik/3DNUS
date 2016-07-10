@@ -106,58 +106,14 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
+            if (Properties.Settings.Default.dev_def_titlelist == "old")
             {
-                File.Delete(Path.Combine(cd, "Update_info.txt"));
-                File.Delete(Path.Combine(cd, "Update_URI.txt"));
-                File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
-                File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
-                File.Delete(Path.Combine(cd, "upd_fin.exe"));
-                WebClient get_info = new WebClient();
-                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
-                WebClient upd_dwld = new WebClient();
-                using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
-                {
-                    using (StreamReader reader = new StreamReader(upd))
-                    {
-                        string rd_upd = null;
-
-                        rd_upd = reader.ReadToEnd();
-
-                        if (rd_upd == Application.ProductVersion)
-                        {
-                            upd_status.Text = "No new Updates";
-                        }
-                        else
-                        {
-                            upd_status.Text = "Downloading New update...";
-                            if (is64 == true)
-                            {
-                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x64/3DNUS.exe"), cd + "\\3DNUS_new.exe");
-                                WebClient get_fin = new WebClient();
-                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
-                                Process.Start(cd + "\\upd_fin.exe");
-                                upd_status.Text = "Preparing...";
-                                Application.Exit();
-                            }
-                            if (is64 == false)
-                            {
-                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x32/3DNUS.exe"), cd + "\\3DNUS_new.exe");
-                                WebClient get_fin = new WebClient();
-                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
-                                Process.Start(cd + "\\upd_fin.exe");
-                                upd_status.Text = "Preparing...";
-                                Application.Exit();
-                            }
-                        }
-                    }
-                }
+                old_3ds.Checked = true;
             }
-            catch
+            if (Properties.Settings.Default.dev_def_titlelist == "new")
             {
-                MessageBox.Show("There was an Error when attempting to Update! --error_file_ren", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                new_3ds.Checked = true;
             }
-
             //try
             //{
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
@@ -545,9 +501,18 @@ namespace _3DNUS_Material_Edition
 
         private void label1_Click(object sender, EventArgs e)
         {
-            if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
-            File.WriteAllText(cd + "\\LOG_DUMP.log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
-            MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (Properties.Settings.Default.dev_dump_info == "1")
+            {
+                if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
+                File.WriteAllText(cd + "\\LOG_DUMP.log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
+                MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
+                File.WriteAllText(cd + "\\LOG_DUMP.log", "" + t_log.Text);
+                MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void faqToolStripMenuItem_Click(object sender, EventArgs e)

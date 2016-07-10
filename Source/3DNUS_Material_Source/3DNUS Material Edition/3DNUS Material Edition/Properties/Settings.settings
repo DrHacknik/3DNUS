@@ -2,7 +2,16 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="_3DNUS_Material_Edition.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="dev_arch" Type="System.String" Scope="User">
+    <Setting Name="dev_auto_upd" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="dev_dump_info" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="dev_flags" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="dev_def_titlelist" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

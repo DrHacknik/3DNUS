@@ -142,7 +142,12 @@ Completed.
 
       (*) If you get an Error saying that 3DNUS can't delete the Directory "\Temp" then
             -Cancel, and check the Option "Silent". This will ignore all errors, and will continue
-            -to download all Titles and/or pack them. </value>
+            -to download all Titles and/or pack them. 
+
+      (*) I get an Error Saying "Unable to update..."; what does this mean?
+            -Make sure you have an Internet Connection, if not...connect! 
+              Another cause could be that the Update Info couldn't be retrieved, 
+              so try again at a later time. </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

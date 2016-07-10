@@ -40,13 +40,12 @@
             this.t_titleid = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.t_log = new System.Windows.Forms.TextBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.old_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.check_noerr = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.new_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.c_cia = new MaterialSkin.Controls.MaterialCheckBox();
             this.panel_ctl = new System.Windows.Forms.Panel();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.upd_status = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
@@ -181,24 +180,24 @@
             this.materialDivider1.TabIndex = 9;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // materialRadioButton2
+            // old_3ds
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.Checked = true;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton2.Location = new System.Drawing.Point(278, -1);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(78, 30);
-            this.materialRadioButton2.TabIndex = 7;
-            this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Old 3DS";
-            this.materialRadioButton2.UseVisualStyleBackColor = true;
-            this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
+            this.old_3ds.AutoSize = true;
+            this.old_3ds.Checked = true;
+            this.old_3ds.Depth = 0;
+            this.old_3ds.Font = new System.Drawing.Font("Roboto", 10F);
+            this.old_3ds.Location = new System.Drawing.Point(278, -1);
+            this.old_3ds.Margin = new System.Windows.Forms.Padding(0);
+            this.old_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.old_3ds.MouseState = MaterialSkin.MouseState.HOVER;
+            this.old_3ds.Name = "old_3ds";
+            this.old_3ds.Ripple = true;
+            this.old_3ds.Size = new System.Drawing.Size(78, 30);
+            this.old_3ds.TabIndex = 7;
+            this.old_3ds.TabStop = true;
+            this.old_3ds.Text = "Old 3DS";
+            this.old_3ds.UseVisualStyleBackColor = true;
+            this.old_3ds.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
             // 
             // check_noerr
             // 
@@ -216,22 +215,22 @@
             this.check_noerr.Text = "Silent";
             this.check_noerr.UseVisualStyleBackColor = true;
             // 
-            // materialRadioButton1
+            // new_3ds
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton1.Location = new System.Drawing.Point(185, -1);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(85, 30);
-            this.materialRadioButton1.TabIndex = 6;
-            this.materialRadioButton1.Text = "New 3DS";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
-            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
+            this.new_3ds.AutoSize = true;
+            this.new_3ds.Depth = 0;
+            this.new_3ds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.new_3ds.Location = new System.Drawing.Point(185, -1);
+            this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
+            this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.new_3ds.MouseState = MaterialSkin.MouseState.HOVER;
+            this.new_3ds.Name = "new_3ds";
+            this.new_3ds.Ripple = true;
+            this.new_3ds.Size = new System.Drawing.Size(85, 30);
+            this.new_3ds.TabIndex = 6;
+            this.new_3ds.Text = "New 3DS";
+            this.new_3ds.UseVisualStyleBackColor = true;
+            this.new_3ds.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
             // 
             // c_cia
             // 
@@ -258,9 +257,9 @@
             // 
             this.panel_ctl.BackColor = System.Drawing.Color.White;
             this.panel_ctl.Controls.Add(this.c_cia);
-            this.panel_ctl.Controls.Add(this.materialRadioButton1);
+            this.panel_ctl.Controls.Add(this.new_3ds);
             this.panel_ctl.Controls.Add(this.check_noerr);
-            this.panel_ctl.Controls.Add(this.materialRadioButton2);
+            this.panel_ctl.Controls.Add(this.old_3ds);
             this.panel_ctl.Location = new System.Drawing.Point(53, 110);
             this.panel_ctl.Name = "panel_ctl";
             this.panel_ctl.Size = new System.Drawing.Size(363, 24);
@@ -283,17 +282,6 @@
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click_1);
             // 
-            // upd_status
-            // 
-            this.upd_status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.upd_status.AutoSize = true;
-            this.upd_status.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.upd_status.Location = new System.Drawing.Point(-1, 460);
-            this.upd_status.Name = "upd_status";
-            this.upd_status.Size = new System.Drawing.Size(95, 15);
-            this.upd_status.TabIndex = 13;
-            this.upd_status.Text = "%UPD_STATUS%";
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,7 +301,6 @@
             this.ClientSize = new System.Drawing.Size(484, 479);
             this.ContextMenuStrip = this.materialContextMenuStrip1;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.upd_status);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.panel_ctl);
             this.Controls.Add(this.materialDivider1);
@@ -351,13 +338,12 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField t_titleid;
         private System.Windows.Forms.TextBox t_log;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
+        private MaterialSkin.Controls.MaterialRadioButton old_3ds;
         private MaterialSkin.Controls.MaterialCheckBox check_noerr;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        private MaterialSkin.Controls.MaterialRadioButton new_3ds;
         private MaterialSkin.Controls.MaterialCheckBox c_cia;
         private System.Windows.Forms.Panel panel_ctl;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private System.Windows.Forms.Label upd_status;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
