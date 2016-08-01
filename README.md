@@ -26,8 +26,11 @@ in Gimp 2.8
 ##Requirements: 
 
 *A Computer running Windows XP or Higher 
-*.NET Framework 4.0 or Higher
+
+*NET Framework 4.0 or Higher
+
 *Either a x32 or x64 CPU 
+
 *An Internet Connection
 
 
