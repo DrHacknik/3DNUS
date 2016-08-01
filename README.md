@@ -34,7 +34,7 @@ in Gimp 2.8
 * An Internet Connection
 
 
-GNU/GPL Copyright(s): 
+ 
 
 #GNU GENERAL PUBLIC LICENSE
 
