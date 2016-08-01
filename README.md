@@ -23,6 +23,13 @@ We are NOT affiliated with Nintendo at All!
 The new Flat Styled icons were created by me
 in Gimp 2.8
 
+##Requirements: 
+
+*A Computer running Windows XP or Higher 
+*.NET Framework 4.0 or Higher
+*Either a x32 or x64 CPU 
+*An Internet Connection
+
 
 GNU/GPL Copyright(s): 
 
