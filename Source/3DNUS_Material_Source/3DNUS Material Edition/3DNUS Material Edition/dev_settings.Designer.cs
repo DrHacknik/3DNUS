@@ -37,6 +37,10 @@
             this.lbl_sys_type = new MaterialSkin.Controls.MaterialLabel();
             this.txtbx_flags = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btn_update = new MaterialSkin.Controls.MaterialFlatButton();
+            this.dev_bck_music = new AxWMPLib.AxWindowsMediaPlayer();
+            this.chck_music = new MaterialSkin.Controls.MaterialCheckBox();
+            this.btn_reset_settings = new MaterialSkin.Controls.MaterialFlatButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_save
@@ -45,7 +49,7 @@
             this.btn_save.AutoSize = true;
             this.btn_save.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_save.Depth = 0;
-            this.btn_save.Location = new System.Drawing.Point(334, 376);
+            this.btn_save.Location = new System.Drawing.Point(349, 394);
             this.btn_save.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_save.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_save.Name = "btn_save";
@@ -95,7 +99,7 @@
             this.new_3ds.AutoSize = true;
             this.new_3ds.Depth = 0;
             this.new_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.new_3ds.Location = new System.Drawing.Point(9, 218);
+            this.new_3ds.Location = new System.Drawing.Point(9, 267);
             this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.new_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -111,7 +115,7 @@
             this.old_3ds.AutoSize = true;
             this.old_3ds.Depth = 0;
             this.old_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.old_3ds.Location = new System.Drawing.Point(9, 258);
+            this.old_3ds.Location = new System.Drawing.Point(9, 307);
             this.old_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.old_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.old_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -128,7 +132,7 @@
             this.lbl_sys_type.Depth = 0;
             this.lbl_sys_type.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbl_sys_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_sys_type.Location = new System.Drawing.Point(12, 189);
+            this.lbl_sys_type.Location = new System.Drawing.Point(12, 238);
             this.lbl_sys_type.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_sys_type.Name = "lbl_sys_type";
             this.lbl_sys_type.Size = new System.Drawing.Size(120, 19);
@@ -139,7 +143,7 @@
             // 
             this.txtbx_flags.Depth = 0;
             this.txtbx_flags.Hint = "Enter any Application Flags here";
-            this.txtbx_flags.Location = new System.Drawing.Point(9, 328);
+            this.txtbx_flags.Location = new System.Drawing.Point(9, 342);
             this.txtbx_flags.MaxLength = 32767;
             this.txtbx_flags.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtbx_flags.Name = "txtbx_flags";
@@ -158,7 +162,7 @@
             this.btn_update.AutoSize = true;
             this.btn_update.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_update.Depth = 0;
-            this.btn_update.Location = new System.Drawing.Point(9, 376);
+            this.btn_update.Location = new System.Drawing.Point(9, 394);
             this.btn_update.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_update.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_update.Name = "btn_update";
@@ -169,13 +173,62 @@
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
+            // dev_bck_music
+            // 
+            this.dev_bck_music.Enabled = true;
+            this.dev_bck_music.Location = new System.Drawing.Point(363, 64);
+            this.dev_bck_music.Name = "dev_bck_music";
+            this.dev_bck_music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("dev_bck_music.OcxState")));
+            this.dev_bck_music.Size = new System.Drawing.Size(75, 23);
+            this.dev_bck_music.TabIndex = 15;
+            this.dev_bck_music.Visible = false;
+            this.dev_bck_music.EndOfStream += new AxWMPLib._WMPOCXEvents_EndOfStreamEventHandler(this.dev_bck_music_EndOfStream);
+            this.dev_bck_music.Enter += new System.EventHandler(this.dev_bck_music_Enter);
+            // 
+            // chck_music
+            // 
+            this.chck_music.AutoSize = true;
+            this.chck_music.BackColor = System.Drawing.Color.Transparent;
+            this.chck_music.Depth = 0;
+            this.chck_music.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chck_music.Location = new System.Drawing.Point(9, 185);
+            this.chck_music.Margin = new System.Windows.Forms.Padding(0);
+            this.chck_music.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chck_music.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chck_music.Name = "chck_music";
+            this.chck_music.Ripple = true;
+            this.chck_music.Size = new System.Drawing.Size(119, 30);
+            this.chck_music.TabIndex = 16;
+            this.chck_music.Text = "Enable Music? ";
+            this.chck_music.UseVisualStyleBackColor = false;
+            // 
+            // btn_reset_settings
+            // 
+            this.btn_reset_settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_reset_settings.AutoSize = true;
+            this.btn_reset_settings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_reset_settings.Depth = 0;
+            this.btn_reset_settings.Location = new System.Drawing.Point(81, 394);
+            this.btn_reset_settings.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_reset_settings.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_reset_settings.Name = "btn_reset_settings";
+            this.btn_reset_settings.Primary = false;
+            this.btn_reset_settings.Size = new System.Drawing.Size(120, 36);
+            this.btn_reset_settings.TabIndex = 17;
+            this.btn_reset_settings.Text = "Reset settings";
+            this.btn_reset_settings.UseVisualStyleBackColor = true;
+            this.btn_reset_settings.Click += new System.EventHandler(this.btn_reset_settings_Click);
+            // 
             // dev_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(442, 414);
+            this.ClientSize = new System.Drawing.Size(457, 432);
+            this.Controls.Add(this.btn_reset_settings);
+            this.Controls.Add(this.chck_music);
+            this.Controls.Add(this.dev_bck_music);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.txtbx_flags);
             this.Controls.Add(this.lbl_sys_type);
@@ -192,7 +245,9 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings: ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dev_settings_FormClosing);
             this.Load += new System.EventHandler(this.dev_settings_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +263,8 @@
         private MaterialSkin.Controls.MaterialLabel lbl_sys_type;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtbx_flags;
         private MaterialSkin.Controls.MaterialFlatButton btn_update;
+        private AxWMPLib.AxWindowsMediaPlayer dev_bck_music;
+        private MaterialSkin.Controls.MaterialCheckBox chck_music;
+        private MaterialSkin.Controls.MaterialFlatButton btn_reset_settings;
     }
 }

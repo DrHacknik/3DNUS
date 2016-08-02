@@ -70,5 +70,29 @@ namespace _3DNUS_Material_Edition.Properties {
                 this["dev_def_titlelist"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_music {
+            get {
+                return ((string)(this["dev_music"]));
+            }
+            set {
+                this["dev_music"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_mode {
+            get {
+                return ((string)(this["dev_mode"]));
+            }
+            set {
+                this["dev_mode"] = value;
+            }
+        }
     }
 }

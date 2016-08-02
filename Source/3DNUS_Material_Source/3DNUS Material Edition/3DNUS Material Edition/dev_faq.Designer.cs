@@ -41,10 +41,12 @@
             this.rch_debug = new System.Windows.Forms.RichTextBox();
             this.txt_user = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dev_tab_control = new MaterialSkin.Controls.MaterialTabSelector();
+            this.dev_bck_music = new AxWMPLib.AxWindowsMediaPlayer();
             this.devtab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).BeginInit();
             this.SuspendLayout();
             // 
             // devtab
@@ -205,12 +207,25 @@
             this.dev_tab_control.Size = new System.Drawing.Size(580, 40);
             this.dev_tab_control.TabIndex = 2;
             // 
+            // dev_bck_music
+            // 
+            this.dev_bck_music.Enabled = true;
+            this.dev_bck_music.Location = new System.Drawing.Point(493, 34);
+            this.dev_bck_music.Name = "dev_bck_music";
+            this.dev_bck_music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("dev_bck_music.OcxState")));
+            this.dev_bck_music.Size = new System.Drawing.Size(75, 23);
+            this.dev_bck_music.TabIndex = 16;
+            this.dev_bck_music.Visible = false;
+            this.dev_bck_music.EndOfStream += new AxWMPLib._WMPOCXEvents_EndOfStreamEventHandler(this.dev_bck_music_EndOfStream);
+            this.dev_bck_music.Enter += new System.EventHandler(this.dev_bck_music_Enter);
+            // 
             // dev_faq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(580, 513);
+            this.Controls.Add(this.dev_bck_music);
             this.Controls.Add(this.devtab);
             this.Controls.Add(this.dev_tab_control);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -228,6 +243,7 @@
             this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,5 +262,6 @@
         private System.Windows.Forms.RichTextBox rch_debug;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt_user;
         private MaterialSkin.Controls.MaterialTabSelector dev_tab_control;
+        private AxWMPLib.AxWindowsMediaPlayer dev_bck_music;
     }
 }

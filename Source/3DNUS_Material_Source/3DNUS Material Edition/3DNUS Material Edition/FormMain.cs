@@ -25,6 +25,7 @@
 
 //=====================================
 using _3DNUS;
+
 using MarcusD.at;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -106,6 +107,7 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lbl_ver.Text = Application.ProductVersion;
             if (Properties.Settings.Default.dev_def_titlelist == "old")
             {
                 old_3ds.Checked = true;
@@ -119,7 +121,7 @@ namespace _3DNUS_Material_Edition
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
             t_log.Text += " " + DateTime.Now;
 
-            DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms? \r\n \r\nIn order to access other menu's, right-click the main Window.", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms? \r\n \r\nIn order to access other menu's, right-click the main Window. \r\n \r\nCaution: Some parts of 3DNUS may have some Loud Bck Music!", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
             }
@@ -133,6 +135,13 @@ namespace _3DNUS_Material_Edition
             //{
             //    MessageBox.Show("Unable to Start the updater; \r\nMake sure it is in the Directory.", "Updater Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
+            if (Properties.Settings.Default.dev_music == "1")
+            {
+                dev_bck_music.URL = cd + "\\snd\\dev_bck_music_main.mp3";
+            }
+            else
+            {
+            }
         }
 
         private void firmwdownload(YLS_Sysver sys, char region)
@@ -525,6 +534,37 @@ namespace _3DNUS_Material_Edition
         {
             dev_settings f = new dev_settings();
             f.Show();
+            if (dev_bck_music.settings.volume > 1)
+            {
+                dev_bck_music.settings.volume = (dev_bck_music.settings.volume - (dev_bck_music.settings.volume / 2));
+            }
+        }
+
+        private void dev_bck_music_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void dev_bck_music_EndOfStream(object sender, AxWMPLib._WMPOCXEvents_EndOfStreamEvent e)
+        {
+            dev_bck_music.URL = cd + "\\snd\\dev_bck_music_main.mp3";
+        }
+
+        private void dev_look_forum_Tick(object sender, EventArgs e)
+        {
+            if (dev_settings.ActiveForm == ActiveForm)
+            {
+                if (dev_bck_music.settings.volume > 1)
+                {
+                    dev_bck_music.settings.volume = (dev_bck_music.settings.volume - (dev_bck_music.settings.volume / 2));
+                }
+            }
+            else
+            {
+                if (dev_bck_music.settings.volume > 1)
+                {
+                    dev_bck_music.settings.volume = (dev_bck_music.settings.volume - (dev_bck_music.settings.volume / 2));
+                }
+            }
         }
     }
 }

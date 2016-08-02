@@ -76,6 +76,7 @@ namespace _3DNUS_Material_Edition
             if (Properties.Settings.Default.dev_auto_upd == "")
             {
                 Properties.Settings.Default.dev_auto_upd = "1";
+                Properties.Settings.Default.dev_music = "1";
                 Properties.Settings.Default.Save();
                 Application.Restart();
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.extensionManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,8 +48,12 @@
             this.panel_ctl = new System.Windows.Forms.Panel();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.dev_bck_music = new AxWMPLib.AxWindowsMediaPlayer();
+            this.dev_look_forum = new System.Windows.Forms.Timer(this.components);
+            this.lbl_ver = new System.Windows.Forms.Label();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).BeginInit();
             this.SuspendLayout();
             // 
             // materialContextMenuStrip1
@@ -219,7 +224,7 @@
             // 
             this.new_3ds.AutoSize = true;
             this.new_3ds.Depth = 0;
-            this.new_3ds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.new_3ds.Font = new System.Drawing.Font("Roboto", 10F);
             this.new_3ds.Location = new System.Drawing.Point(185, -1);
             this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -295,11 +300,42 @@
             this.label1.Text = "Dump Log";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // dev_bck_music
+            // 
+            this.dev_bck_music.Enabled = true;
+            this.dev_bck_music.Location = new System.Drawing.Point(12, 390);
+            this.dev_bck_music.Name = "dev_bck_music";
+            this.dev_bck_music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("dev_bck_music.OcxState")));
+            this.dev_bck_music.Size = new System.Drawing.Size(75, 23);
+            this.dev_bck_music.TabIndex = 14;
+            this.dev_bck_music.Visible = false;
+            this.dev_bck_music.EndOfStream += new AxWMPLib._WMPOCXEvents_EndOfStreamEventHandler(this.dev_bck_music_EndOfStream);
+            this.dev_bck_music.Enter += new System.EventHandler(this.dev_bck_music_Enter);
+            // 
+            // dev_look_forum
+            // 
+            this.dev_look_forum.Enabled = true;
+            this.dev_look_forum.Tick += new System.EventHandler(this.dev_look_forum_Tick);
+            // 
+            // lbl_ver
+            // 
+            this.lbl_ver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_ver.AutoSize = true;
+            this.lbl_ver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_ver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ver.Location = new System.Drawing.Point(-1, 460);
+            this.lbl_ver.Name = "lbl_ver";
+            this.lbl_ver.Size = new System.Drawing.Size(47, 15);
+            this.lbl_ver.TabIndex = 15;
+            this.lbl_ver.Text = "%VER%";
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 479);
             this.ContextMenuStrip = this.materialContextMenuStrip1;
+            this.Controls.Add(this.lbl_ver);
+            this.Controls.Add(this.dev_bck_music);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.panel_ctl);
@@ -322,6 +358,7 @@
             this.materialContextMenuStrip1.ResumeLayout(false);
             this.panel_ctl.ResumeLayout(false);
             this.panel_ctl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,6 +383,9 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private AxWMPLib.AxWindowsMediaPlayer dev_bck_music;
+        private System.Windows.Forms.Timer dev_look_forum;
+        private System.Windows.Forms.Label lbl_ver;
     }
 }
 

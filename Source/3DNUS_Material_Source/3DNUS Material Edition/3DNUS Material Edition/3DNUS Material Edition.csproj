@@ -61,6 +61,9 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="AxInterop.WMPLib">
+      <HintPath>..\..\..\..\..\..\..\OneDrive\Documents\Visual Studio 2015\Projects\Zulas OS - Lite\Zulas OS - Lite\bin\Debug\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>..\..\..\old\upd_extract_Source\upd_extract\bin\x86\Release\Ionic.Zip.dll</HintPath>
     </Reference>
@@ -162,6 +165,25 @@
     <None Include="Resources\vyV7NzW.png" />
     <None Include="Resources\NDP461-KB3102438-Web.exe" />
     <None Include="Resources\make_cdn_cia.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

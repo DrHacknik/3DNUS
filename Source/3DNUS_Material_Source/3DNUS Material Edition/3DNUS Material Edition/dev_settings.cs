@@ -29,6 +29,14 @@ namespace _3DNUS_Material_Edition
         private void dev_settings_Load(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reload();
+            if (Properties.Settings.Default.dev_music == "1")
+            {
+                dev_bck_music.URL = cd + "\\snd\\dev_bck_music_settings.mp3";
+            }
+            else
+            {
+            }
+
             if (Properties.Settings.Default.dev_auto_upd == "1")
             {
                 chck_auto_upd.Checked = true;
@@ -36,6 +44,14 @@ namespace _3DNUS_Material_Edition
             else
             {
                 chck_auto_upd.Checked = false;
+            }
+            if (Properties.Settings.Default.dev_music == "1")
+            {
+                chck_music.Checked = true;
+            }
+            else
+            {
+                chck_music.Checked = false;
             }
             if (Properties.Settings.Default.dev_dump_info == "1")
             {
@@ -68,6 +84,14 @@ namespace _3DNUS_Material_Edition
             {
                 Properties.Settings.Default.dev_auto_upd = "0";
             }
+            if (chck_music.Checked == true)
+            {
+                Properties.Settings.Default.dev_music = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_music = "0";
+            }
             if (chck_dump_info.Checked == true)
             {
                 Properties.Settings.Default.dev_dump_info = "1";
@@ -95,7 +119,7 @@ namespace _3DNUS_Material_Edition
         {
             try
             {
-                btn_update.Text = "....";
+                btn_update.Text = "Update";
                 File.Delete(Path.Combine(cd, "Update_info.txt"));
                 File.Delete(Path.Combine(cd, "Update_URI.txt"));
                 File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
@@ -145,6 +169,26 @@ namespace _3DNUS_Material_Edition
             {
                 btn_update.Text = "Unable to update...";
             }
+        }
+
+        private void dev_bck_music_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void dev_bck_music_EndOfStream(object sender, AxWMPLib._WMPOCXEvents_EndOfStreamEvent e)
+        {
+            dev_bck_music.URL = cd + "\\snd\\dev_bck_music_settings.mp3";
+        }
+
+        private void dev_settings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
+
+        private void btn_reset_settings_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reset();
+            Properties.Settings.Default.Save();
+            Application.Restart();
         }
     }
 }
