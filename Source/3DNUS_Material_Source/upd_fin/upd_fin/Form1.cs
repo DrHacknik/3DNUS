@@ -34,10 +34,10 @@ namespace upd_fin
                 File.Delete(cd + "\\snd\\dev_bck_music_settings.mp3");
                 File.Move(cd + "\\3DNUS_new.exe", cd + "\\3DNUS Material Edition.exe");
                 Directory.CreateDirectory(cd + "\\snd");
-                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/dev_bck_music_main.mp3"), cd + "\\dev_bck_music_main.mp3");
-                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/dev_bck_music_help.mp3"), cd + "\\dev_bck_music_help.mp3");
-                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/dev_bck_music_settings.mp3"), cd + "\\dev_bck_music_settings.mp3");
-                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/AxInterop.WMPLib.dll"), cd + "\\AxInterop.WMPLib.dll");
+                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/dev_bck_music_main.mp3?raw=true"), cd + "\\dev_bck_music_main.mp3");
+                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/dev_bck_music_help.mp3?raw=true"), cd + "\\dev_bck_music_help.mp3");
+                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/dev_bck_music_settings.mp3?raw=true"), cd + "\\dev_bck_music_settings.mp3");
+                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/AxInterop.WMPLib.dll?raw=true"), cd + "\\AxInterop.WMPLib.dll");
                 Process.Start(cd + "\\3DNUS Material Edition.exe");
                 Application.Exit();
             }

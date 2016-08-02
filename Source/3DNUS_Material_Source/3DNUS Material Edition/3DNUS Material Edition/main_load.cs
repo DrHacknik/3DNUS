@@ -113,7 +113,7 @@ namespace _3DNUS_Material_Edition
                                 {
                                     upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x64/3DNUS.exe"), cd + "\\3DNUS_new.exe");
                                     WebClient get_fin = new WebClient();
-                                    get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
+                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
                                     Process.Start(cd + "\\upd_fin.exe");
                                     dev_status.Text = "Preparing...";
                                     Application.Exit();
@@ -122,7 +122,7 @@ namespace _3DNUS_Material_Edition
                                 {
                                     upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/x32/3DNUS.exe"), cd + "\\3DNUS_new.exe");
                                     WebClient get_fin = new WebClient();
-                                    get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
+                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
                                     Process.Start(cd + "\\upd_fin.exe");
                                     dev_status.Text = "Preparing...";
                                     Application.Exit();
