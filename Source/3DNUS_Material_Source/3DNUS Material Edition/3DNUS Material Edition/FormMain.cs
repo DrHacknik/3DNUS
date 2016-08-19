@@ -5,11 +5,12 @@
 
    Credits:
 
-   @Dr.Hacknik -- Project Leader, Minor Coding, and Designer
-   @MarcusD -- Project Partner, Major Coding, Bug Fixer, and Tips
+   @Dr.Hacknik -- Project Leader, Coding, and Designer
+   @MarcusD -- Project Partner, Minor Coding, Bug Fixer, and Tips
    @IgnaceMaes -- Material Skin Lib for C#
    @GitHub -- For hosting
    @FileTrip -- For Downloads (In the past)
+   @WiiBrew -- For hosting Updates (In the past)
    @OneDrive -- For Backups
    @GBATemp & Users -- For Your support
    @YouTube & DreamInCode for a little help

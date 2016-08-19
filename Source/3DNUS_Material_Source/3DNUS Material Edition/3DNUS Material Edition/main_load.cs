@@ -73,10 +73,15 @@ namespace _3DNUS_Material_Edition
             //                read = sr.Read(buf, 0, buf.Length);
             //                if (read == 0) break;
             //                fs.Write(buf, 0, read);
+            if (Properties.Settings.Default.dev_music == "")
+            {
+                Properties.Settings.Default.dev_music = "0";
+                Properties.Settings.Default.Save();
+                Application.Restart();
+            }
             if (Properties.Settings.Default.dev_auto_upd == "")
             {
                 Properties.Settings.Default.dev_auto_upd = "1";
-                Properties.Settings.Default.dev_music = "1";
                 Properties.Settings.Default.Save();
                 Application.Restart();
             }
