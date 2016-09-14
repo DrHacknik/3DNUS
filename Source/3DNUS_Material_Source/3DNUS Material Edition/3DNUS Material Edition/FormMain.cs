@@ -122,14 +122,19 @@ namespace _3DNUS_Material_Edition
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
             t_log.Text += " " + DateTime.Now;
 
-            DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms? \r\n \r\nIn order to access other menu's, right-click the main Window. \r\n \r\nCaution: Some parts of 3DNUS may have some Loud Bck Music!", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (dialogResult == DialogResult.Yes)
+            if(Properties.Settings.Default.eula_read != "yiss")
             {
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                MessageBox.Show("You have chosen to NOT agree to the Terms, therefor the Program will now Close.", "Legal Terms:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Application.Exit();
+                DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms? \r\n \r\nIn order to access other menu's, right-click the main Window. \r\n \r\nCaution: Some parts of 3DNUS may have some Loud Bck Music!", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if(dialogResult == DialogResult.Yes)
+                {
+                    Properties.Settings.Default.eula_read = "yiss";
+                    Properties.Settings.Default.Save();
+                }
+                else if(dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("You have chosen to NOT agree to the Terms, therefor the Program will now Close.", "Legal Terms:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Application.Exit();
+                }
             }
             //}
             //catch

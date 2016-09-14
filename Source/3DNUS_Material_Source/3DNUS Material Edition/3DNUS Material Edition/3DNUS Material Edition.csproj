@@ -61,9 +61,6 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="AxInterop.WMPLib">
-      <HintPath>..\..\..\..\..\..\..\OneDrive\Documents\Visual Studio 2015\Projects\Zulas OS - Lite\Zulas OS - Lite\bin\Debug\AxInterop.WMPLib.dll</HintPath>
-    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>..\..\..\old\upd_extract_Source\upd_extract\bin\x86\Release\Ionic.Zip.dll</HintPath>
     </Reference>
@@ -119,15 +116,19 @@
     <Compile Include="YLS.cs" />
     <EmbeddedResource Include="dev_faq.resx">
       <DependentUpon>dev_faq.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="dev_settings.resx">
       <DependentUpon>dev_settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="main_load.resx">
       <DependentUpon>main_load.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -20,6 +20,8 @@ namespace _3DNUS_Material_Edition
         private bool is64 = System.Environment.Is64BitOperatingSystem;
         private bool checksum;
 
+        FormMain frm;
+
         public main_load()
         {
             InitializeComponent();
@@ -77,14 +79,20 @@ namespace _3DNUS_Material_Edition
             {
                 Properties.Settings.Default.dev_music = "0";
                 Properties.Settings.Default.Save();
-                Application.Restart();
+                //Application.Restart();
             }
             if (Properties.Settings.Default.dev_auto_upd == "")
             {
                 Properties.Settings.Default.dev_auto_upd = "1";
                 Properties.Settings.Default.Save();
-                Application.Restart();
+                //Application.Restart();
             }
+            if(Properties.Settings.Default.eula_read == "")
+            {
+                Properties.Settings.Default.eula_read = "nope";
+                Properties.Settings.Default.Save();
+            }
+            /*
             if (Properties.Settings.Default.dev_auto_upd == "1")
             {
                 try
@@ -143,16 +151,16 @@ namespace _3DNUS_Material_Edition
                 }
             }
             else
-            {
-                splash_timer.Start();
-            }
+            {*/
+            frm = new FormMain();
+            splash_timer.Start();
+            //}
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             splash_timer.Stop();
-            FormMain f = new FormMain();
-            f.Show();
+            frm.Show();
             Hide();
         }
 
