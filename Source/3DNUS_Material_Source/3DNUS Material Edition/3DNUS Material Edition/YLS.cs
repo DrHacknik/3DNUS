@@ -45,8 +45,11 @@ namespace _3DNUS
 
                     titl.id = Convert.ToUInt64(line[0], 16);
 
-                    if (titl.id == 0x4013000001B02) line[3] = line[3].Replace("02-11-15 GPIO", "9.5.0-22");
-                    if (titl.id == 0x400102002CA00) line[3] = line[3].Replace("10-02-14 JPN", "9.1.0-20J");
+                    if (titl.id == 0x4013000001B02) line[3] = line[3].Replace("_GPIO", " GPIO").Replace("02-11-15 GPIO", "9.5.0-22");
+                    if (titl.id == 0x400102002CA00) line[3] = line[3].Replace("_JPN", " JPN").Replace("10-02-14 JPN", "9.1.0-20J");
+
+                    if(line[1] == "TWN") line[3] = line[3].Replace("08-18-16_TWN_BeginScanning", "11.0.0-33T");
+                    
 
                     Match mat = Regex.Match(line[3], @"(\d+)\.(\d+)\.(\d+)-(\d+)");
 
