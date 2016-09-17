@@ -61,6 +61,16 @@ namespace _3DNUS_Material_Edition.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3dnus_3_256 {
+            get {
+                object obj = ResourceManager.GetObject("3dnus_3_256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] make_cdn_cia {

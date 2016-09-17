@@ -50,7 +50,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dev_bck_music = new AxWMPLib.AxWindowsMediaPlayer();
             this.dev_look_forum = new System.Windows.Forms.Timer(this.components);
+            this.lbl_upd_chck = new System.Windows.Forms.Label();
             this.lbl_ver = new System.Windows.Forms.Label();
+            this.devtourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).BeginInit();
@@ -63,11 +65,12 @@
             this.materialContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.extensionManagerToolStripMenuItem,
             this.settingsToolStripMenuItem,
+            this.devtourToolStripMenuItem,
             this.faqToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
-            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 92);
+            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 136);
             // 
             // extensionManagerToolStripMenuItem
             // 
@@ -105,7 +108,7 @@
             this.b_download.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.b_download.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.b_download.Depth = 0;
-            this.b_download.Location = new System.Drawing.Point(156, 393);
+            this.b_download.Location = new System.Drawing.Point(193, 422);
             this.b_download.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.b_download.MouseState = MaterialSkin.MouseState.HOVER;
             this.b_download.Name = "b_download";
@@ -121,10 +124,10 @@
             this.prog_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.prog_main.Depth = 0;
-            this.prog_main.Location = new System.Drawing.Point(12, 438);
+            this.prog_main.Location = new System.Drawing.Point(12, 461);
             this.prog_main.MouseState = MaterialSkin.MouseState.HOVER;
             this.prog_main.Name = "prog_main";
-            this.prog_main.Size = new System.Drawing.Size(460, 5);
+            this.prog_main.Size = new System.Drawing.Size(511, 5);
             this.prog_main.TabIndex = 2;
             // 
             // prog_sub
@@ -132,10 +135,10 @@
             this.prog_sub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.prog_sub.Depth = 0;
-            this.prog_sub.Location = new System.Drawing.Point(12, 449);
+            this.prog_sub.Location = new System.Drawing.Point(12, 472);
             this.prog_sub.MouseState = MaterialSkin.MouseState.HOVER;
             this.prog_sub.Name = "prog_sub";
-            this.prog_sub.Size = new System.Drawing.Size(460, 5);
+            this.prog_sub.Size = new System.Drawing.Size(511, 5);
             this.prog_sub.TabIndex = 2;
             // 
             // t_titleid
@@ -152,7 +155,7 @@
             this.t_titleid.SelectedText = "";
             this.t_titleid.SelectionLength = 0;
             this.t_titleid.SelectionStart = 0;
-            this.t_titleid.Size = new System.Drawing.Size(460, 23);
+            this.t_titleid.Size = new System.Drawing.Size(511, 23);
             this.t_titleid.TabIndex = 3;
             this.t_titleid.TabStop = false;
             this.t_titleid.UseSystemPasswordChar = false;
@@ -163,12 +166,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.t_log.BackColor = System.Drawing.Color.Gainsboro;
-            this.t_log.Location = new System.Drawing.Point(12, 167);
+            this.t_log.Location = new System.Drawing.Point(12, 148);
             this.t_log.Multiline = true;
             this.t_log.Name = "t_log";
             this.t_log.ReadOnly = true;
             this.t_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.t_log.Size = new System.Drawing.Size(460, 217);
+            this.t_log.Size = new System.Drawing.Size(511, 247);
             this.t_log.TabIndex = 4;
             this.t_log.Text = "Console: ";
             // 
@@ -181,7 +184,7 @@
             this.materialDivider1.Location = new System.Drawing.Point(2, 140);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(481, 2);
+            this.materialDivider1.Size = new System.Drawing.Size(532, 2);
             this.materialDivider1.TabIndex = 9;
             this.materialDivider1.Text = "materialDivider1";
             // 
@@ -276,7 +279,7 @@
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(464, 68);
+            this.materialFlatButton1.Location = new System.Drawing.Point(515, 68);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -289,21 +292,21 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(420, 460);
+            this.label1.Location = new System.Drawing.Point(0, 534);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(535, 15);
             this.label1.TabIndex = 13;
             this.label1.Text = "Dump Log";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dev_bck_music
             // 
             this.dev_bck_music.Enabled = true;
-            this.dev_bck_music.Location = new System.Drawing.Point(12, 390);
+            this.dev_bck_music.Location = new System.Drawing.Point(12, 401);
             this.dev_bck_music.Name = "dev_bck_music";
             this.dev_bck_music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("dev_bck_music.OcxState")));
             this.dev_bck_music.Size = new System.Drawing.Size(75, 23);
@@ -317,23 +320,44 @@
             this.dev_look_forum.Enabled = true;
             this.dev_look_forum.Tick += new System.EventHandler(this.dev_look_forum_Tick);
             // 
+            // lbl_upd_chck
+            // 
+            this.lbl_upd_chck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_upd_chck.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_upd_chck.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_upd_chck.Location = new System.Drawing.Point(0, 504);
+            this.lbl_upd_chck.Name = "lbl_upd_chck";
+            this.lbl_upd_chck.Size = new System.Drawing.Size(535, 15);
+            this.lbl_upd_chck.TabIndex = 16;
+            this.lbl_upd_chck.Text = "Check for Updates";
+            this.lbl_upd_chck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_upd_chck.Click += new System.EventHandler(this.lbl_upd_chck_Click);
+            // 
             // lbl_ver
             // 
-            this.lbl_ver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_ver.AutoSize = true;
-            this.lbl_ver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_ver.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lbl_ver.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_ver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ver.Location = new System.Drawing.Point(-1, 460);
+            this.lbl_ver.Location = new System.Drawing.Point(0, 519);
             this.lbl_ver.Name = "lbl_ver";
-            this.lbl_ver.Size = new System.Drawing.Size(47, 15);
+            this.lbl_ver.Size = new System.Drawing.Size(535, 15);
             this.lbl_ver.TabIndex = 15;
             this.lbl_ver.Text = "%VER%";
+            this.lbl_ver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // devtourToolStripMenuItem
+            // 
+            this.devtourToolStripMenuItem.Name = "devtourToolStripMenuItem";
+            this.devtourToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.devtourToolStripMenuItem.Text = "dev_tour";
+            this.devtourToolStripMenuItem.Click += new System.EventHandler(this.devtourToolStripMenuItem_Click);
             // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(484, 479);
+            this.ClientSize = new System.Drawing.Size(535, 549);
             this.ContextMenuStrip = this.materialContextMenuStrip1;
+            this.Controls.Add(this.lbl_upd_chck);
             this.Controls.Add(this.lbl_ver);
             this.Controls.Add(this.dev_bck_music);
             this.Controls.Add(this.label1);
@@ -385,7 +409,9 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private AxWMPLib.AxWindowsMediaPlayer dev_bck_music;
         private System.Windows.Forms.Timer dev_look_forum;
+        private System.Windows.Forms.Label lbl_upd_chck;
         private System.Windows.Forms.Label lbl_ver;
+        private System.Windows.Forms.ToolStripMenuItem devtourToolStripMenuItem;
     }
 }
 

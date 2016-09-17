@@ -81,6 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dev_ext_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev_ext_manager.Designer.cs">
+      <DependentUpon>dev_ext_manager.cs</DependentUpon>
+    </Compile>
     <Compile Include="dev_faq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,18 @@
     </Compile>
     <Compile Include="dev_settings.Designer.cs">
       <DependentUpon>dev_settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dev_tour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev_tour.Designer.cs">
+      <DependentUpon>dev_tour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dev_tour_setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev_tour_setup.Designer.cs">
+      <DependentUpon>dev_tour_setup.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -114,6 +132,9 @@
     <Compile Include="System\Web\Mail.cs" />
     <Compile Include="upd.cs" />
     <Compile Include="YLS.cs" />
+    <EmbeddedResource Include="dev_ext_manager.resx">
+      <DependentUpon>dev_ext_manager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dev_faq.resx">
       <DependentUpon>dev_faq.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -121,6 +142,12 @@
     <EmbeddedResource Include="dev_settings.resx">
       <DependentUpon>dev_settings.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_tour.resx">
+      <DependentUpon>dev_tour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_tour_setup.resx">
+      <DependentUpon>dev_tour_setup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -159,6 +186,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="new_3dnus_logo.ico" />
+    <None Include="Resources\3dnus_3_256.png" />
     <None Include="Resources\new_3dnus_logo_128.png" />
     <None Include="Resources\new_3dnus_logo.png" />
     <None Include="Resources\new_3dnus_splash_bck.png" />

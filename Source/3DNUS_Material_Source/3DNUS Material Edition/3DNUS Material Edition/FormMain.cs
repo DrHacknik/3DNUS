@@ -108,7 +108,7 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lbl_ver.Text = Application.ProductVersion;
+            lbl_ver.Text = "Version: " +  Application.ProductVersion + " - ALPHA";
             if (Properties.Settings.Default.dev_def_titlelist == "old")
             {
                 old_3ds.Checked = true;
@@ -122,15 +122,15 @@ namespace _3DNUS_Material_Edition
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
             t_log.Text += " " + DateTime.Now;
 
-            if(Properties.Settings.Default.eula_read != "yiss")
+            if (Properties.Settings.Default.eula_read != "yiss")
             {
                 DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms? \r\n \r\nIn order to access other menu's, right-click the main Window. \r\n \r\nCaution: Some parts of 3DNUS may have some Loud Bck Music!", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                if(dialogResult == DialogResult.Yes)
+                if (dialogResult == DialogResult.Yes)
                 {
                     Properties.Settings.Default.eula_read = "yiss";
                     Properties.Settings.Default.Save();
                 }
-                else if(dialogResult == DialogResult.No)
+                else if (dialogResult == DialogResult.No)
                 {
                     MessageBox.Show("You have chosen to NOT agree to the Terms, therefor the Program will now Close.", "Legal Terms:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Application.Exit();
@@ -519,7 +519,7 @@ namespace _3DNUS_Material_Edition
             if (Properties.Settings.Default.dev_dump_info == "1")
             {
                 if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
-                File.WriteAllText(cd + "\\LOG_DUMP.log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
+                File.WriteAllText(cd + "\\LOG_DUMP.log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion.VersionString + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
                 MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -572,5 +572,71 @@ namespace _3DNUS_Material_Edition
                 }
             }
         }
+
+        private void lbl_upd_chck_Click(object sender, EventArgs e)
+        {
+        
+                try
+                {
+                    lbl_upd_chck.Text = "Checking for Updates...";
+                    File.Delete(Path.Combine(cd, "Update_info.txt"));
+                    File.Delete(Path.Combine(cd, "Update_URI.txt"));
+                    File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
+                    File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
+                    File.Delete(Path.Combine(cd, "upd_fin.exe"));
+                    WebClient get_info = new WebClient();
+                    get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
+                    WebClient upd_dwld = new WebClient();
+                    using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                    {
+                        using (StreamReader reader = new StreamReader(upd))
+                        {
+                            string rd_upd = null;
+
+                            rd_upd = reader.ReadToEnd();
+
+                            if (rd_upd == Application.ProductVersion)
+                            {
+                                lbl_upd_chck.Text = "No new Updates";
+
+                            }
+                            else
+                            {
+                                lbl_upd_chck.Text = "Downloading New update...";
+                                if (is64 == true)
+                                {
+                                    upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x64/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
+                                    WebClient get_fin = new WebClient();
+                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                    Process.Start(cd + "\\upd_fin.exe");
+                                    lbl_upd_chck.Text = "Preparing...";
+                                    Application.Exit();
+                                }
+                                if (is64 == false)
+                                {
+                                    upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x32/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
+                                    WebClient get_fin = new WebClient();
+                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                    Process.Start(cd + "\\upd_fin.exe");
+                                    lbl_upd_chck.Text = "Preparing...";
+                                    Application.Exit();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    lbl_upd_chck.Text = "Unable to update...";
+
+                }
+            }
+
+        private void devtourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dev_tour f = new dev_tour();
+            f.Show();
+            Hide(); 
+        }
     }
-}
+    }
