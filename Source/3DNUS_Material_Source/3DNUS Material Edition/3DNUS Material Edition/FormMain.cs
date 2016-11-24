@@ -160,7 +160,8 @@ namespace _3DNUS_Material_Edition
                     sb.Append(chr);
                     sb.Append(", ");
                 }
-                sb.Remove(sb.Length - 3, 2);
+                if(sb.Length > 2)
+                    sb.Remove(sb.Length - 3, 2);
 
                 MessageBox.Show("Invalid region! Valid regions are:\r\n" + sb.ToString(), "Invalid region", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
