@@ -13,8 +13,6 @@ Current Version: 3.0 (x86, x86_64)
 
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/status/3DNUS_STATUS_32x64.png)
 
- new_3dnus_logo_128.png
-
 You're probably wondering why the Thread has been reduced down to this paragraph of
 text; I'll tell you why.
 
