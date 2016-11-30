@@ -13,7 +13,7 @@ Current Version: 3.0 (x86, x86_64)
 
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/status/3DNUS_STATUS_32x64.png)
 
-You're probably wondering why the Thread has been reduced down to this paragraph of
+You're probably wondering why the Readme has been reduced down to this paragraph of
 text; I'll tell you why.
 
 Thanks everyone for supporting this project thus far. I appreciate everything that you all have said about this project. But, the reason I'm saying this is that I am stopping the project. Not just do to the mtheall servers being down, but also due to me being so focused on SimpliiU, and other side projects; as well as school. Again, thanks so much for your support. But, it seems like 3DNUS has come to an end. Either someone begins hosting a new mtheall service, or otherwise. Regardless, I will not be picking up the project back up. If this does happen, I fully condone you forking and making your own release(s) of 3DNUS. Thanks to @ground @VoxelStudios and so many more users and Tempers. Thanks again, and goodbye, 3DNUS.
