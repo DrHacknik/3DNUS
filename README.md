@@ -13,7 +13,7 @@ The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-ha
 ### COPYRIGHT (C) 2014-2016
 #########################
 
-Current Version: 3.0 (x86, x86_64) 
+Current Version: 3.0.1 (x86, x86_64) 
 
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/status/3DNUS_STATUS_32x64.png)
 
