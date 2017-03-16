@@ -108,7 +108,7 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lbl_ver.Text = "Version: " +  Application.ProductVersion + " - ALPHA";
+            lbl_ver.Text = "Version: " + Application.ProductVersion + " - ALPHA";
             if (Properties.Settings.Default.dev_def_titlelist == "old")
             {
                 old_3ds.Checked = true;
@@ -575,68 +575,77 @@ namespace _3DNUS_Material_Edition
 
         private void lbl_upd_chck_Click(object sender, EventArgs e)
         {
-        
-                try
+            try
+            {
+                lbl_upd_chck.Text = "Checking for Updates...";
+                File.Delete(Path.Combine(cd, "Update_info.txt"));
+                File.Delete(Path.Combine(cd, "Update_URI.txt"));
+                File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
+                File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
+                File.Delete(Path.Combine(cd, "upd_fin.exe"));
+                WebClient get_info = new WebClient();
+                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
+                WebClient upd_dwld = new WebClient();
+                using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
                 {
-                    lbl_upd_chck.Text = "Checking for Updates...";
-                    File.Delete(Path.Combine(cd, "Update_info.txt"));
-                    File.Delete(Path.Combine(cd, "Update_URI.txt"));
-                    File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
-                    File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
-                    File.Delete(Path.Combine(cd, "upd_fin.exe"));
-                    WebClient get_info = new WebClient();
-                    get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
-                    WebClient upd_dwld = new WebClient();
-                    using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                    using (StreamReader reader = new StreamReader(upd))
                     {
-                        using (StreamReader reader = new StreamReader(upd))
+                        string rd_upd = null;
+
+                        rd_upd = reader.ReadToEnd();
+
+                        if (rd_upd == Application.ProductVersion)
                         {
-                            string rd_upd = null;
-
-                            rd_upd = reader.ReadToEnd();
-
-                            if (rd_upd == Application.ProductVersion)
+                            lbl_upd_chck.Text = "No new Updates";
+                        }
+                        else
+                        {
+                            lbl_upd_chck.Text = "Downloading New update...";
+                            if (is64 == true)
                             {
-                                lbl_upd_chck.Text = "No new Updates";
-
+                                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x64/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
+                                WebClient get_fin = new WebClient();
+                                get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                Process.Start(cd + "\\upd_fin.exe");
+                                lbl_upd_chck.Text = "Preparing...";
+                                Application.Exit();
                             }
-                            else
+                            if (is64 == false)
                             {
-                                lbl_upd_chck.Text = "Downloading New update...";
-                                if (is64 == true)
-                                {
-                                    upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x64/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
-                                    WebClient get_fin = new WebClient();
-                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
-                                    Process.Start(cd + "\\upd_fin.exe");
-                                    lbl_upd_chck.Text = "Preparing...";
-                                    Application.Exit();
-                                }
-                                if (is64 == false)
-                                {
-                                    upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x32/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
-                                    WebClient get_fin = new WebClient();
-                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
-                                    Process.Start(cd + "\\upd_fin.exe");
-                                    lbl_upd_chck.Text = "Preparing...";
-                                    Application.Exit();
-                                }
+                                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x32/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
+                                WebClient get_fin = new WebClient();
+                                get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                Process.Start(cd + "\\upd_fin.exe");
+                                lbl_upd_chck.Text = "Preparing...";
+                                Application.Exit();
                             }
                         }
                     }
                 }
-                catch
-                {
-                    lbl_upd_chck.Text = "Unable to update...";
-
-                }
             }
+            catch
+            {
+                lbl_upd_chck.Text = "Unable to update...";
+            }
+        }
 
         private void devtourToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dev_tour f = new dev_tour();
             f.Show();
-            Hide(); 
+            Hide();
+        }
+
+        private void dev_repeat_msc_Tick(object sender, EventArgs e)
+        {
+            if (dev_bck_music.playState == WMPLib.WMPPlayState.wmppsStopped)
+            {
+                dev_bck_music.URL = cd + "\\snd\\dev_bck_music_main.mp3";
+            }
+            if (dev_bck_music.playState == WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                dev_bck_music.URL = cd + "\\snd\\dev_bck_music_main.mp3";
+            }
         }
     }
-    }
+}

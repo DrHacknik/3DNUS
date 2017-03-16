@@ -33,6 +33,7 @@
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.extensionManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devtourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.b_download = new MaterialSkin.Controls.MaterialFlatButton();
@@ -52,7 +53,7 @@
             this.dev_look_forum = new System.Windows.Forms.Timer(this.components);
             this.lbl_upd_chck = new System.Windows.Forms.Label();
             this.lbl_ver = new System.Windows.Forms.Label();
-            this.devtourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dev_repeat_msc = new System.Windows.Forms.Timer(this.components);
             this.materialContextMenuStrip1.SuspendLayout();
             this.panel_ctl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dev_bck_music)).BeginInit();
@@ -70,7 +71,7 @@
             this.exitToolStripMenuItem});
             this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
-            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 136);
+            this.materialContextMenuStrip1.Size = new System.Drawing.Size(175, 114);
             // 
             // extensionManagerToolStripMenuItem
             // 
@@ -85,6 +86,13 @@
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // devtourToolStripMenuItem
+            // 
+            this.devtourToolStripMenuItem.Name = "devtourToolStripMenuItem";
+            this.devtourToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.devtourToolStripMenuItem.Text = "dev_tour";
+            this.devtourToolStripMenuItem.Click += new System.EventHandler(this.devtourToolStripMenuItem_Click);
             // 
             // faqToolStripMenuItem
             // 
@@ -345,12 +353,10 @@
             this.lbl_ver.Text = "%VER%";
             this.lbl_ver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // devtourToolStripMenuItem
+            // dev_repeat_msc
             // 
-            this.devtourToolStripMenuItem.Name = "devtourToolStripMenuItem";
-            this.devtourToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.devtourToolStripMenuItem.Text = "dev_tour";
-            this.devtourToolStripMenuItem.Click += new System.EventHandler(this.devtourToolStripMenuItem_Click);
+            this.dev_repeat_msc.Enabled = true;
+            this.dev_repeat_msc.Tick += new System.EventHandler(this.dev_repeat_msc_Tick);
             // 
             // FormMain
             // 
@@ -412,6 +418,7 @@
         private System.Windows.Forms.Label lbl_upd_chck;
         private System.Windows.Forms.Label lbl_ver;
         private System.Windows.Forms.ToolStripMenuItem devtourToolStripMenuItem;
+        private System.Windows.Forms.Timer dev_repeat_msc;
     }
 }
 
