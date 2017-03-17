@@ -1,9 +1,0 @@
-C:\Users\Luke\OneDrive\Documents\Visual Studio 2015\Projects\Extension Manager\Extension Manager\bin\x86\Extension Manager.exe.config
-C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\bin\x86\Extension Manager.exe.config
-C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Interop.WMPLib.dll
-C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\AxInterop.WMPLib.dll
-C:\Users\Luke\Documents\GitHub\3DNUS\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Extension Manager.vbproj.ResolveComReference.cache
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\bin\x86\Extension Manager.exe.config
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Interop.WMPLib.dll
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\AxInterop.WMPLib.dll
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\Ext_Manager_Source\Extension Manager\Extension Manager\obj\x86\Extension Manager.vbproj.ResolveComReference.cache
