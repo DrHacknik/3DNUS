@@ -298,7 +298,7 @@ namespace _3DNUS_Material_Edition
                     }
                 }
 
-                YLS_Sysver firmw = new YLS_Sysver() { label = (match.Groups[1] + "." + match.Groups[2] + "." + (match.Groups[4].Success ? match.Groups[4].ToString() : "0") + "-" + (match.Groups[6].Success ? match.Groups[6].ToString() : "999")) };
+                YLS_Sysver firmw = new YLS_Sysver() { label = (match.Groups[1] + "." + match.Groups[2] + "." + (match.Groups[4].Success ? match.Groups[4].ToString() : "9") + "-" + (match.Groups[6].Success ? match.Groups[6].ToString() : "999")) };
                 String region = match.Groups[7].ToString().ToUpper();
                 t_titleid.Text = firmw + region;
                 t_titleid.Update();
