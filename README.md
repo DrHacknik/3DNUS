@@ -8,6 +8,7 @@ Notice: The latest Development build will/has been compiled; this build is
 A Simple NUS Downloader for 3DS Content, and Pack them as .cia's. 
 The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-hacknik.392360/
 
+To access the latest Code, switch to the Unfinished branch. 
 
 #########################
 ### COPYRIGHT (C) 2014-2016
