@@ -1,1 +1,0 @@
-A Simple Experimental 3DS Rom Emulator. 

@@ -1,1 +1,0 @@
-A DevKit that helps you to make Extensions for 3DNUS. 
