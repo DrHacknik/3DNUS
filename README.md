@@ -1,20 +1,30 @@
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/new_3dnus_logo_128.png)
 # 3DNUS
-### mtheall seems to be up; but 3DNUS is still dead, somewhat; Sorry.  
-Notice: The latest Development build will/has been compiled; this build is
-3.0.1. This just fixes some minor bugs, and such. Enjoy the final release of 
-3DNUS! 
 
-A Simple NUS Downloader for 3DS Content, and Pack them as .cia's. 
-The original Thread post is here: https://gbatemp.net/threads/3dnus-mod-by-dr-hacknik.392360/
+## Introduction:
 
-To access the latest Code, switch to the Unfinished branch. 
+What is 3DNUS? 3DNUS allows you to download NUS content for the Nintendo 3DS, and pack it as .cia(s) if you wish.
+The application is simple and easy to use. It's light, and works quickly.
 
-#########################
-### COPYRIGHT (C) 2014-2016
-#########################
+## Features:
 
-Current Version: 3.2 (x86, x86_64) 
+* Download NUS content and pack it as a .cia
+* Download Titles (System Titles only)
+* Download Full Firmwares
+* Spoof Titles or Firmwares
+* Automatic Updates for the Application; to ensure you have the latest experience.
+* Ability to Dump the LOG of the Application; which can help me, and others help you if a issue has occurred.
+* Download NUS content for both new3DS and old3DS.
 
-**No Changelog** 
 
+## Screenshots:
+
+QSv7fov[1].png 3ER00gz[1].png fa76sGq[1].png
+
+
+## How-to:
+
+To download a firmware, type the Version as such "XX.X" then followed by either "U, E, or J." U for USA, E for Europe, and J for Japan.
+Then Check Silent (If you want to ignore Download and packing errors; also allows the app to finish download the full firmware.
+
+To download a title, do as follows: 000000000 (Title ID) followed by the version. For example: 000000000 v0000. Then download, and pack it if you wish. 
