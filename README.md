@@ -16,12 +16,6 @@ The application is simple and easy to use. It's light, and works quickly.
 * Ability to Dump the LOG of the Application; which can help me, and others help you if a issue has occurred.
 * Download NUS content for both new3DS and old3DS.
 
-
-## Screenshots:
-
-QSv7fov[1].png 3ER00gz[1].png fa76sGq[1].png
-
-
 ## How-to:
 
 To download a firmware, type the Version as such "XX.X" then followed by either "U, E, or J." U for USA, E for Europe, and J for Japan.
