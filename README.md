@@ -6,6 +6,8 @@
 What is 3DNUS? 3DNUS allows you to download NUS content for the Nintendo 3DS, and pack it as .cia(s) if you wish.
 The application is simple and easy to use. It's light, and works quickly.
 
+**This application is only for Windows based Computers. This is not designed for use on the 3DS.** 
+
 ## Features:
 
 * Download NUS content and pack it as a .cia
