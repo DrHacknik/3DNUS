@@ -1,6 +1,6 @@
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/new_3dnus_logo_128.png)
 # 3DNUS
-
+#### Current Version: Nightly | 3.2(x86, x64) 
 ## Introduction:
 
 What is 3DNUS? 3DNUS allows you to download NUS content for the Nintendo 3DS, and pack it as .cia(s) if you wish.
