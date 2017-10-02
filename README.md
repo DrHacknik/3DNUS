@@ -21,6 +21,6 @@ The application is simple and easy to use. It's light, and works quickly.
 ## How-to:
 
 To download a firmware, type the Version as such "XX.X" then followed by either "U, E, or J." U for USA, E for Europe, and J for Japan.
-Then Check Silent (If you want to ignore Download and packing errors; also allows the app to finish download the full firmware.
+Then Check Silent (If you want to ignore Download and packing errors; also allows the app to finish downloading the remainder of the Firmware. 
 
 To download a title, do as follows: 000000000 (Title ID) followed by the version. For example: 000000000 v0000. Then download, and pack it if you wish. 
