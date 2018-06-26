@@ -1,1 +1,0 @@
-Ionic.BZip2 CF v1.9 packed Sat-08-06-2011-215945.06. This is the Ionic.BZip2 library packaged for the .NET Compact Framework v2.0 or later.  Use this library if you want to compress or decompress using BZip2, via the stream classes  BZip2InputStream and BZip2OutputStream.

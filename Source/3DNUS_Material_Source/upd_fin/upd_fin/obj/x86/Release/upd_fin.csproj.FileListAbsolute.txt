@@ -1,9 +1,0 @@
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Release\upd_fin.exe.config
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Release\upd_fin.exe
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Release\upd_fin.pdb
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Release\upd_fin.csprojResolveAssemblyReference.cache
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Release\upd_fin.Form1.resources
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Release\upd_fin.Properties.Resources.resources
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Release\upd_fin.csproj.GenerateResource.Cache
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Release\upd_fin.exe
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Release\upd_fin.pdb

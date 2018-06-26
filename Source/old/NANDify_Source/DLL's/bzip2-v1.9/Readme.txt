@@ -1,1 +1,0 @@
-Ionic.BZip2 v1.9 packed Sat-08-06-2011-215945.06.  This is the Ionic.BZip2 assembly; it includes only the classes in the Ionic.BZip2 namespace. Use this library if you want to take advantage of BZip2 compression directly, via the compressing stream classes like BZip2OutputStream, or BZip2InputStream.

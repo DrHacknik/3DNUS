@@ -1,9 +1,0 @@
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\Release\3DNUS Material Edition.exe.config
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\Release\3DNUS Material Edition.exe
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\Release\3DNUS Material Edition.pdb
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\Release\MaterialSkin.dll
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Release\_3DNUS_Material_Edition.Form1.resources
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Release\_3DNUS_Material_Edition.Properties.Resources.resources
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Release\3DNUS Material Edition.csproj.GenerateResource.Cache
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Release\3DNUS Material Edition.exe
-C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Release\3DNUS Material Edition.pdb

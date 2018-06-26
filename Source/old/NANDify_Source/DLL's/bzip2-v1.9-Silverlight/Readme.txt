@@ -1,1 +1,0 @@
-Ionic.BZip2 Silverlight v1.9 packed Sat-08-06-2011-215945.06. This is the Ionic.BZip2 library packaged for Silverlight 3.0 or later.  Use this library if you want to take advantage of BZip2 compression directly from within Silverlight applications, using the stream classes like BZip2InputStream, or BZip2OutputStream.

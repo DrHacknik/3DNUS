@@ -1,1 +1,0 @@
-Ionic.Zlib Silverlight v1.9 packed Sat-08-06-2011-215945.06. This is the Ionic.Zlib library packaged for Silverlight 3.0 or later.  Use this library if you want to take advantage of ZLIB compression directly from within Silverlight applications, using the compressing stream classes like GZipStream, DeflateStream, or ZlibStream.

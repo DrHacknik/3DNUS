@@ -1,1 +1,0 @@
-Ionic.Zlib v1.9 packed Sat-08-06-2011-215945.06.  This is the Ionic.Zlib assembly; it includes only the classes in the Ionic.Zlib namespace. Use this library if you want to take advantage of ZLIB compression directly, or if you want to use the compressing stream classes like GZipStream, DeflateStream, or ZlibStream.
