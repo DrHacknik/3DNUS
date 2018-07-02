@@ -1,0 +1,4 @@
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\x64\Debug\3DNUS Material Edition.exe.config
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Debug\Interop.WMPLib.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Debug\AxInterop.WMPLib.dll
+C:\Users\Luke\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Debug\3DNUS Material Edition.csproj.ResolveComReference.cache

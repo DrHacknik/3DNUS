@@ -1,4 +1,0 @@
-[extension_info] ver=1.0.1 title=dev_kit ext_type=external_ext  ext_priv=2 ext_external_res=1  ext_upd=1
-
-ext_external_res="0\\_bin", "0\\_res"
-ext_reset=1
