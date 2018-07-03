@@ -32,6 +32,7 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -517,14 +518,16 @@ namespace _3DNUS_Material_Edition
             if (Properties.Settings.Default.dev_dump_info == "1")
             {
                 if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
-                File.WriteAllText(cd + "\\LOG_DUMP.log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion.VersionString + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
-                MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
+                                     CultureInfo.InvariantCulture) + ".log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion.VersionString + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
+                MessageBox.Show("The Log was Dumped Sucessfully!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
-                File.WriteAllText(cd + "\\LOG_DUMP.log", "" + t_log.Text);
-                MessageBox.Show("The Log was Dumped Sucessfully! Although, the old Log File may have been Deleted!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
+                                     CultureInfo.InvariantCulture) + ".log", t_log.Text);
+                MessageBox.Show("The Log was Dumped Sucessfully!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
