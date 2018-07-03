@@ -63,3 +63,10 @@ Temporary Items
 **/patches.h
 compiled
 *.db
+Source/3DNUS_Material_Source/3DNUS Material Edition/3DNUS Material Edition/obj/x64/Release/3DNUS Material Edition\.pdb
+
+Source/3DNUS_Material_Source/3DNUS Material Edition/\.vs/3DNUS Material Edition/v15/
+
+*.pdb
+
+*.cache
