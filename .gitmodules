@@ -14,6 +14,3 @@
 [submodule "rxtools/source/lib/jsmn"]
 	path = rxtools/source/lib/jsmn
 	url = https://github.com/zserge/jsmn
-[submodule "jsmn"]
-	path = jsmn
-	url = https://github.com/zserge/jsmn
