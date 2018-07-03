@@ -35,7 +35,6 @@
             this.new_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.old_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.lbl_sys_type = new MaterialSkin.Controls.MaterialLabel();
-            this.btn_update = new MaterialSkin.Controls.MaterialFlatButton();
             this.btn_reset_settings = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
@@ -139,24 +138,6 @@
             this.lbl_sys_type.TabIndex = 5;
             this.lbl_sys_type.Text = "Default Titlelist: ";
             // 
-            // btn_update
-            // 
-            this.btn_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_update.AutoSize = true;
-            this.btn_update.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btn_update.BackColor = System.Drawing.Color.White;
-            this.btn_update.Depth = 0;
-            this.btn_update.Location = new System.Drawing.Point(9, 349);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btn_update.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Primary = false;
-            this.btn_update.Size = new System.Drawing.Size(64, 36);
-            this.btn_update.TabIndex = 8;
-            this.btn_update.Text = "Update";
-            this.btn_update.UseVisualStyleBackColor = false;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
             // btn_reset_settings
             // 
             this.btn_reset_settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -183,7 +164,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(457, 387);
             this.Controls.Add(this.btn_reset_settings);
-            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.lbl_sys_type);
             this.Controls.Add(this.old_3ds);
             this.Controls.Add(this.new_3ds);
@@ -213,7 +193,6 @@
         private MaterialSkin.Controls.MaterialRadioButton new_3ds;
         private MaterialSkin.Controls.MaterialRadioButton old_3ds;
         private MaterialSkin.Controls.MaterialLabel lbl_sys_type;
-        private MaterialSkin.Controls.MaterialFlatButton btn_update;
         private MaterialSkin.Controls.MaterialFlatButton btn_reset_settings;
     }
 }

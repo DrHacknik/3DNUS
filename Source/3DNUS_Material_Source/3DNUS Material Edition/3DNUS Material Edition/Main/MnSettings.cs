@@ -87,62 +87,6 @@ namespace _3DNUS_Material_Edition
             Close();
         }
 
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                btn_update.Text = "Update";
-                File.Delete(Path.Combine(cd, "Update_info.txt"));
-                File.Delete(Path.Combine(cd, "Update_URI.txt"));
-                File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
-                File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
-                File.Delete(Path.Combine(cd, "upd_fin.exe"));
-                WebClient get_info = new WebClient();
-                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/3DNUS/master/Update_Info.txt"), cd + "\\Update_info.txt");
-                WebClient upd_dwld = new WebClient();
-                using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
-                {
-                    using (StreamReader reader = new StreamReader(upd))
-                    {
-                        string rd_upd = null;
-
-                        rd_upd = reader.ReadToEnd();
-
-                        if (rd_upd == Application.ProductVersion)
-                        {
-                            MessageBox.Show("No new Updates!");
-                        }
-                        else
-                        {
-                            btn_update.Text = "Updating";
-                            if (is64 == true)
-                            {
-                                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x64/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
-                                WebClient get_fin = new WebClient();
-                                get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
-                                Process.Start(cd + "\\upd_fin.exe");
-                                btn_update.Text = "Preparing...";
-                                Application.Exit();
-                            }
-                            if (is64 == false)
-                            {
-                                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/x32/3DNUS.exe?raw=true"), cd + "\\3DNUS_new.exe");
-                                WebClient get_fin = new WebClient();
-                                get_fin.DownloadFile(new Uri("https://github.com/zoltx23/3DNUS/blob/master/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
-                                Process.Start(cd + "\\upd_fin.exe");
-                                btn_update.Text = "Preparing...";
-                                Application.Exit();
-                            }
-                        }
-                    }
-                }
-            }
-            catch
-            {
-                btn_update.Text = "Unable to update...";
-            }
-        }
-
         private void dev_bck_music_Enter(object sender, EventArgs e)
         {
         }
