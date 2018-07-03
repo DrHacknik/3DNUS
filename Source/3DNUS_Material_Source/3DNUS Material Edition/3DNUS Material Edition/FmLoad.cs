@@ -10,7 +10,7 @@ namespace _3DNUS_Material_Edition
         private bool is64 = System.Environment.Is64BitOperatingSystem;
         private bool checksum;
 
-        private FmMain frm;
+        private MnMain frm;
 
         public FmLoad()
         {
@@ -156,7 +156,7 @@ namespace _3DNUS_Material_Edition
             }
             else
             {
-                frm = new FmMain();
+                frm = new MnMain();
                 splash_timer.Start();
             }
 

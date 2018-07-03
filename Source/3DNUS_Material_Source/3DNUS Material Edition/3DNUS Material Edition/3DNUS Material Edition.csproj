@@ -129,11 +129,11 @@
     <Compile Include="Main\Tour\MnTourSetup.Designer.cs">
       <DependentUpon>MnTourSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="FmMain.cs">
+    <Compile Include="Main\MnMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmMain.Designer.cs">
-      <DependentUpon>FmMain.cs</DependentUpon>
+    <Compile Include="Main\MnMain.Designer.cs">
+      <DependentUpon>MnMain.cs</DependentUpon>
     </Compile>
     <Compile Include="System\SysIni.cs" />
     <Compile Include="FmLoad.cs">
@@ -147,7 +147,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Parser\PsSyncDown.cs" />
-    <Compile Include="System\Web\Mail.cs" />
     <Compile Include="Services\SvcUpd.cs" />
     <Compile Include="Parser\PsYLS.cs" />
     <EmbeddedResource Include="Main\MnExtension.resx">
@@ -167,8 +166,8 @@
     <EmbeddedResource Include="Main\Tour\MnTourSetup.resx">
       <DependentUpon>MnTourSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FmMain.resx">
-      <DependentUpon>FmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Main\MnMain.resx">
+      <DependentUpon>MnMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FmLoad.resx">

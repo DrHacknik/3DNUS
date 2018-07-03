@@ -37,7 +37,6 @@ C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Materia
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.dev_settings.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.dev_tour.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.dev_tour_setup.resources
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.FmMain.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.FmLoad.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.Properties.Resources.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\3DNUS Material Edition.csproj.GenerateResource.cache
@@ -45,3 +44,4 @@ C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Materia
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\3DNUS Material Edition.csproj.CopyComplete
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\3DNUS Material Edition.exe
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\3DNUS Material Edition.pdb
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.MnMain.resources

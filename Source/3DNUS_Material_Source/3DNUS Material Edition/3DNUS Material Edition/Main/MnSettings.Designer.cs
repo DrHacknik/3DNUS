@@ -36,7 +36,6 @@
             this.old_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.lbl_sys_type = new MaterialSkin.Controls.MaterialLabel();
             this.btn_update = new MaterialSkin.Controls.MaterialFlatButton();
-            this.chck_music = new MaterialSkin.Controls.MaterialCheckBox();
             this.btn_reset_settings = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
@@ -47,7 +46,7 @@
             this.btn_save.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_save.BackColor = System.Drawing.Color.White;
             this.btn_save.Depth = 0;
-            this.btn_save.Location = new System.Drawing.Point(349, 394);
+            this.btn_save.Location = new System.Drawing.Point(349, 349);
             this.btn_save.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_save.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_save.Name = "btn_save";
@@ -98,7 +97,7 @@
             this.new_3ds.BackColor = System.Drawing.Color.White;
             this.new_3ds.Depth = 0;
             this.new_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.new_3ds.Location = new System.Drawing.Point(9, 267);
+            this.new_3ds.Location = new System.Drawing.Point(9, 216);
             this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.new_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -115,7 +114,7 @@
             this.old_3ds.BackColor = System.Drawing.Color.White;
             this.old_3ds.Depth = 0;
             this.old_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.old_3ds.Location = new System.Drawing.Point(9, 307);
+            this.old_3ds.Location = new System.Drawing.Point(9, 256);
             this.old_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.old_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.old_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -133,7 +132,7 @@
             this.lbl_sys_type.Depth = 0;
             this.lbl_sys_type.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbl_sys_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_sys_type.Location = new System.Drawing.Point(12, 238);
+            this.lbl_sys_type.Location = new System.Drawing.Point(12, 187);
             this.lbl_sys_type.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_sys_type.Name = "lbl_sys_type";
             this.lbl_sys_type.Size = new System.Drawing.Size(120, 19);
@@ -147,7 +146,7 @@
             this.btn_update.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_update.BackColor = System.Drawing.Color.White;
             this.btn_update.Depth = 0;
-            this.btn_update.Location = new System.Drawing.Point(9, 394);
+            this.btn_update.Location = new System.Drawing.Point(9, 349);
             this.btn_update.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_update.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_update.Name = "btn_update";
@@ -158,23 +157,6 @@
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // chck_music
-            // 
-            this.chck_music.AutoSize = true;
-            this.chck_music.BackColor = System.Drawing.Color.White;
-            this.chck_music.Depth = 0;
-            this.chck_music.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chck_music.Location = new System.Drawing.Point(9, 185);
-            this.chck_music.Margin = new System.Windows.Forms.Padding(0);
-            this.chck_music.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chck_music.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chck_music.Name = "chck_music";
-            this.chck_music.Ripple = true;
-            this.chck_music.Size = new System.Drawing.Size(119, 30);
-            this.chck_music.TabIndex = 16;
-            this.chck_music.Text = "Enable Music? ";
-            this.chck_music.UseVisualStyleBackColor = false;
-            // 
             // btn_reset_settings
             // 
             this.btn_reset_settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -182,7 +164,7 @@
             this.btn_reset_settings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_reset_settings.BackColor = System.Drawing.Color.White;
             this.btn_reset_settings.Depth = 0;
-            this.btn_reset_settings.Location = new System.Drawing.Point(221, 394);
+            this.btn_reset_settings.Location = new System.Drawing.Point(221, 349);
             this.btn_reset_settings.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_reset_settings.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_reset_settings.Name = "btn_reset_settings";
@@ -199,9 +181,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(457, 432);
+            this.ClientSize = new System.Drawing.Size(457, 387);
             this.Controls.Add(this.btn_reset_settings);
-            this.Controls.Add(this.chck_music);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.lbl_sys_type);
             this.Controls.Add(this.old_3ds);
@@ -233,7 +214,6 @@
         private MaterialSkin.Controls.MaterialRadioButton old_3ds;
         private MaterialSkin.Controls.MaterialLabel lbl_sys_type;
         private MaterialSkin.Controls.MaterialFlatButton btn_update;
-        private MaterialSkin.Controls.MaterialCheckBox chck_music;
         private MaterialSkin.Controls.MaterialFlatButton btn_reset_settings;
     }
 }

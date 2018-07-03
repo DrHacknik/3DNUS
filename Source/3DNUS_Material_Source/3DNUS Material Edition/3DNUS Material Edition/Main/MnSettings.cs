@@ -32,14 +32,6 @@ namespace _3DNUS_Material_Edition
             {
                 chck_auto_upd.Checked = false;
             }
-            if (Properties.Settings.Default.dev_music == "1")
-            {
-                chck_music.Checked = true;
-            }
-            else
-            {
-                chck_music.Checked = false;
-            }
             if (Properties.Settings.Default.dev_dump_info == "1")
             {
                 chck_dump_info.Checked = true;
@@ -70,11 +62,6 @@ namespace _3DNUS_Material_Edition
             {
                 Properties.Settings.Default.dev_auto_upd = "0";
             }
-            if (chck_music.Checked == true)
-            {
-                Properties.Settings.Default.dev_music = "1";
-            }
-            else
             {
                 Properties.Settings.Default.dev_music = "0";
             }

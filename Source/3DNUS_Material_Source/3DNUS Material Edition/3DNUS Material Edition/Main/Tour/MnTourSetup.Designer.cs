@@ -32,7 +32,6 @@
             this.lbl_body = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
             this.b_fin = new MaterialSkin.Controls.MaterialFlatButton();
-            this.chck_music = new MaterialSkin.Controls.MaterialCheckBox();
             this.lbl_sys_type = new MaterialSkin.Controls.MaterialLabel();
             this.old_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.new_3ds = new MaterialSkin.Controls.MaterialRadioButton();
@@ -81,23 +80,6 @@
             this.b_fin.UseVisualStyleBackColor = false;
             this.b_fin.Click += new System.EventHandler(this.b_fin_Click);
             // 
-            // chck_music
-            // 
-            this.chck_music.AutoSize = true;
-            this.chck_music.BackColor = System.Drawing.Color.Transparent;
-            this.chck_music.Depth = 0;
-            this.chck_music.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chck_music.Location = new System.Drawing.Point(5, 219);
-            this.chck_music.Margin = new System.Windows.Forms.Padding(0);
-            this.chck_music.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chck_music.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chck_music.Name = "chck_music";
-            this.chck_music.Ripple = true;
-            this.chck_music.Size = new System.Drawing.Size(119, 30);
-            this.chck_music.TabIndex = 23;
-            this.chck_music.Text = "Enable Music? ";
-            this.chck_music.UseVisualStyleBackColor = false;
-            // 
             // lbl_sys_type
             // 
             this.lbl_sys_type.AutoSize = true;
@@ -105,7 +87,7 @@
             this.lbl_sys_type.Depth = 0;
             this.lbl_sys_type.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbl_sys_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_sys_type.Location = new System.Drawing.Point(4, 263);
+            this.lbl_sys_type.Location = new System.Drawing.Point(3, 238);
             this.lbl_sys_type.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_sys_type.Name = "lbl_sys_type";
             this.lbl_sys_type.Size = new System.Drawing.Size(120, 19);
@@ -118,7 +100,7 @@
             this.old_3ds.Checked = true;
             this.old_3ds.Depth = 0;
             this.old_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.old_3ds.Location = new System.Drawing.Point(5, 322);
+            this.old_3ds.Location = new System.Drawing.Point(4, 297);
             this.old_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.old_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.old_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -135,7 +117,7 @@
             this.new_3ds.AutoSize = true;
             this.new_3ds.Depth = 0;
             this.new_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.new_3ds.Location = new System.Drawing.Point(5, 292);
+            this.new_3ds.Location = new System.Drawing.Point(4, 267);
             this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.new_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -189,7 +171,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(579, 451);
             this.ControlBox = false;
-            this.Controls.Add(this.chck_music);
             this.Controls.Add(this.lbl_sys_type);
             this.Controls.Add(this.old_3ds);
             this.Controls.Add(this.new_3ds);
@@ -214,7 +195,6 @@
         private System.Windows.Forms.Label lbl_body;
         private System.Windows.Forms.Label lbl_title;
         private MaterialSkin.Controls.MaterialFlatButton b_fin;
-        private MaterialSkin.Controls.MaterialCheckBox chck_music;
         private MaterialSkin.Controls.MaterialLabel lbl_sys_type;
         private MaterialSkin.Controls.MaterialRadioButton old_3ds;
         private MaterialSkin.Controls.MaterialRadioButton new_3ds;
