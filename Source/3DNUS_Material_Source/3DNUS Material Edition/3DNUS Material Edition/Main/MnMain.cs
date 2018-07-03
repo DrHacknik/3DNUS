@@ -531,12 +531,6 @@ namespace _3DNUS_Material_Edition
             }
         }
 
-        private void faqToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dev_faq f = new dev_faq();
-            f.Show();
-        }
-
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dev_settings f = new dev_settings();
