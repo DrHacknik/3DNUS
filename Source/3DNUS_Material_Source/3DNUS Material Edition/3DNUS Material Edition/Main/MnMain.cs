@@ -498,20 +498,20 @@ namespace _3DNUS_Material_Edition
             Application.Exit();
         }
 
-        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            try
-            {
-                foreach (var process in Process.GetProcessesByName("3DNUS Upd - Lite.exe"))
-                {
-                    process.Kill();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Unable to Kill the Process Specified; Please try again.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        foreach (var process in Process.GetProcessesByName("3DNUS Upd - Lite.exe"))
+        //        {
+        //            process.Kill();
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        MessageBox.Show("Unable to Kill the Process Specified; Please try again.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {
