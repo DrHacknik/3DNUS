@@ -270,6 +270,7 @@ namespace _3DNUS_Material_Edition
         {
             b_download.Enabled = false;
             cancel = false;
+            t_log.Clear();
 
             if (working)
             {
@@ -589,7 +590,6 @@ namespace _3DNUS_Material_Edition
 
         private void tmr_upd_timeout_Tick(object sender, EventArgs e)
         {
-
         }
     }
 }

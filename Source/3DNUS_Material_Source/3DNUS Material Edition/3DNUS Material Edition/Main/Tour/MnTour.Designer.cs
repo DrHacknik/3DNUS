@@ -107,7 +107,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS: Tour ";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.dev_tour_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

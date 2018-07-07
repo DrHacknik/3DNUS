@@ -11,10 +11,6 @@ namespace _3DNUS_Material_Edition
             InitializeComponent();
         }
 
-        private void dev_tour_setup_Load(object sender, EventArgs e)
-        {
-        }
-
         private void b_fin_Click(object sender, EventArgs e)
         {
             if (chck_auto_dump.Checked == true)

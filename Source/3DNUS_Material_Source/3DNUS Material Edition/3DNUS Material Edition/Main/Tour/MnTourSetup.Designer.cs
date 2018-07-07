@@ -225,7 +225,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3DNUS: Tour";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.dev_tour_setup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
