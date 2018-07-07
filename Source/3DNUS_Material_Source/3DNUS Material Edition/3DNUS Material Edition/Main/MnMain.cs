@@ -108,6 +108,24 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.dev_dark_theme == "1")
+            {
+                lbl_settings.ForeColor = System.Drawing.Color.White;
+                lbl_upd_chck.ForeColor = System.Drawing.Color.White;
+                lbl_ver.ForeColor = System.Drawing.Color.White;
+                lbl_dump.ForeColor = System.Drawing.Color.White;
+                t_log.BackColor = System.Drawing.Color.DimGray;
+                t_log.ForeColor = System.Drawing.Color.White;
+            }
+            else
+            {
+                lbl_settings.ForeColor = System.Drawing.Color.Black;
+                lbl_upd_chck.ForeColor = System.Drawing.Color.Black;
+                lbl_ver.ForeColor = System.Drawing.Color.Black;
+                lbl_dump.ForeColor = System.Drawing.Color.Black;
+                t_log.BackColor = System.Drawing.Color.White;
+                t_log.ForeColor = System.Drawing.Color.Black;
+            }
             lbl_ver.Text = "Version: " + Application.ProductVersion + " - BETA";
             if (Properties.Settings.Default.dev_def_titlelist == "old")
             {
@@ -124,7 +142,7 @@ namespace _3DNUS_Material_Edition
 
             if (Properties.Settings.Default.eula_read != "yiss")
             {
-                DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIF you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms?", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIf you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms?", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Properties.Settings.Default.eula_read = "yiss";
@@ -211,28 +229,29 @@ namespace _3DNUS_Material_Edition
             sd.op.setSubValue(0);
             sd.op.setProgMax(1);
             sd.op.setSubMax(1);
+
+            if (Properties.Settings.Default.dev_auto_dump_log == "1")
+            {
+                if (Properties.Settings.Default.dev_dump_info == "1")
+                {
+                    if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
+                    File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
+                                         CultureInfo.InvariantCulture) + ".log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion.VersionString + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Unknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
+                    t_log.Text += "\r\n\r\nThe Log was Dumped Sucessfully!";
+                }
+                else
+                {
+                    if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
+                    File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
+                                         CultureInfo.InvariantCulture) + ".log", t_log.Text);
+                    t_log.Text += "\r\n\r\nThe Log was Dumped Sucessfully!";
+                }
+            }
         }
 
         private void log(string msg)
         {
             t_log.AppendText("\r\n" + msg);
-        }
-
-        private void extensionManagerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start(Application.StartupPath + "\\Extension Manager.exe");
-            }
-            catch
-            {
-                MessageBox.Show("We're unable to locate the Executable, please make sure it's there!", "3DNUS: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
@@ -479,7 +498,10 @@ namespace _3DNUS_Material_Edition
 
         private void FormMain_ResizeEnd(object sender, EventArgs e)
         {
-            panel_ctl.Left = (this.Width / 2) - (panel_ctl.Width / 2);
+            //new_3ds.Left = (this.Location.X / 2) - (new_3ds.Location.X / 2);
+            //old_3ds.Left = (this.Location.X / 2) - (old_3ds.Location.X / 2);
+            //c_cia.Left = (this.Location.X / 2) - (c_cia.Location.X / 2);
+            //check_noerr.Left = (this.Location.X / 2) - (check_noerr.Location.X / 2);
             b_download.Left = (this.Width / 2) - (b_download.Width / 2);
         }
 
@@ -498,28 +520,13 @@ namespace _3DNUS_Material_Edition
             Application.Exit();
         }
 
-        //private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        foreach (var process in Process.GetProcessesByName("3DNUS Upd - Lite.exe"))
-        //        {
-        //            process.Kill();
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        MessageBox.Show("Unable to Kill the Process Specified; Please try again.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
         private void label1_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.dev_dump_info == "1")
             {
                 if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
                 File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
-                                     CultureInfo.InvariantCulture) + ".log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion.VersionString + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Uknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
+                                     CultureInfo.InvariantCulture) + ".log", "--Log Dump Start--" + "\r\n" + "\r\nSystemOS: " + Environment.OSVersion.VersionString + "\r\n" + "\r\nProgram Version: " + Application.ProductVersion + "\r\n" + "\r\nDebug State: " + "Unknown" + "\r\n" + "\r\nTime Dumped: " + DateTime.Now + "\r\n" + "\r\n---------------------------------------" + "\r\n" + t_log.Text);
                 MessageBox.Show("The Log was Dumped Sucessfully!", "Log Dump:", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -539,73 +546,8 @@ namespace _3DNUS_Material_Edition
 
         private void lbl_upd_chck_Click(object sender, EventArgs e)
         {
-            try
-            {
-                lbl_upd_chck.Text = "Checking for Updates...";
-                try
-                {
-                    File.Delete(Path.Combine(cd, "Update_Info.txt"));
-                    File.Delete(Path.Combine(cd, "Update_URI.txt"));
-                    File.Delete(Path.Combine(cd, "3DNUS_old.exe"));
-                    File.Delete(Path.Combine(cd, "3DNUS_new.exe"));
-                    File.Delete(Path.Combine(cd, "upd_fin.exe"));
-                }
-                catch
-                {
-                    lbl_upd_chck.Text = "Unable to update. [Cleanup Failed]";
-                    return;
-                }
-                WebClient get_info = new WebClient();
-                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/Update_Info.txt"), cd + "\\Update_Info.txt");
-                WebClient upd_dwld = new WebClient();
-                using (Stream upd = File.Open(cd + "\\Update_Info.txt", FileMode.Open))
-                {
-                    using (StreamReader reader = new StreamReader(upd))
-                    {
-                        string rd_upd = null;
-
-                        rd_upd = reader.ReadToEnd();
-
-                        if (rd_upd == Application.ProductVersion)
-                        {
-                            lbl_upd_chck.Text = "No new Updates";
-                        }
-                        else
-                        {
-                            try
-                            {
-                                lbl_upd_chck.Text = "Downloading New update...";
-                                if (is64 == true)
-                                {
-                                    upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/x64/3DNUS.exe"), cd + "\\3DNUS_new.exe");
-                                    WebClient get_fin = new WebClient();
-                                    get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
-                                    Process.Start(cd + "\\upd_fin.exe");
-                                    lbl_upd_chck.Text = "Preparing...";
-                                    Application.Exit();
-                                }
-                                if (is64 == false)
-                                {
-                                    upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/x32/3DNUS.exe"), cd + "\\3DNUS_new.exe");
-                                    WebClient get_fin = new WebClient();
-                                    get_fin.DownloadFile(new Uri("https://raw.githubusercontent.comD/rHacknik/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
-                                    Process.Start(cd + "\\upd_fin.exe");
-                                    lbl_upd_chck.Text = "Preparing...";
-                                    Application.Exit();
-                                }
-                            }
-                            catch
-                            {
-                                lbl_upd_chck.Text = "Unable to update. [Get Binary Failed]";
-                            }
-                        }
-                    }
-                }
-            }
-            catch
-            {
-                lbl_upd_chck.Text = "Unable to update. [Overall Failure]";
-            }
+            tmr_get_upd_stat.Start();
+            SvcUpd.SvcUpdate();
         }
 
         private void devtourToolStripMenuItem_Click(object sender, EventArgs e)
@@ -619,6 +561,35 @@ namespace _3DNUS_Material_Edition
         {
             Form f = new dev_settings();
             f.Show();
+        }
+
+        private void tmr_get_upd_stat_Tick(object sender, EventArgs e)
+        {
+            //Fetch Svc Status
+            lbl_upd_chck.Text = SvcUpd.SvcUpdateStat;
+            this.Refresh();
+
+            //Fetch and check Error codes
+            if (SvcUpd.SvcUpdateStat == "Unable to update. [Overall Failure]")
+            {
+                tmr_upd_timeout.Start();
+                tmr_get_upd_stat.Stop();
+            }
+            if (SvcUpd.SvcUpdateStat == "Unable to update. [Get Binary Failed]")
+            {
+                tmr_upd_timeout.Start();
+                tmr_get_upd_stat.Stop();
+            }
+            if (SvcUpd.SvcUpdateStat == "No new Updates")
+            {
+                tmr_upd_timeout.Start();
+                tmr_get_upd_stat.Stop();
+            }
+        }
+
+        private void tmr_upd_timeout_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

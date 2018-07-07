@@ -37,6 +37,8 @@
             this.new_3ds = new MaterialSkin.Controls.MaterialRadioButton();
             this.chck_auto_upd = new MaterialSkin.Controls.MaterialCheckBox();
             this.chck_dump_info = new MaterialSkin.Controls.MaterialCheckBox();
+            this.chck_auto_dump = new MaterialSkin.Controls.MaterialCheckBox();
+            this.chck_darktheme = new MaterialSkin.Controls.MaterialCheckBox();
             this.SuspendLayout();
             // 
             // lbl_body
@@ -67,14 +69,15 @@
             this.b_fin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_fin.AutoSize = true;
             this.b_fin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.b_fin.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.b_fin.BackColor = System.Drawing.Color.Transparent;
             this.b_fin.Depth = 0;
-            this.b_fin.Location = new System.Drawing.Point(523, 413);
+            this.b_fin.Icon = null;
+            this.b_fin.Location = new System.Drawing.Point(513, 413);
             this.b_fin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.b_fin.MouseState = MaterialSkin.MouseState.HOVER;
             this.b_fin.Name = "b_fin";
             this.b_fin.Primary = false;
-            this.b_fin.Size = new System.Drawing.Size(55, 36);
+            this.b_fin.Size = new System.Drawing.Size(64, 36);
             this.b_fin.TabIndex = 4;
             this.b_fin.Text = "finish";
             this.b_fin.UseVisualStyleBackColor = false;
@@ -87,7 +90,7 @@
             this.lbl_sys_type.Depth = 0;
             this.lbl_sys_type.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbl_sys_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_sys_type.Location = new System.Drawing.Point(3, 238);
+            this.lbl_sys_type.Location = new System.Drawing.Point(3, 302);
             this.lbl_sys_type.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_sys_type.Name = "lbl_sys_type";
             this.lbl_sys_type.Size = new System.Drawing.Size(120, 19);
@@ -97,10 +100,11 @@
             // old_3ds
             // 
             this.old_3ds.AutoSize = true;
+            this.old_3ds.BackColor = System.Drawing.Color.Transparent;
             this.old_3ds.Checked = true;
             this.old_3ds.Depth = 0;
             this.old_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.old_3ds.Location = new System.Drawing.Point(4, 297);
+            this.old_3ds.Location = new System.Drawing.Point(4, 361);
             this.old_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.old_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.old_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -110,14 +114,15 @@
             this.old_3ds.TabIndex = 20;
             this.old_3ds.TabStop = true;
             this.old_3ds.Text = "Old 3DS";
-            this.old_3ds.UseVisualStyleBackColor = true;
+            this.old_3ds.UseVisualStyleBackColor = false;
             // 
             // new_3ds
             // 
             this.new_3ds.AutoSize = true;
+            this.new_3ds.BackColor = System.Drawing.Color.Transparent;
             this.new_3ds.Depth = 0;
             this.new_3ds.Font = new System.Drawing.Font("Roboto", 10F);
-            this.new_3ds.Location = new System.Drawing.Point(4, 267);
+            this.new_3ds.Location = new System.Drawing.Point(4, 331);
             this.new_3ds.Margin = new System.Windows.Forms.Padding(0);
             this.new_3ds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.new_3ds.MouseState = MaterialSkin.MouseState.HOVER;
@@ -126,7 +131,7 @@
             this.new_3ds.Size = new System.Drawing.Size(85, 30);
             this.new_3ds.TabIndex = 19;
             this.new_3ds.Text = "New 3DS";
-            this.new_3ds.UseVisualStyleBackColor = true;
+            this.new_3ds.UseVisualStyleBackColor = false;
             // 
             // chck_auto_upd
             // 
@@ -164,6 +169,40 @@
             this.chck_dump_info.Text = "When dumping log, Dump System Info? ";
             this.chck_dump_info.UseVisualStyleBackColor = false;
             // 
+            // chck_auto_dump
+            // 
+            this.chck_auto_dump.AutoSize = true;
+            this.chck_auto_dump.BackColor = System.Drawing.Color.Transparent;
+            this.chck_auto_dump.Depth = 0;
+            this.chck_auto_dump.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chck_auto_dump.Location = new System.Drawing.Point(5, 249);
+            this.chck_auto_dump.Margin = new System.Windows.Forms.Padding(0);
+            this.chck_auto_dump.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chck_auto_dump.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chck_auto_dump.Name = "chck_auto_dump";
+            this.chck_auto_dump.Ripple = true;
+            this.chck_auto_dump.Size = new System.Drawing.Size(207, 30);
+            this.chck_auto_dump.TabIndex = 23;
+            this.chck_auto_dump.Text = "Automatically Dump the log?";
+            this.chck_auto_dump.UseVisualStyleBackColor = false;
+            // 
+            // chck_darktheme
+            // 
+            this.chck_darktheme.AutoSize = true;
+            this.chck_darktheme.BackColor = System.Drawing.Color.Transparent;
+            this.chck_darktheme.Depth = 0;
+            this.chck_darktheme.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chck_darktheme.Location = new System.Drawing.Point(5, 219);
+            this.chck_darktheme.Margin = new System.Windows.Forms.Padding(0);
+            this.chck_darktheme.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chck_darktheme.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chck_darktheme.Name = "chck_darktheme";
+            this.chck_darktheme.Ripple = true;
+            this.chck_darktheme.Size = new System.Drawing.Size(157, 30);
+            this.chck_darktheme.TabIndex = 22;
+            this.chck_darktheme.Text = "Use the Dark theme?";
+            this.chck_darktheme.UseVisualStyleBackColor = false;
+            // 
             // dev_tour_setup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +210,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(579, 451);
             this.ControlBox = false;
+            this.Controls.Add(this.chck_auto_dump);
+            this.Controls.Add(this.chck_darktheme);
             this.Controls.Add(this.lbl_sys_type);
             this.Controls.Add(this.old_3ds);
             this.Controls.Add(this.new_3ds);
@@ -200,5 +241,7 @@
         private MaterialSkin.Controls.MaterialRadioButton new_3ds;
         private MaterialSkin.Controls.MaterialCheckBox chck_auto_upd;
         private MaterialSkin.Controls.MaterialCheckBox chck_dump_info;
+        private MaterialSkin.Controls.MaterialCheckBox chck_auto_dump;
+        private MaterialSkin.Controls.MaterialCheckBox chck_darktheme;
     }
 }

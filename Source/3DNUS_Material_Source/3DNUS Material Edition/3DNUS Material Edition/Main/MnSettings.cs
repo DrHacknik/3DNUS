@@ -14,6 +14,8 @@ namespace _3DNUS_Material_Edition
 
         private bool is64 = System.Environment.Is64BitOperatingSystem;
 
+        private string chck_drk = null;
+
         public dev_settings()
         {
             InitializeComponent();
@@ -24,6 +26,22 @@ namespace _3DNUS_Material_Edition
         {
             Properties.Settings.Default.Reload();
 
+            if (Properties.Settings.Default.dev_auto_dump_log == "1")
+            {
+                chck_auto_dump.Checked = true;
+            }
+            else
+            {
+                chck_auto_dump.Checked = false;
+            }
+            if (Properties.Settings.Default.dev_dark_theme == "1")
+            {
+                chck_darktheme.Checked = true;
+            }
+            else
+            {
+                chck_darktheme.Checked = false;
+            }
             if (Properties.Settings.Default.dev_auto_upd == "1")
             {
                 chck_auto_upd.Checked = true;
@@ -54,6 +72,22 @@ namespace _3DNUS_Material_Edition
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (chck_auto_dump.Checked == true)
+            {
+                Properties.Settings.Default.dev_auto_dump_log = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_auto_dump_log = "0";
+            }
+            if (chck_darktheme.Checked == true)
+            {
+                Properties.Settings.Default.dev_dark_theme = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_dark_theme = "0";
+            }
             if (chck_auto_upd.Checked == true)
             {
                 Properties.Settings.Default.dev_auto_upd = "1";
@@ -83,6 +117,27 @@ namespace _3DNUS_Material_Edition
                 Properties.Settings.Default.dev_def_titlelist = "new";
             }
 
+            //if (chck_darktheme.Checked == true)
+            //{
+            //    DialogResult dialogResult = MessageBox.Show("Enabling the dark theme will require the application. By clicking Ok, the Application will restart automatically.", "3DNUS Settings: Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+
+            //    if (dialogResult == DialogResult.OK)
+            //    {
+            //        Properties.Settings.Default.Save();
+            //        Application.Restart();
+            //    }
+
+            //    if (dialogResult == DialogResult.Cancel)
+            //    {
+            //        Properties.Settings.Default.Save();
+            //        Close();
+            //    }
+            //}
+            //else
+            //{
+            //    Properties.Settings.Default.Save();
+            //    Close();
+            //}
             Properties.Settings.Default.Save();
             Close();
         }
@@ -100,6 +155,17 @@ namespace _3DNUS_Material_Edition
             Properties.Settings.Default.Reset();
             Properties.Settings.Default.Save();
             Application.Restart();
+        }
+
+        private void chck_darktheme_CheckedChanged(object sender, EventArgs e)
+        {
+            //chck_drk = "1";
+            //return;
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

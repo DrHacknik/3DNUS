@@ -31,7 +31,6 @@ C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Materia
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\Interop.WMPLib.dll
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\3DNUS Material Edition.csproj.ResolveComReference.cache
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\_3DNUS_Material_Edition.dev_ext_manager.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\_3DNUS_Material_Edition.dev_settings.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\_3DNUS_Material_Edition.dev_tour.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\Debug\_3DNUS_Material_Edition.dev_tour_setup.resources

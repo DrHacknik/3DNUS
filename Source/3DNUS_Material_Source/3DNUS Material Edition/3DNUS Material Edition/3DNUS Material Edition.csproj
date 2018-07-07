@@ -98,12 +98,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main\MnExtension.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\MnExtension.Designer.cs">
-      <DependentUpon>MnExtension.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main\MnSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +136,6 @@
     <Compile Include="Parser\PsSyncDown.cs" />
     <Compile Include="Services\SvcUpd.cs" />
     <Compile Include="Parser\PsYLS.cs" />
-    <EmbeddedResource Include="Main\MnExtension.resx">
-      <DependentUpon>MnExtension.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main\MnSettings.resx">
       <DependentUpon>MnSettings.cs</DependentUpon>
       <SubType>Designer</SubType>

@@ -17,6 +17,22 @@ namespace _3DNUS_Material_Edition
 
         private void b_fin_Click(object sender, EventArgs e)
         {
+            if (chck_auto_dump.Checked == true)
+            {
+                Properties.Settings.Default.dev_auto_dump_log = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_auto_dump_log = "0";
+            }
+            if (chck_darktheme.Checked == true)
+            {
+                Properties.Settings.Default.dev_dark_theme = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_dark_theme = "0";
+            }
             if (chck_auto_upd.Checked == true)
             {
                 Properties.Settings.Default.dev_auto_upd = "1";

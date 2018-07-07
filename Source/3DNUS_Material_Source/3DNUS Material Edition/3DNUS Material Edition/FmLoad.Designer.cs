@@ -33,6 +33,7 @@
             this.dev_status = new System.Windows.Forms.Label();
             this.splash_timer = new System.Windows.Forms.Timer(this.components);
             this.pic_splash_logo = new System.Windows.Forms.PictureBox();
+            this.tmr_get_upd_stat = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_splash_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             // splash_timer
             // 
-            this.splash_timer.Interval = 2500;
+            this.splash_timer.Interval = 4000;
             this.splash_timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pic_splash_logo
@@ -65,7 +66,11 @@
             this.pic_splash_logo.Size = new System.Drawing.Size(400, 300);
             this.pic_splash_logo.TabIndex = 1;
             this.pic_splash_logo.TabStop = false;
-            this.pic_splash_logo.Click += new System.EventHandler(this.pic_splash_logo_Click);
+            // 
+            // tmr_get_upd_stat
+            // 
+            this.tmr_get_upd_stat.Interval = 10;
+            this.tmr_get_upd_stat.Tick += new System.EventHandler(this.tmr_get_upd_stat_Tick);
             // 
             // FmLoad
             // 
@@ -88,7 +93,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "main_load";
             this.Load += new System.EventHandler(this.main_load_Load);
-            this.QueryAccessibilityHelp += new System.Windows.Forms.QueryAccessibilityHelpEventHandler(this.main_load_QueryAccessibilityHelp);
             ((System.ComponentModel.ISupportInitialize)(this.pic_splash_logo)).EndInit();
             this.ResumeLayout(false);
 
@@ -99,5 +103,6 @@
         private System.Windows.Forms.Label dev_status;
         private System.Windows.Forms.Timer splash_timer;
         private System.Windows.Forms.PictureBox pic_splash_logo;
+        private System.Windows.Forms.Timer tmr_get_upd_stat;
     }
 }

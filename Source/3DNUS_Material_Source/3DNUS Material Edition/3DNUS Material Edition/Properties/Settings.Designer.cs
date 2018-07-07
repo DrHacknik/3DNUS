@@ -118,5 +118,29 @@ namespace _3DNUS_Material_Edition.Properties {
                 this["dev_tour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string dev_dark_theme {
+            get {
+                return ((string)(this["dev_dark_theme"]));
+            }
+            set {
+                this["dev_dark_theme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_auto_dump_log {
+            get {
+                return ((string)(this["dev_auto_dump_log"]));
+            }
+            set {
+                this["dev_auto_dump_log"] = value;
+            }
+        }
     }
 }
