@@ -52,7 +52,7 @@ namespace _3DNUS_Material_Edition
         private void tmr_get_upd_stat_Tick(object sender, EventArgs e)
         {
             //Fetch Svc Status
-            dev_status.Text = SvcUpd.SvcUpdateStat;
+            lbl_status.Text = SvcUpd.SvcUpdateStat;
             this.Refresh();
 
             //Fetch and check Error codes

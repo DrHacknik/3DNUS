@@ -32,5 +32,8 @@
     <Setting Name="dev_auto_dump_log" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="dev_build_codename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nightly</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

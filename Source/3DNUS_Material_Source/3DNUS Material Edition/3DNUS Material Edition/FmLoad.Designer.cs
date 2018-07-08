@@ -30,58 +30,59 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmLoad));
-            this.dev_status = new System.Windows.Forms.Label();
             this.splash_timer = new System.Windows.Forms.Timer(this.components);
-            this.pic_splash_logo = new System.Windows.Forms.PictureBox();
             this.tmr_get_upd_stat = new System.Windows.Forms.Timer(this.components);
+            this.lbl_status = new System.Windows.Forms.Label();
+            this.pic_splash_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_splash_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dev_status
-            // 
-            this.dev_status.BackColor = System.Drawing.Color.Transparent;
-            this.dev_status.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dev_status.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dev_status.ForeColor = System.Drawing.Color.White;
-            this.dev_status.Location = new System.Drawing.Point(0, 277);
-            this.dev_status.Name = "dev_status";
-            this.dev_status.Size = new System.Drawing.Size(400, 23);
-            this.dev_status.TabIndex = 0;
-            this.dev_status.Text = "Preparing Config...";
-            this.dev_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splash_timer
             // 
             this.splash_timer.Interval = 4000;
             this.splash_timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pic_splash_logo
-            // 
-            this.pic_splash_logo.BackColor = System.Drawing.Color.Transparent;
-            this.pic_splash_logo.BackgroundImage = global::_3DNUS_Material_Edition.Properties.Resources.new_3dnus_logo_128;
-            this.pic_splash_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_splash_logo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic_splash_logo.Location = new System.Drawing.Point(0, 0);
-            this.pic_splash_logo.Name = "pic_splash_logo";
-            this.pic_splash_logo.Size = new System.Drawing.Size(400, 300);
-            this.pic_splash_logo.TabIndex = 1;
-            this.pic_splash_logo.TabStop = false;
-            // 
             // tmr_get_upd_stat
             // 
             this.tmr_get_upd_stat.Interval = 10;
             this.tmr_get_upd_stat.Tick += new System.EventHandler(this.tmr_get_upd_stat_Tick);
+            // 
+            // lbl_status
+            // 
+            this.lbl_status.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_status.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_status.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_status.ForeColor = System.Drawing.Color.White;
+            this.lbl_status.Location = new System.Drawing.Point(0, 277);
+            this.lbl_status.Name = "lbl_status";
+            this.lbl_status.Size = new System.Drawing.Size(400, 23);
+            this.lbl_status.TabIndex = 0;
+            this.lbl_status.Text = "Preparing Config...";
+            this.lbl_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_splash_logo
+            // 
+            this.pic_splash_logo.BackColor = System.Drawing.Color.Transparent;
+            this.pic_splash_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pic_splash_logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic_splash_logo.Image = global::_3DNUS_Material_Edition.Properties.Resources.new_3dnus_logo_128;
+            this.pic_splash_logo.Location = new System.Drawing.Point(0, 0);
+            this.pic_splash_logo.Name = "pic_splash_logo";
+            this.pic_splash_logo.Size = new System.Drawing.Size(400, 300);
+            this.pic_splash_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_splash_logo.TabIndex = 1;
+            this.pic_splash_logo.TabStop = false;
             // 
             // FmLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::_3DNUS_Material_Edition.Properties.Resources.new_3dnus_splash_bck;
+            this.BackgroundImage = global::_3DNUS_Material_Edition.Properties.Resources.Splash_new_with_gradient;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 300);
             this.ControlBox = false;
-            this.Controls.Add(this.dev_status);
+            this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.pic_splash_logo);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
@@ -99,10 +100,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label dev_status;
         private System.Windows.Forms.Timer splash_timer;
-        private System.Windows.Forms.PictureBox pic_splash_logo;
         private System.Windows.Forms.Timer tmr_get_upd_stat;
+        private System.Windows.Forms.Label lbl_status;
+        private System.Windows.Forms.PictureBox pic_splash_logo;
     }
 }

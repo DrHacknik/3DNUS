@@ -26,7 +26,7 @@
 
 //=====================================
 using _3DNUS;
-
+using _3DNUS_Material_Edition.Main;
 using MarcusD.at;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -126,7 +126,7 @@ namespace _3DNUS_Material_Edition
                 t_log.BackColor = System.Drawing.Color.White;
                 t_log.ForeColor = System.Drawing.Color.Black;
             }
-            lbl_ver.Text = "Version: " + Application.ProductVersion + " - BETA";
+            lbl_ver.Text = "Version: " + Application.ProductVersion + " - " + Properties.Settings.Default.dev_build_codename;
             if (Properties.Settings.Default.dev_def_titlelist == "old")
             {
                 old_3ds.Checked = true;
@@ -508,12 +508,15 @@ namespace _3DNUS_Material_Edition
 
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: " +
-                Application.ProductVersion + "" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info." + "\r\n" +
-                "\r\nThanks a Ton to @MarcusD for alot of His work." +
-                "\r\n \r\nWhen typing your Title ID, make sure you type it correctly. For example: \r\n000000000 v0000 (ID followed by the Version.)" +
-                "\r\nIf you're downloading a Full firmware, please type it as follows: XX.X followed by U, J, or E. \r\nU for USA, J for Japan, and E for Europe. \r\nOr for Example: 11.5U",
-                "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Form ma = new MnAbout();
+            ma.Show();
+            return;
+            //MessageBox.Show("This is the new Lightweight version of 3DNUS." + "\r\nThe Current Version you're using is: " +
+            //    Application.ProductVersion + "" + "\r\n" + "\r\nVisit the forum post or GitHub for more Info." + "\r\n" +
+            //    "\r\nThanks a Ton to @MarcusD for alot of His work." +
+            //    "\r\n \r\nWhen typing your Title ID, make sure you type it correctly. For example: \r\n000000000 v0000 (ID followed by the Version.)" +
+            //    "\r\nIf you're downloading a Full firmware, please type it as follows: XX.X followed by U, J, or E. \r\nU for USA, J for Japan, and E for Europe. \r\nOr for Example: 11.5U",
+            //    "Quick Information:", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)

@@ -123,6 +123,26 @@ namespace _3DNUS_Material_Edition.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Splash_new {
+            get {
+                object obj = ResourceManager.GetObject("Splash_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Splash_new_with_gradient {
+            get {
+                object obj = ResourceManager.GetObject("Splash_new_with_gradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vyV7NzW {
             get {
                 object obj = ResourceManager.GetObject("vyV7NzW", resourceCulture);

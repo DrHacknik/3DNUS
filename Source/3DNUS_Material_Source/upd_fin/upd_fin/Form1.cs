@@ -15,16 +15,13 @@ using System.Windows.Forms;
 
 namespace upd_fin
 {
-    public partial class Form1 : MaterialForm
+    public partial class Main : Form
     {
         public readonly String cd = Path.GetDirectoryName(Application.ExecutablePath);
         private WebClient upd_dwld = new WebClient();
 
-        public Form1()
+        public Main()
         {
-            MaterialSkinManager skinmgr = MaterialSkinManager.Instance;
-            skinmgr.Theme = MaterialSkinManager.Themes.LIGHT;
-            skinmgr.ColorScheme = new ColorScheme(Primary.Red800, Primary.Red900, Primary.Red500, Accent.Red200, TextShade.WHITE);
             InitializeComponent();
         }
 
@@ -33,6 +30,8 @@ namespace upd_fin
             try
             {
                 Hide();
+                File.Delete(cd + "\\3DNUS_Material_Edition.exe.config");
+                File.Move(cd + "\\3DNUS Material Edition.exe.config.new", cd + "\\3DNUS Material Edition.exe.config");
                 File.Move(cd + "\\3DNUS Material Edition.exe", cd + "\\3DNUS Material Edition.exe.old");
                 if (!File.Exists(cd + "\\snd\\dev_bck_music_help.mp3"))
                 {
@@ -56,6 +55,10 @@ namespace upd_fin
             {
                 MessageBox.Show("There were errors when Finishing the Update!", "upd_fin: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pnl_main_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }

@@ -142,5 +142,17 @@ namespace _3DNUS_Material_Edition.Properties {
                 this["dev_auto_dump_log"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Nightly")]
+        public string dev_build_codename {
+            get {
+                return ((string)(this["dev_build_codename"]));
+            }
+            set {
+                this["dev_build_codename"] = value;
+            }
+        }
     }
 }

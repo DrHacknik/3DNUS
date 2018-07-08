@@ -97,6 +97,7 @@ namespace _3DNUS_Material_Edition
                                 if (is64 == true)
                                 {
                                     upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/x64/3DNUS.exe"), cd + "\\3DNUS_new.exe");
+                                    upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/x64/3DNUS_Material_Edition.exe.config"), cd + "\\3DNUS_Material_Edition.exe.config.new");
                                     WebClient get_fin = new WebClient();
                                     get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
                                     Process.Start(cd + "\\upd_fin.exe");
@@ -106,6 +107,7 @@ namespace _3DNUS_Material_Edition
                                 if (is64 == false)
                                 {
                                     upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/x32/3DNUS.exe"), cd + "\\3DNUS_new.exe");
+                                    upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/DrHacknik/3DNUS/master/Updates/x32/3DNUS_Material_Edition.exe.config"), cd + "\\3DNUS_Material_Edition.exe.config.new");
                                     WebClient get_fin = new WebClient();
                                     get_fin.DownloadFile(new Uri("https://raw.githubusercontent.comD/rHacknik/3DNUS/master/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
                                     Process.Start(cd + "\\upd_fin.exe");
