@@ -66,7 +66,10 @@ compiled
 Source/3DNUS_Material_Source/3DNUS Material Edition/3DNUS Material Edition/obj/x64/Release/3DNUS Material Edition\.pdb
 
 Source/3DNUS_Material_Source/3DNUS Material Edition/\.vs
+Source/3DNUS_Material_Source/3DNUS Material Edition/3DNUS Material Edition/bin
 
 *.pdb
 
 *.cache
+
+Source/3DNUS_Material_Source/3DNUS Material Edition/3DNUS Material Edition/obj/Debug/
