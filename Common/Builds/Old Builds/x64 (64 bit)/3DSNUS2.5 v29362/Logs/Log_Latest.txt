@@ -1,7 +1,0 @@
-If the Application Freezes, but there is still Internet Activty;
-There may be a Firewall Issue, or the NUS servers are under load.
-In order to fix this issue, go to your Windows Firewall Settings
-And Disable or add an Exeption for 3DNUS. This may also be Caused 
-By other Things. 
-
-Log:

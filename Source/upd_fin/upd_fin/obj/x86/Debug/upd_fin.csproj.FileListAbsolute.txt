@@ -1,0 +1,12 @@
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.csprojAssemblyReference.cache
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.Main.resources
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.Properties.Resources.resources
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.csproj.GenerateResource.cache
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.csproj.CoreCompileInputs.cache
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Debug\upd_fin.exe.config
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Debug\upd_fin.exe
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Debug\upd_fin.pdb
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\bin\x86\Debug\MaterialSkin.dll
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.csproj.CopyComplete
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.exe
+C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\upd_fin\upd_fin\obj\x86\Debug\upd_fin.pdb

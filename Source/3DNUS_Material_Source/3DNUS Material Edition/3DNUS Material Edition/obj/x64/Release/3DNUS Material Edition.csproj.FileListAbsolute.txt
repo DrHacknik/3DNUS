@@ -26,12 +26,7 @@ C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Materia
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\x64\Release\3DNUS Material Edition.exe
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\x64\Release\3DNUS Material Edition.pdb
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\x64\Release\MaterialSkin.dll
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\x64\Release\Interop.WMPLib.dll
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\bin\x64\Release\AxInterop.WMPLib.dll
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\3DNUS Material Edition.csprojAssemblyReference.cache
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\Interop.WMPLib.dll
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\AxInterop.WMPLib.dll
-C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\3DNUS Material Edition.csproj.ResolveComReference.cache
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.Main.MnAbout.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.dev_settings.resources
 C:\Users\luked\Documents\GitHub\3DNUS\Source\3DNUS_Material_Source\3DNUS Material Edition\3DNUS Material Edition\obj\x64\Release\_3DNUS_Material_Edition.dev_tour.resources

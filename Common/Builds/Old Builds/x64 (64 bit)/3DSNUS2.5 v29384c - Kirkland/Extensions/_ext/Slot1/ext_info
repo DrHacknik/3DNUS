@@ -1,4 +1,0 @@
-[extension_info] ver=0.14b title=vnm_gui  ext_type=default  ext_priv=1 ext_external_res=1  ext_upd=0 
-
-ext_external_res="0\\_bin", "0\\_res", "1\\_sys\\upd"
-ext_reset=0 
