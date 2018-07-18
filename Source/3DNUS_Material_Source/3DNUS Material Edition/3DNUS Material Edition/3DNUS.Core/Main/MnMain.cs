@@ -25,8 +25,9 @@
 */
 
 //=====================================
-using _3DNUS;
-using _3DNUS_Material_Edition.Main;
+using _3DNUS.Core.Services;
+using _3DNUS.Core.Tour;
+using _3DNUS_Material_Edition;
 using MarcusD.at;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -39,12 +40,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace _3DNUS_Material_Edition
+namespace _3DNUS.Core
 {
     public partial class MnMain : MaterialForm
     {
         public static readonly String server = "http://nus.cdn.c.shop.nintendowifi.net/ccs/download/";
-        private bool is64 = System.Environment.Is64BitOperatingSystem;
+        private bool is64 = Environment.Is64BitOperatingSystem;
         public static readonly String ninupdate = "http://yls8.mtheall.com/ninupdates/titlelist.php?csv=1&sys=";
 
         public static readonly String[] sysarr = new String[]
@@ -108,7 +109,7 @@ namespace _3DNUS_Material_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.dev_dark_theme == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme == "1")
             {
                 lbl_settings.ForeColor = System.Drawing.Color.White;
                 lbl_upd_chck.ForeColor = System.Drawing.Color.White;
@@ -126,12 +127,12 @@ namespace _3DNUS_Material_Edition
                 t_log.BackColor = System.Drawing.Color.White;
                 t_log.ForeColor = System.Drawing.Color.Black;
             }
-            lbl_ver.Text = "Version: " + Application.ProductVersion + " - " + Properties.Settings.Default.dev_build_codename;
-            if (Properties.Settings.Default.dev_def_titlelist == "old")
+            lbl_ver.Text = "Version: " + Application.ProductVersion + " - " + _3DNUS_Material_Edition.Properties.Settings.Default.dev_build_codename;
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist == "old")
             {
                 old_3ds.Checked = true;
             }
-            if (Properties.Settings.Default.dev_def_titlelist == "new")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist == "new")
             {
                 new_3ds.Checked = true;
             }
@@ -140,13 +141,13 @@ namespace _3DNUS_Material_Edition
             //    Process.Start(cd + "\\3DNUS Upd - Lite.exe");
             t_log.Text += " " + DateTime.Now;
 
-            if (Properties.Settings.Default.eula_read != "yiss")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.eula_read != "yiss")
             {
                 DialogResult dialogResult = MessageBox.Show("All components that are used in 3DNUS are either created by Me, or other users; these components are Open-Source, and can not be distributed for any cost. \r\nThis also includes 3DNUS, and/or it's Components. \r\n \r\nIf you paid for 3DNUS or any other of its components, please demand your Money back Immediately! \r\nAlso, report where you Purchased 3DNUS or as a Bundle. \r\nWe are NOT affiliated with Nintendo, or any other Company. \r\n \r\nThis project is Non-Profit, meaning it will always be Free, and is maintained by Volunteers. \r\nBy using this Program, you agree to these Terms. \r\n \r\nDo you agree to these Terms?", "Legal Terms:", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Properties.Settings.Default.eula_read = "yiss";
-                    Properties.Settings.Default.Save();
+                    _3DNUS_Material_Edition.Properties.Settings.Default.eula_read = "yiss";
+                    _3DNUS_Material_Edition.Properties.Settings.Default.Save();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
@@ -230,9 +231,9 @@ namespace _3DNUS_Material_Edition
             sd.op.setProgMax(1);
             sd.op.setSubMax(1);
 
-            if (Properties.Settings.Default.dev_auto_dump_log == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_dump_log == "1")
             {
-                if (Properties.Settings.Default.dev_dump_info == "1")
+                if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info == "1")
                 {
                     if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
                     File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
@@ -526,7 +527,7 @@ namespace _3DNUS_Material_Edition
 
         private void label1_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.dev_dump_info == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info == "1")
             {
                 if (!File.Exists("LOG_DUMP.log")) File.Delete(cd + "LOG_DUMP.log");
                 File.WriteAllText(cd + "\\LOG_DUMP_" + DateTime.Now.ToString("M_d_yyyy_HH_mm_ss",
@@ -589,10 +590,19 @@ namespace _3DNUS_Material_Edition
                 tmr_upd_timeout.Start();
                 tmr_get_upd_stat.Stop();
             }
+            if (SvcUpd.SvcUpdateStat == null)
+            {
+                tmr_upd_timeout.Start();
+                tmr_get_upd_stat.Stop();
+                lbl_upd_chck.Text = "Unable to update. [Service Returned NULL value]";
+                return;
+            }
         }
 
         private void tmr_upd_timeout_Tick(object sender, EventArgs e)
         {
+            lbl_upd_chck.Text = "Check for Updates";
+            tmr_upd_timeout.Stop();
         }
     }
 }

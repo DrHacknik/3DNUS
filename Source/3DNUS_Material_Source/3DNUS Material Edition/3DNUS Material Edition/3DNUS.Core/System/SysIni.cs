@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace _3DNUS_Material_Edition.System
+namespace _3DNUS_Material_Edition.Core.System
 {
     public class Ini
     {

@@ -1,4 +1,7 @@
-﻿namespace _3DNUS_Material_Edition
+﻿using _3DNUS_Material_Edition;
+using System;
+
+namespace _3DNUS.Core
 {
     partial class MnMain
     {

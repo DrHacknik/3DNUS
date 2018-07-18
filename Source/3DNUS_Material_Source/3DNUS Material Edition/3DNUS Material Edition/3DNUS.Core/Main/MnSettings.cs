@@ -6,7 +6,7 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 
-namespace _3DNUS_Material_Edition
+namespace _3DNUS.Core
 {
     public partial class dev_settings : MaterialForm
     {
@@ -24,9 +24,9 @@ namespace _3DNUS_Material_Edition
 
         private void dev_settings_Load(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Reload();
+            _3DNUS_Material_Edition.Properties.Settings.Default.Reload();
 
-            if (Properties.Settings.Default.dev_auto_dump_log == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_dump_log == "1")
             {
                 chck_auto_dump.Checked = true;
             }
@@ -34,7 +34,7 @@ namespace _3DNUS_Material_Edition
             {
                 chck_auto_dump.Checked = false;
             }
-            if (Properties.Settings.Default.dev_dark_theme == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme == "1")
             {
                 chck_darktheme.Checked = true;
             }
@@ -42,7 +42,7 @@ namespace _3DNUS_Material_Edition
             {
                 chck_darktheme.Checked = false;
             }
-            if (Properties.Settings.Default.dev_auto_upd == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_upd == "1")
             {
                 chck_auto_upd.Checked = true;
             }
@@ -50,7 +50,7 @@ namespace _3DNUS_Material_Edition
             {
                 chck_auto_upd.Checked = false;
             }
-            if (Properties.Settings.Default.dev_dump_info == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info == "1")
             {
                 chck_dump_info.Checked = true;
             }
@@ -58,13 +58,13 @@ namespace _3DNUS_Material_Edition
             {
                 chck_dump_info.Checked = false;
             }
-            if (Properties.Settings.Default.dev_def_titlelist == "old")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist == "old")
             {
                 old_3ds.Checked = true;
             }
             else
 
-            if (Properties.Settings.Default.dev_def_titlelist == "new")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist == "new")
             {
                 new_3ds.Checked = true;
             }
@@ -74,47 +74,47 @@ namespace _3DNUS_Material_Edition
         {
             if (chck_auto_dump.Checked == true)
             {
-                Properties.Settings.Default.dev_auto_dump_log = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_dump_log = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_auto_dump_log = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_dump_log = "0";
             }
             if (chck_darktheme.Checked == true)
             {
-                Properties.Settings.Default.dev_dark_theme = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_dark_theme = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme = "0";
             }
             if (chck_auto_upd.Checked == true)
             {
-                Properties.Settings.Default.dev_auto_upd = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_upd = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_auto_upd = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_upd = "0";
             }
             {
-                Properties.Settings.Default.dev_music = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_music = "0";
             }
             if (chck_dump_info.Checked == true)
             {
-                Properties.Settings.Default.dev_dump_info = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_dump_info = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info = "0";
             }
             if (old_3ds.Checked == true)
             {
-                Properties.Settings.Default.dev_def_titlelist = "old";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist = "old";
             }
 
             if (new_3ds.Checked == true)
             {
-                Properties.Settings.Default.dev_def_titlelist = "new";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist = "new";
             }
 
             //if (chck_darktheme.Checked == true)
@@ -123,22 +123,22 @@ namespace _3DNUS_Material_Edition
 
             //    if (dialogResult == DialogResult.OK)
             //    {
-            //        Properties.Settings.Default.Save();
+            //        _3DNUS_Material_Edition.Properties.Settings.Default.Save();
             //        Application.Restart();
             //    }
 
             //    if (dialogResult == DialogResult.Cancel)
             //    {
-            //        Properties.Settings.Default.Save();
+            //        _3DNUS_Material_Edition.Properties.Settings.Default.Save();
             //        Close();
             //    }
             //}
             //else
             //{
-            //    Properties.Settings.Default.Save();
+            //    _3DNUS_Material_Edition.Properties.Settings.Default.Save();
             //    Close();
             //}
-            Properties.Settings.Default.Save();
+            _3DNUS_Material_Edition.Properties.Settings.Default.Save();
             Close();
         }
 
@@ -152,8 +152,8 @@ namespace _3DNUS_Material_Edition
 
         private void btn_reset_settings_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Reset();
-            Properties.Settings.Default.Save();
+            _3DNUS_Material_Edition.Properties.Settings.Default.Reset();
+            _3DNUS_Material_Edition.Properties.Settings.Default.Save();
             Application.Restart();
         }
 

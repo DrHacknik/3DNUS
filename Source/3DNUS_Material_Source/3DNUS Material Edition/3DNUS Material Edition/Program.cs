@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using _3DNUS.Core;
+using MaterialSkin;
 using System;
 using System.Windows.Forms;
 
@@ -29,7 +30,7 @@ namespace _3DNUS_Material_Edition
                 skinmgr.ColorScheme = new ColorScheme(Primary.Red800, Primary.Red900, Primary.Red500, Accent.Red200, TextShade.WHITE);
             }
 
-            Application.Run(new FmLoad());
+            Application.Run(new MnLoad());
         }
     }
 }

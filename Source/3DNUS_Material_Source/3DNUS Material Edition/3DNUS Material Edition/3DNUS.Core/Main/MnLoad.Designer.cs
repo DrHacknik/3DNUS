@@ -1,6 +1,6 @@
-﻿namespace _3DNUS_Material_Edition.Main
+﻿namespace _3DNUS.Core
 {
-    partial class FmLoad
+    partial class MnLoad
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmLoad));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MnLoad));
             this.splash_timer = new System.Windows.Forms.Timer(this.components);
             this.tmr_get_upd_stat = new System.Windows.Forms.Timer(this.components);
             this.lbl_status = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.pic_splash_logo.TabIndex = 1;
             this.pic_splash_logo.TabStop = false;
             // 
-            // FmLoad
+            // MnLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FmLoad";
+            this.Name = "MnLoad";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

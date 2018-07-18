@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace _3DNUS_Material_Edition
+namespace _3DNUS.Core.Tour
 {
     public partial class dev_tour_setup : MaterialForm
     {
@@ -15,51 +15,51 @@ namespace _3DNUS_Material_Edition
         {
             if (chck_auto_dump.Checked == true)
             {
-                Properties.Settings.Default.dev_auto_dump_log = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_dump_log = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_auto_dump_log = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_dump_log = "0";
             }
             if (chck_darktheme.Checked == true)
             {
-                Properties.Settings.Default.dev_dark_theme = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_dark_theme = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme = "0";
             }
             if (chck_auto_upd.Checked == true)
             {
-                Properties.Settings.Default.dev_auto_upd = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_upd = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_auto_upd = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_upd = "0";
             }
             {
-                Properties.Settings.Default.dev_music = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_music = "0";
             }
             if (chck_dump_info.Checked == true)
             {
-                Properties.Settings.Default.dev_dump_info = "1";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info = "1";
             }
             else
             {
-                Properties.Settings.Default.dev_dump_info = "0";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_dump_info = "0";
             }
             if (old_3ds.Checked == true)
             {
-                Properties.Settings.Default.dev_def_titlelist = "old";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist = "old";
             }
 
             if (new_3ds.Checked == true)
             {
-                Properties.Settings.Default.dev_def_titlelist = "new";
+                _3DNUS_Material_Edition.Properties.Settings.Default.dev_def_titlelist = "new";
             }
 
-            Properties.Settings.Default.dev_tour = "1";
-            Properties.Settings.Default.Save();
+            _3DNUS_Material_Edition.Properties.Settings.Default.dev_tour = "1";
+            _3DNUS_Material_Edition.Properties.Settings.Default.Save();
             Application.Restart();
         }
     }

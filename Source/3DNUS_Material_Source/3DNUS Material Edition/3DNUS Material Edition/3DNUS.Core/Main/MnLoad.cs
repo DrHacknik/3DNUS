@@ -1,23 +1,25 @@
-﻿using System;
+﻿using _3DNUS.Core.Services;
+using _3DNUS.Core.Tour;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace _3DNUS_Material_Edition
+namespace _3DNUS.Core
 {
-    public partial class FmLoad : Form
+    public partial class MnLoad : Form
     {
         public readonly String cd = Path.GetDirectoryName(Application.ExecutablePath);
         private bool is64 = System.Environment.Is64BitOperatingSystem;
         private Form mn = new MnMain();
 
-        public FmLoad()
+        public MnLoad()
         {
             InitializeComponent();
         }
 
         private void main_load_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.dev_auto_upd == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_auto_upd == "1")
             {
                 splash_timer.Stop();
                 SvcUpd.SvcUpdate();
@@ -25,7 +27,7 @@ namespace _3DNUS_Material_Edition
             }
             else
             {
-                if (Properties.Settings.Default.dev_tour == "")
+                if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_tour == "")
                 {
                     Form dv = new dev_tour();
                     dv.Show();
@@ -67,6 +69,12 @@ namespace _3DNUS_Material_Edition
             if (SvcUpd.SvcUpdateStat == "No new Updates")
             {
                 splash_timer.Start();
+            }
+            if (SvcUpd.SvcUpdateStat == null)
+            {
+                splash_timer.Start();
+                tmr_get_upd_stat.Stop();
+                lbl_status.Text = "Unable to update. [Service Returned NULL value]";
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace _3DNUS_Material_Edition
+﻿namespace _3DNUS.Core
 {
     partial class dev_settings
     {

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _3DNUS_Material_Edition.Main
+namespace _3DNUS.Core
 {
     public partial class MnAbout : MaterialForm
     {
@@ -22,12 +22,12 @@ namespace _3DNUS_Material_Edition.Main
 
         private void MnAbout_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.dev_dark_theme == "1")
+            if (_3DNUS_Material_Edition.Properties.Settings.Default.dev_dark_theme == "1")
             {
                 lbl_header.ForeColor = System.Drawing.Color.White;
                 lbl_body.ForeColor = System.Drawing.Color.White;
             }
-            lbl_header.Text = "3DNUS version " + Application.ProductVersion + " - " + Properties.Settings.Default.dev_build_codename;
+            lbl_header.Text = "3DNUS version " + Application.ProductVersion + " - " + _3DNUS_Material_Edition.Properties.Settings.Default.dev_build_codename;
             lbl_body.Text = "This is the new Lightweight version of 3DNUS." + "\r\n\r\nVisit the forum post or GitHub for more Info.\r\n" +
                 "\r\nThanks a Ton to @MarcusD for alot of His work." +
                 "\r\n\r\n3DNUS is licensed under the GNU General Public License v3.\r\n\r\nThis project uses the Following Libraries:" +

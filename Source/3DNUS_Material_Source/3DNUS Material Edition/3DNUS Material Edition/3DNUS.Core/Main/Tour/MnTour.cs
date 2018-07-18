@@ -1,7 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using System;
 
-namespace _3DNUS_Material_Edition
+namespace _3DNUS.Core.Tour
 {
     public partial class dev_tour : MaterialForm
     {
