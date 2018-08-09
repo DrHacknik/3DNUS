@@ -11,7 +11,6 @@ The application is simple and easy to use. It's light, and works quickly.
 
 *Quoted from GBAtemp:* 
 ~~~~
-New
 For anyone who is unaware: 
 
 Nintendo has recently been able to patch the way 3DS' grab titles from the CDN and otherwise. 
