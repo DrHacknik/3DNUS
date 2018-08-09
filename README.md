@@ -8,6 +8,18 @@ The application is simple and easy to use. It's light, and works quickly.
 
 **This application is only for Windows based Computers. This is not designed for use on the 3DS.** 
 
+
+*Quoted from GBAtemp:* 
+`New
+For anyone who is unaware: 
+
+Nintendo has recently been able to patch the way 3DS' grab titles from the CDN and otherwise. 
+This takes effect for firmwares 11.8+. 
+
+Soon, Nintendo may pull the plug for downloading content from the CDN's that are NOT a 3DS. Meaning, 3DNUS will most likely become useless and obsolete. 
+
+If you need to download any firmwares or titles; please grab the latest release and download what you need immediately!`
+
 ## Features:
 
 * Download NUS content and pack it as a .cia
