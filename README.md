@@ -1,5 +1,5 @@
 ![Status](https://raw.githubusercontent.com/zoltx23/3DNUS/master/wiki/new_3dnus_logo_128.png)
-# 3DNUS
+# 3DNUS - Deprecated
 #### Current Version: Nightly | 3.3.1 (x86, x64) 
 ## Introduction:
 
